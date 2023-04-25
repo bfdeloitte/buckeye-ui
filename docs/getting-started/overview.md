@@ -1,6 +1,6 @@
 <div class="splash">
 <div class="splash-start">
-<img class="splash-logo" src="/assets/images/wordmark.svg" alt="Shoelace">
+<img class="splash-logo" src="/assets/images/wordmark.png" alt="IOP-UI">
 
 # <sl-visually-hidden>Shoelace:</sl-visually-hidden> A forward-thinking library of web components.
 
@@ -11,9 +11,6 @@
 - Built with accessibility in mind ♿️
 - First-class [React support](/frameworks/react) ⚛️
 - Built-in localization 💬
-- Open source 😸
-
-Designed in New Hampshire by [Cory LaViska](https://twitter.com/claviska).
 
 </div>
 <div class="splash-end">
