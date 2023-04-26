@@ -1,18 +1,401 @@
 {
   "$schema": "http://json.schemastore.org/web-types",
-  "name": "@shoelace-style/shoelace",
-  "version": "2.4.0",
+  "name": "iop-ui",
+  "version": "0.0.1",
   "description-markup": "markdown",
   "framework-config": {
     "enable-when": {
       "node-packages": [
-        "@shoelace-style/shoelace"
+        "iop-ui"
       ]
     }
   },
   "contributions": {
     "html": {
       "elements": [
+        {
+          "name": "sl-alert",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/alert",
+          "js": {
+            "properties": [
+              {
+                "name": "autoHideTimeout",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "hasSlotController",
+                "value": {}
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "base",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "open",
+                "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "closable",
+                "description": "Enables a close button that allows the user to dismiss the alert.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "variant",
+                "description": "The alert's theme variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                }
+              },
+              {
+                "name": "duration",
+                "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+                "value": {}
+              },
+              {
+                "name": "restartAutoHide",
+                "value": {}
+              },
+              {
+                "name": "handleCloseClick",
+                "value": {}
+              },
+              {
+                "name": "handleMouseMove",
+                "value": {}
+              },
+              {
+                "name": "handleOpenChange",
+                "value": {}
+              },
+              {
+                "name": "handleDurationChange",
+                "value": {}
+              },
+              {
+                "name": "show",
+                "description": "Shows the alert.",
+                "value": {}
+              },
+              {
+                "name": "hide",
+                "description": "Hides the alert",
+                "value": {}
+              },
+              {
+                "name": "toast",
+                "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-show",
+                "description": "Emitted when the alert opens."
+              },
+              {
+                "name": "sl-after-show",
+                "description": "Emitted after the alert opens and all animations are complete."
+              },
+              {
+                "name": "sl-hide",
+                "description": "Emitted when the alert closes."
+              },
+              {
+                "name": "sl-after-hide",
+                "description": "Emitted after the alert closes and all animations are complete."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "open",
+              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "closable",
+              "description": "Enables a close button that allows the user to dismiss the alert.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "variant",
+              "description": "The alert's theme variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              }
+            },
+            {
+              "name": "duration",
+              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+              "value": {}
+            }
+          ]
+        },
+        {
+          "name": "sl-animated-image",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/animated-image",
+          "js": {
+            "properties": [
+              {
+                "name": "animatedImage",
+                "value": {
+                  "type": "HTMLImageElement"
+                }
+              },
+              {
+                "name": "frozenFrame",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "isLoaded",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleLoad",
+                "value": {}
+              },
+              {
+                "name": "handleError",
+                "value": {}
+              },
+              {
+                "name": "handlePlayChange",
+                "value": {}
+              },
+              {
+                "name": "handleSrcChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "sl-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-avatar",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/avatar",
+          "js": {
+            "properties": [
+              {
+                "name": "hasError",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "image",
+                "description": "The image source to use for the avatar.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "label",
+                "description": "A label to use to describe the avatar to assistive devices.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "initials",
+                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "loading",
+                "description": "Indicates how the browser should load the image.",
+                "value": {
+                  "type": "'eager' | 'lazy'"
+                }
+              },
+              {
+                "name": "shape",
+                "description": "The shape of the avatar.",
+                "value": {
+                  "type": "'circle' | 'square' | 'rounded'"
+                }
+              },
+              {
+                "name": "handleImageChange",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "image",
+              "description": "The image source to use for the avatar.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "label",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "initials",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "loading",
+              "description": "Indicates how the browser should load the image.",
+              "value": {
+                "type": "'eager' | 'lazy'"
+              }
+            },
+            {
+              "name": "shape",
+              "description": "The shape of the avatar.",
+              "value": {
+                "type": "'circle' | 'square' | 'rounded'"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-badge",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/badge",
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "The badge's theme variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                }
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
+                "value": {
+                  "type": "boolean"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The badge's theme variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
         {
           "name": "sl-animation",
           "description": "",
@@ -279,389 +662,6 @@
             "events": []
           },
           "attributes": []
-        },
-        {
-          "name": "sl-animated-image",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/animated-image",
-          "js": {
-            "properties": [
-              {
-                "name": "animatedImage",
-                "value": {
-                  "type": "HTMLImageElement"
-                }
-              },
-              {
-                "name": "frozenFrame",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "isLoaded",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleLoad",
-                "value": {}
-              },
-              {
-                "name": "handleError",
-                "value": {}
-              },
-              {
-                "name": "handlePlayChange",
-                "value": {}
-              },
-              {
-                "name": "handleSrcChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "sl-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-alert",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/alert",
-          "js": {
-            "properties": [
-              {
-                "name": "autoHideTimeout",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "hasSlotController",
-                "value": {}
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "base",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "open",
-                "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "closable",
-                "description": "Enables a close button that allows the user to dismiss the alert.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "variant",
-                "description": "The alert's theme variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "duration",
-                "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-                "value": {}
-              },
-              {
-                "name": "restartAutoHide",
-                "value": {}
-              },
-              {
-                "name": "handleCloseClick",
-                "value": {}
-              },
-              {
-                "name": "handleMouseMove",
-                "value": {}
-              },
-              {
-                "name": "handleOpenChange",
-                "value": {}
-              },
-              {
-                "name": "handleDurationChange",
-                "value": {}
-              },
-              {
-                "name": "show",
-                "description": "Shows the alert.",
-                "value": {}
-              },
-              {
-                "name": "hide",
-                "description": "Hides the alert",
-                "value": {}
-              },
-              {
-                "name": "toast",
-                "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-show",
-                "description": "Emitted when the alert opens."
-              },
-              {
-                "name": "sl-after-show",
-                "description": "Emitted after the alert opens and all animations are complete."
-              },
-              {
-                "name": "sl-hide",
-                "description": "Emitted when the alert closes."
-              },
-              {
-                "name": "sl-after-hide",
-                "description": "Emitted after the alert closes and all animations are complete."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "open",
-              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "closable",
-              "description": "Enables a close button that allows the user to dismiss the alert.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "variant",
-              "description": "The alert's theme variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "duration",
-              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-              "value": {}
-            }
-          ]
-        },
-        {
-          "name": "sl-avatar",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/avatar",
-          "js": {
-            "properties": [
-              {
-                "name": "hasError",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "image",
-                "description": "The image source to use for the avatar.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "label",
-                "description": "A label to use to describe the avatar to assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "initials",
-                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "loading",
-                "description": "Indicates how the browser should load the image.",
-                "value": {
-                  "type": "'eager' | 'lazy'"
-                }
-              },
-              {
-                "name": "shape",
-                "description": "The shape of the avatar.",
-                "value": {
-                  "type": "'circle' | 'square' | 'rounded'"
-                }
-              },
-              {
-                "name": "handleImageChange",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "image",
-              "description": "The image source to use for the avatar.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "label",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "initials",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "loading",
-              "description": "Indicates how the browser should load the image.",
-              "value": {
-                "type": "'eager' | 'lazy'"
-              }
-            },
-            {
-              "name": "shape",
-              "description": "The shape of the avatar.",
-              "value": {
-                "type": "'circle' | 'square' | 'rounded'"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-badge",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/badge",
-          "js": {
-            "properties": [
-              {
-                "name": "variant",
-                "description": "The badge's theme variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
-                "value": {
-                  "type": "boolean"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The badge's theme variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
         },
         {
           "name": "sl-breadcrumb",
@@ -1270,21 +1270,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "sl-card",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/card",
-          "js": {
-            "properties": [
-              {
-                "name": "hasSlotController",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": []
         },
         {
           "description": "A controller that repeatedly calls the specified callback with the provided interval time.\nThe timer is automatically paused while the user is interacting with the component.",
@@ -1967,6 +1952,21 @@
               }
             }
           ]
+        },
+        {
+          "name": "sl-card",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/card",
+          "js": {
+            "properties": [
+              {
+                "name": "hasSlotController",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": []
         },
         {
           "name": "sl-color-picker",
@@ -3155,64 +3155,6 @@
           ]
         },
         {
-          "name": "sl-format-bytes",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/format-bytes",
-          "js": {
-            "properties": [
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "value",
-                "description": "The number to format in bytes.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "unit",
-                "description": "The type of unit to display.",
-                "value": {
-                  "type": "'byte' | 'bit'"
-                }
-              },
-              {
-                "name": "display",
-                "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-                "value": {
-                  "type": "'long' | 'short' | 'narrow'"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "value",
-              "description": "The number to format in bytes.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "unit",
-              "description": "The type of unit to display.",
-              "value": {
-                "type": "'byte' | 'bit'"
-              }
-            },
-            {
-              "name": "display",
-              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-              "value": {
-                "type": "'long' | 'short' | 'narrow'"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-format-date",
           "description": "",
           "doc-url": "https://shoelace.style/components/format-date",
@@ -3392,6 +3334,64 @@
               "description": "The format for displaying the hour.",
               "value": {
                 "type": "'auto' | '12' | '24'"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-format-bytes",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/format-bytes",
+          "js": {
+            "properties": [
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "value",
+                "description": "The number to format in bytes.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "unit",
+                "description": "The type of unit to display.",
+                "value": {
+                  "type": "'byte' | 'bit'"
+                }
+              },
+              {
+                "name": "display",
+                "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+                "value": {
+                  "type": "'long' | 'short' | 'narrow'"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The number to format in bytes.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "unit",
+              "description": "The type of unit to display.",
+              "value": {
+                "type": "'byte' | 'bit'"
+              }
+            },
+            {
+              "name": "display",
+              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+              "value": {
+                "type": "'long' | 'short' | 'narrow'"
               }
             }
           ]
@@ -4691,6 +4691,16 @@
           "attributes": []
         },
         {
+          "name": "sl-menu-label",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/menu-label",
+          "js": {
+            "properties": [],
+            "events": []
+          },
+          "attributes": []
+        },
+        {
           "name": "sl-menu-item",
           "description": "",
           "doc-url": "https://shoelace.style/components/menu-item",
@@ -4800,16 +4810,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "sl-menu-label",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/menu-label",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
         },
         {
           "name": "sl-mutation-observer",
@@ -4932,109 +4932,6 @@
             {
               "name": "disabled",
               "description": "Disables the observer.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-option",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/option",
-          "js": {
-            "properties": [
-              {
-                "name": "cachedTextLabel",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "current",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "selected",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "hasHover",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "value",
-                "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "disabled",
-                "description": "Draws the option in a disabled state, preventing selection.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleDefaultSlotChange",
-                "value": {}
-              },
-              {
-                "name": "handleMouseEnter",
-                "value": {}
-              },
-              {
-                "name": "handleMouseLeave",
-                "value": {}
-              },
-              {
-                "name": "handleDisabledChange",
-                "value": {}
-              },
-              {
-                "name": "handleSelectedChange",
-                "value": {}
-              },
-              {
-                "name": "handleValueChange",
-                "value": {}
-              },
-              {
-                "name": "getTextLabel",
-                "description": "Returns a plain text label based on the option's content.",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "value",
-              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "disabled",
-              "description": "Draws the option in a disabled state, preventing selection.",
               "value": {
                 "type": "boolean"
               }
@@ -5390,6 +5287,109 @@
               "description": "The amount of padding, in pixels, to exceed before the auto-size behavior will occur.",
               "value": {
                 "type": "number"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-option",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/option",
+          "js": {
+            "properties": [
+              {
+                "name": "cachedTextLabel",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "current",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "selected",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "hasHover",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "value",
+                "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "disabled",
+                "description": "Draws the option in a disabled state, preventing selection.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleDefaultSlotChange",
+                "value": {}
+              },
+              {
+                "name": "handleMouseEnter",
+                "value": {}
+              },
+              {
+                "name": "handleMouseLeave",
+                "value": {}
+              },
+              {
+                "name": "handleDisabledChange",
+                "value": {}
+              },
+              {
+                "name": "handleSelectedChange",
+                "value": {}
+              },
+              {
+                "name": "handleValueChange",
+                "value": {}
+              },
+              {
+                "name": "getTextLabel",
+                "description": "Returns a plain text label based on the option's content.",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Draws the option in a disabled state, preventing selection.",
+              "value": {
+                "type": "boolean"
               }
             }
           ]
@@ -7368,185 +7368,6 @@
           "attributes": []
         },
         {
-          "name": "sl-split-panel",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/split-panel",
-          "js": {
-            "properties": [
-              {
-                "name": "cachedPositionInPixels",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "resizeObserver",
-                "value": {
-                  "type": "ResizeObserver"
-                }
-              },
-              {
-                "name": "size",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "divider",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "position",
-                "description": "The current position of the divider from the primary panel's edge as a percentage 0-100. Defaults to 50% of the\ncontainer's initial size.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "positionInPixels",
-                "description": "The current position of the divider from the primary panel's edge in pixels.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "vertical",
-                "description": "Draws the split panel in a vertical orientation with the start and end panels stacked.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "disabled",
-                "description": "Disables resizing. Note that the position may still change as a result of resizing the host element.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "primary",
-                "description": "If no primary panel is designated, both panels will resize proportionally when the host element is resized. If a\nprimary panel is designated, it will maintain its size and the other panel will grow or shrink as needed when the\nhost element is resized.",
-                "value": {
-                  "type": "'start' | 'end' | undefined"
-                }
-              },
-              {
-                "name": "snap",
-                "description": "One or more space-separated values at which the divider should snap. Values can be in pixels or percentages, e.g.\n`\"100px 50%\"`.",
-                "value": {
-                  "type": "string | undefined"
-                }
-              },
-              {
-                "name": "snapThreshold",
-                "description": "How close the divider must be to a snap point until snapping occurs.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "detectSize",
-                "value": {}
-              },
-              {
-                "name": "percentageToPixels",
-                "value": {}
-              },
-              {
-                "name": "pixelsToPercentage",
-                "value": {}
-              },
-              {
-                "name": "handleDrag",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleResize",
-                "value": {}
-              },
-              {
-                "name": "handlePositionChange",
-                "value": {}
-              },
-              {
-                "name": "handlePositionInPixelsChange",
-                "value": {}
-              },
-              {
-                "name": "handleVerticalChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-reposition",
-                "description": "Emitted when the divider's position changes."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "position",
-              "description": "The current position of the divider from the primary panel's edge as a percentage 0-100. Defaults to 50% of the\ncontainer's initial size.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "position-in-pixels",
-              "description": "The current position of the divider from the primary panel's edge in pixels.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "vertical",
-              "description": "Draws the split panel in a vertical orientation with the start and end panels stacked.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "disabled",
-              "description": "Disables resizing. Note that the position may still change as a result of resizing the host element.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "primary",
-              "description": "If no primary panel is designated, both panels will resize proportionally when the host element is resized. If a\nprimary panel is designated, it will maintain its size and the other panel will grow or shrink as needed when the\nhost element is resized.",
-              "value": {
-                "type": "'start' | 'end' | undefined"
-              }
-            },
-            {
-              "name": "snap",
-              "description": "One or more space-separated values at which the divider should snap. Values can be in pixels or percentages, e.g.\n`\"100px 50%\"`.",
-              "value": {
-                "type": "string | undefined"
-              }
-            },
-            {
-              "name": "snap-threshold",
-              "description": "How close the divider must be to a snap point until snapping occurs.",
-              "value": {
-                "type": "number"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-switch",
           "description": "",
           "doc-url": "https://shoelace.style/components/switch",
@@ -7785,6 +7606,185 @@
               "description": "Makes the switch a required field.",
               "value": {
                 "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-split-panel",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/split-panel",
+          "js": {
+            "properties": [
+              {
+                "name": "cachedPositionInPixels",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "resizeObserver",
+                "value": {
+                  "type": "ResizeObserver"
+                }
+              },
+              {
+                "name": "size",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "divider",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "position",
+                "description": "The current position of the divider from the primary panel's edge as a percentage 0-100. Defaults to 50% of the\ncontainer's initial size.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "positionInPixels",
+                "description": "The current position of the divider from the primary panel's edge in pixels.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "vertical",
+                "description": "Draws the split panel in a vertical orientation with the start and end panels stacked.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "disabled",
+                "description": "Disables resizing. Note that the position may still change as a result of resizing the host element.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "primary",
+                "description": "If no primary panel is designated, both panels will resize proportionally when the host element is resized. If a\nprimary panel is designated, it will maintain its size and the other panel will grow or shrink as needed when the\nhost element is resized.",
+                "value": {
+                  "type": "'start' | 'end' | undefined"
+                }
+              },
+              {
+                "name": "snap",
+                "description": "One or more space-separated values at which the divider should snap. Values can be in pixels or percentages, e.g.\n`\"100px 50%\"`.",
+                "value": {
+                  "type": "string | undefined"
+                }
+              },
+              {
+                "name": "snapThreshold",
+                "description": "How close the divider must be to a snap point until snapping occurs.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "detectSize",
+                "value": {}
+              },
+              {
+                "name": "percentageToPixels",
+                "value": {}
+              },
+              {
+                "name": "pixelsToPercentage",
+                "value": {}
+              },
+              {
+                "name": "handleDrag",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleResize",
+                "value": {}
+              },
+              {
+                "name": "handlePositionChange",
+                "value": {}
+              },
+              {
+                "name": "handlePositionInPixelsChange",
+                "value": {}
+              },
+              {
+                "name": "handleVerticalChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-reposition",
+                "description": "Emitted when the divider's position changes."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "position",
+              "description": "The current position of the divider from the primary panel's edge as a percentage 0-100. Defaults to 50% of the\ncontainer's initial size.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "position-in-pixels",
+              "description": "The current position of the divider from the primary panel's edge in pixels.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "vertical",
+              "description": "Draws the split panel in a vertical orientation with the start and end panels stacked.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Disables resizing. Note that the position may still change as a result of resizing the host element.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "primary",
+              "description": "If no primary panel is designated, both panels will resize proportionally when the host element is resized. If a\nprimary panel is designated, it will maintain its size and the other panel will grow or shrink as needed when the\nhost element is resized.",
+              "value": {
+                "type": "'start' | 'end' | undefined"
+              }
+            },
+            {
+              "name": "snap",
+              "description": "One or more space-separated values at which the divider should snap. Values can be in pixels or percentages, e.g.\n`\"100px 50%\"`.",
+              "value": {
+                "type": "string | undefined"
+              }
+            },
+            {
+              "name": "snap-threshold",
+              "description": "How close the divider must be to a snap point until snapping occurs.",
+              "value": {
+                "type": "number"
               }
             }
           ]
@@ -8089,60 +8089,6 @@
           ]
         },
         {
-          "name": "sl-tab-panel",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/tab-panel",
-          "js": {
-            "properties": [
-              {
-                "name": "attrId",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "componentId",
-                "value": {}
-              },
-              {
-                "name": "name",
-                "description": "The tab panel's name.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "active",
-                "description": "When true, the tab panel will be shown.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleActiveChange",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "name",
-              "description": "The tab panel's name.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "active",
-              "description": "When true, the tab panel will be shown.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-tag",
           "description": "",
           "doc-url": "https://shoelace.style/components/tag",
@@ -8217,6 +8163,60 @@
             {
               "name": "removable",
               "description": "Makes the tag removable and shows a remove button.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-tab-panel",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/tab-panel",
+          "js": {
+            "properties": [
+              {
+                "name": "attrId",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "componentId",
+                "value": {}
+              },
+              {
+                "name": "name",
+                "description": "The tab panel's name.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "active",
+                "description": "When true, the tab panel will be shown.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleActiveChange",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "name",
+              "description": "The tab panel's name.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "active",
+              "description": "When true, the tab panel will be shown.",
               "value": {
                 "type": "boolean"
               }

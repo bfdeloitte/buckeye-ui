@@ -1,9 +1,9 @@
 {
-  "name": "@shoelace-style/shoelace",
-  "description": "A forward-thinking library of web components.",
-  "version": "2.4.0",
-  "homepage": "https://github.com/shoelace-style/shoelace",
-  "author": "Cory LaViska",
+  "name": "iop-ui",
+  "description": "An Ohioan library of web components.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bfdeloitte/iop-ui",
+  "author": "Brandon Fearing",
   "license": "MIT",
   "customElements": "dist/custom-elements.json",
   "web-types": "dist/web-types.json",
@@ -32,14 +32,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shoelace-style/shoelace.git"
+    "url": "git+https://github.com/bfdeloitte/iop-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/shoelace-style/shoelace/issues"
+    "url": "https://github.com/bfdeloitte/iop-ui/issues"
   },
   "funding": {
     "type": "individual",
-    "url": "https://github.com/sponsors/claviska"
+    "url": "https://github.com/sponsors/bfdeloitte"
   },
   "scripts": {
     "start": "node scripts/build.js --bundle --serve",

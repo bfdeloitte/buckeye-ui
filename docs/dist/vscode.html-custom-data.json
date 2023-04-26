@@ -2,90 +2,6 @@
   "version": 1.1,
   "tags": [
     {
-      "name": "sl-animation",
-      "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-cancel** - Emitted when the animation is canceled.\n- **sl-finish** - Emitted when the animation finishes.\n- **sl-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-          "values": []
-        },
-        {
-          "name": "delay",
-          "description": "The number of milliseconds to delay the start of the animation.",
-          "values": []
-        },
-        {
-          "name": "direction",
-          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-          "values": [{ "name": "PlaybackDirection" }]
-        },
-        {
-          "name": "duration",
-          "description": "The number of milliseconds each iteration of the animation takes to complete.",
-          "values": []
-        },
-        {
-          "name": "easing",
-          "description": "The easing function to use for the animation. This can be a Shoelace easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-          "values": []
-        },
-        {
-          "name": "end-delay",
-          "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-          "values": []
-        },
-        {
-          "name": "fill",
-          "description": "Sets how the animation applies styles to its target before and after its execution.",
-          "values": [{ "name": "FillMode" }]
-        },
-        {
-          "name": "iterations",
-          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-          "values": []
-        },
-        {
-          "name": "iteration-start",
-          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-          "values": []
-        },
-        {
-          "name": "playback-rate",
-          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-alert",
       "description": "Alerts are used to display important messages inline or as toast notifications.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-show** - Emitted when the alert opens.\n- **sl-after-show** - Emitted after the alert opens and all animations are complete.\n- **sl-hide** - Emitted when the alert closes.\n- **sl-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<sl-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<sl-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
       "attributes": [
@@ -113,6 +29,28 @@
         {
           "name": "duration",
           "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-load** - Emitted when the image loads successfully.\n- **sl-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<sl-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
           "values": []
         }
       ],
@@ -177,6 +115,68 @@
         {
           "name": "pulse",
           "description": "Makes the badge pulsate to draw attention.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-animation",
+      "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-cancel** - Emitted when the animation is canceled.\n- **sl-finish** - Emitted when the animation finishes.\n- **sl-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+          "values": []
+        },
+        {
+          "name": "delay",
+          "description": "The number of milliseconds to delay the start of the animation.",
+          "values": []
+        },
+        {
+          "name": "direction",
+          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+          "values": [{ "name": "PlaybackDirection" }]
+        },
+        {
+          "name": "duration",
+          "description": "The number of milliseconds each iteration of the animation takes to complete.",
+          "values": []
+        },
+        {
+          "name": "easing",
+          "description": "The easing function to use for the animation. This can be a Shoelace easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+          "values": []
+        },
+        {
+          "name": "end-delay",
+          "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+          "values": []
+        },
+        {
+          "name": "fill",
+          "description": "Sets how the animation applies styles to its target before and after its execution.",
+          "values": [{ "name": "FillMode" }]
+        },
+        {
+          "name": "iterations",
+          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+          "values": []
+        },
+        {
+          "name": "iteration-start",
+          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+          "values": []
+        },
+        {
+          "name": "playback-rate",
+          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
           "values": []
         }
       ],
@@ -377,12 +377,6 @@
       "references": []
     },
     {
-      "name": "sl-card",
-      "description": "Cards can be used to group related subjects in a container.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
-      "attributes": [],
-      "references": []
-    },
-    {
       "name": "sl-carousel",
       "description": "Carousels display an arbitrary number of content slides along a horizontal or vertical axis.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-slide-change** - Emitted when the active slide changes.\n\n### **Methods:**\n - **previous(behavior: _ScrollBehavior_)** - Move the carousel backward by `slides-per-move` slides.\n- **next(behavior: _ScrollBehavior_)** - Move the carousel forward by `slides-per-move` slides.\n- **goToSlide(index: _number_, behavior: _ScrollBehavior_)** - Scrolls the carousel to the slide specified by `index`.\n\n### **Slots:**\n - _default_ - The carousel's main content, one or more `<sl-carousel-item>` elements.\n- **next-icon** - Optional next icon to use instead of the default. Works best with `<sl-icon>`.\n- **previous-icon** - Optional previous icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--slide-gap** - The space between each slide. _(default: undefined)_\n- **--aspect-ratio** - The aspect ratio of each slide. _(default: undefined)_\n- **--scroll-hint** - The amount of padding to apply to the scroll area, allowing adjacent slides to become partially visible as a scroll hint. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The carousel's internal wrapper.\n- **scroll-container** - The scroll container that wraps the slides.\n- **pagination** - The pagination indicators wrapper.\n- **pagination-item** - The pagination indicator.\n- **pagination-item--active** - Applied when the item is active.\n- **navigation** - The navigation wrapper.\n- **navigation-button** - The navigation button.\n- **navigation-button--previous** - Applied to the previous button.\n- **navigation-button--next** - Applied to the next button.",
       "attributes": [
@@ -490,6 +484,12 @@
           "values": []
         }
       ],
+      "references": []
+    },
+    {
+      "name": "sl-card",
+      "description": "Cards can be used to group related subjects in a container.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
+      "attributes": [],
       "references": []
     },
     {
@@ -728,32 +728,6 @@
       "references": []
     },
     {
-      "name": "sl-format-bytes",
-      "description": "Formats a number as a human readable bytes value.\n\n\n---\n\n\n",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The number to format in bytes.",
-          "values": []
-        },
-        {
-          "name": "unit",
-          "description": "The type of unit to display.",
-          "values": [{ "name": "byte" }, { "name": "bit" }]
-        },
-        {
-          "name": "display",
-          "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-          "values": [
-            { "name": "long" },
-            { "name": "short" },
-            { "name": "narrow" }
-          ]
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-format-date",
       "description": "Formats a date/time using the specified locale and options.\n\n\n---\n\n\n",
       "attributes": [
@@ -830,6 +804,32 @@
           "name": "hour-format",
           "description": "The format for displaying the hour.",
           "values": [{ "name": "auto" }, { "name": "12" }, { "name": "24" }]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-format-bytes",
+      "description": "Formats a number as a human readable bytes value.\n\n\n---\n\n\n",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The number to format in bytes.",
+          "values": []
+        },
+        {
+          "name": "unit",
+          "description": "The type of unit to display.",
+          "values": [{ "name": "byte" }, { "name": "bit" }]
+        },
+        {
+          "name": "display",
+          "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+          "values": [
+            { "name": "long" },
+            { "name": "short" },
+            { "name": "narrow" }
+          ]
         }
       ],
       "references": []
@@ -1222,6 +1222,12 @@
       "references": []
     },
     {
+      "name": "sl-menu-label",
+      "description": "Menu labels are used to describe a group of menu items.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The menu label's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [],
+      "references": []
+    },
+    {
       "name": "sl-menu-item",
       "description": "Menu items provide options for the user to pick from in a menu.\n\n\n---\n\n\n\n\n### **Methods:**\n - **getTextLabel()** - Returns a text label based on the contents of the menu item's default slot.\n\n### **Slots:**\n - _default_ - The menu item's label.\n- **prefix** - Used to prepend an icon or similar element to the menu item.\n- **suffix** - Used to append an icon or similar element to the menu item.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **checked-icon** - The checked icon, which is only visible when the menu item is checked.\n- **prefix** - The prefix container.\n- **label** - The menu item label.\n- **suffix** - The suffix container.",
       "attributes": [
@@ -1246,12 +1252,6 @@
           "values": []
         }
       ],
-      "references": []
-    },
-    {
-      "name": "sl-menu-label",
-      "description": "Menu labels are used to describe a group of menu items.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The menu label's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [],
       "references": []
     },
     {
@@ -1286,23 +1286,6 @@
         {
           "name": "disabled",
           "description": "Disables the observer.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-option",
-      "description": "Options define the selectable items within various form controls such as [select](/components/select).\n\n\n---\n\n\n\n\n### **Methods:**\n - **getTextLabel()** - Returns a plain text label based on the option's content.\n\n### **Slots:**\n - _default_ - The option's label.\n- **prefix** - Used to prepend an icon or similar element to the menu item.\n- **suffix** - Used to append an icon or similar element to the menu item.\n\n### **CSS Parts:**\n - **checked-icon** - The checked icon, an `<sl-icon>` element.\n- **base** - The component's base wrapper.\n- **label** - The option's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Draws the option in a disabled state, preventing selection.",
           "values": []
         }
       ],
@@ -1442,6 +1425,23 @@
         {
           "name": "auto-size-padding",
           "description": "The amount of padding, in pixels, to exceed before the auto-size behavior will occur.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-option",
+      "description": "Options define the selectable items within various form controls such as [select](/components/select).\n\n\n---\n\n\n\n\n### **Methods:**\n - **getTextLabel()** - Returns a plain text label based on the option's content.\n\n### **Slots:**\n - _default_ - The option's label.\n- **prefix** - Used to prepend an icon or similar element to the menu item.\n- **suffix** - Used to append an icon or similar element to the menu item.\n\n### **CSS Parts:**\n - **checked-icon** - The checked icon, an `<sl-icon>` element.\n- **base** - The component's base wrapper.\n- **label** - The option's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Draws the option in a disabled state, preventing selection.",
           "values": []
         }
       ],
@@ -1898,48 +1898,6 @@
       "references": []
     },
     {
-      "name": "sl-split-panel",
-      "description": "Split panels display two adjacent panels, allowing the user to reposition them.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-reposition** - Emitted when the divider's position changes.\n\n### **Slots:**\n - **start** - Content to place in the start panel.\n- **end** - Content to place in the end panel.\n- **divider** - The divider. Useful for slotting in a custom icon that renders as a handle.\n\n### **CSS Properties:**\n - **--divider-width** - The width of the visible divider. _(default: 4px)_\n- **--divider-hit-area** - The invisible region around the divider where dragging can occur. This is usually wider than the divider to facilitate easier dragging. _(default: 12px)_\n- **--min** - The minimum allowed size of the primary panel. _(default: 0)_\n- **--max** - The maximum allowed size of the primary panel. _(default: 100%)_\n\n### **CSS Parts:**\n - **start** - The start panel.\n- **end** - The end panel.\n- **panel** - Targets both the start and end panels.\n- **divider** - The divider that separates the start and end panels.",
-      "attributes": [
-        {
-          "name": "position",
-          "description": "The current position of the divider from the primary panel's edge as a percentage 0-100. Defaults to 50% of the\ncontainer's initial size.",
-          "values": []
-        },
-        {
-          "name": "position-in-pixels",
-          "description": "The current position of the divider from the primary panel's edge in pixels.",
-          "values": []
-        },
-        {
-          "name": "vertical",
-          "description": "Draws the split panel in a vertical orientation with the start and end panels stacked.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Disables resizing. Note that the position may still change as a result of resizing the host element.",
-          "values": []
-        },
-        {
-          "name": "primary",
-          "description": "If no primary panel is designated, both panels will resize proportionally when the host element is resized. If a\nprimary panel is designated, it will maintain its size and the other panel will grow or shrink as needed when the\nhost element is resized.",
-          "values": [{ "name": "start" }, { "name": "end" }]
-        },
-        {
-          "name": "snap",
-          "description": "One or more space-separated values at which the divider should snap. Values can be in pixels or percentages, e.g.\n`\"100px 50%\"`.",
-          "values": []
-        },
-        {
-          "name": "snap-threshold",
-          "description": "How close the divider must be to a snap point until snapping occurs.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-switch",
       "description": "Switches allow the user to toggle an option on or off.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-blur** - Emitted when the control loses focus.\n- **sl-change** - Emitted when the control's checked state changes.\n- **sl-input** - Emitted when the control receives input.\n- **sl-focus** - Emitted when the control gains focus.\n- **sl-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **click()** - Simulates a click on the switch.\n- **focus(options: _FocusOptions_)** - Sets focus on the switch.\n- **blur()** - Removes focus from the switch.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - _default_ - The switch's label.\n\n### **CSS Properties:**\n - **--width** - The width of the switch. _(default: undefined)_\n- **--height** - The height of the switch. _(default: undefined)_\n- **--thumb-size** - The size of the thumb. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **control** - The control that houses the switch's thumb.\n- **thumb** - The switch's thumb.\n- **label** - The switch's label.",
       "attributes": [
@@ -1981,6 +1939,48 @@
         {
           "name": "required",
           "description": "Makes the switch a required field.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-split-panel",
+      "description": "Split panels display two adjacent panels, allowing the user to reposition them.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-reposition** - Emitted when the divider's position changes.\n\n### **Slots:**\n - **start** - Content to place in the start panel.\n- **end** - Content to place in the end panel.\n- **divider** - The divider. Useful for slotting in a custom icon that renders as a handle.\n\n### **CSS Properties:**\n - **--divider-width** - The width of the visible divider. _(default: 4px)_\n- **--divider-hit-area** - The invisible region around the divider where dragging can occur. This is usually wider than the divider to facilitate easier dragging. _(default: 12px)_\n- **--min** - The minimum allowed size of the primary panel. _(default: 0)_\n- **--max** - The maximum allowed size of the primary panel. _(default: 100%)_\n\n### **CSS Parts:**\n - **start** - The start panel.\n- **end** - The end panel.\n- **panel** - Targets both the start and end panels.\n- **divider** - The divider that separates the start and end panels.",
+      "attributes": [
+        {
+          "name": "position",
+          "description": "The current position of the divider from the primary panel's edge as a percentage 0-100. Defaults to 50% of the\ncontainer's initial size.",
+          "values": []
+        },
+        {
+          "name": "position-in-pixels",
+          "description": "The current position of the divider from the primary panel's edge in pixels.",
+          "values": []
+        },
+        {
+          "name": "vertical",
+          "description": "Draws the split panel in a vertical orientation with the start and end panels stacked.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Disables resizing. Note that the position may still change as a result of resizing the host element.",
+          "values": []
+        },
+        {
+          "name": "primary",
+          "description": "If no primary panel is designated, both panels will resize proportionally when the host element is resized. If a\nprimary panel is designated, it will maintain its size and the other panel will grow or shrink as needed when the\nhost element is resized.",
+          "values": [{ "name": "start" }, { "name": "end" }]
+        },
+        {
+          "name": "snap",
+          "description": "One or more space-separated values at which the divider should snap. Values can be in pixels or percentages, e.g.\n`\"100px 50%\"`.",
+          "values": []
+        },
+        {
+          "name": "snap-threshold",
+          "description": "How close the divider must be to a snap point until snapping occurs.",
           "values": []
         }
       ],
@@ -2041,23 +2041,6 @@
       "references": []
     },
     {
-      "name": "sl-tab-panel",
-      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The tab panel's name.",
-          "values": []
-        },
-        {
-          "name": "active",
-          "description": "When true, the tab panel will be shown.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-tag",
       "description": "Tags are used as labels to organize things or to indicate a selection.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-remove** - Emitted when the remove button is activated.\n\n### **Slots:**\n - _default_ - The tag's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **content** - The tag's content.\n- **remove-button** - The tag's remove button, an `<sl-icon-button>`.\n- **remove-button__base** - The remove button's exported `base` part.",
       "attributes": [
@@ -2090,6 +2073,23 @@
         {
           "name": "removable",
           "description": "Makes the tag removable and shows a remove button.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-tab-panel",
+      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The tab panel's name.",
+          "values": []
+        },
+        {
+          "name": "active",
+          "description": "When true, the tab panel will be shown.",
           "values": []
         }
       ],
