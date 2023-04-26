@@ -75,8 +75,8 @@ It's up to you to make the source files available to your app. One way to do thi
 Once you've done that, add the following tags to your page. Make sure to update `href` and `src` so they point to the route you created.
 
 ```html
-<link rel="stylesheet" href="/shoelace/dist/themes/light.css" />
-<script type="module" src="/shoelace/dist/buckeye.js"></script>
+<link rel="stylesheet" href="/buckeye-ui/dist/themes/light.css" />
+<script type="module" src="/buckeye-ui/dist/buckeye.js"></script>
 ```
 
 Alternatively, [you can use a bundler](#bundling).
@@ -85,19 +85,19 @@ Alternatively, [you can use a bundler](#bundling).
 
 ## Setting the Base Path
 
-Some components rely on assets (icons, images, etc.) and BuckeyeUI needs to know where they're located. For convenience, BuckeyeUI will try to auto-detect the correct location based on the script you've loaded it from. This assumes assets are colocated with `shoelace.js` or `shoelace-autoloader.js` and will "just work" for most users.
+Some components rely on assets (icons, images, etc.) and BuckeyeUI needs to know where they're located. For convenience, BuckeyeUI will try to auto-detect the correct location based on the script you've loaded it from. This assumes assets are colocated with `buckeye.js` or `buckeye-autoloader.js` and will "just work" for most users.
 
 However, if you're [cherry picking](#cherry-picking) or [bundling](#bundling) BuckeyeUI, you'll need to set the base path. You can do this one of two ways.
 
 ```html
-<!-- Option 1: the data-shoelace attribute -->
-<script src="bundle.js" data-shoelace="/path/to/shoelace/dist"></script>
+<!-- Option 1: the data-buckeye attribute -->
+<script src="bundle.js" data-buckeye="/path/to/buckeye-ui/dist"></script>
 
 <!-- Option 2: the setBasePath() method -->
 <script src="bundle.js"></script>
 <script type="module">
   import { setBasePath } from 'buckeye-ui/dist/utilities/base-path.js';
-  setBasePath('/path/to/shoelace/dist');
+  setBasePath('/path/to/buckeye-ui/dist');
 </script>
 ```
 
@@ -110,9 +110,9 @@ Cherry picking can be done from [the CDN](#cdn-installation-easiest) or your [lo
 Here's an example that loads only the button component. Again, if you're not using a module resolver, you'll need to adjust the path to point to the folder BuckeyeUI is in.
 
 ```html
-<link rel="stylesheet" href="/path/to/shoelace/dist/themes/light.css" />
+<link rel="stylesheet" href="/path/to/buckeye-ui/dist/themes/light.css" />
 
-<script type="module" data-shoelace="/path/to/shoelace/dist">
+<script type="module" data-buckeye="/path/to/buckeye-ui/dist">
   import 'buckeye-ui/dist/components/button/button.js';
 
   // <sl-button> is ready to use!
@@ -121,7 +121,7 @@ Here's an example that loads only the button component. Again, if you're not usi
 
 You can copy and paste the code to import a component from the "Importing" section of the component's documentation. Note that some components have dependencies that are automatically imported when you cherry pick. If a component has dependencies, they will be listed in the "Dependencies" section of its docs.
 
-!> Never cherry pick components or utilities from `shoelace.js` as this will cause the browser to load the entire library. Instead, cherry pick from specific modules as shown above.
+!> Never cherry pick components or utilities from `buckeye.js` as this will cause the browser to load the entire library. Instead, cherry pick from specific modules as shown above.
 
 !> You will see files named `chunk.[hash].js` in the `chunks` directory. Never import these files directly, as they are generated and change from version to version.
 
@@ -151,7 +151,7 @@ import 'buckeye-ui/dist/components/rating/rating.js';
 import { setBasePath } from 'buckeye-ui/dist/utilities/base-path.js';
 
 // Set the base path to the folder you copied BuckeyeUI's assets to
-setBasePath('/path/to/shoelace/dist');
+setBasePath('/path/to/buckeye-ui/dist');
 
 // <sl-button>, <sl-icon>, <sl-input>, and <sl-rating> are ready to use!
 ```
