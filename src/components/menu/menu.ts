@@ -1,6 +1,6 @@
 import { customElement, query } from 'lit/decorators.js';
 import { html } from 'lit';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './menu.styles';
 import type { CSSResultGroup } from 'lit';
 import type SlMenuItem from '../menu-item/menu-item';
@@ -10,7 +10,7 @@ export interface MenuSelectEventDetail {
 
 /**
  * @summary Menus provide a list of options for the user to choose from.
- * @documentation https://shoelace.style/components/menu
+ * @documentation https://buckeyeui.com/components/menu
  * @status stable
  * @since 2.0
  *

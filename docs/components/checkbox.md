@@ -7,7 +7,7 @@
 ```
 
 ```jsx react
-import { SlCheckbox } from 'iop-ui/dist/react';
+import { SlCheckbox } from 'buckeye-ui/dist/react';
 
 const App = () => <SlCheckbox>Checkbox</SlCheckbox>;
 ```
@@ -25,7 +25,7 @@ Use the `checked` attribute to activate the checkbox.
 ```
 
 ```jsx react
-import { SlCheckbox } from 'iop-ui/dist/react';
+import { SlCheckbox } from 'buckeye-ui/dist/react';
 
 const App = () => <SlCheckbox checked>Checked</SlCheckbox>;
 ```
@@ -39,7 +39,7 @@ Use the `indeterminate` attribute to make the checkbox indeterminate.
 ```
 
 ```jsx react
-import { SlCheckbox } from 'iop-ui/dist/react';
+import { SlCheckbox } from 'buckeye-ui/dist/react';
 
 const App = () => <SlCheckbox indeterminate>Indeterminate</SlCheckbox>;
 ```
@@ -53,7 +53,7 @@ Use the `disabled` attribute to disable the checkbox.
 ```
 
 ```jsx react
-import { SlCheckbox } from 'iop-ui/dist/react';
+import { SlCheckbox } from 'buckeye-ui/dist/react';
 
 const App = () => <SlCheckbox disabled>Disabled</SlCheckbox>;
 ```
@@ -71,7 +71,7 @@ Use the `size` attribute to change a checkbox's size.
 ```
 
 ```jsx react
-import { SlCheckbox } from 'iop-ui/dist/react';
+import { SlCheckbox } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
@@ -120,7 +120,7 @@ Use the `setCustomValidity()` method to set a custom validation message. This wi
 
 ```jsx react
 import { useEffect, useRef } from 'react';
-import { SlButton, SlCheckbox } from 'iop-ui/dist/react';
+import { SlButton, SlCheckbox } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const checkbox = useRef(null);

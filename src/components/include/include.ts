@@ -2,13 +2,13 @@ import { customElement, property } from 'lit/decorators.js';
 import { html } from 'lit';
 import { requestInclude } from './request';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './include.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Includes give you the power to embed external HTML files into the page.
- * @documentation https://shoelace.style/components/include
+ * @documentation https://buckeyeui.com/components/include
  * @status stable
  * @since 2.0
  *

@@ -4,17 +4,17 @@
 
 ```html preview
 <sl-animated-image
-  src="https://shoelace.style/assets/images/walk.gif"
+  src="https://buckeyeui.com/assets/images/walk.gif"
   alt="Animation of untied shoes walking on pavement"
 ></sl-animated-image>
 ```
 
 ```jsx react
-import { SlAnimatedImage } from 'iop-ui/dist/react';
+import { SlAnimatedImage } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <SlAnimatedImage
-    src="https://shoelace.style/assets/images/walk.gif"
+    src="https://buckeyeui.com/assets/images/walk.gif"
     alt="Animation of untied shoes walking on pavement"
   />
 );
@@ -30,16 +30,16 @@ Both GIF and WEBP images are supported.
 
 ```html preview
 <sl-animated-image
-  src="https://shoelace.style/assets/images/tie.webp"
+  src="https://buckeyeui.com/assets/images/tie.webp"
   alt="Animation of a shoe being tied"
 ></sl-animated-image>
 ```
 
 ```jsx react
-import { SlAnimatedImage } from 'iop-ui/dist/react';
+import { SlAnimatedImage } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlAnimatedImage src="https://shoelace.style/assets/images/tie.webp" alt="Animation of a shoe being tied" />
+  <SlAnimatedImage src="https://buckeyeui.com/assets/images/tie.webp" alt="Animation of a shoe being tied" />
 );
 ```
 
@@ -49,7 +49,7 @@ To set a custom size, apply a width and/or height to the host element.
 
 ```html preview
 <sl-animated-image
-  src="https://shoelace.style/assets/images/walk.gif"
+  src="https://buckeyeui.com/assets/images/walk.gif"
   alt="Animation of untied shoes walking on pavement"
   style="width: 150px; height: 200px;"
 >
@@ -57,11 +57,11 @@ To set a custom size, apply a width and/or height to the host element.
 ```
 
 ```jsx react
-import { SlAnimatedImage } from 'iop-ui/dist/react';
+import { SlAnimatedImage } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <SlAnimatedImage
-    src="https://shoelace.style/assets/images/walk.gif"
+    src="https://buckeyeui.com/assets/images/walk.gif"
     alt="Animation of untied shoes walking on pavement"
     style={{ width: '150px', height: '200px' }}
   />
@@ -74,7 +74,7 @@ You can change the appearance and location of the control box by targeting the `
 
 ```html preview
 <sl-animated-image
-  src="https://shoelace.style/assets/images/walk.gif"
+  src="https://buckeyeui.com/assets/images/walk.gif"
   alt="Animation of untied shoes walking on pavement"
   class="animated-image-custom-control-box"
 ></sl-animated-image>
@@ -93,7 +93,7 @@ You can change the appearance and location of the control box by targeting the `
 ```
 
 ```jsx react
-import { SlAnimatedImage } from 'iop-ui/dist/react';
+import { SlAnimatedImage } from 'buckeye-ui/dist/react';
 
 const css = `
   .animated-image-custom-control-box::part(control-box) {
@@ -111,7 +111,7 @@ const App = () => (
   <>
     <SlAnimatedImage
       className="animated-image-custom-control-box"
-      src="https://shoelace.style/assets/images/walk.gif"
+      src="https://buckeyeui.com/assets/images/walk.gif"
       alt="Animation of untied shoes walking on pavement"
     />
 

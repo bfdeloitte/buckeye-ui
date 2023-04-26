@@ -3,13 +3,13 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { html } from 'lit';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './radio.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Radios allow the user to select a single option from a group.
- * @documentation https://shoelace.style/components/radio
+ * @documentation https://buckeyeui.com/components/radio
  * @status stable
  * @since 2.0
  *

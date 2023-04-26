@@ -13,9 +13,9 @@ import { LocalizeController } from '../../utilities/localize';
 import { scrollIntoView } from 'src/internal/scroll';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './select.styles';
-import type { BuckeyeFormControl } from '../../internal/shoelace-element';
+import type { BuckeyeFormControl } from '../../internal/buckeye-element';
 import type { CSSResultGroup } from 'lit';
 import type SlOption from '../option/option';
 import type SlPopup from '../popup/popup';
@@ -23,7 +23,7 @@ import type SlRemoveEvent from '../../events/sl-remove';
 
 /**
  * @summary Selects allow you to choose items from a menu of predefined options.
- * @documentation https://shoelace.style/components/select
+ * @documentation https://buckeyeui.com/components/select
  * @status stable
  * @since 2.0
  *

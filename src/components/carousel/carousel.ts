@@ -10,7 +10,7 @@ import { prefersReducedMotion } from '../../internal/animate';
 import { range } from 'lit/directives/range.js';
 import { ScrollController } from './scroll-controller';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import SlCarouselItem from '../carousel-item/carousel-item';
 import styles from './carousel.styles';
 import type { CSSResultGroup } from 'lit';

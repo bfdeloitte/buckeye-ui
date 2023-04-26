@@ -10,13 +10,13 @@ import { live } from 'lit/directives/live.js';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
 import { when } from 'lit/directives/when.js';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './tree-item.styles';
 import type { CSSResultGroup, PropertyValueMap } from 'lit';
 
 /**
  * @summary A tree item serves as a hierarchical node that lives inside a [tree](/components/tree).
- * @documentation https://shoelace.style/components/tree-item
+ * @documentation https://buckeyeui.com/components/tree-item
  * @status stable
  * @since 2.0
  *

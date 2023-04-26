@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import type { BuckeyeFormControl } from '../shoelace-element';
+import type { BuckeyeFormControl } from '../buckeye-element';
 
 type CreateControlFn = () => Promise<BuckeyeFormControl>;
 

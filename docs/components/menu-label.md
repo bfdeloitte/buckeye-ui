@@ -17,7 +17,7 @@
 ```
 
 ```jsx react
-import { SlDivider, SlMenu, SlMenuLabel, SlMenuItem } from 'iop-ui/dist/react';
+import { SlDivider, SlMenu, SlMenuLabel, SlMenuItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <SlMenu style={{ maxWidth: '200px' }}>

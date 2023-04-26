@@ -2,14 +2,14 @@ import '../icon/icon';
 import { customElement, property, query } from 'lit/decorators.js';
 import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './breadcrumb.styles';
 import type { CSSResultGroup } from 'lit';
 import type SlBreadcrumbItem from '../breadcrumb-item/breadcrumb-item';
 
 /**
  * @summary Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
- * @documentation https://shoelace.style/components/breadcrumb
+ * @documentation https://buckeyeui.com/components/breadcrumb
  * @status stable
  * @since 2.0
  *

@@ -194,7 +194,7 @@ BuckeyeUI ships with a file called `vscode.html-custom-data.json` that can be us
 
 ```js
 {
-  "html.customData": ["./node_modules/iop-ui/dist/vscode.html-custom-data.json"]
+  "html.customData": ["./node_modules/buckeye-ui/dist/vscode.html-custom-data.json"]
 }
 ```
 
@@ -202,4 +202,4 @@ If `settings.json` already exists, simply add the above line to the root of the 
 
 ### Other Editors
 
-Most popular editors support custom code completion with a bit of configuration. Please [submit a feature request](https://github.com/shoelace-style/shoelace/issues/new/choose) for your editor of choice. PRs are also welcome!
+Most popular editors support custom code completion with a bit of configuration. Please [submit a feature request](https://github.com/bfdeloitte/buckeye-ui/issues/new/choose) for your editor of choice. PRs are also welcome!

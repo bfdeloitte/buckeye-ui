@@ -2,13 +2,13 @@ import '../icon/icon';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { html } from 'lit';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './animated-image.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.
- * @documentation https://shoelace.style/components/animated-image
+ * @documentation https://buckeyeui.com/components/animated-image
  * @status stable
  * @since 2.0
  *

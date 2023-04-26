@@ -36,7 +36,7 @@ QR codes are useful for providing small pieces of information to users who can q
 
 ```jsx react
 import { useState } from 'react';
-import { SlQrCode, SlInput } from 'iop-ui/dist/react';
+import { SlQrCode, SlInput } from 'buckeye-ui/dist/react';
 
 const css = `
   .qr-overview {
@@ -73,13 +73,13 @@ const App = () => {
 Use the `fill` and `background` attributes to modify the QR code's colors. You should always ensure good contrast for optimal compatibility with QR code scanners.
 
 ```html preview
-<sl-qr-code value="https://shoelace.style/" fill="deeppink" background="white"></sl-qr-code>
+<sl-qr-code value="https://buckeyeui.com/" fill="deeppink" background="white"></sl-qr-code>
 ```
 
 ```jsx react
-import { SlQrCode } from 'iop-ui/dist/react';
+import { SlQrCode } from 'buckeye-ui/dist/react';
 
-const App = () => <SlQrCode value="https://shoelace.style/" fill="deeppink" background="white" />;
+const App = () => <SlQrCode value="https://buckeyeui.com/" fill="deeppink" background="white" />;
 ```
 
 ### Size
@@ -87,13 +87,13 @@ const App = () => <SlQrCode value="https://shoelace.style/" fill="deeppink" back
 Use the `size` attribute to change the size of the QR code.
 
 ```html preview
-<sl-qr-code value="https://shoelace.style/" size="64"></sl-qr-code>
+<sl-qr-code value="https://buckeyeui.com/" size="64"></sl-qr-code>
 ```
 
 ```jsx react
-import { SlQrCode } from 'iop-ui/dist/react';
+import { SlQrCode } from 'buckeye-ui/dist/react';
 
-const App = () => <SlQrCode value="https://shoelace.style/" size="64" />;
+const App = () => <SlQrCode value="https://buckeyeui.com/" size="64" />;
 ```
 
 ### Radius
@@ -101,13 +101,13 @@ const App = () => <SlQrCode value="https://shoelace.style/" size="64" />;
 Create a rounded effect with the `radius` attribute.
 
 ```html preview
-<sl-qr-code value="https://shoelace.style/" radius="0.5"></sl-qr-code>
+<sl-qr-code value="https://buckeyeui.com/" radius="0.5"></sl-qr-code>
 ```
 
 ```jsx react
-import { SlQrCode } from 'iop-ui/dist/react';
+import { SlQrCode } from 'buckeye-ui/dist/react';
 
-const App = () => <SlQrCode value="https://shoelace.style/" radius="0.5" />;
+const App = () => <SlQrCode value="https://buckeyeui.com/" radius="0.5" />;
 ```
 
 ### Error Correction
@@ -116,10 +116,10 @@ QR codes can be rendered with various levels of [error correction](https://www.q
 
 ```html preview
 <div class="qr-error-correction">
-  <sl-qr-code value="https://shoelace.style/" error-correction="L"></sl-qr-code>
-  <sl-qr-code value="https://shoelace.style/" error-correction="M"></sl-qr-code>
-  <sl-qr-code value="https://shoelace.style/" error-correction="Q"></sl-qr-code>
-  <sl-qr-code value="https://shoelace.style/" error-correction="H"></sl-qr-code>
+  <sl-qr-code value="https://buckeyeui.com/" error-correction="L"></sl-qr-code>
+  <sl-qr-code value="https://buckeyeui.com/" error-correction="M"></sl-qr-code>
+  <sl-qr-code value="https://buckeyeui.com/" error-correction="Q"></sl-qr-code>
+  <sl-qr-code value="https://buckeyeui.com/" error-correction="H"></sl-qr-code>
 </div>
 
 <style>
@@ -132,7 +132,7 @@ QR codes can be rendered with various levels of [error correction](https://www.q
 ```
 
 ```jsx react
-import { SlQrCode } from 'iop-ui/dist/react';
+import { SlQrCode } from 'buckeye-ui/dist/react';
 
 const css = `
   .qr-error-correction {
@@ -146,10 +146,10 @@ const App = () => {
   return (
     <>
       <div className="qr-error-correction">
-        <SlQrCode value="https://shoelace.style/" error-correction="L" />
-        <SlQrCode value="https://shoelace.style/" error-correction="M" />
-        <SlQrCode value="https://shoelace.style/" error-correction="Q" />
-        <SlQrCode value="https://shoelace.style/" error-correction="H" />
+        <SlQrCode value="https://buckeyeui.com/" error-correction="L" />
+        <SlQrCode value="https://buckeyeui.com/" error-correction="M" />
+        <SlQrCode value="https://buckeyeui.com/" error-correction="Q" />
+        <SlQrCode value="https://buckeyeui.com/" error-correction="H" />
       </div>
 
       <style>{css}</style>

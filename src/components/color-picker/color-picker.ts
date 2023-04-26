@@ -16,9 +16,9 @@ import { LocalizeController } from '../../utilities/localize';
 import { styleMap } from 'lit/directives/style-map.js';
 import { TinyColor } from '@ctrl/tinycolor';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './color-picker.styles';
-import type { BuckeyeFormControl } from '../../internal/shoelace-element';
+import type { BuckeyeFormControl } from '../../internal/buckeye-element';
 import type { CSSResultGroup } from 'lit';
 import type SlChangeEvent from '../../events/sl-change';
 import type SlDropdown from '../dropdown/dropdown';
@@ -39,7 +39,7 @@ declare const EyeDropper: EyeDropperConstructor;
 
 /**
  * @summary Color pickers allow the user to select a color.
- * @documentation https://shoelace.style/components/color-picker
+ * @documentation https://buckeyeui.com/components/color-picker
  * @status stable
  * @since 2.0
  *

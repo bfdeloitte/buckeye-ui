@@ -1,12 +1,12 @@
 import { customElement, property } from 'lit/decorators.js';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './divider.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Dividers are used to visually separate or group elements.
- * @documentation https://shoelace.style/components/divider
+ * @documentation https://buckeyeui.com/components/divider
  * @status stable
  * @since 2.0
  *

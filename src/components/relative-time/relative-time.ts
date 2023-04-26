@@ -1,7 +1,7 @@
 import { customElement, property, state } from 'lit/decorators.js';
 import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 
 interface UnitConfig {
   max: number;
@@ -20,7 +20,7 @@ const availableUnits: UnitConfig[] = [
 
 /**
  * @summary Outputs a localized time phrase relative to the current date and time.
- * @documentation https://shoelace.style/components/relative-time
+ * @documentation https://buckeyeui.com/components/relative-time
  * @status stable
  * @since 2.0
  */

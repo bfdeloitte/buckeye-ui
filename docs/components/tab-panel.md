@@ -17,7 +17,7 @@
 ```
 
 ```jsx react
-import { SlTab, SlTabGroup, SlTabPanel } from 'iop-ui/dist/react';
+import { SlTab, SlTabGroup, SlTabPanel } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <SlTabGroup>

@@ -2,7 +2,7 @@
 
 This page explains how to integrate BuckeyeUI with a NextJS app.
 
-?> This is a community-maintained document. Please [ask the community](/resources/community) if you have questions about this integration. You can also [suggest improvements](https://github.com/shoelace-style/shoelace/blob/next/docs/tutorials/integrating-with-nextjs.md) to make it better.
+?> This is a community-maintained document. Please [ask the community](/resources/community) if you have questions about this integration. You can also [suggest improvements](https://github.com/bfdeloitte/buckeye-ui/blob/next/docs/tutorials/integrating-with-nextjs.md) to make it better.
 
 ## Requirements
 
@@ -17,7 +17,7 @@ This integration has been tested with the following:
 To get started using BuckeyeUI with NextJS, the following packages must be installed.
 
 ```bash
-yarn add iop-ui copy-webpack-plugin next-compose-plugins next-transpile-modules
+yarn add buckeye-ui copy-webpack-plugin next-compose-plugins next-transpile-modules
 ```
 
 ### Enabling ESM
@@ -36,7 +36,7 @@ There's one more step to enable ESM in NextJS, but we'll tackle that in our Next
 The next step is to import BuckeyeUI's default theme (stylesheet) in your `_app.js` file:
 
 ```css
-import 'iop-ui/dist/themes/light.css';
+import 'buckeye-ui/dist/themes/light.css';
 ```
 
 ### Defining Custom Elements
@@ -55,14 +55,14 @@ function CustomEls({ URL }) {
       return;
     }
 
-    import('iop-ui/dist/utilities/base-path').then(({ setBasePath }) => {
+    import('buckeye-ui/dist/utilities/base-path').then(({ setBasePath }) => {
       setBasePath(`${URL}/static/static`);
 
       // This imports all components
-      import('iop-ui/dist/shoelace');
+      import('buckeye-ui/dist/buckeye');
       // If you're wanting to selectively import components, replace this line with your own definitions
 
-      // import("iop-ui/dist/components/button/button");
+      // import("buckeye-ui/dist/components/button/button");
       customEls.current = true;
     });
   }, [URL, customEls]);
@@ -113,7 +113,7 @@ MyApp.getInitialProps = async context => {
 };
 ```
 
-?> You'll need to set this `BASE_URL` variable inside the build process of whatever local build or CI/CD you have. This will need to be an absolute URL, as a relative URL will cause shoelace to throw a warning
+?> You'll need to set this `BASE_URL` variable inside the build process of whatever local build or CI/CD you have. This will need to be an absolute URL, as a relative URL will cause BuckeyeUI to throw a warning
 
 ### webpack Config
 
@@ -126,7 +126,7 @@ import CopyPlugin from 'copy-webpack-plugin';
 import withPlugins from 'next-compose-plugins';
 import withTM from 'next-transpile-modules';
 
-const withTMCompiled = withTM(['iop-ui']);
+const withTMCompiled = withTM(['buckeye-ui']);
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -138,7 +138,7 @@ export default withPlugins([withTMCompiled], {
       new CopyPlugin({
         patterns: [
           {
-            from: resolve(__dirname, 'node_modules/iop-ui/dist/assets/icons'),
+            from: resolve(__dirname, 'node_modules/buckeye-ui/dist/assets/icons'),
             to: resolve(__dirname, 'static/icons')
           }
         ]

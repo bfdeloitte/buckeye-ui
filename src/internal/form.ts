@@ -1,4 +1,4 @@
-import type { BuckeyeFormControl } from '../internal/shoelace-element';
+import type { BuckeyeFormControl } from '../internal/buckeye-element';
 import type { ReactiveController, ReactiveControllerHost } from 'lit';
 import type SlButton from '../components/button/button';
 

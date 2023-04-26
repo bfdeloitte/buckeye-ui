@@ -8,18 +8,16 @@
   - [Form Controls](/getting-started/form-controls)
   - [Localization](/getting-started/localization)
 
-- Frameworks
+- Design Tokens
 
-  - [React](/frameworks/react)
-  - [Vue](/frameworks/vue)
-  - [Angular](/frameworks/angular)
-
-- Resources
-
-  - [Community](/resources/community)
-  - [Accessibility](/resources/accessibility)
-  - [Contributing](/resources/contributing)
-  - [Changelog](/resources/changelog)
+  - [Typography](/tokens/typography)
+  - [Color](/tokens/color)
+  - [Spacing](/tokens/spacing)
+  - [Elevation](/tokens/elevation)
+  - [Border Radius](/tokens/border-radius)
+  - [Transition](/tokens/transition)
+  - [Z-index](/tokens/z-index)
+  - [More](/tokens/more)
 
 - Components
 
@@ -85,16 +83,18 @@
   - [Resize Observer](/components/resize-observer)
   - [Visually Hidden](/components/visually-hidden)
 
-- Design Tokens
+- Resources
 
-  - [Typography](/tokens/typography)
-  - [Color](/tokens/color)
-  - [Spacing](/tokens/spacing)
-  - [Elevation](/tokens/elevation)
-  - [Border Radius](/tokens/border-radius)
-  - [Transition](/tokens/transition)
-  - [Z-index](/tokens/z-index)
-  - [More](/tokens/more)
+  - [Community](/resources/community)
+  - [Accessibility](/resources/accessibility)
+  - [Contributing](/resources/contributing)
+  - [Changelog](/resources/changelog)
+
+- Frameworks
+
+  - [React](/frameworks/react)
+  - [Vue](/frameworks/vue)
+  - [Angular](/frameworks/angular)
 
 - Tutorials
 

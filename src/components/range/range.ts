@@ -8,14 +8,14 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 import { live } from 'lit/directives/live.js';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './range.styles';
-import type { BuckeyeFormControl } from '../../internal/shoelace-element';
+import type { BuckeyeFormControl } from '../../internal/buckeye-element';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Ranges allow the user to select a single value within a given range using a slider.
- * @documentation https://shoelace.style/components/range
+ * @documentation https://buckeyeui.com/components/range
  * @status stable
  * @since 2.0
  *

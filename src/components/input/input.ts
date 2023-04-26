@@ -9,14 +9,14 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 import { live } from 'lit/directives/live.js';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './input.styles';
-import type { BuckeyeFormControl } from '../../internal/shoelace-element';
+import type { BuckeyeFormControl } from '../../internal/buckeye-element';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Inputs collect data from the user.
- * @documentation https://shoelace.style/components/input
+ * @documentation https://buckeyeui.com/components/input
  * @status stable
  * @since 2.0
  *

@@ -6,14 +6,14 @@ Please be respectful of other users and remember that BuckeyeUI is an open sourc
 
 ## Discussion Forum
 
-The [discussion forum](https://github.com/shoelace-style/shoelace/discussions) is open to anyone with a GitHub account. This is the best place to:
+The [discussion forum](https://github.com/bfdeloitte/buckeye-ui/discussions) is open to anyone with a GitHub account. This is the best place to:
 
 - Ask for help
 - Share ideas and get feedback
 - Show the community what you're working on
 - Learn more about the project, its values, and its roadmap
 
-<sl-button variant="primary" href="https://github.com/shoelace-style/shoelace/discussions" target="_blank">
+<sl-button variant="primary" href="https://github.com/bfdeloitte/buckeye-ui/discussions" target="_blank">
   <sl-icon name="github" slot="prefix"></sl-icon>
   Join the Discussion
 </sl-button>
@@ -34,20 +34,20 @@ The [community chat](https://discord.gg/mg8f26C) is open to the public and power
 
 ## Stack Overflow
 
-You can post questions on Stack Overflow using [the "shoelace" tag](https://stackoverflow.com/questions/tagged/shoelace). This is a public forum where talented developers answer questions. It's a great way to get help, but it is not maintained by the BuckeyeUI author.
+You can post questions on Stack Overflow using [the "buckeye" tag](https://stackoverflow.com/questions/tagged/buckeye). This is a public forum where talented developers answer questions. It's a great way to get help, but it is not maintained by the BuckeyeUI author.
 
-<sl-button variant="primary" href="https://stackoverflow.com/questions/ask?tags=shoelace" target="_blank">
+<sl-button variant="primary" href="https://stackoverflow.com/questions/ask?tags=buckeye" target="_blank">
   <sl-icon name="stack-overflow" slot="prefix"></sl-icon>
   Ask for Help
 </sl-button>
 
 ## Twitter
 
-Follow [@shoelace_style](https://twitter.com/shoelace_style) on Twitter for general updates and announcements about BuckeyeUI. This is a great place to say "hi" or to share something you're working on. You're also welcome to follow [@claviska](https://twitter.com/claviska), the creator, for tweets about web components, web development, and life.
+Follow [@buckeyeui](https://twitter.com/buckeyeui) on Twitter for general updates and announcements about BuckeyeUI. This is a great place to say "hi" or to share something you're working on. You're also welcome to follow [@brfearing](https://twitter.com/brfearing), the creator, for tweets about web components, web development, and life.
 
-**Please avoid using Twitter for support questions.** The [discussion forum](https://github.com/shoelace-style/shoelace/discussions) is a much better place to share code snippets, screenshots, and other troubleshooting info. You'll have much better luck there, as more users will have a chance to help you.
+**Please avoid using Twitter for support questions.** The [discussion forum](https://github.com/bfdeloitte/buckeye-ui/discussions) is a much better place to share code snippets, screenshots, and other troubleshooting info. You'll have much better luck there, as more users will have a chance to help you.
 
-<sl-button variant="primary" href="https://twitter.com/shoelace_style" target="_blank">
+<sl-button variant="primary" href="https://twitter.com/buckeyeui" target="_blank">
   <sl-icon name="twitter" slot="prefix"></sl-icon>
   Follow on Twitter
 </sl-button>

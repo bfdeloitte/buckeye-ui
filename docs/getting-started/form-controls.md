@@ -22,7 +22,7 @@ const data = new FormData(form);
 However, some folks find `FormData` tricky to work with or they need to pass a JSON payload to their server. To accommodate this, BuckeyeUI offers a serialization utility that gathers form data and returns a simple JavaScript object instead.
 
 ```js
-import { serialize } from 'iop-ui/dist/utilities/form.js';
+import { serialize } from 'buckeye-ui/dist/utilities/form.js';
 
 const form = document.querySelector('form');
 const data = serialize(form);
@@ -76,7 +76,7 @@ The form will not be submitted if a required field is incomplete.
 ```
 
 ```jsx react
-import { SlButton, SlCheckbox, SlInput, SlMenuItem, SlSelect, SlTextarea } from 'iop-ui/dist/react';
+import { SlButton, SlCheckbox, SlInput, SlMenuItem, SlSelect, SlTextarea } from 'buckeye-ui/dist/react';
 
 const App = () => {
   function handleSubmit(event) {
@@ -130,7 +130,7 @@ To restrict a value to a specific [pattern](https://developer.mozilla.org/en-US/
 ```
 
 ```jsx react
-import { SlButton, SlInput } from 'iop-ui/dist/react';
+import { SlButton, SlInput } from 'buckeye-ui/dist/react';
 
 const App = () => {
   function handleSubmit(event) {
@@ -174,7 +174,7 @@ Some input types will automatically trigger constraints, such as `email` and `ur
 ```
 
 ```jsx react
-import { SlButton, SlInput } from 'iop-ui/dist/react';
+import { SlButton, SlInput } from 'buckeye-ui/dist/react';
 
 const App = () => {
   function handleSubmit(event) {
@@ -202,7 +202,7 @@ To create a custom validation error, pass a non-empty string to the `setCustomVa
 
 ```html preview
 <form class="input-validation-custom">
-  <sl-input label="Type “shoelace”" required></sl-input>
+  <sl-input label="Type “buckeye”" required></sl-input>
   <br />
   <sl-button type="submit" variant="primary">Submit</sl-button>
   <sl-button type="reset" variant="default">Reset</sl-button>
@@ -218,10 +218,10 @@ To create a custom validation error, pass a non-empty string to the `setCustomVa
   });
 
   input.addEventListener('sl-input', () => {
-    if (input.value === 'shoelace') {
+    if (input.value === 'buckeye') {
       input.setCustomValidity('');
     } else {
-      input.setCustomValidity("Hey, you're supposed to type 'shoelace' before submitting this!");
+      input.setCustomValidity("Hey, you're supposed to type 'buckeye' before submitting this!");
     }
   });
 </script>
@@ -229,7 +229,7 @@ To create a custom validation error, pass a non-empty string to the `setCustomVa
 
 ```jsx react
 import { useRef, useState } from 'react';
-import { SlButton, SlInput } from 'iop-ui/dist/react';
+import { SlButton, SlInput } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const input = useRef(null);
@@ -238,10 +238,10 @@ const App = () => {
   function handleInput(event) {
     setValue(event.target.value);
 
-    if (event.target.value === 'shoelace') {
+    if (event.target.value === 'buckeye') {
       input.current.setCustomValidity('');
     } else {
-      input.current.setCustomValidity("Hey, you're supposed to type 'shoelace' before submitting this!");
+      input.current.setCustomValidity("Hey, you're supposed to type 'buckeye' before submitting this!");
     }
   }
 
@@ -252,7 +252,7 @@ const App = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <SlInput ref={input} label="Type 'shoelace'" required value={value} onSlInput={handleInput} />
+      <SlInput ref={input} label="Type 'buckeye'" required value={value} onSlInput={handleInput} />
       <br />
       <SlButton type="submit" variant="primary">
         Submit
@@ -489,7 +489,7 @@ To disable the browser's error messages, you need to cancel the `sl-invalid` eve
 At this time, using [`HTMLFormElement.elements`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements) will not return BuckeyeUI form controls because the browser is unaware of their status as custom element form controls. Fortunately, BuckeyeUI provides an `elements()` function that does something very similar. However, instead of returning an [`HTMLFormControlsCollection`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection), it returns an array of HTML and BuckeyeUI form controls in the order they appear in the DOM.
 
 ```js
-import { getFormControls } from 'iop-ui/dist/utilities/form.js';
+import { getFormControls } from 'buckeye-ui/dist/utilities/form.js';
 
 const form = document.querySelector('#my-form');
 const formControls = getFormControls(form);

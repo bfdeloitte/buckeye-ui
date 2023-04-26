@@ -33,7 +33,7 @@ The resize observer will report changes to the dimensions of the elements it wra
 ```
 
 ```jsx react
-import { SlResizeObserver } from 'iop-ui/dist/react';
+import { SlResizeObserver } from 'buckeye-ui/dist/react';
 
 const css = `
   .resize-observer-overview div {

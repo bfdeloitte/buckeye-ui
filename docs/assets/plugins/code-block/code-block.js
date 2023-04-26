@@ -16,7 +16,7 @@
     const version = sessionStorage.getItem('sl-version');
 
     html = html
-      .replace(/iop-ui/g, `https://cdn.skypack.dev/iop-ui@${version}`)
+      .replace(/buckeye-ui/g, `https://cdn.skypack.dev/buckeye-ui@${version}`)
       .replace(/from 'react'/g, `from 'https://cdn.skypack.dev/react@${reactVersion}'`)
       .replace(/from "react"/g, `from "https://cdn.skypack.dev/react@${reactVersion}"`);
 
@@ -310,7 +310,7 @@
       // HTML templates
       if (!isReact) {
         htmlTemplate =
-          `<script type="module" src="https://cdn.jsdelivr.net/npm/iop-ui@${version}/dist/buckeye.js"></script>\n` +
+          `<script type="module" src="https://cdn.jsdelivr.net/npm/buckeye-ui@${version}/dist/buckeye.js"></script>\n` +
           `\n${htmlExample}`;
         jsTemplate = '';
       }
@@ -321,10 +321,10 @@
         jsTemplate =
           `import React from 'https://cdn.skypack.dev/react@${reactVersion}';\n` +
           `import ReactDOM from 'https://cdn.skypack.dev/react-dom@${reactVersion}';\n` +
-          `import { setBasePath } from 'https://cdn.skypack.dev/iop-ui@${version}/dist/utilities/base-path';\n` +
+          `import { setBasePath } from 'https://cdn.skypack.dev/buckeye-ui@${version}/dist/utilities/base-path';\n` +
           `\n` +
           `// Set the base path for BuckeyeUI assets\n` +
-          `setBasePath('https://cdn.skypack.dev/iop-ui@${version}/dist/')\n` +
+          `setBasePath('https://cdn.skypack.dev/buckeye-ui@${version}/dist/')\n` +
           `\n${convertModuleLinks(reactExample)}\n` +
           `\n` +
           `ReactDOM.render(<App />, document.getElementById('root'));`;
@@ -332,7 +332,7 @@
 
       // CSS templates
       cssTemplate =
-        `@import 'https://cdn.jsdelivr.net/npm/iop-ui@${version}/dist/themes/${isDark ? 'dark' : 'light'}.css';\n` +
+        `@import 'https://cdn.jsdelivr.net/npm/buckeye-ui@${version}/dist/themes/${isDark ? 'dark' : 'light'}.css';\n` +
         '\n' +
         'body {\n' +
         '  font: 16px sans-serif;\n' +

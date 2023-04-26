@@ -10,7 +10,7 @@
 ```
 
 ```jsx react
-import { SlTab } from 'iop-ui/dist/react';
+import { SlTab } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>

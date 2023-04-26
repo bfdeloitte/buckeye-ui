@@ -7,19 +7,19 @@ Angular [plays nice](https://custom-elements-everywhere.com/#angular) with custo
 To add BuckeyeUI to your Angular app, install the package from npm.
 
 ```bash
-npm install iop-ui
+npm install buckeye-ui
 ```
 
 Next, [include a theme](/getting-started/themes) and set the [base path](/getting-started/installation#setting-the-base-path) for icons and other assets. In this example, we'll import the light theme and use the CDN as a base path.
 
 ```jsx
-import 'iop-ui/dist/themes/light.css';
-import { setBasePath } from 'iop-ui/dist/utilities/base-path';
+import 'buckeye-ui/dist/themes/light.css';
+import { setBasePath } from 'buckeye-ui/dist/utilities/base-path';
 
-setBasePath('https://cdn.jsdelivr.net/npm/iop-ui@%VERSION%/dist/');
+setBasePath('https://cdn.jsdelivr.net/npm/buckeye-ui@%VERSION%/dist/');
 ```
 
-?> If you'd rather not use the CDN for assets, you can create a build task that copies `node_modules/iop-ui/dist/assets` into a public folder in your app. Then you can point the base path to that folder instead.
+?> If you'd rather not use the CDN for assets, you can create a build task that copies `node_modules/buckeye-ui/dist/assets` into a public folder in your app. Then you can point the base path to that folder instead.
 
 ## Configuration
 
@@ -44,7 +44,7 @@ export class AppModule {}
 ## Reference BuckeyeUI components in your Angular component code
 
 ```js
-import { SlDrawer } from 'iop-ui';
+import { SlDrawer } from 'buckeye-ui';
 
 @Component({
   selector: 'app-drawer-example',
@@ -75,4 +75,4 @@ export class DrawerExampleComponent implements OnInit {
 
 Now you can start using BuckeyeUI components in your app!
 
-?> Are you using BuckeyeUI with Angular? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/angular.md)
+?> Are you using BuckeyeUI with Angular? [Help us improve this page!](https://github.com/bfdeloitte/buckeye-ui/blob/next/docs/frameworks/angular.md)

@@ -11,14 +11,14 @@ import { lockBodyScrolling, unlockBodyScrolling } from '../../internal/scroll';
 import { uppercaseFirstLetter } from '../../internal/string';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import Modal from '../../internal/modal';
 import styles from './drawer.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Drawers slide in from a container to expose additional options and information.
- * @documentation https://shoelace.style/components/drawer
+ * @documentation https://buckeyeui.com/components/drawer
  * @status stable
  * @since 2.0
  *

@@ -7,14 +7,14 @@ import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './tooltip.styles';
 import type { CSSResultGroup } from 'lit';
 import type SlPopup from '../popup/popup';
 
 /**
  * @summary Tooltips display additional information based on a specific action.
- * @documentation https://shoelace.style/components/tooltip
+ * @documentation https://buckeyeui.com/components/tooltip
  * @status stable
  * @since 2.0
  *

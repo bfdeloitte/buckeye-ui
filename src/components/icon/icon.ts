@@ -1,7 +1,7 @@
 import { customElement, property, state } from 'lit/decorators.js';
 import { getIconLibrary, unwatchIcon, watchIcon } from './library';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './icon.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -14,7 +14,7 @@ const iconCache = new Map<string, Promise<SVGResult>>();
 
 /**
  * @summary Icons are symbols that can be used to represent various options within an application.
- * @documentation https://shoelace.style/components/icon
+ * @documentation https://buckeyeui.com/components/icon
  * @status stable
  * @since 2.0
  *

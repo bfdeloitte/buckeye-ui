@@ -14,7 +14,7 @@
 ```
 
 ```jsx react
-import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from 'iop-ui/dist/react';
+import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <SlBreadcrumb>

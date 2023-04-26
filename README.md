@@ -12,7 +12,7 @@ An Ohioan library of web components.
 
 Documentation: [buckeyeui.com](https://buckeyeui.com)
 
-Source: [github.com/bfdeloitte/iop-ui](https://github.com/bfdeloitte/iop-ui)
+Source: [github.com/bfdeloitte/buckeye-ui](https://github.com/bfdeloitte/buckeye-ui)
 
 ---
 
@@ -30,11 +30,11 @@ Components are built with [LitElement](https://lit-element.polymer-project.org/)
 
 ### Forking the Repo
 
-Start by [forking the repo](https://github.com/bfdeloitte/iop-ui/fork) on GitHub, then clone it locally and install dependencies.
+Start by [forking the repo](https://github.com/bfdeloitte/buckeye-ui/fork) on GitHub, then clone it locally and install dependencies.
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/iop-ui
-cd iop-ui
+git clone https://github.com/YOUR_GITHUB_USERNAME/buckeye-ui
+cd buckeye-ui
 npm install
 ```
 
@@ -76,4 +76,4 @@ BuckeyeUI is an open source project! If you're interesting in contributing, plea
 
 BuckeyeUI is maintained by Brandon Fearing, forked from Shoelace by [Cory LaViska](https://twitter.com/claviska). It’s available under the terms of the MIT license.
 
-- [Star on GitHub](https://github.com/bfdeloitte/iop-ui/stargazers)
+- [Star on GitHub](https://github.com/bfdeloitte/buckeye-ui/stargazers)

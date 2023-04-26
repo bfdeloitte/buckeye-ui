@@ -1,13 +1,13 @@
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { html } from 'lit';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './skeleton.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Skeletons are used to provide a visual representation of where content will eventually be drawn.
- * @documentation https://shoelace.style/components/skeleton
+ * @documentation https://buckeyeui.com/components/skeleton
  * @status stable
  * @since 2.0
  *

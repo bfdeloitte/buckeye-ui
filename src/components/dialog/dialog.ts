@@ -10,14 +10,14 @@ import { LocalizeController } from '../../utilities/localize';
 import { lockBodyScrolling, unlockBodyScrolling } from '../../internal/scroll';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import Modal from '../../internal/modal';
 import styles from './dialog.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Dialogs, sometimes called "modals", appear above the page and require the user's immediate attention.
- * @documentation https://shoelace.style/components/dialog
+ * @documentation https://buckeyeui.com/components/dialog
  * @status stable
  * @since 2.0
  *

@@ -1,12 +1,12 @@
 import { customElement } from 'lit/decorators.js';
 import { html } from 'lit';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './visually-hidden.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.
- * @documentation https://shoelace.style/components/visually-hidden
+ * @documentation https://buckeyeui.com/components/visually-hidden
  * @status stable
  * @since 2.0
  *

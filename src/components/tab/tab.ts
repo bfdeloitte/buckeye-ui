@@ -4,7 +4,7 @@ import { customElement, property, query } from 'lit/decorators.js';
 import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './tab.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -12,7 +12,7 @@ let id = 0;
 
 /**
  * @summary Tabs are used inside [tab groups](/components/tab-group) to represent and activate [tab panels](/components/tab-panel).
- * @documentation https://shoelace.style/components/tab
+ * @documentation https://buckeyeui.com/components/tab
  * @status stable
  * @since 2.0
  *

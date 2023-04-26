@@ -2,13 +2,13 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement } from 'lit/decorators.js';
 import { HasSlotController } from '../../internal/slot';
 import { html } from 'lit';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './card.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Cards can be used to group related subjects in a container.
- * @documentation https://shoelace.style/components/card
+ * @documentation https://buckeyeui.com/components/card
  * @status stable
  * @since 2.0
  *

@@ -63,7 +63,7 @@ Icons inherit their color from the current text color. Thus, you can set the `co
 ```
 
 ```jsx react
-import { SlIcon } from 'iop-ui/dist/react';
+import { SlIcon } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
@@ -121,7 +121,7 @@ Icons are sized relative to the current font size. To change their size, set the
 ```
 
 ```jsx react
-import { SlIcon } from 'iop-ui/dist/react';
+import { SlIcon } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <div style={{ fontSize: '32px' }}>
@@ -154,7 +154,7 @@ For non-decorative icons, use the `label` attribute to announce it to assistive 
 ```
 
 ```jsx react
-import { SlIcon } from 'iop-ui/dist/react';
+import { SlIcon } from 'buckeye-ui/dist/react';
 
 const App = () => <SlIcon name="star-fill" label="Add to favorites" />;
 ```
@@ -164,13 +164,13 @@ const App = () => <SlIcon name="star-fill" label="Add to favorites" />;
 Custom icons can be loaded individually with the `src` attribute. Only SVGs on a local or CORS-enabled endpoint are supported. If you're using more than one custom icon, it might make sense to register a [custom icon library](#icon-libraries).
 
 ```html preview
-<sl-icon src="https://shoelace.style/assets/images/shoe.svg" style="font-size: 8rem;"></sl-icon>
+<sl-icon src="https://buckeyeui.com/assets/images/shoe.svg" style="font-size: 8rem;"></sl-icon>
 ```
 
 ```jsx react
-import { SlIcon } from 'iop-ui/dist/react';
+import { SlIcon } from 'buckeye-ui/dist/react';
 
-const App = () => <SlIcon src="https://shoelace.style/assets/images/shoe.svg" style={{ fontSize: '8rem' }}></SlIcon>;
+const App = () => <SlIcon src="https://buckeyeui.com/assets/images/shoe.svg" style={{ fontSize: '8rem' }}></SlIcon>;
 ```
 
 ## Icon Libraries
@@ -674,7 +674,7 @@ If you want to change the icons BuckeyeUI uses internally, you can register an i
         list.appendChild(item);
 
         // Wrap it with a tooltip the first time the mouse lands on it. We do this instead of baking them into the DOM 
-        // to improve this page's performance. See: https://github.com/shoelace-style/shoelace/issues/1122
+        // to improve this page's performance. See: https://github.com/bfdeloitte/buckeye-ui/issues/1122
         item.addEventListener('mouseover', () => wrapWithTooltip(item), { once: true });
 
         // Copy on click

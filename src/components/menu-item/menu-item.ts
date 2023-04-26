@@ -4,13 +4,13 @@ import { customElement, property, query } from 'lit/decorators.js';
 import { getTextContent } from '../../internal/slot';
 import { html } from 'lit';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './menu-item.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Menu items provide options for the user to pick from in a menu.
- * @documentation https://shoelace.style/components/menu-item
+ * @documentation https://buckeyeui.com/components/menu-item
  * @status stable
  * @since 2.0
  *

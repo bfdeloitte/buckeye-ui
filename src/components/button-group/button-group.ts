@@ -1,12 +1,12 @@
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { html } from 'lit';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './button-group.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Button groups can be used to group related buttons into sections.
- * @documentation https://shoelace.style/components/button-group
+ * @documentation https://buckeyeui.com/components/button-group
  * @status stable
  * @since 2.0
  *

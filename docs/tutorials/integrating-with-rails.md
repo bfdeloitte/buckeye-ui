@@ -2,7 +2,7 @@
 
 This page explains how to integrate BuckeyeUI with a Rails app.
 
-?> This is a community-maintained document. Please [ask the community](/resources/community) if you have questions about this integration. You can also [suggest improvements](https://github.com/shoelace-style/shoelace/blob/next/docs/tutorials/integrating-with-rails.md) to make it better.
+?> This is a community-maintained document. Please [ask the community](/resources/community) if you have questions about this integration. You can also [suggest improvements](https://github.com/bfdeloitte/buckeye-ui/blob/next/docs/tutorials/integrating-with-rails.md) to make it better.
 
 ## Requirements
 
@@ -17,7 +17,7 @@ This integration has been tested with the following:
 To get started using BuckeyeUI with Rails, the following packages must be installed.
 
 ```bash
-yarn add iop-ui copy-webpack-plugin
+yarn add buckeye-ui copy-webpack-plugin
 ```
 
 ### Importing the Default Theme
@@ -25,8 +25,8 @@ yarn add iop-ui copy-webpack-plugin
 The next step is to import BuckeyeUI's default theme (stylesheet) in `app/javascript/stylesheets/application.scss`.
 
 ```css
-@import 'iop-ui/dist/themes/light';
-@import 'iop-ui/dist/themes/dark'; // Optional dark theme
+@import 'buckeye-ui/dist/themes/light';
+@import 'buckeye-ui/dist/themes/dark'; // Optional dark theme
 ```
 
 Fore more details about themes, please refer to [Theme Basics](/getting-started/themes?id=theme-basics).
@@ -37,7 +37,7 @@ After importing the theme, you'll need to import the JavaScript files for Buckey
 
 ```js
 import '../stylesheets/application.scss'
-import { setBasePath, SlAlert, SlAnimation, SlButton, ... } from 'iop-ui'
+import { setBasePath, SlAlert, SlAnimation, SlButton, ... } from 'buckeye-ui'
 
 // ...
 
@@ -59,13 +59,13 @@ const { environment } = require('@rails/webpacker');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
-// Add shoelace assets to webpack's build process
+// Add buckeye assets to webpack's build process
 environment.plugins.append(
   'CopyPlugin',
   new CopyPlugin({
     patterns: [
       {
-        from: path.resolve(__dirname, '../../node_modules/iop-ui/dist/assets'),
+        from: path.resolve(__dirname, '../../node_modules/buckeye-ui/dist/assets'),
         to: path.resolve(__dirname, '../../public/packs/js/assets')
       }
     ]

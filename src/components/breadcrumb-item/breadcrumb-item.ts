@@ -3,13 +3,13 @@ import { customElement, property } from 'lit/decorators.js';
 import { HasSlotController } from '../../internal/slot';
 import { html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './breadcrumb-item.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
- * @documentation https://shoelace.style/components/breadcrumb-item
+ * @documentation https://buckeyeui.com/components/breadcrumb-item
  * @status stable
  * @since 2.0
  *

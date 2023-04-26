@@ -8,7 +8,7 @@ import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './alert.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -16,7 +16,7 @@ const toastStack = Object.assign(document.createElement('div'), { className: 'sl
 
 /**
  * @summary Alerts are used to display important messages inline or as toast notifications.
- * @documentation https://shoelace.style/components/alert
+ * @documentation https://buckeyeui.com/components/alert
  * @status stable
  * @since 2.0
  *

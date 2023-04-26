@@ -1,12 +1,12 @@
 import { customElement } from 'lit/decorators.js';
 import { html } from 'lit';
-import BuckeyeElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './menu-label.styles';
 import type { CSSResultGroup } from 'lit';
 
 /**
  * @summary Menu labels are used to describe a group of menu items.
- * @documentation https://shoelace.style/components/menu-label
+ * @documentation https://buckeyeui.com/components/menu-label
  * @status stable
  * @since 2.0
  *

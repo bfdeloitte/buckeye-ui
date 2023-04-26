@@ -7,20 +7,20 @@ BuckeyeUI offers a React version of every component to provide an idiomatic expe
 To add BuckeyeUI to your React app, install the package from npm.
 
 ```bash
-npm install iop-ui
+npm install buckeye-ui
 ```
 
 Next, [include a theme](/getting-started/themes) and set the [base path](/getting-started/installation#setting-the-base-path) for icons and other assets. In this example, we'll import the light theme and use the CDN as a base path.
 
 ```jsx
 // App.jsx
-import 'iop-ui/dist/themes/light.css';
-import { setBasePath } from 'iop-ui/dist/utilities/base-path';
+import 'buckeye-ui/dist/themes/light.css';
+import { setBasePath } from 'buckeye-ui/dist/utilities/base-path';
 
-setBasePath('https://cdn.jsdelivr.net/npm/iop-ui@%VERSION%/dist/');
+setBasePath('https://cdn.jsdelivr.net/npm/buckeye-ui@%VERSION%/dist/');
 ```
 
-?> If you'd rather not use the CDN for assets, you can create a [build task](https://webpack.js.org/plugins/copy-webpack-plugin/) that copies `node_modules/iop-ui/dist/assets` into your app's `public` directory. Then you can point the base path to that folder instead.
+?> If you'd rather not use the CDN for assets, you can create a [build task](https://webpack.js.org/plugins/copy-webpack-plugin/) that copies `node_modules/buckeye-ui/dist/assets` into your app's `public` directory. Then you can point the base path to that folder instead.
 
 Now you can start using components!
 
@@ -31,7 +31,7 @@ Now you can start using components!
 Every BuckeyeUI component is available to import as a React component. Note that we're importing the `<SlButton>` _React component_ instead of the `<sl-button>` _custom element_ in the example below.
 
 ```jsx
-import { SlButton } from 'iop-ui/dist/react';
+import { SlButton } from 'buckeye-ui/dist/react';
 
 const MyComponent = () => <SlButton variant="primary">Click me</SlButton>;
 
@@ -48,7 +48,7 @@ Here's how you can bind the input's value to a state variable.
 
 ```jsx
 import { useState } from 'react';
-import { SlInput } from 'iop-ui/dist/react';
+import { SlInput } from 'buckeye-ui/dist/react';
 
 function MyComponent() {
   const [value, setValue] = useState('');
@@ -63,8 +63,8 @@ If you're using TypeScript, it's important to note that `event.target` will be a
 
 ```tsx
 import { useState } from 'react';
-import { SlInput } from 'iop-ui/dist/react';
-import type SlInputElement from 'iop-ui/dist/components/input/input';
+import { SlInput } from 'buckeye-ui/dist/react';
+import type SlInputElement from 'buckeye-ui/dist/components/input/input';
 
 function MyComponent() {
   const [value, setValue] = useState('');
@@ -130,7 +130,7 @@ To fix this, add the following to your `package.json` which tells the transpiler
 ```js
 {
   "jest": {
-    "transformIgnorePatterns": ["node_modules/?!(@shoelace)"]
+    "transformIgnorePatterns": ["node_modules/?!(buckeye-ui)"]
   }
 }
 ```
@@ -139,4 +139,4 @@ These instructions are for apps created via Create React App. If you're using Je
 
 For more details, refer to Jest's [`transformIgnorePatterns` customization](https://jestjs.io/docs/tutorial-react-native#transformignorepatterns-customization) documentation.
 
-?> Are you using BuckeyeUI with React? [Help us improve this page!](https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/react.md)
+?> Are you using BuckeyeUI with React? [Help us improve this page!](https://github.com/bfdeloitte/buckeye-ui/blob/next/docs/frameworks/react.md)
