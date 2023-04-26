@@ -8,8 +8,6 @@ An Ohioan library of web components.
 - Includes an official dark theme 🌛
 - Built with accessibility in mind ♿️
 
-<!-- Designed in New Hampshire by [Cory LaViska](https://twitter.com/claviska). -->
-
 ---
 
 Documentation: [buckeyeui.com](https://buckeyeui.com)
