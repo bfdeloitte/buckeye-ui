@@ -7,7 +7,7 @@ import { LocalizeController } from '../../utilities/localize';
 import { styleMap } from 'lit/directives/style-map.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './rating.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -32,7 +32,7 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --symbol-spacing - The spacing to use around symbols.
  */
 @customElement('sl-rating')
-export default class SlRating extends ShoelaceElement {
+export default class SlRating extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly localize = new LocalizeController(this);

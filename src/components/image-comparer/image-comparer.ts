@@ -7,7 +7,7 @@ import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { styleMap } from 'lit/directives/style-map.js';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './image-comparer.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -35,7 +35,7 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --handle-size - The size of the compare handle.
  */
 @customElement('sl-image-comparer')
-export default class SlImageComparer extends ShoelaceElement {
+export default class SlImageComparer extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly localize = new LocalizeController(this);

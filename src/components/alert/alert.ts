@@ -8,7 +8,7 @@ import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './alert.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -41,7 +41,7 @@ const toastStack = Object.assign(document.createElement('div'), { className: 'sl
  */
 
 @customElement('sl-alert')
-export default class SlAlert extends ShoelaceElement {
+export default class SlAlert extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private autoHideTimeout: number;

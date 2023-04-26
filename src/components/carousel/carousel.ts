@@ -10,7 +10,7 @@ import { prefersReducedMotion } from '../../internal/animate';
 import { range } from 'lit/directives/range.js';
 import { ScrollController } from './scroll-controller';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import SlCarouselItem from '../carousel-item/carousel-item';
 import styles from './carousel.styles';
 import type { CSSResultGroup } from 'lit';
@@ -45,7 +45,7 @@ import type { CSSResultGroup } from 'lit';
  *  partially visible as a scroll hint.
  */
 @customElement('sl-carousel')
-export default class SlCarousel extends ShoelaceElement {
+export default class SlCarousel extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   /** When set, allows the user to navigate the carousel in the same direction indefinitely. */

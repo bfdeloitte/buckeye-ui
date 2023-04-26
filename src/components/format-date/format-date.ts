@@ -1,7 +1,7 @@
 import { customElement, property } from 'lit/decorators.js';
 import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 
 /**
  * @summary Formats a date/time using the specified locale and options.
@@ -10,7 +10,7 @@ import ShoelaceElement from '../../internal/shoelace-element';
  * @since 2.0
  */
 @customElement('sl-format-date')
-export default class SlFormatDate extends ShoelaceElement {
+export default class SlFormatDate extends BuckeyeElement {
   private readonly localize = new LocalizeController(this);
 
   /**

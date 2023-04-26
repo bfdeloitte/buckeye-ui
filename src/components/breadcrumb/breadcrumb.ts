@@ -2,7 +2,7 @@ import '../icon/icon';
 import { customElement, property, query } from 'lit/decorators.js';
 import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './breadcrumb.styles';
 import type { CSSResultGroup } from 'lit';
 import type SlBreadcrumbItem from '../breadcrumb-item/breadcrumb-item';
@@ -21,7 +21,7 @@ import type SlBreadcrumbItem from '../breadcrumb-item/breadcrumb-item';
  * @csspart base - The component's base wrapper.
  */
 @customElement('sl-breadcrumb')
-export default class SlBreadcrumb extends ShoelaceElement {
+export default class SlBreadcrumb extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly localize = new LocalizeController(this);

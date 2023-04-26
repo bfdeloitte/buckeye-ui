@@ -4,7 +4,7 @@ import { html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { LocalizeController } from '../../utilities/localize';
 import { styleMap } from 'lit/directives/style-map.js';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './progress-bar.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -26,7 +26,7 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --label-color - The color of the label.
  */
 @customElement('sl-progress-bar')
-export default class SlProgressBar extends ShoelaceElement {
+export default class SlProgressBar extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
   private readonly localize = new LocalizeController(this);
 

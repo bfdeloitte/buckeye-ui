@@ -7,10 +7,10 @@ import { html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { live } from 'lit/directives/live.js';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './textarea.styles';
+import type { BuckeyeFormControl } from '../../internal/shoelace-element';
 import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/shoelace-element';
 
 /**
  * @summary Textareas collect data from the user and allow multiple lines of text.
@@ -35,7 +35,7 @@ import type { ShoelaceFormControl } from '../../internal/shoelace-element';
  * @csspart textarea - The internal `<textarea>` control.
  */
 @customElement('sl-textarea')
-export default class SlTextarea extends ShoelaceElement implements ShoelaceFormControl {
+export default class SlTextarea extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this, {

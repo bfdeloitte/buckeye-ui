@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './tag.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -25,7 +25,7 @@ import type { CSSResultGroup } from 'lit';
  * @csspart remove-button__base - The remove button's exported `base` part.
  */
 @customElement('sl-tag')
-export default class SlTag extends ShoelaceElement {
+export default class SlTag extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
   private readonly localize = new LocalizeController(this);
 

@@ -1,6 +1,6 @@
 import { customElement } from 'lit/decorators.js';
 import { html } from 'lit';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './carousel-item.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -16,7 +16,7 @@ import type { CSSResultGroup } from 'lit';
  *
  */
 @customElement('sl-carousel-item')
-export default class SlCarouselItem extends ShoelaceElement {
+export default class SlCarouselItem extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   static isCarouselItem(node: Node) {

@@ -16,10 +16,10 @@ import { LocalizeController } from '../../utilities/localize';
 import { styleMap } from 'lit/directives/style-map.js';
 import { TinyColor } from '@ctrl/tinycolor';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './color-picker.styles';
+import type { BuckeyeFormControl } from '../../internal/shoelace-element';
 import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/shoelace-element';
 import type SlChangeEvent from '../../events/sl-change';
 import type SlDropdown from '../dropdown/dropdown';
 import type SlInput from '../input/input';
@@ -92,7 +92,7 @@ declare const EyeDropper: EyeDropperConstructor;
  * @cssproperty --swatch-size - The size of each predefined color swatch.
  */
 @customElement('sl-color-picker')
-export default class SlColorPicker extends ShoelaceElement implements ShoelaceFormControl {
+export default class SlColorPicker extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this);

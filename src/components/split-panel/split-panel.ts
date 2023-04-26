@@ -5,7 +5,7 @@ import { html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './split-panel.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -33,7 +33,7 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty [--max=100%] - The maximum allowed size of the primary panel.
  */
 @customElement('sl-split-panel')
-export default class SlSplitPanel extends ShoelaceElement {
+export default class SlSplitPanel extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private cachedPositionInPixels: number;

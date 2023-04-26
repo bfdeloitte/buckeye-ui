@@ -38,7 +38,7 @@
 ```
 
 ```jsx react
-import { SlCarousel, SlCarouselItem } from '@shoelace-style/shoelace/dist/react';
+import { SlCarousel, SlCarouselItem } from 'iop-ui/dist/react';
 
 const App = () => (
   <SlCarousel pagination>

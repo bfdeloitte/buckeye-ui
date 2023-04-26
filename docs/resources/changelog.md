@@ -1,10 +1,10 @@
 # Changelog
 
-Shoelace follows [Semantic Versioning](https://semver.org/). Breaking changes in components with the <sl-badge variant="primary" pill>Stable</sl-badge> badge will not be accepted until the next major version. As such, all contributions must consider the project's roadmap and take this into consideration. Features that are deemed no longer necessary will be deprecated but not removed.
+BuckeyeUI follows [Semantic Versioning](https://semver.org/). Breaking changes in components with the <sl-badge variant="primary" pill>Stable</sl-badge> badge will not be accepted until the next major version. As such, all contributions must consider the project's roadmap and take this into consideration. Features that are deemed no longer necessary will be deprecated but not removed.
 
 Components with the <sl-badge variant="warning" pill>Experimental</sl-badge> badge should not be used in production. They are made available as release candidates for development and testing purposes. As such, changes to experimental components will not be subject to semantic versioning.
 
-New versions of Shoelace are released as-needed and generally occur when a critical mass of changes have accumulated. At any time, you can see what's coming in the next release by visiting [next.shoelace.style](https://next.shoelace.style).
+New versions of BuckeyeUI are released as-needed and generally occur when a critical mass of changes have accumulated. At any time, you can see what's coming in the next release by visiting [next.shoelace.style](https://next.shoelace.style).
 
 ## 2.4.0
 
@@ -83,7 +83,7 @@ When using `<input type="password">` the default value for `autocapitalize`, `au
 
 ## 2.0.0
 
-This is the first stable release of Shoelace 2, meaning breaking changes to the API will no longer be accepted for this version. Development of Shoelace 2.0 started in January 2020. The first beta was released on [July 15, 2020](https://github.com/shoelace-style/shoelace/releases/tag/v2.0.0-beta.1). Since then, Shoelace has grown quite a bit! Here are some stats from the project as of January 24, 2023:
+This is the first stable release of BuckeyeUI 2, meaning breaking changes to the API will no longer be accepted for this version. Development of BuckeyeUI 2.0 started in January 2020. The first beta was released on [July 15, 2020](https://github.com/shoelace-style/shoelace/releases/tag/v2.0.0-beta.1). Since then, BuckeyeUI has grown quite a bit! Here are some stats from the project as of January 24, 2023:
 
 - 55 components have been built
 - [Over 2,500 commits](https://github.com/shoelace-style/shoelace/commits/next) have been made to the project
@@ -92,13 +92,13 @@ This is the first stable release of Shoelace 2, meaning breaking changes to the 
 - [669 issues](https://github.com/shoelace-style/shoelace/issues?q=is%3Aissue+is%3Aclosed) have been filed on GitHub
 - [274 pull requests](https://github.com/shoelace-style/shoelace/pulls) have been opened
 - [More than 150 discussions](https://github.com/shoelace-style/shoelace/discussions) have been started on GitHub
-- [Over 500 people](https://discord.com/invite/mg8f26C) have joined the Shoelace community on Discord
-- [Over 300 million CDN hits](https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace) per month
-- [Over 13,000 npm downloads](https://www.npmjs.com/package/@shoelace-style/shoelace) per week
+- [Over 500 people](https://discord.com/invite/mg8f26C) have joined the BuckeyeUI community on Discord
+- [Over 300 million CDN hits](https://www.jsdelivr.com/package/npm/iop-ui) per month
+- [Over 13,000 npm downloads](https://www.npmjs.com/package/iop-ui) per week
 - [73rd most popular project](https://www.jsdelivr.com/statistics) on jsDelivr
 - [#2 product of the day](https://www.producthunt.com/products/shoelace-css) on Product Hunt (July 25, 2020)
 
-I'd like to extend a very special thank you to every single contributor who worked to make this possible. Everyone who's filed a bug, submitted a PR, requested a feature, started a discussion, helped with testing, and advocated for the project. You are just as responsible for Shoelace's success as I am. I'd also like to thank the folks at [Font&nbsp;Awesome](https://fontawesome.com/) for recognizing Shoelace's potential and [believing in me](https://blog.fontawesome.com/shoelace-joins-font-awesome/) to make it happen.
+I'd like to extend a very special thank you to every single contributor who worked to make this possible. Everyone who's filed a bug, submitted a PR, requested a feature, started a discussion, helped with testing, and advocated for the project. You are just as responsible for BuckeyeUI's success as I am. I'd also like to thank the folks at [Font&nbsp;Awesome](https://fontawesome.com/) for recognizing BuckeyeUI's potential and [believing in me](https://blog.fontawesome.com/shoelace-joins-font-awesome/) to make it happen.
 
 Thank you! And keep building _awesome_ stuff!
 
@@ -128,7 +128,7 @@ Without further ado, here are the notes for this release.
 - Fixed a bug in `<sl-icon>` that caused icons to sometimes be clipped in Safari
 - Fixed a bug that prevented label colors from inheriting by default in `<sl-checkbox>`, `<sl-radio>`, and `<sl-switch>`
 - Fixed a bug in `<sl-radio-group>` that caused an extra margin between the host element and the internal fieldset [#1139](https://github.com/shoelace-style/shoelace/issues/1139)
-- Refactored the `ShoelaceFormControl` interface to remove the `invalid` property, allowing a more intuitive API for controlling validation internally
+- Refactored the `BuckeyeFormControl` interface to remove the `invalid` property, allowing a more intuitive API for controlling validation internally
 - Renamed the internal `FormSubmitController` to `FormControlController` to better reflect what it's used for
 - Updated Lit to 2.6.1
 - Updated Floating UI to 1.1.0
@@ -278,7 +278,7 @@ This release includes a complete rewrite of `<sl-select>` to improve accessibili
   - Improved `<sl-tab-group>` so tabs are cleaner and easier to understand in forced-colors mode
 - Improved positioning of the menu in `<sl-select>` so you can customize the menu width [#1018](https://github.com/shoelace-style/shoelace/issues/1018)
 - Moved all component descriptions to `@summary` to get them within documentation tools [#962](https://github.com/shoelace-style/shoelace/pull/962)
-- Refactored form controls to use the `ShoelaceFormControl` interface to improve type safety and consistency
+- Refactored form controls to use the `BuckeyeFormControl` interface to improve type safety and consistency
 - Updated Lit to 2.4.1
 - Updated `@shoelace-style/localize` t0 3.0.3 to support for extended language codes
 - Updated Bootstrap Icons to 1.10.2
@@ -288,7 +288,7 @@ This release includes a complete rewrite of `<sl-select>` to improve accessibili
 
 ## 2.0.0-beta.83
 
-This release removes the `<sl-responsive-media>` component. When this component was introduced, support for [`aspect-ratio`](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)) wasn't great. These days, [the property is supported](https://caniuse.com/mdn-css_properties_aspect-ratio) by all of Shoelace's target browsers, making a dedicated component redundant.
+This release removes the `<sl-responsive-media>` component. When this component was introduced, support for [`aspect-ratio`](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)) wasn't great. These days, [the property is supported](https://caniuse.com/mdn-css_properties_aspect-ratio) by all of BuckeyeUI's target browsers, making a dedicated component redundant.
 
 - 🚨 BREAKING: Removed `<sl-responsive-media>` (use the well-supported `aspect-ratio` CSS property instead)
 - 🚨 BREAKING: Changed the `toggle-password` attribute of `<sl-input>` to `password-toggle` for consistency
@@ -307,7 +307,7 @@ This release removes the `<sl-responsive-media>` component. When this component 
 - Fixed a handful of paths to prevent TypeScript from getting upset [#886](https://github.com/shoelace-style/shoelace/issues/886)
 - Fixed a bug in `<sl-radio-group>` where the `button-group__base` part was documented but not exposed [#909](https://github.com/shoelace-style/shoelace/discussions/909)
 - Fixed a bug in `<sl-range>` that caused the active track color to render on the wrong side in RTL [#916](https://github.com/shoelace-style/shoelace/issues/916)
-- Refactored the internal event emitter to be part of `ShoelaceElement` to reduce imports and improve DX
+- Refactored the internal event emitter to be part of `BuckeyeElement` to reduce imports and improve DX
 - Downgraded Floating UI from 1.0.1 to 1.0.0 due to new logic that makes positioning much slower for certain components [#915](https://github.com/shoelace-style/shoelace/issues/915)
 - Upgraded the status of `<sl-animated-image>`, `<sl-popup>`, and `<sl-split-panel>` from experimental to stable
 
@@ -329,7 +329,7 @@ This release removes the `<sl-responsive-media>` component. When this component 
 - Improved single selection in `<sl-tree>` so nodes expand and collapse and receive selection when clicking on the label
 - Renamed `expanded-icon` and `collapsed-icon` slots to `expand-icon` and `collapse-icon` in the experimental `<sl-tree>` and `<sl-tree-item>` components
 - Improved RTL support for `<sl-image-comparer>`
-- Refactored components to extend from `ShoelaceElement` to make `dir` and `lang` reactive properties in all components
+- Refactored components to extend from `BuckeyeElement` to make `dir` and `lang` reactive properties in all components
 
 ## 2.0.0-beta.81
 
@@ -443,7 +443,7 @@ To upgrade to this version, you will need to rework your radio controls by movin
 - Added `color-scheme` to light and dark themes to improve rendering of browser-provided UI [#776](https://github.com/shoelace-style/shoelace/issues/776)
 - Added `--track-width` custom property to `<sl-tab-group>`
 - Fixed focus rings for `<sl-input>`, `<sl-select>`, and `<sl-textarea>` in Safari since they don't use `:focus-visible` [#767](https://github.com/shoelace-style/shoelace/issues/767)
-- Fixed a bug where calling `HTMLFormElement.reportValidity()` would skip Shoelace form controls [#772](https://github.com/shoelace-style/shoelace/issues/772)
+- Fixed a bug where calling `HTMLFormElement.reportValidity()` would skip BuckeyeUI form controls [#772](https://github.com/shoelace-style/shoelace/issues/772)
 - Fixed a bug that prevented `<sl-tooltip>` from closing when disabled [#775](https://github.com/shoelace-style/shoelace/issues/775)
 - Fixed a bug that allowed `<sl-icon-button>` to emit a `click` event when disabled [#781](https://github.com/shoelace-style/shoelace/issues/781)
 - Improved the default icon for `<sl-image-comparer>` so it's more intuitive and removed `grip-vertical` from system icon library
@@ -682,7 +682,7 @@ If you're using color tokens in your own stylesheet, simply remove the `rgb()` t
 }
 ```
 
-Thank you for your help and patience with testing Shoelace. I promise, we're not far from a stable release!
+Thank you for your help and patience with testing BuckeyeUI. I promise, we're not far from a stable release!
 
 - 🚨 BREAKING: removed blue gray, cool gray, true gray, and warm gray color palettes
 - 🚨 BREAKING: removed `--sl-focus-ring-color`, and `--sl-focus-ring-alpha` (use `--sl-focus-ring` instead)
@@ -723,7 +723,7 @@ Thank you for your help and patience with testing Shoelace. I promise, we're not
 
 ## 2.0.0-beta.58
 
-This version once again restores the bundled distribution because the unbundled + CDN approach is currently confusing and [not working properly](https://github.com/shoelace-style/shoelace/issues/559#issuecomment-949662331). Unbundling the few dependencies Shoelace has is still a goal of the project, but [this jsDelivr bug](https://github.com/jsdelivr/jsdelivr/issues/18337) needs to be resolved before we can achieve it.
+This version once again restores the bundled distribution because the unbundled + CDN approach is currently confusing and [not working properly](https://github.com/shoelace-style/shoelace/issues/559#issuecomment-949662331). Unbundling the few dependencies BuckeyeUI has is still a goal of the project, but [this jsDelivr bug](https://github.com/jsdelivr/jsdelivr/issues/18337) needs to be resolved before we can achieve it.
 
 I sincerely apologize for the instability of the last few beta releases as a result of this effort.
 
@@ -754,7 +754,7 @@ This release is the second attempt at unbundling dependencies. This will be a br
 
 ## 2.0.0-beta.54
 
-Shoelace doesn't have a lot of dependencies, but this release unbundles most of them so you can potentially save some extra kilobytes. This will be a breaking change only if your configuration _does not_ support bare module specifiers. CDN users and bundler users will be unaffected.
+BuckeyeUI doesn't have a lot of dependencies, but this release unbundles most of them so you can potentially save some extra kilobytes. This will be a breaking change only if your configuration _does not_ support bare module specifiers. CDN users and bundler users will be unaffected.
 
 - 🚨 BREAKING: renamed the `sl-clear` event to `sl-remove`, the `clear-button` part to `remove-button`, and the `clearable` property to `removable` in `<sl-tag>`
 - Added the `disabled` attribute to `<sl-resize-observer>`
@@ -846,7 +846,7 @@ This release also fixes a critical bug in the color scale where `--sl-color-neut
 
 This release improves theming by offering both light and dark themes that can be used autonomously. It also improves contrast in most components, adds a variety of new color primitives, and changes the way color tokens are consumed.
 
-Previously, color tokens were in hexadecimal format. Now, Shoelace now uses an `R G B` format that requires you to use the `rgb()` function in your CSS.
+Previously, color tokens were in hexadecimal format. Now, BuckeyeUI now uses an `R G B` format that requires you to use the `rgb()` function in your CSS.
 
 ```css
 .example {
@@ -894,7 +894,7 @@ This change applies to all design tokens that implement a color. Refer to the [c
 
 ## 2.0.0-beta.47
 
-This release improves how component dependencies are imported. If you've been cherry picking, you no longer need to import component dependencies manually. This significantly improves developer experience, making Shoelace even easier to use. For transparency, component dependencies will continue to be listed in the docs.
+This release improves how component dependencies are imported. If you've been cherry picking, you no longer need to import component dependencies manually. This significantly improves developer experience, making BuckeyeUI even easier to use. For transparency, component dependencies will continue to be listed in the docs.
 
 - Added "Reflects" column to the properties table
 - Dependencies are now automatically imported for all components
@@ -911,7 +911,7 @@ This release improves the developer experience of `<sl-animation>`. Previously, 
 
 This is a lot more intuitive and makes it easier to activate animations imperatively. In addition, the `play` attribute is automatically removed automatically when the animation finishes or cancels, making it easier to restart finite animations. Lastly, the animation's timing is now accessible through the new `currentTime` property instead of `getCurrentTime()` and `setCurrentTime()`.
 
-In addition, Shoelace no longer uses Sass. Component styles now use Lit's template literal styles and theme files use pure CSS.
+In addition, BuckeyeUI no longer uses Sass. Component styles now use Lit's template literal styles and theme files use pure CSS.
 
 - 🚨 BREAKING: removed the `pause` attribute from `<sl-animation>` (use `play` to start and stop the animation instead)
 - 🚨 BREAKING: removed `getCurrentTime()` and `setCurrentTime()` from `<sl-animation>` (use the `currentTime` property instead)
@@ -1090,12 +1090,12 @@ The most elegant solution I found was to use the [Web Animations API](https://de
 
 ## 2.0.0-beta.34
 
-This release changes the way components are registered if you're [cherry picking](/getting-started/installation?id=cherry-picking) or [using a bundler](/getting-started/installation?id=bundling). This recommendation came from the LitElement team and simplifies Shoelace's dependency graph. It also eliminates the need to call a `register()` function before using each component.
+This release changes the way components are registered if you're [cherry picking](/getting-started/installation?id=cherry-picking) or [using a bundler](/getting-started/installation?id=bundling). This recommendation came from the LitElement team and simplifies BuckeyeUI's dependency graph. It also eliminates the need to call a `register()` function before using each component.
 
-From now on, importing a component will register it automatically. The caveat is that bundlers may not tree shake the library properly if you import from `@shoelace-style/shoelace`, so the recommendation is to import components and utilities from their corresponding files instead.
+From now on, importing a component will register it automatically. The caveat is that bundlers may not tree shake the library properly if you import from `iop-ui`, so the recommendation is to import components and utilities from their corresponding files instead.
 
 - 🚨 BREAKING: removed `all.shoelace.js` (use `shoelace.js` instead)
-- 🚨 BREAKING: component modules now have a side effect, so bundlers may not tree shake properly when importing from `@shoelace-style/shoelace` (see the [installation page](/getting-started/installation?id=bundling) for more details and how to update)
+- 🚨 BREAKING: component modules now have a side effect, so bundlers may not tree shake properly when importing from `iop-ui` (see the [installation page](/getting-started/installation?id=bundling) for more details and how to update)
 - Added `sl-clear` event to `<sl-select>`
 - Fixed a bug where dynamically changing menu items in `<sl-select>` would cause the display label to be blank [#374](https://github.com/shoelace-style/shoelace/discussions/374)
 - Fixed a bug where setting the `value` attribute or property on `<sl-input>` and `<sl-textarea>` would trigger validation too soon
@@ -1114,7 +1114,7 @@ From now on, importing a component will register it automatically. The caveat is
 
 ## 2.0.0-beta.32
 
-- Added tag name maps so TypeScript can identify Shoelace elements [#371](https://github.com/shoelace-style/shoelace/pull/371)
+- Added tag name maps so TypeScript can identify BuckeyeUI elements [#371](https://github.com/shoelace-style/shoelace/pull/371)
 - Fixed a bug where the active tab indicator wouldn't render properly on tabs styled with `flex-end` [#355](https://github.com/shoelace-style/shoelace/issues/355)
 - Fixed a bug where `sl-change` wasn't emitted by `<sl-checkbox>` or `<sl-switch>` [#370](https://github.com/shoelace-style/shoelace/issues/370)
 - Fixed a bug where some props weren't being watched correctly in `<sl-alert>` and `<sl-color-picker>`
@@ -1134,7 +1134,7 @@ From now on, importing a component will register it automatically. The caveat is
 
 ## 2.0.0-beta.29
 
-**This release migrates component implementations from Shoemaker to LitElement.** Due to feedback from the community, Shoelace will rely on a more heavily tested library for component implementations. This gives you a more solid foundation and reduces my maintenance burden. Thank you for all your comments, concerns, and encouragement! Aside from that, everything else from beta.28 still applies plus the following.
+**This release migrates component implementations from Shoemaker to LitElement.** Due to feedback from the community, BuckeyeUI will rely on a more heavily tested library for component implementations. This gives you a more solid foundation and reduces my maintenance burden. Thank you for all your comments, concerns, and encouragement! Aside from that, everything else from beta.28 still applies plus the following.
 
 - 🚨 BREAKING: removed the `symbol` property from `<sl-rating>` and reverted to `getSymbol` for optimal flexibility
 - Added `vscode.html-custom-data.json` to the build to support IntelliSense (see [the usage section](/getting-started/usage#code-completion) for details)
@@ -1147,13 +1147,13 @@ From now on, importing a component will register it automatically. The caveat is
 
 ## 2.0.0-beta.28
 
-**This release includes a major under the hood overhaul of the library and how it's distributed.** Until now, Shoelace was developed with Stencil. This release moves to a lightweight tool called Shoemaker, a homegrown utility that provides declarative templating and data binding while reducing the boilerplate required for said features.
+**This release includes a major under the hood overhaul of the library and how it's distributed.** Until now, BuckeyeUI was developed with Stencil. This release moves to a lightweight tool called Shoemaker, a homegrown utility that provides declarative templating and data binding while reducing the boilerplate required for said features.
 
-This change in tooling addresses a number of longstanding bugs and limitations. It also gives us more control over the library and build process while streamlining development and maintenance. Instead of two different distributions, Shoelace now offers a single, standards-compliant collection of ES modules. This may affect how you install and use the library, so please refer to the [installation page](/getting-started/installation) for details.
+This change in tooling addresses a number of longstanding bugs and limitations. It also gives us more control over the library and build process while streamlining development and maintenance. Instead of two different distributions, BuckeyeUI now offers a single, standards-compliant collection of ES modules. This may affect how you install and use the library, so please refer to the [installation page](/getting-started/installation) for details.
 
-!> Due to the large number of internal changes, I would consider this update to be less stable than previous ones. If you're using Shoelace in a production app, consider holding off until the next beta to allow for more exhaustive testing from the community. Please report any bugs you find on the [issue tracker](https://github.com/shoelace-style/shoelace/issues).
+!> Due to the large number of internal changes, I would consider this update to be less stable than previous ones. If you're using BuckeyeUI in a production app, consider holding off until the next beta to allow for more exhaustive testing from the community. Please report any bugs you find on the [issue tracker](https://github.com/shoelace-style/shoelace/issues).
 
-The component API remains the same except for the changes noted below. Thanks for your patience as I work diligently to make Shoelace more stable and future-proof. 🙌
+The component API remains the same except for the changes noted below. Thanks for your patience as I work diligently to make BuckeyeUI more stable and future-proof. 🙌
 
 - 🚨 BREAKING: removed the custom elements bundle (you can import ES modules directly)
 - 🚨 BREAKING: removed `getAnimationNames()` and `getEasingNames()` methods from `<sl-animation>` (you can import them from `utilities/animation.js` instead)
@@ -1305,7 +1305,7 @@ The component API remains the same except for the changes noted below. Thanks fo
 
 ## 2.0.0-beta.20
 
-- 🚨 BREAKING: Transformed all Shoelace events to lowercase ([details](#why-did-event-names-change))
+- 🚨 BREAKING: Transformed all BuckeyeUI events to lowercase ([details](#why-did-event-names-change))
 - Added support for dropdowns and non-icon elements to `<sl-input>`
 - Added `spellcheck` attribute to `<sl-input>`
 - Added `<sl-icon-library>` to allow custom icon library registration
@@ -1317,11 +1317,11 @@ The component API remains the same except for the changes noted below. Thanks fo
 
 ### Why did event names change?
 
-Shoelace events were updated to use a lowercase, kebab-style naming convention. Instead of event names such as `slChange` and `slAfterShow`, you'll need to use `sl-change` and `sl-after-show` now.
+BuckeyeUI events were updated to use a lowercase, kebab-style naming convention. Instead of event names such as `slChange` and `slAfterShow`, you'll need to use `sl-change` and `sl-after-show` now.
 
 This change was necessary to address a critical issue in frameworks that use DOM templates with declarative event bindings such as `<sl-button @slChange="handler">`. Due to HTML's case-insensitivity, browsers translate attribute names to lowercase, turning `@slChange` into `@slchange`, making it impossible to listen to `slChange`.
 
-While declarative event binding is a non-standard feature, not supporting it would make Shoelace much harder to use in popular frameworks. To accommodate those users and provide a better developer experience, we decided to change the naming convention while Shoelace is still in beta.
+While declarative event binding is a non-standard feature, not supporting it would make BuckeyeUI much harder to use in popular frameworks. To accommodate those users and provide a better developer experience, we decided to change the naming convention while BuckeyeUI is still in beta.
 
 The following pages demonstrate why this change was necessary.
 
@@ -1435,7 +1435,7 @@ The following pages demonstrate why this change was necessary.
 
 - Added support for `href`, `target`, and `download` to buttons
 - Fixed a bug where buttons would have horizontal spacing in Safari
-- Fixed a bug that caused an import resolution error when using Shoelace in a Stencil app
+- Fixed a bug that caused an import resolution error when using BuckeyeUI in a Stencil app
 
 ## 2.0.0-beta.11
 

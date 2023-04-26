@@ -7,7 +7,7 @@ import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './details.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -39,7 +39,7 @@ import type { CSSResultGroup } from 'lit';
  * @animation details.hide - The animation to use when hiding details. You can use `height: auto` with this animation.
  */
 @customElement('sl-details')
-export default class SlDetails extends ShoelaceElement {
+export default class SlDetails extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly localize = new LocalizeController(this);

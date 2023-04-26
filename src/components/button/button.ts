@@ -8,10 +8,10 @@ import { html, literal } from 'lit/static-html.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './button.styles';
+import type { BuckeyeFormControl } from '../../internal/shoelace-element';
 import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/shoelace-element';
 
 /**
  * @summary Buttons represent actions that are available to the user.
@@ -37,7 +37,7 @@ import type { ShoelaceFormControl } from '../../internal/shoelace-element';
  * @csspart caret - The button's caret icon, an `<sl-icon>` element.
  */
 @customElement('sl-button')
-export default class SlButton extends ShoelaceElement implements ShoelaceFormControl {
+export default class SlButton extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this, {

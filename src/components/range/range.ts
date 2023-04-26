@@ -8,10 +8,10 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 import { live } from 'lit/directives/live.js';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './range.styles';
+import type { BuckeyeFormControl } from '../../internal/shoelace-element';
 import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/shoelace-element';
 
 /**
  * @summary Ranges allow the user to select a single value within a given range using a slider.
@@ -44,7 +44,7 @@ import type { ShoelaceFormControl } from '../../internal/shoelace-element';
  * @cssproperty --track-active-offset - The point of origin of the active track.
  */
 @customElement('sl-range')
-export default class SlRange extends ShoelaceElement implements ShoelaceFormControl {
+export default class SlRange extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this);

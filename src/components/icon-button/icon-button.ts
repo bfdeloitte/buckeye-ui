@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { html, literal } from 'lit/static-html.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './icon-button.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -21,7 +21,7 @@ import type { CSSResultGroup } from 'lit';
  * @csspart base - The component's base wrapper.
  */
 @customElement('sl-icon-button')
-export default class SlIconButton extends ShoelaceElement {
+export default class SlIconButton extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @query('.icon-button') button: HTMLButtonElement | HTMLLinkElement;

@@ -1,18 +1,18 @@
 {
   "name": "iop-ui",
   "description": "An Ohioan library of web components.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/bfdeloitte/iop-ui",
   "author": "Brandon Fearing",
   "license": "MIT",
   "customElements": "dist/custom-elements.json",
   "web-types": "dist/web-types.json",
   "type": "module",
-  "types": "dist/shoelace.d.ts",
+  "types": "dist/buckeye.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/shoelace.d.ts",
-      "import": "./dist/shoelace.js"
+      "types": "./dist/buckeye.d.ts",
+      "import": "./dist/buckeye.js"
     },
     "./dist/custom-elements.json": "./dist/custom-elements.json",
     "./dist/themes/*": "./dist/themes/*",

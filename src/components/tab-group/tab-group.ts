@@ -5,7 +5,7 @@ import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { scrollIntoView } from '../../internal/scroll';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './tab-group.styles';
 import type { CSSResultGroup } from 'lit';
 import type SlTab from '../tab/tab';
@@ -40,7 +40,7 @@ import type SlTabPanel from '../tab-panel/tab-panel';
  * @cssproperty --track-width - The width of the indicator's track (the line that separates tabs from panels).
  */
 @customElement('sl-tab-group')
-export default class SlTabGroup extends ShoelaceElement {
+export default class SlTabGroup extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
   private readonly localize = new LocalizeController(this);
 

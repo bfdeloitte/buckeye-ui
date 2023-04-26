@@ -4,7 +4,7 @@ import { customElement, property, query } from 'lit/decorators.js';
 import { getTextContent } from '../../internal/slot';
 import { html } from 'lit';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './menu-item.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -27,7 +27,7 @@ import type { CSSResultGroup } from 'lit';
  * @csspart suffix - The suffix container.
  */
 @customElement('sl-menu-item')
-export default class SlMenuItem extends ShoelaceElement {
+export default class SlMenuItem extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private cachedTextLabel: string;

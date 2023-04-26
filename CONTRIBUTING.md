@@ -1,5 +1,5 @@
-# Contributing to Shoelace
+# Contributing to BuckeyeUI
 
 Before contributing, please review the contributions guidelines at:
 
-[shoelace.style/resources/contributing](https://shoelace.style/resources/contributing)
+[buckeyeui.com/resources/contributing](https://buckeyeui.com/resources/contributing)

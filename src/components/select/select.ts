@@ -13,10 +13,10 @@ import { LocalizeController } from '../../utilities/localize';
 import { scrollIntoView } from 'src/internal/scroll';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './select.styles';
+import type { BuckeyeFormControl } from '../../internal/shoelace-element';
 import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/shoelace-element';
 import type SlOption from '../option/option';
 import type SlPopup from '../popup/popup';
 import type SlRemoveEvent from '../../events/sl-remove';
@@ -67,7 +67,7 @@ import type SlRemoveEvent from '../../events/sl-remove';
  * @csspart expand-icon - The container that wraps the expand icon.
  */
 @customElement('sl-select')
-export default class SlSelect extends ShoelaceElement implements ShoelaceFormControl {
+export default class SlSelect extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this, {

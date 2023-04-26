@@ -2,7 +2,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement } from 'lit/decorators.js';
 import { HasSlotController } from '../../internal/slot';
 import { html } from 'lit';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './card.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -29,7 +29,7 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --padding - The padding to use for the card's sections.
  */
 @customElement('sl-card')
-export default class SlCard extends ShoelaceElement {
+export default class SlCard extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly hasSlotController = new HasSlotController(this, 'footer', 'header', 'image');

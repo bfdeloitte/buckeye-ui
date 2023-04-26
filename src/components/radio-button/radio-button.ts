@@ -4,7 +4,7 @@ import { HasSlotController } from '../../internal/slot';
 import { html } from 'lit/static-html.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './radio-button.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -29,7 +29,7 @@ import type { CSSResultGroup } from 'lit';
  * @csspart suffix - The container that wraps the suffix.
  */
 @customElement('sl-radio-button')
-export default class SlRadioButton extends ShoelaceElement {
+export default class SlRadioButton extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly hasSlotController = new HasSlotController(this, '[default]', 'prefix', 'suffix');

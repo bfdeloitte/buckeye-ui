@@ -9,10 +9,10 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 import { live } from 'lit/directives/live.js';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './input.styles';
+import type { BuckeyeFormControl } from '../../internal/shoelace-element';
 import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/shoelace-element';
 
 /**
  * @summary Inputs collect data from the user.
@@ -49,7 +49,7 @@ import type { ShoelaceFormControl } from '../../internal/shoelace-element';
  * @csspart suffix - The container that wraps the suffix.
  */
 @customElement('sl-input')
-export default class SlInput extends ShoelaceElement implements ShoelaceFormControl {
+export default class SlInput extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this, {

@@ -1,6 +1,6 @@
 import { customElement, property } from 'lit/decorators.js';
 import { LocalizeController } from '../../utilities/localize';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 
 /**
  * @summary Formats a number using the specified locale and options.
@@ -9,7 +9,7 @@ import ShoelaceElement from '../../internal/shoelace-element';
  * @since 2.0
  */
 @customElement('sl-format-number')
-export default class SlFormatNumber extends ShoelaceElement {
+export default class SlFormatNumber extends BuckeyeElement {
   private readonly localize = new LocalizeController(this);
 
   /** The number to format. */

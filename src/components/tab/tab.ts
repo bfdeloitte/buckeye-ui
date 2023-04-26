@@ -4,7 +4,7 @@ import { customElement, property, query } from 'lit/decorators.js';
 import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './tab.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -27,7 +27,7 @@ let id = 0;
  * @csspart close-button__base - The close button's exported `base` part.
  */
 @customElement('sl-tab')
-export default class SlTab extends ShoelaceElement {
+export default class SlTab extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
   private readonly localize = new LocalizeController(this);
 

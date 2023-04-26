@@ -1,7 +1,7 @@
 import { customElement, property, state } from 'lit/decorators.js';
 import { getIconLibrary, unwatchIcon, watchIcon } from './library';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './icon.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -24,7 +24,7 @@ const iconCache = new Map<string, Promise<SVGResult>>();
  * @csspart svg - The internal SVG element.
  */
 @customElement('sl-icon')
-export default class SlIcon extends ShoelaceElement {
+export default class SlIcon extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   /** Given a URL, this function returns the resulting SVG element or an appropriate error symbol. */

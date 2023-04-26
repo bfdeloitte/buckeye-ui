@@ -10,7 +10,7 @@ import { live } from 'lit/directives/live.js';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
 import { when } from 'lit/directives/when.js';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './tree-item.styles';
 import type { CSSResultGroup, PropertyValueMap } from 'lit';
 
@@ -49,7 +49,7 @@ import type { CSSResultGroup, PropertyValueMap } from 'lit';
  * @csspart children - The container that wraps the tree item's nested children.
  */
 @customElement('sl-tree-item')
-export default class SlTreeItem extends ShoelaceElement {
+export default class SlTreeItem extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   static isTreeItem(node: Node) {

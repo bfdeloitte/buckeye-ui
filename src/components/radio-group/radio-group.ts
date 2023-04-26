@@ -10,10 +10,10 @@ import {
 import { HasSlotController } from '../../internal/slot';
 import { html } from 'lit';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './radio-group.styles';
+import type { BuckeyeFormControl } from '../../internal/shoelace-element';
 import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/shoelace-element';
 import type SlRadio from '../radio/radio';
 import type SlRadioButton from '../radio-button/radio-button';
 
@@ -41,7 +41,7 @@ import type SlRadioButton from '../radio-button/radio-button';
  * @csspart button-group__base - The button group's `base` part.
  */
 @customElement('sl-radio-group')
-export default class SlRadioGroup extends ShoelaceElement implements ShoelaceFormControl {
+export default class SlRadioGroup extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   protected readonly formControlController = new FormControlController(this);

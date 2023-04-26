@@ -14,7 +14,7 @@
 ```
 
 ```jsx react
-import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from '@shoelace-style/shoelace/dist/react';
+import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from 'iop-ui/dist/react';
 
 const App = () => (
   <SlBreadcrumb>

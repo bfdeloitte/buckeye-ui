@@ -11,8 +11,8 @@ import { lockBodyScrolling, unlockBodyScrolling } from '../../internal/scroll';
 import { uppercaseFirstLetter } from '../../internal/string';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
+import BuckeyeElement from '../../internal/shoelace-element';
 import Modal from '../../internal/modal';
-import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './drawer.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -70,7 +70,7 @@ import type { CSSResultGroup } from 'lit';
  * @animation drawer.overlay.hide - The animation to use when hiding the drawer's overlay.
  */
 @customElement('sl-drawer')
-export default class SlDrawer extends ShoelaceElement {
+export default class SlDrawer extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly hasSlotController = new HasSlotController(this, 'footer');

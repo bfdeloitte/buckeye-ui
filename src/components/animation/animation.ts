@@ -2,7 +2,7 @@ import { animations } from './animations';
 import { customElement, property, queryAsync } from 'lit/decorators.js';
 import { html } from 'lit';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './animation.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -20,7 +20,7 @@ import type { CSSResultGroup } from 'lit';
  *  animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.
  */
 @customElement('sl-animation')
-export default class SlAnimation extends ShoelaceElement {
+export default class SlAnimation extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private animation?: Animation;
@@ -50,7 +50,7 @@ export default class SlAnimation extends ShoelaceElement {
   @property({ type: Number }) duration = 1000;
 
   /**
-   * The easing function to use for the animation. This can be a Shoelace easing function or a custom easing function
+   * The easing function to use for the animation. This can be a BuckeyeUI easing function or a custom easing function
    * such as `cubic-bezier(0, 1, .76, 1.14)`.
    */
   @property() easing = 'linear';

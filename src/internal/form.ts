@@ -1,13 +1,13 @@
+import type { BuckeyeFormControl } from '../internal/shoelace-element';
 import type { ReactiveController, ReactiveControllerHost } from 'lit';
-import type { ShoelaceFormControl } from '../internal/shoelace-element';
 import type SlButton from '../components/button/button';
 
 //
-// We store a WeakMap of forms + controls so we can keep references to all Shoelace controls within a given form. As
+// We store a WeakMap of forms + controls so we can keep references to all BuckeyeUI controls within a given form. As
 // elements connect and disconnect to/from the DOM, their containing form is used as the key and the form control is
 // added and removed from the form's set, respectively.
 //
-export const formCollections: WeakMap<HTMLFormElement, Set<ShoelaceFormControl>> = new WeakMap();
+export const formCollections: WeakMap<HTMLFormElement, Set<BuckeyeFormControl>> = new WeakMap();
 
 //
 // We store a WeakMap of reportValidity() overloads so we can override it when form controls connect to the DOM and
@@ -19,31 +19,31 @@ const reportValidityOverloads: WeakMap<HTMLFormElement, () => boolean> = new Wea
 // We store a Set of controls that users have interacted with. This allows us to determine the interaction state
 // without littering the DOM with additional data attributes.
 //
-const userInteractedControls: WeakSet<ShoelaceFormControl> = new WeakSet();
+const userInteractedControls: WeakSet<BuckeyeFormControl> = new WeakSet();
 
 //
 // We store a WeakMap of interactions for each form control so we can track when all conditions are met for validation.
 //
-const interactions = new WeakMap<ShoelaceFormControl, string[]>();
+const interactions = new WeakMap<BuckeyeFormControl, string[]>();
 
 export interface FormControlControllerOptions {
   /** A function that returns the form containing the form control. */
-  form: (input: ShoelaceFormControl) => HTMLFormElement | null;
+  form: (input: BuckeyeFormControl) => HTMLFormElement | null;
   /** A function that returns the form control's name, which will be submitted with the form data. */
-  name: (input: ShoelaceFormControl) => string;
+  name: (input: BuckeyeFormControl) => string;
   /** A function that returns the form control's current value. */
-  value: (input: ShoelaceFormControl) => unknown | unknown[];
+  value: (input: BuckeyeFormControl) => unknown | unknown[];
   /** A function that returns the form control's default value. */
-  defaultValue: (input: ShoelaceFormControl) => unknown | unknown[];
+  defaultValue: (input: BuckeyeFormControl) => unknown | unknown[];
   /** A function that returns the form control's current disabled state. If disabled, the value won't be submitted. */
-  disabled: (input: ShoelaceFormControl) => boolean;
+  disabled: (input: BuckeyeFormControl) => boolean;
   /**
    * A function that maps to the form control's reportValidity() function. When the control is invalid, this will
    * prevent submission and trigger the browser's constraint violation warning.
    */
-  reportValidity: (input: ShoelaceFormControl) => boolean;
+  reportValidity: (input: BuckeyeFormControl) => boolean;
   /** A function that sets the form control's value */
-  setValue: (input: ShoelaceFormControl, value: unknown) => void;
+  setValue: (input: BuckeyeFormControl, value: unknown) => void;
   /**
    * An array of event names to listen to. When all events in the list are emitted, the control will receive validity
    * states such as user-valid and user-invalid.user interacted validity states. */
@@ -52,11 +52,11 @@ export interface FormControlControllerOptions {
 
 /** A reactive controller to allow form controls to participate in form submission, validation, etc. */
 export class FormControlController implements ReactiveController {
-  host: ShoelaceFormControl & ReactiveControllerHost;
+  host: BuckeyeFormControl & ReactiveControllerHost;
   form?: HTMLFormElement | null;
   options: FormControlControllerOptions;
 
-  constructor(host: ReactiveControllerHost & ShoelaceFormControl, options?: Partial<FormControlControllerOptions>) {
+  constructor(host: ReactiveControllerHost & BuckeyeFormControl, options?: Partial<FormControlControllerOptions>) {
     (this.host = host).addController(this);
     this.options = {
       form: input => {
@@ -139,14 +139,14 @@ export class FormControlController implements ReactiveController {
       if (formCollections.has(this.form)) {
         formCollections.get(this.form)!.add(this.host);
       } else {
-        formCollections.set(this.form, new Set<ShoelaceFormControl>([this.host]));
+        formCollections.set(this.form, new Set<BuckeyeFormControl>([this.host]));
       }
 
       this.form.addEventListener('formdata', this.handleFormData);
       this.form.addEventListener('submit', this.handleFormSubmit);
       this.form.addEventListener('reset', this.handleFormReset);
 
-      // Overload the form's reportValidity() method so it looks at Shoelace form controls
+      // Overload the form's reportValidity() method so it looks at BuckeyeUI form controls
       if (!reportValidityOverloads.has(this.form)) {
         reportValidityOverloads.set(this.form, this.form.reportValidity);
         this.form.reportValidity = () => this.reportFormValidity();
@@ -233,7 +233,7 @@ export class FormControlController implements ReactiveController {
 
   private reportFormValidity() {
     //
-    // Shoelace form controls work hard to act like regular form controls. They support the Constraint Validation API
+    // BuckeyeUI form controls work hard to act like regular form controls. They support the Constraint Validation API
     // and its associated methods such as setCustomValidity() and reportValidity(). However, the HTMLFormElement also
     // has a reportValidity() method that will trigger validation on all child controls. Since we're not yet using
     // ElementInternals, we need to overload this method so it looks for any element with the reportValidity() method.
@@ -245,7 +245,7 @@ export class FormControlController implements ReactiveController {
     // Note that we're also honoring the form's novalidate attribute.
     //
     if (this.form && !this.form.noValidate) {
-      // This seems sloppy, but checking all elements will cover native inputs, Shoelace inputs, and other custom
+      // This seems sloppy, but checking all elements will cover native inputs, BuckeyeUI inputs, and other custom
       // elements that support the constraint validation API.
       const elements = this.form.querySelectorAll<HTMLInputElement>('*');
 
@@ -261,7 +261,7 @@ export class FormControlController implements ReactiveController {
     return true;
   }
 
-  private setUserInteracted(el: ShoelaceFormControl, hasInteracted: boolean) {
+  private setUserInteracted(el: BuckeyeFormControl, hasInteracted: boolean) {
     if (hasInteracted) {
       userInteractedControls.add(el);
     } else {

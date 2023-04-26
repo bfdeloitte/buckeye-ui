@@ -3,7 +3,7 @@ import { customElement, property, query } from 'lit/decorators.js';
 import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import SlTreeItem from '../tree-item/tree-item';
 import styles from './tree.styles';
 import type { CSSResultGroup } from 'lit';
@@ -70,7 +70,7 @@ function syncCheckboxes(changedTreeItem: SlTreeItem, initialSync = false) {
  * @cssproperty [--indent-guide-width=0] - The width of the indentation line.
  */
 @customElement('sl-tree')
-export default class SlTree extends ShoelaceElement {
+export default class SlTree extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @query('slot:not([name])') defaultSlot: HTMLSlotElement;

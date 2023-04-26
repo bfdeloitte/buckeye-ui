@@ -1,6 +1,6 @@
 # Contributing
 
-Shoelace is an open source project, meaning everyone can use it and contribute to its development. When you join our community, you'll find a friendly group of enthusiasts at all experience levels who are willing to chat about anything and everything related to Shoelace.
+BuckeyeUI is an open source project, meaning everyone can use it and contribute to its development. When you join our community, you'll find a friendly group of enthusiasts at all experience levels who are willing to chat about anything and everything related to BuckeyeUI.
 
 The easiest way to get started contributing is to join the [community chat](https://discord.gg/mg8f26C). This is where we hang out, discuss new ideas, ask for feedback, and more!
 
@@ -88,7 +88,7 @@ cd shoelace
 npm install
 ```
 
-Once you've cloned the repo, run the following command to spin up the Shoelace dev server.
+Once you've cloned the repo, run the following command to spin up the BuckeyeUI dev server.
 
 ```bash
 npm run start
@@ -122,7 +122,7 @@ For more information about running and building the project locally, refer to `R
 
 ### Testing
 
-Shoelace uses [Web Test Runner](https://modern-web.dev/guides/test-runner/getting-started/) for testing. To launch the test runner during development, open a terminal and launch the dev server.
+BuckeyeUI uses [Web Test Runner](https://modern-web.dev/guides/test-runner/getting-started/) for testing. To launch the test runner during development, open a terminal and launch the dev server.
 
 ```bash
 npm run start
@@ -160,7 +160,7 @@ If in doubt, use your best judgment and the maintainers will be happy to guide y
 
 ### Accessibility
 
-Shoelace is built with accessibility in mind. Creating generic components that are fully accessible to users with varying capabilities across a multitude of circumstances is a daunting challenge. Oftentimes, the solution to an a11y problem is not written in black and white and, therefore, we may not get it right the first time around. There are, however, guidelines we can follow in our effort to make Shoelace an accessible foundation from which applications and websites can be built.
+BuckeyeUI is built with accessibility in mind. Creating generic components that are fully accessible to users with varying capabilities across a multitude of circumstances is a daunting challenge. Oftentimes, the solution to an a11y problem is not written in black and white and, therefore, we may not get it right the first time around. There are, however, guidelines we can follow in our effort to make BuckeyeUI an accessible foundation from which applications and websites can be built.
 
 We take this commitment seriously, so please ensure your contributions have this goal in mind. If you need help with anything a11y-related, please [reach out to the community](/resources/community) for assistance. If you discover an accessibility concern within the library, please file a bug on the [issue tracker](https://github.com/shoelace-style/shoelace/issues).
 
@@ -168,9 +168,9 @@ It's important to remember that, although accessibility starts with foundational
 
 ### Documentation
 
-Maintaining good documentation can be a painstaking task, but poor documentation leads to frustration and makes the project less appealing to users. Fortunately, writing documentation for Shoelace is fast and easy!
+Maintaining good documentation can be a painstaking task, but poor documentation leads to frustration and makes the project less appealing to users. Fortunately, writing documentation for BuckeyeUI is fast and easy!
 
-Most of Shoelace's technical documentation is generated with JSDoc comments and TypeScript metadata from the source code. Every property, method, event, etc. is documented this way. In-code comments encourage contributors to keep the documentation up to date as changes occur so the docs are less likely to become stale. Refer to an existing component to see how JSDoc comments are used in Shoelace.
+Most of BuckeyeUI's technical documentation is generated with JSDoc comments and TypeScript metadata from the source code. Every property, method, event, etc. is documented this way. In-code comments encourage contributors to keep the documentation up to date as changes occur so the docs are less likely to become stale. Refer to an existing component to see how JSDoc comments are used in BuckeyeUI.
 
 Instructions, code examples, and interactive demos are hand-curated to give users the best possible experience. Typically, the most relevant information is shown first and less common examples are shown towards the bottom. Edge cases and gotchas should be called out in context with tips or warnings.
 
@@ -265,7 +265,7 @@ This convention avoids the problem of browsers lowercasing attributes, causing s
 
 ### Change Events
 
-When change events are emitted by Shoelace components, they should be named `sl-change` and they should only be emitted as a result of user input. Programmatic changes, such as setting `el.value = '…'` _should not_ result in a change event being emitted. This is consistent with how native form controls work.
+When change events are emitted by BuckeyeUI components, they should be named `sl-change` and they should only be emitted as a result of user input. Programmatic changes, such as setting `el.value = '…'` _should not_ result in a change event being emitted. This is consistent with how native form controls work.
 
 ### CSS Custom Properties
 
@@ -313,7 +313,7 @@ This convention can be relaxed when the developer experience is greatly improved
 
 ### Naming CSS Parts
 
-While CSS parts can be named [virtually anything](https://www.abeautifulsite.net/posts/valid-names-for-css-parts/), within Shoelace they must use the kebab-case convention and lowercase letters. Additionally, [a BEM-inspired naming convention](https://www.abeautifulsite.net/posts/css-parts-inspired-by-bem/) is used to distinguish parts, subparts, and states.
+While CSS parts can be named [virtually anything](https://www.abeautifulsite.net/posts/valid-names-for-css-parts/), within BuckeyeUI they must use the kebab-case convention and lowercase letters. Additionally, [a BEM-inspired naming convention](https://www.abeautifulsite.net/posts/css-parts-inspired-by-bem/) is used to distinguish parts, subparts, and states.
 
 When composing elements, use `part` to export the host element and `exportparts` to export its parts.
 
@@ -333,11 +333,11 @@ This results in a consistent, easy to understand structure for parts. In this ex
 
 TL;DR – a component is a dependency if and only if it's rendered inside another component's shadow root.
 
-Many Shoelace components use other Shoelace components internally. For example, `<sl-button>` uses both `<sl-icon>` and `<sl-spinner>` for its caret icon and loading state, respectively. Since these components appear in the button's shadow root, they are considered dependencies of Button. Since dependencies are automatically loaded, users only need to import the button and everything will work as expected.
+Many BuckeyeUI components use other BuckeyeUI components internally. For example, `<sl-button>` uses both `<sl-icon>` and `<sl-spinner>` for its caret icon and loading state, respectively. Since these components appear in the button's shadow root, they are considered dependencies of Button. Since dependencies are automatically loaded, users only need to import the button and everything will work as expected.
 
 Contrast this to `<sl-select>` and `<sl-option>`. At first, one might assume that Option is a dependency of Select. After all, you can't really use Select without slotting in at least one Option. However, Option _is not_ a dependency of Select! The reason is because no Option is rendered in the Select's shadow root. Since the options are provided by the user, it's up to them to import both components independently.
 
-People often suggest that Shoelace should auto-load Select + Option, Menu + Menu Item, Breadcrumb + Breadcrumb Item, etc. Although some components are designed to work together, they're technically not dependencies so eagerly loading them may not be desirable. What if someone wants to roll their own component with a superset of features? They wouldn't be able to if Shoelace automatically imported it!
+People often suggest that BuckeyeUI should auto-load Select + Option, Menu + Menu Item, Breadcrumb + Breadcrumb Item, etc. Although some components are designed to work together, they're technically not dependencies so eagerly loading them may not be desirable. What if someone wants to roll their own component with a superset of features? They wouldn't be able to if BuckeyeUI automatically imported it!
 
 Similarly, in the case of `<sl-radio-group>` there was originally only `<sl-radio>`, but now you can use either `<sl-radio>` or `<sl-radio-button>` as child elements. Which component(s) should be auto-loaded dependencies in this case? Had Radio been a dependency of Radio Group, users that only wanted Radio Buttons would be forced to register both with no way to opt out and no way to provide their own customized version.
 

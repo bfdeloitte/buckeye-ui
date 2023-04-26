@@ -6,10 +6,10 @@ import { html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { live } from 'lit/directives/live.js';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './switch.styles';
+import type { BuckeyeFormControl } from '../../internal/shoelace-element';
 import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/shoelace-element';
 
 /**
  * @summary Switches allow the user to toggle an option on or off.
@@ -35,7 +35,7 @@ import type { ShoelaceFormControl } from '../../internal/shoelace-element';
  * @cssproperty --thumb-size - The size of the thumb.
  */
 @customElement('sl-switch')
-export default class SlSwitch extends ShoelaceElement implements ShoelaceFormControl {
+export default class SlSwitch extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this, {

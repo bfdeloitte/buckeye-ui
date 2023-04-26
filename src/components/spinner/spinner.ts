@@ -1,7 +1,7 @@
 import { customElement } from 'lit/decorators.js';
 import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './spinner.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -19,7 +19,7 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --speed - The time it takes for the spinner to complete one animation cycle.
  */
 @customElement('sl-spinner')
-export default class SlSpinner extends ShoelaceElement {
+export default class SlSpinner extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly localize = new LocalizeController(this);

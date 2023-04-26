@@ -1,6 +1,6 @@
 import { customElement, query } from 'lit/decorators.js';
 import { html } from 'lit';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './menu.styles';
 import type { CSSResultGroup } from 'lit';
 import type SlMenuItem from '../menu-item/menu-item';
@@ -19,7 +19,7 @@ export interface MenuSelectEventDetail {
  * @event {{ item: SlMenuItem }} sl-select - Emitted when a menu item is selected.
  */
 @customElement('sl-menu')
-export default class SlMenu extends ShoelaceElement {
+export default class SlMenu extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @query('slot') defaultSlot: HTMLSlotElement;

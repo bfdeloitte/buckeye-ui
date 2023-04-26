@@ -7,10 +7,10 @@ import { html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { live } from 'lit/directives/live.js';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './checkbox.styles';
+import type { BuckeyeFormControl } from '../../internal/shoelace-element';
 import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/shoelace-element';
 
 /**
  * @summary Checkboxes allow the user to toggle an option on or off.
@@ -37,7 +37,7 @@ import type { ShoelaceFormControl } from '../../internal/shoelace-element';
  * @csspart label - The container that wraps the checkbox's label.
  */
 @customElement('sl-checkbox')
-export default class SlCheckbox extends ShoelaceElement implements ShoelaceFormControl {
+export default class SlCheckbox extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this, {

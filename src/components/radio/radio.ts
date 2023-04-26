@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { html } from 'lit';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './radio.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -27,7 +27,7 @@ import type { CSSResultGroup } from 'lit';
  * @csspart label - The container that wraps the radio's label.
  */
 @customElement('sl-radio')
-export default class SlRadio extends ShoelaceElement {
+export default class SlRadio extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @state() checked = false;

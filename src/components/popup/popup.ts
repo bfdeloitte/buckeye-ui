@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query } from 'lit/decorators.js';
 import { html } from 'lit';
 import { offsetParent } from 'composed-offset-position';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './popup.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -36,7 +36,7 @@ import type { CSSResultGroup } from 'lit';
  *  available when using `auto-size`.
  */
 @customElement('sl-popup')
-export default class SlPopup extends ShoelaceElement {
+export default class SlPopup extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private anchorEl: Element | null;

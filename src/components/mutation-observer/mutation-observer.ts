@@ -1,7 +1,7 @@
 import { customElement, property } from 'lit/decorators.js';
 import { html } from 'lit';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './mutation-observer.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -16,7 +16,7 @@ import type { CSSResultGroup } from 'lit';
  * @slot - The content to watch for mutations.
  */
 @customElement('sl-mutation-observer')
-export default class SlMutationObserver extends ShoelaceElement {
+export default class SlMutationObserver extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private mutationObserver: MutationObserver;

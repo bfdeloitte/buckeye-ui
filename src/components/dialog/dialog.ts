@@ -10,8 +10,8 @@ import { LocalizeController } from '../../utilities/localize';
 import { lockBodyScrolling, unlockBodyScrolling } from '../../internal/scroll';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
+import BuckeyeElement from '../../internal/shoelace-element';
 import Modal from '../../internal/modal';
-import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './dialog.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -62,7 +62,7 @@ import type { CSSResultGroup } from 'lit';
  * @animation dialog.overlay.hide - The animation to use when hiding the dialog's overlay.
  */
 @customElement('sl-dialog')
-export default class SlDialog extends ShoelaceElement {
+export default class SlDialog extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly hasSlotController = new HasSlotController(this, 'footer');

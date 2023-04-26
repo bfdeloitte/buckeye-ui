@@ -2,8 +2,8 @@ import { customElement, property, query } from 'lit/decorators.js';
 import { html } from 'lit';
 import { styleMap } from 'lit/directives/style-map.js';
 import { watch } from '../../internal/watch';
+import BuckeyeElement from '../../internal/shoelace-element';
 import QrCreator from 'qr-creator';
-import ShoelaceElement from '../../internal/shoelace-element';
 import styles from './qr-code.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -16,7 +16,7 @@ import type { CSSResultGroup } from 'lit';
  * @csspart base - The component's base wrapper.
  */
 @customElement('sl-qr-code')
-export default class SlQrCode extends ShoelaceElement {
+export default class SlQrCode extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @query('canvas') canvas: HTMLElement;

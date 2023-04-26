@@ -8,7 +8,7 @@ import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { waitForEvent } from '../../internal/event';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './dropdown.styles';
 import type { CSSResultGroup } from 'lit';
 import type SlButton from '../button/button';
@@ -41,7 +41,7 @@ import type SlSelectEvent from '../../events/sl-select';
  * @animation dropdown.hide - The animation to use when hiding the dropdown.
  */
 @customElement('sl-dropdown')
-export default class SlDropdown extends ShoelaceElement {
+export default class SlDropdown extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @query('.dropdown') popup: SlPopup;
@@ -291,7 +291,7 @@ export default class SlDropdown extends ShoelaceElement {
 
     if (accessibleTrigger) {
       switch (accessibleTrigger.tagName.toLowerCase()) {
-        // Shoelace buttons have to update the internal button so it's announced correctly by screen readers
+        // BuckeyeUI buttons have to update the internal button so it's announced correctly by screen readers
         case 'sl-button':
         case 'sl-icon-button':
           target = (accessibleTrigger as SlButton | SlIconButton).button;

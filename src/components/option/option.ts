@@ -4,7 +4,7 @@ import { customElement, property, query, state } from 'lit/decorators.js';
 import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './option.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -27,7 +27,7 @@ import type { CSSResultGroup } from 'lit';
  * @csspart suffix - The container that wraps the suffix.
  */
 @customElement('sl-option')
-export default class SlOption extends ShoelaceElement {
+export default class SlOption extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private cachedTextLabel: string;

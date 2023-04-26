@@ -1,7 +1,7 @@
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { html } from 'lit';
-import ShoelaceElement from '../../internal/shoelace-element';
+import BuckeyeElement from '../../internal/shoelace-element';
 import styles from './badge.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -16,7 +16,7 @@ import type { CSSResultGroup } from 'lit';
  * @csspart base - The component's base wrapper.
  */
 @customElement('sl-badge')
-export default class SlBadge extends ShoelaceElement {
+export default class SlBadge extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   /** The badge's theme variant. */

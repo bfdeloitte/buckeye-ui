@@ -16,7 +16,7 @@
     const version = sessionStorage.getItem('sl-version');
 
     html = html
-      .replace(/@shoelace-style\/shoelace/g, `https://cdn.skypack.dev/@shoelace-style/shoelace@${version}`)
+      .replace(/iop-ui/g, `https://cdn.skypack.dev/iop-ui@${version}`)
       .replace(/from 'react'/g, `from 'https://cdn.skypack.dev/react@${reactVersion}'`)
       .replace(/from "react"/g, `from "https://cdn.skypack.dev/react@${reactVersion}"`);
 
@@ -310,7 +310,7 @@
       // HTML templates
       if (!isReact) {
         htmlTemplate =
-          `<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@${version}/dist/shoelace.js"></script>\n` +
+          `<script type="module" src="https://cdn.jsdelivr.net/npm/iop-ui@${version}/dist/buckeye.js"></script>\n` +
           `\n${htmlExample}`;
         jsTemplate = '';
       }
@@ -321,10 +321,10 @@
         jsTemplate =
           `import React from 'https://cdn.skypack.dev/react@${reactVersion}';\n` +
           `import ReactDOM from 'https://cdn.skypack.dev/react-dom@${reactVersion}';\n` +
-          `import { setBasePath } from 'https://cdn.skypack.dev/@shoelace-style/shoelace@${version}/dist/utilities/base-path';\n` +
+          `import { setBasePath } from 'https://cdn.skypack.dev/iop-ui@${version}/dist/utilities/base-path';\n` +
           `\n` +
-          `// Set the base path for Shoelace assets\n` +
-          `setBasePath('https://cdn.skypack.dev/@shoelace-style/shoelace@${version}/dist/')\n` +
+          `// Set the base path for BuckeyeUI assets\n` +
+          `setBasePath('https://cdn.skypack.dev/iop-ui@${version}/dist/')\n` +
           `\n${convertModuleLinks(reactExample)}\n` +
           `\n` +
           `ReactDOM.render(<App />, document.getElementById('root'));`;
@@ -332,9 +332,7 @@
 
       // CSS templates
       cssTemplate =
-        `@import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@${version}/dist/themes/${
-          isDark ? 'dark' : 'light'
-        }.css';\n` +
+        `@import 'https://cdn.jsdelivr.net/npm/iop-ui@${version}/dist/themes/${isDark ? 'dark' : 'light'}.css';\n` +
         '\n' +
         'body {\n' +
         '  font: 16px sans-serif;\n' +
@@ -347,7 +345,7 @@
       const data = {
         title: '',
         description: '',
-        tags: ['shoelace', 'web components'],
+        tags: ['buckeye', 'web components'],
         editors,
         head: `<meta name="viewport" content="width=device-width">`,
         html_classes: `sl-theme-${isDark ? 'dark' : 'light'}`,
