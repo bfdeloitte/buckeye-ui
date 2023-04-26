@@ -343,60 +343,6 @@
           ]
         },
         {
-          "name": "sl-badge",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/badge",
-          "js": {
-            "properties": [
-              {
-                "name": "variant",
-                "description": "The badge's theme variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
-                "value": {
-                  "type": "boolean"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The badge's theme variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "sl-animation",
           "description": "",
           "doc-url": "https://shoelace.style/components/animation",
@@ -662,6 +608,60 @@
             "events": []
           },
           "attributes": []
+        },
+        {
+          "name": "sl-badge",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/badge",
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "The badge's theme variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                }
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
+                "value": {
+                  "type": "boolean"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The badge's theme variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
         },
         {
           "name": "sl-breadcrumb",
@@ -1270,6 +1270,21 @@
               }
             }
           ]
+        },
+        {
+          "name": "sl-card",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/card",
+          "js": {
+            "properties": [
+              {
+                "name": "hasSlotController",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": []
         },
         {
           "description": "A controller that repeatedly calls the specified callback with the provided interval time.\nThe timer is automatically paused while the user is interacting with the component.",
@@ -1952,21 +1967,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "sl-card",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/card",
-          "js": {
-            "properties": [
-              {
-                "name": "hasSlotController",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": []
         },
         {
           "name": "sl-color-picker",
@@ -3155,6 +3155,64 @@
           ]
         },
         {
+          "name": "sl-format-bytes",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/format-bytes",
+          "js": {
+            "properties": [
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "value",
+                "description": "The number to format in bytes.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "unit",
+                "description": "The type of unit to display.",
+                "value": {
+                  "type": "'byte' | 'bit'"
+                }
+              },
+              {
+                "name": "display",
+                "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+                "value": {
+                  "type": "'long' | 'short' | 'narrow'"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The number to format in bytes.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "unit",
+              "description": "The type of unit to display.",
+              "value": {
+                "type": "'byte' | 'bit'"
+              }
+            },
+            {
+              "name": "display",
+              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+              "value": {
+                "type": "'long' | 'short' | 'narrow'"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-format-date",
           "description": "",
           "doc-url": "https://shoelace.style/components/format-date",
@@ -3334,64 +3392,6 @@
               "description": "The format for displaying the hour.",
               "value": {
                 "type": "'auto' | '12' | '24'"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-format-bytes",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/format-bytes",
-          "js": {
-            "properties": [
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "value",
-                "description": "The number to format in bytes.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "unit",
-                "description": "The type of unit to display.",
-                "value": {
-                  "type": "'byte' | 'bit'"
-                }
-              },
-              {
-                "name": "display",
-                "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-                "value": {
-                  "type": "'long' | 'short' | 'narrow'"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "value",
-              "description": "The number to format in bytes.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "unit",
-              "description": "The type of unit to display.",
-              "value": {
-                "type": "'byte' | 'bit'"
-              }
-            },
-            {
-              "name": "display",
-              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-              "value": {
-                "type": "'long' | 'short' | 'narrow'"
               }
             }
           ]
@@ -4691,16 +4691,6 @@
           "attributes": []
         },
         {
-          "name": "sl-menu-label",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/menu-label",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
           "name": "sl-menu-item",
           "description": "",
           "doc-url": "https://shoelace.style/components/menu-item",
@@ -4810,6 +4800,16 @@
               }
             }
           ]
+        },
+        {
+          "name": "sl-menu-label",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/menu-label",
+          "js": {
+            "properties": [],
+            "events": []
+          },
+          "attributes": []
         },
         {
           "name": "sl-mutation-observer",
@@ -4932,6 +4932,109 @@
             {
               "name": "disabled",
               "description": "Disables the observer.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-option",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/option",
+          "js": {
+            "properties": [
+              {
+                "name": "cachedTextLabel",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "current",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "selected",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "hasHover",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "value",
+                "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "disabled",
+                "description": "Draws the option in a disabled state, preventing selection.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleDefaultSlotChange",
+                "value": {}
+              },
+              {
+                "name": "handleMouseEnter",
+                "value": {}
+              },
+              {
+                "name": "handleMouseLeave",
+                "value": {}
+              },
+              {
+                "name": "handleDisabledChange",
+                "value": {}
+              },
+              {
+                "name": "handleSelectedChange",
+                "value": {}
+              },
+              {
+                "name": "handleValueChange",
+                "value": {}
+              },
+              {
+                "name": "getTextLabel",
+                "description": "Returns a plain text label based on the option's content.",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Draws the option in a disabled state, preventing selection.",
               "value": {
                 "type": "boolean"
               }
@@ -5287,109 +5390,6 @@
               "description": "The amount of padding, in pixels, to exceed before the auto-size behavior will occur.",
               "value": {
                 "type": "number"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-option",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/option",
-          "js": {
-            "properties": [
-              {
-                "name": "cachedTextLabel",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "current",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "selected",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "hasHover",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "value",
-                "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "disabled",
-                "description": "Draws the option in a disabled state, preventing selection.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleDefaultSlotChange",
-                "value": {}
-              },
-              {
-                "name": "handleMouseEnter",
-                "value": {}
-              },
-              {
-                "name": "handleMouseLeave",
-                "value": {}
-              },
-              {
-                "name": "handleDisabledChange",
-                "value": {}
-              },
-              {
-                "name": "handleSelectedChange",
-                "value": {}
-              },
-              {
-                "name": "handleValueChange",
-                "value": {}
-              },
-              {
-                "name": "getTextLabel",
-                "description": "Returns a plain text label based on the option's content.",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "value",
-              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "disabled",
-              "description": "Draws the option in a disabled state, preventing selection.",
-              "value": {
-                "type": "boolean"
               }
             }
           ]
@@ -8089,6 +8089,60 @@
           ]
         },
         {
+          "name": "sl-tab-panel",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/tab-panel",
+          "js": {
+            "properties": [
+              {
+                "name": "attrId",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "componentId",
+                "value": {}
+              },
+              {
+                "name": "name",
+                "description": "The tab panel's name.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "active",
+                "description": "When true, the tab panel will be shown.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleActiveChange",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "name",
+              "description": "The tab panel's name.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "active",
+              "description": "When true, the tab panel will be shown.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
           "name": "sl-tag",
           "description": "",
           "doc-url": "https://shoelace.style/components/tag",
@@ -8163,60 +8217,6 @@
             {
               "name": "removable",
               "description": "Makes the tag removable and shows a remove button.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-tab-panel",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/tab-panel",
-          "js": {
-            "properties": [
-              {
-                "name": "attrId",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "componentId",
-                "value": {}
-              },
-              {
-                "name": "name",
-                "description": "The tab panel's name.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "active",
-                "description": "When true, the tab panel will be shown.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleActiveChange",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "name",
-              "description": "The tab panel's name.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "active",
-              "description": "When true, the tab panel will be shown.",
               "value": {
                 "type": "boolean"
               }
@@ -8925,143 +8925,6 @@
           ]
         },
         {
-          "name": "sl-tree",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/tree",
-          "js": {
-            "properties": [
-              {
-                "name": "defaultSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "expandedIconSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "collapsedIconSlot",
-                "value": {
-                  "type": "HTMLSlotElement"
-                }
-              },
-              {
-                "name": "selection",
-                "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-                "value": {
-                  "type": "'single' | 'multiple' | 'leaf'"
-                }
-              },
-              {
-                "name": "lastFocusedItem",
-                "value": {
-                  "type": "SlTreeItem"
-                }
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "mutationObserver",
-                "value": {
-                  "type": "MutationObserver"
-                }
-              },
-              {
-                "name": "clickTarget",
-                "value": {
-                  "type": "SlTreeItem | null"
-                }
-              },
-              {
-                "name": "getExpandButtonIcon",
-                "value": {}
-              },
-              {
-                "name": "initTreeItem",
-                "value": {}
-              },
-              {
-                "name": "handleTreeChanged",
-                "value": {}
-              },
-              {
-                "name": "syncTreeItems",
-                "value": {}
-              },
-              {
-                "name": "selectItem",
-                "value": {}
-              },
-              {
-                "name": "getAllTreeItems",
-                "value": {}
-              },
-              {
-                "name": "focusItem",
-                "value": {}
-              },
-              {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleMouseDown",
-                "value": {}
-              },
-              {
-                "name": "handleFocusOut",
-                "value": {}
-              },
-              {
-                "name": "handleFocusIn",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              },
-              {
-                "name": "handleSelectionChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "sl-selection-change",
-                "description": "Emitted when a tree item is selected or deselected."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "selection",
-              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-              "value": {
-                "type": "'single' | 'multiple' | 'leaf'"
-              }
-            }
-          ]
-        },
-        {
-          "name": "sl-visually-hidden",
-          "description": "",
-          "doc-url": "https://shoelace.style/components/visually-hidden",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
           "name": "sl-tree-item",
           "description": "",
           "doc-url": "https://shoelace.style/components/tree-item",
@@ -9260,6 +9123,143 @@
               }
             }
           ]
+        },
+        {
+          "name": "sl-tree",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/tree",
+          "js": {
+            "properties": [
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "expandedIconSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "collapsedIconSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "selection",
+                "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
+                "value": {
+                  "type": "'single' | 'multiple' | 'leaf'"
+                }
+              },
+              {
+                "name": "lastFocusedItem",
+                "value": {
+                  "type": "SlTreeItem"
+                }
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "mutationObserver",
+                "value": {
+                  "type": "MutationObserver"
+                }
+              },
+              {
+                "name": "clickTarget",
+                "value": {
+                  "type": "SlTreeItem | null"
+                }
+              },
+              {
+                "name": "getExpandButtonIcon",
+                "value": {}
+              },
+              {
+                "name": "initTreeItem",
+                "value": {}
+              },
+              {
+                "name": "handleTreeChanged",
+                "value": {}
+              },
+              {
+                "name": "syncTreeItems",
+                "value": {}
+              },
+              {
+                "name": "selectItem",
+                "value": {}
+              },
+              {
+                "name": "getAllTreeItems",
+                "value": {}
+              },
+              {
+                "name": "focusItem",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleMouseDown",
+                "value": {}
+              },
+              {
+                "name": "handleFocusOut",
+                "value": {}
+              },
+              {
+                "name": "handleFocusIn",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              },
+              {
+                "name": "handleSelectionChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "sl-selection-change",
+                "description": "Emitted when a tree item is selected or deselected."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "selection",
+              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
+              "value": {
+                "type": "'single' | 'multiple' | 'leaf'"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sl-visually-hidden",
+          "description": "",
+          "doc-url": "https://shoelace.style/components/visually-hidden",
+          "js": {
+            "properties": [],
+            "events": []
+          },
+          "attributes": []
         }
       ]
     }

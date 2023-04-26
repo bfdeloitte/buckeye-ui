@@ -93,34 +93,6 @@
       "references": []
     },
     {
-      "name": "sl-badge",
-      "description": "Badges are used to draw attention and display statuses or counts.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "variant",
-          "description": "The badge's theme variant.",
-          "values": [
-            { "name": "primary" },
-            { "name": "success" },
-            { "name": "neutral" },
-            { "name": "warning" },
-            { "name": "danger" }
-          ]
-        },
-        {
-          "name": "pill",
-          "description": "Draws a pill-style badge with rounded edges.",
-          "values": []
-        },
-        {
-          "name": "pulse",
-          "description": "Makes the badge pulsate to draw attention.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "sl-animation",
       "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-cancel** - Emitted when the animation is canceled.\n- **sl-finish** - Emitted when the animation finishes.\n- **sl-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<sl-animation>` elements.",
       "attributes": [
@@ -177,6 +149,34 @@
         {
           "name": "playback-rate",
           "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-badge",
+      "description": "Badges are used to draw attention and display statuses or counts.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The badge's theme variant.",
+          "values": [
+            { "name": "primary" },
+            { "name": "success" },
+            { "name": "neutral" },
+            { "name": "warning" },
+            { "name": "danger" }
+          ]
+        },
+        {
+          "name": "pill",
+          "description": "Draws a pill-style badge with rounded edges.",
+          "values": []
+        },
+        {
+          "name": "pulse",
+          "description": "Makes the badge pulsate to draw attention.",
           "values": []
         }
       ],
@@ -377,6 +377,12 @@
       "references": []
     },
     {
+      "name": "sl-card",
+      "description": "Cards can be used to group related subjects in a container.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
+      "attributes": [],
+      "references": []
+    },
+    {
       "name": "sl-carousel",
       "description": "Carousels display an arbitrary number of content slides along a horizontal or vertical axis.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-slide-change** - Emitted when the active slide changes.\n\n### **Methods:**\n - **previous(behavior: _ScrollBehavior_)** - Move the carousel backward by `slides-per-move` slides.\n- **next(behavior: _ScrollBehavior_)** - Move the carousel forward by `slides-per-move` slides.\n- **goToSlide(index: _number_, behavior: _ScrollBehavior_)** - Scrolls the carousel to the slide specified by `index`.\n\n### **Slots:**\n - _default_ - The carousel's main content, one or more `<sl-carousel-item>` elements.\n- **next-icon** - Optional next icon to use instead of the default. Works best with `<sl-icon>`.\n- **previous-icon** - Optional previous icon to use instead of the default. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--slide-gap** - The space between each slide. _(default: undefined)_\n- **--aspect-ratio** - The aspect ratio of each slide. _(default: undefined)_\n- **--scroll-hint** - The amount of padding to apply to the scroll area, allowing adjacent slides to become partially visible as a scroll hint. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The carousel's internal wrapper.\n- **scroll-container** - The scroll container that wraps the slides.\n- **pagination** - The pagination indicators wrapper.\n- **pagination-item** - The pagination indicator.\n- **pagination-item--active** - Applied when the item is active.\n- **navigation** - The navigation wrapper.\n- **navigation-button** - The navigation button.\n- **navigation-button--previous** - Applied to the previous button.\n- **navigation-button--next** - Applied to the next button.",
       "attributes": [
@@ -484,12 +490,6 @@
           "values": []
         }
       ],
-      "references": []
-    },
-    {
-      "name": "sl-card",
-      "description": "Cards can be used to group related subjects in a container.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
-      "attributes": [],
       "references": []
     },
     {
@@ -728,6 +728,32 @@
       "references": []
     },
     {
+      "name": "sl-format-bytes",
+      "description": "Formats a number as a human readable bytes value.\n\n\n---\n\n\n",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The number to format in bytes.",
+          "values": []
+        },
+        {
+          "name": "unit",
+          "description": "The type of unit to display.",
+          "values": [{ "name": "byte" }, { "name": "bit" }]
+        },
+        {
+          "name": "display",
+          "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+          "values": [
+            { "name": "long" },
+            { "name": "short" },
+            { "name": "narrow" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-format-date",
       "description": "Formats a date/time using the specified locale and options.\n\n\n---\n\n\n",
       "attributes": [
@@ -804,32 +830,6 @@
           "name": "hour-format",
           "description": "The format for displaying the hour.",
           "values": [{ "name": "auto" }, { "name": "12" }, { "name": "24" }]
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-format-bytes",
-      "description": "Formats a number as a human readable bytes value.\n\n\n---\n\n\n",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The number to format in bytes.",
-          "values": []
-        },
-        {
-          "name": "unit",
-          "description": "The type of unit to display.",
-          "values": [{ "name": "byte" }, { "name": "bit" }]
-        },
-        {
-          "name": "display",
-          "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-          "values": [
-            { "name": "long" },
-            { "name": "short" },
-            { "name": "narrow" }
-          ]
         }
       ],
       "references": []
@@ -1222,12 +1222,6 @@
       "references": []
     },
     {
-      "name": "sl-menu-label",
-      "description": "Menu labels are used to describe a group of menu items.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The menu label's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [],
-      "references": []
-    },
-    {
       "name": "sl-menu-item",
       "description": "Menu items provide options for the user to pick from in a menu.\n\n\n---\n\n\n\n\n### **Methods:**\n - **getTextLabel()** - Returns a text label based on the contents of the menu item's default slot.\n\n### **Slots:**\n - _default_ - The menu item's label.\n- **prefix** - Used to prepend an icon or similar element to the menu item.\n- **suffix** - Used to append an icon or similar element to the menu item.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **checked-icon** - The checked icon, which is only visible when the menu item is checked.\n- **prefix** - The prefix container.\n- **label** - The menu item label.\n- **suffix** - The suffix container.",
       "attributes": [
@@ -1252,6 +1246,12 @@
           "values": []
         }
       ],
+      "references": []
+    },
+    {
+      "name": "sl-menu-label",
+      "description": "Menu labels are used to describe a group of menu items.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The menu label's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [],
       "references": []
     },
     {
@@ -1286,6 +1286,23 @@
         {
           "name": "disabled",
           "description": "Disables the observer.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-option",
+      "description": "Options define the selectable items within various form controls such as [select](/components/select).\n\n\n---\n\n\n\n\n### **Methods:**\n - **getTextLabel()** - Returns a plain text label based on the option's content.\n\n### **Slots:**\n - _default_ - The option's label.\n- **prefix** - Used to prepend an icon or similar element to the menu item.\n- **suffix** - Used to append an icon or similar element to the menu item.\n\n### **CSS Parts:**\n - **checked-icon** - The checked icon, an `<sl-icon>` element.\n- **base** - The component's base wrapper.\n- **label** - The option's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Draws the option in a disabled state, preventing selection.",
           "values": []
         }
       ],
@@ -1425,23 +1442,6 @@
         {
           "name": "auto-size-padding",
           "description": "The amount of padding, in pixels, to exceed before the auto-size behavior will occur.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-option",
-      "description": "Options define the selectable items within various form controls such as [select](/components/select).\n\n\n---\n\n\n\n\n### **Methods:**\n - **getTextLabel()** - Returns a plain text label based on the option's content.\n\n### **Slots:**\n - _default_ - The option's label.\n- **prefix** - Used to prepend an icon or similar element to the menu item.\n- **suffix** - Used to append an icon or similar element to the menu item.\n\n### **CSS Parts:**\n - **checked-icon** - The checked icon, an `<sl-icon>` element.\n- **base** - The component's base wrapper.\n- **label** - The option's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Draws the option in a disabled state, preventing selection.",
           "values": []
         }
       ],
@@ -2041,6 +2041,23 @@
       "references": []
     },
     {
+      "name": "sl-tab-panel",
+      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The tab panel's name.",
+          "values": []
+        },
+        {
+          "name": "active",
+          "description": "When true, the tab panel will be shown.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "sl-tag",
       "description": "Tags are used as labels to organize things or to indicate a selection.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-remove** - Emitted when the remove button is activated.\n\n### **Slots:**\n - _default_ - The tag's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **content** - The tag's content.\n- **remove-button** - The tag's remove button, an `<sl-icon-button>`.\n- **remove-button__base** - The remove button's exported `base` part.",
       "attributes": [
@@ -2073,23 +2090,6 @@
         {
           "name": "removable",
           "description": "Makes the tag removable and shows a remove button.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-tab-panel",
-      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The tab panel's name.",
-          "values": []
-        },
-        {
-          "name": "active",
-          "description": "When true, the tab panel will be shown.",
           "values": []
         }
       ],
@@ -2307,28 +2307,6 @@
       "references": []
     },
     {
-      "name": "sl-tree",
-      "description": "Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-selection-change** - Emitted when a tree item is selected or deselected.\n\n### **Slots:**\n - _default_ - The default slot.\n- **expand-icon** - The icon to show when the tree item is expanded. Works best with `<sl-icon>`.\n- **collapse-icon** - The icon to show when the tree item is collapsed. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--indent-size** - The size of the indentation for nested items. _(default: var(--sl-spacing-medium))_\n- **--indent-guide-color** - The color of the indentation line. _(default: var(--sl-color-neutral-200))_\n- **--indent-guide-offset** - The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position. _(default: 0)_\n- **--indent-guide-style** - The style of the indentation line, e.g. solid, dotted, dashed. _(default: solid)_\n- **--indent-guide-width** - The width of the indentation line. _(default: 0)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "selection",
-          "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-          "values": [
-            { "name": "single" },
-            { "name": "multiple" },
-            { "name": "leaf" }
-          ]
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "sl-visually-hidden",
-      "description": "The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The content to be visually hidden.",
-      "attributes": [],
-      "references": []
-    },
-    {
       "name": "sl-tree-item",
       "description": "A tree item serves as a hierarchical node that lives inside a [tree](/components/tree).\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-expand** - Emitted when the tree item expands.\n- **sl-after-expand** - Emitted after the tree item expands and all animations are complete.\n- **sl-collapse** - Emitted when the tree item collapses.\n- **sl-after-collapse** - Emitted after the tree item collapses and all animations are complete.\n- **sl-lazy-change** - Emitted when the tree item's lazy state changes.\n- **sl-lazy-load** - Emitted when a lazy item is selected. Use this event to asynchronously load data and append items to the tree before expanding. After appending new items, remove the `lazy` attribute to remove the loading state and update the tree.\n\n### **Methods:**\n - **getChildrenItems({ includeDisabled = true }: _{ includeDisabled?: boolean }_): _SlTreeItem[]_** - Gets all the nested tree items in this node.\n\n### **Slots:**\n - _default_ - The default slot.\n- **expand-icon** - The icon to show when the tree item is expanded.\n- **collapse-icon** - The icon to show when the tree item is collapsed.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **item** - The tree item's container. This element wraps everything except slotted tree item children.\n- **item--disabled** - Applied when the tree item is disabled.\n- **item--expanded** - Applied when the tree item is expanded.\n- **item--indeterminate** - Applied when the selection is indeterminate.\n- **item--selected** - Applied when the tree item is selected.\n- **indentation** - The tree item's indentation container.\n- **expand-button** - The container that wraps the tree item's expand button and spinner.\n- **label** - The tree item's label.\n- **children** - The container that wraps the tree item's nested children.",
       "attributes": [
@@ -2353,6 +2331,28 @@
           "values": []
         }
       ],
+      "references": []
+    },
+    {
+      "name": "sl-tree",
+      "description": "Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.\n\n\n---\n\n\n\n\n### **Events:**\n - **sl-selection-change** - Emitted when a tree item is selected or deselected.\n\n### **Slots:**\n - _default_ - The default slot.\n- **expand-icon** - The icon to show when the tree item is expanded. Works best with `<sl-icon>`.\n- **collapse-icon** - The icon to show when the tree item is collapsed. Works best with `<sl-icon>`.\n\n### **CSS Properties:**\n - **--indent-size** - The size of the indentation for nested items. _(default: var(--sl-spacing-medium))_\n- **--indent-guide-color** - The color of the indentation line. _(default: var(--sl-color-neutral-200))_\n- **--indent-guide-offset** - The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position. _(default: 0)_\n- **--indent-guide-style** - The style of the indentation line, e.g. solid, dotted, dashed. _(default: solid)_\n- **--indent-guide-width** - The width of the indentation line. _(default: 0)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "selection",
+          "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
+          "values": [
+            { "name": "single" },
+            { "name": "multiple" },
+            { "name": "leaf" }
+          ]
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "sl-visually-hidden",
+      "description": "The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The content to be visually hidden.",
+      "attributes": [],
       "references": []
     }
   ]

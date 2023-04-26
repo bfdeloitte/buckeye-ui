@@ -1,6 +1,6 @@
 import {
   SlIcon
-} from "./chunk.B4225MTJ.js";
+} from "./chunk.UUTSP3SX.js";
 
 // src/react/icon/index.ts
 import * as React from "react";

@@ -1,11 +1,11 @@
 import {
+  icon_styles_default
+} from "./chunk.DAGT3MMF.js";
+import {
   getIconLibrary,
   unwatchIcon,
   watchIcon
 } from "./chunk.VG6XY36X.js";
-import {
-  icon_styles_default
-} from "./chunk.DAGT3MMF.js";
 import {
   watch
 } from "./chunk.VQ3XOPCT.js";

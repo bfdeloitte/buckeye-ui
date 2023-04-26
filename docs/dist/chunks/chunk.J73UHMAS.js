@@ -8,11 +8,11 @@ import {
   clamp
 } from "./chunk.HF7GESMZ.js";
 import {
-  l
-} from "./chunk.V47DPYLL.js";
-import {
   LocalizeController
 } from "./chunk.MQ6XKY3Z.js";
+import {
+  l
+} from "./chunk.V47DPYLL.js";
 import {
   watch
 } from "./chunk.VQ3XOPCT.js";

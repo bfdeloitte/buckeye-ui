@@ -1,6 +1,6 @@
 import {
   SlProgressBar
-} from "./chunk.BHYP7XSR.js";
+} from "./chunk.VXAUED3I.js";
 
 // src/react/progress-bar/index.ts
 import * as React from "react";

@@ -615,121 +615,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/badge/badge.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlBadge",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's theme variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's theme variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Badges are used to draw attention and display statuses or counts.",
-          "documentation": "https://shoelace.style/components/badge",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-badge",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "components/badge/badge.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-badge",
-          "declaration": {
-            "name": "SlBadge",
-            "module": "components/badge/badge.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/animation/animation.js",
       "declarations": [
         {
@@ -1126,6 +1011,121 @@
           "declaration": {
             "name": "getEasingNames",
             "module": "components/animation/animations.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/badge/badge.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlBadge",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's theme variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's theme variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Badges are used to draw attention and display statuses or counts.",
+          "documentation": "https://shoelace.style/components/badge",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-badge",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "components/badge/badge.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-badge",
+          "declaration": {
+            "name": "SlBadge",
+            "module": "components/badge/badge.js"
           }
         }
       ]
@@ -2202,6 +2202,111 @@
           "declaration": {
             "name": "SlButtonGroup",
             "module": "components/button-group/button-group.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/card/card.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlCard",
+          "cssProperties": [
+            {
+              "description": "The card's border color, including borders that occur inside the card.",
+              "name": "--border-color"
+            },
+            {
+              "description": "The border radius for the card's edges.",
+              "name": "--border-radius"
+            },
+            {
+              "description": "The width of the card's borders.",
+              "name": "--border-width"
+            },
+            {
+              "description": "The padding to use for the card's sections.",
+              "name": "--padding"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the card's image.",
+              "name": "image"
+            },
+            {
+              "description": "The container that wraps the card's header.",
+              "name": "header"
+            },
+            {
+              "description": "The container that wraps the card's main content.",
+              "name": "body"
+            },
+            {
+              "description": "The container that wraps the card's footer.",
+              "name": "footer"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The card's main content.",
+              "name": ""
+            },
+            {
+              "description": "An optional header for the card.",
+              "name": "header"
+            },
+            {
+              "description": "An optional footer for the card.",
+              "name": "footer"
+            },
+            {
+              "description": "An optional image to render at the start of the card.",
+              "name": "image"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Cards can be used to group related subjects in a container.",
+          "documentation": "https://shoelace.style/components/card",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlCard",
+            "module": "components/card/card.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-card",
+          "declaration": {
+            "name": "SlCard",
+            "module": "components/card/card.js"
           }
         }
       ]
@@ -3466,111 +3571,6 @@
           "declaration": {
             "name": "SlCheckbox",
             "module": "components/checkbox/checkbox.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/card/card.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlCard",
-          "cssProperties": [
-            {
-              "description": "The card's border color, including borders that occur inside the card.",
-              "name": "--border-color"
-            },
-            {
-              "description": "The border radius for the card's edges.",
-              "name": "--border-radius"
-            },
-            {
-              "description": "The width of the card's borders.",
-              "name": "--border-width"
-            },
-            {
-              "description": "The padding to use for the card's sections.",
-              "name": "--padding"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the card's image.",
-              "name": "image"
-            },
-            {
-              "description": "The container that wraps the card's header.",
-              "name": "header"
-            },
-            {
-              "description": "The container that wraps the card's main content.",
-              "name": "body"
-            },
-            {
-              "description": "The container that wraps the card's footer.",
-              "name": "footer"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The card's main content.",
-              "name": ""
-            },
-            {
-              "description": "An optional header for the card.",
-              "name": "header"
-            },
-            {
-              "description": "An optional footer for the card.",
-              "name": "footer"
-            },
-            {
-              "description": "An optional image to render at the start of the card.",
-              "name": "image"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'footer', 'header', 'image')"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Cards can be used to group related subjects in a container.",
-          "documentation": "https://shoelace.style/components/card",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-card",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlCard",
-            "module": "components/card/card.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-card",
-          "declaration": {
-            "name": "SlCard",
-            "module": "components/card/card.js"
           }
         }
       ]
@@ -6037,6 +6037,112 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/format-bytes/format-bytes.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlFormatBytes",
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format in bytes.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "unit",
+              "type": {
+                "text": "'byte' | 'bit'"
+              },
+              "default": "'byte'",
+              "description": "The type of unit to display.",
+              "attribute": "unit"
+            },
+            {
+              "kind": "field",
+              "name": "display",
+              "type": {
+                "text": "'long' | 'short' | 'narrow'"
+              },
+              "default": "'short'",
+              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+              "attribute": "display"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format in bytes.",
+              "fieldName": "value"
+            },
+            {
+              "name": "unit",
+              "type": {
+                "text": "'byte' | 'bit'"
+              },
+              "default": "'byte'",
+              "description": "The type of unit to display.",
+              "fieldName": "unit"
+            },
+            {
+              "name": "display",
+              "type": {
+                "text": "'long' | 'short' | 'narrow'"
+              },
+              "default": "'short'",
+              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
+              "fieldName": "display"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Formats a number as a human readable bytes value.",
+          "documentation": "https://shoelace.style/components/format-bytes",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-format-bytes",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlFormatBytes",
+            "module": "components/format-bytes/format-bytes.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-format-bytes",
+          "declaration": {
+            "name": "SlFormatBytes",
+            "module": "components/format-bytes/format-bytes.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/format-date/format-date.js",
       "declarations": [
         {
@@ -6288,112 +6394,6 @@
           "declaration": {
             "name": "SlFormatDate",
             "module": "components/format-date/format-date.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/format-bytes/format-bytes.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlFormatBytes",
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number to format in bytes.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "unit",
-              "type": {
-                "text": "'byte' | 'bit'"
-              },
-              "default": "'byte'",
-              "description": "The type of unit to display.",
-              "attribute": "unit"
-            },
-            {
-              "kind": "field",
-              "name": "display",
-              "type": {
-                "text": "'long' | 'short' | 'narrow'"
-              },
-              "default": "'short'",
-              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-              "attribute": "display"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number to format in bytes.",
-              "fieldName": "value"
-            },
-            {
-              "name": "unit",
-              "type": {
-                "text": "'byte' | 'bit'"
-              },
-              "default": "'byte'",
-              "description": "The type of unit to display.",
-              "fieldName": "unit"
-            },
-            {
-              "name": "display",
-              "type": {
-                "text": "'long' | 'short' | 'narrow'"
-              },
-              "default": "'short'",
-              "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-              "fieldName": "display"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Formats a number as a human readable bytes value.",
-          "documentation": "https://shoelace.style/components/format-bytes",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-format-bytes",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlFormatBytes",
-            "module": "components/format-bytes/format-bytes.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-format-bytes",
-          "declaration": {
-            "name": "SlFormatBytes",
-            "module": "components/format-bytes/format-bytes.js"
           }
         }
       ]
@@ -8695,58 +8695,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/menu-label/menu-label.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlMenuLabel",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The menu label's content.",
-              "name": ""
-            }
-          ],
-          "members": [],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Menu labels are used to describe a group of menu items.",
-          "documentation": "https://shoelace.style/components/menu-label",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-menu-label",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlMenuLabel",
-            "module": "components/menu-label/menu-label.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-menu-label",
-          "declaration": {
-            "name": "SlMenuLabel",
-            "module": "components/menu-label/menu-label.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/menu-item/menu-item.js",
       "declarations": [
         {
@@ -8964,6 +8912,58 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/menu-label/menu-label.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlMenuLabel",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The menu label's content.",
+              "name": ""
+            }
+          ],
+          "members": [],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Menu labels are used to describe a group of menu items.",
+          "documentation": "https://shoelace.style/components/menu-label",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-menu-label",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlMenuLabel",
+            "module": "components/menu-label/menu-label.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-menu-label",
+          "declaration": {
+            "name": "SlMenuLabel",
+            "module": "components/menu-label/menu-label.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/mutation-observer/mutation-observer.js",
       "declarations": [
         {
@@ -9174,6 +9174,205 @@
           "declaration": {
             "name": "SlMutationObserver",
             "module": "components/mutation-observer/mutation-observer.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/option/option.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlOption",
+          "cssParts": [
+            {
+              "description": "The checked icon, an `<sl-icon>` element.",
+              "name": "checked-icon"
+            },
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The option's label.",
+              "name": "label"
+            },
+            {
+              "description": "The container that wraps the prefix.",
+              "name": "prefix"
+            },
+            {
+              "description": "The container that wraps the suffix.",
+              "name": "suffix"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The option's label.",
+              "name": ""
+            },
+            {
+              "description": "Used to prepend an icon or similar element to the menu item.",
+              "name": "prefix"
+            },
+            {
+              "description": "Used to append an icon or similar element to the menu item.",
+              "name": "suffix"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "cachedTextLabel",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "current",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "hasHover",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
+              "attribute": "value",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the option in a disabled state, preventing selection.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleDefaultSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseEnter",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseLeave",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSelectedChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleValueChange"
+            },
+            {
+              "kind": "method",
+              "name": "getTextLabel",
+              "description": "Returns a plain text label based on the option's content."
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
+              "fieldName": "value"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the option in a disabled state, preventing selection.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Options define the selectable items within various form controls such as [select](/components/select).",
+          "documentation": "https://shoelace.style/components/option",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "sl-icon"
+          ],
+          "tagName": "sl-option",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlOption",
+            "module": "components/option/option.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-option",
+          "declaration": {
+            "name": "SlOption",
+            "module": "components/option/option.js"
           }
         }
       ]
@@ -9711,205 +9910,6 @@
           "declaration": {
             "name": "SlPopup",
             "module": "components/popup/popup.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/option/option.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlOption",
-          "cssParts": [
-            {
-              "description": "The checked icon, an `<sl-icon>` element.",
-              "name": "checked-icon"
-            },
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The option's label.",
-              "name": "label"
-            },
-            {
-              "description": "The container that wraps the prefix.",
-              "name": "prefix"
-            },
-            {
-              "description": "The container that wraps the suffix.",
-              "name": "suffix"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The option's label.",
-              "name": ""
-            },
-            {
-              "description": "Used to prepend an icon or similar element to the menu item.",
-              "name": "prefix"
-            },
-            {
-              "description": "Used to append an icon or similar element to the menu item.",
-              "name": "suffix"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "cachedTextLabel",
-              "type": {
-                "text": "string"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "current",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "selected",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "hasHover",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-              "attribute": "value",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the option in a disabled state, preventing selection.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleDefaultSlotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseEnter",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseLeave",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSelectedChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleValueChange"
-            },
-            {
-              "kind": "method",
-              "name": "getTextLabel",
-              "description": "Returns a plain text label based on the option's content."
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-              "fieldName": "value"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the option in a disabled state, preventing selection.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Options define the selectable items within various form controls such as [select](/components/select).",
-          "documentation": "https://shoelace.style/components/option",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "sl-icon"
-          ],
-          "tagName": "sl-option",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlOption",
-            "module": "components/option/option.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-option",
-          "declaration": {
-            "name": "SlOption",
-            "module": "components/option/option.js"
           }
         }
       ]
@@ -15019,6 +15019,126 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/tab-panel/tab-panel.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlTabPanel",
+          "cssProperties": [
+            {
+              "description": "The tab panel's padding.",
+              "name": "--padding"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The tab panel's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "attrId",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private",
+              "default": "++id"
+            },
+            {
+              "kind": "field",
+              "name": "componentId",
+              "privacy": "private",
+              "default": "`sl-tab-panel-${this.attrId}`"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The tab panel's name.",
+              "attribute": "name",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, the tab panel will be shown.",
+              "attribute": "active",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleActiveChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The tab panel's name.",
+              "fieldName": "name"
+            },
+            {
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, the tab panel will be shown.",
+              "fieldName": "active"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.",
+          "documentation": "https://shoelace.style/components/tab-panel",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-tab-panel",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlTabPanel",
+            "module": "components/tab-panel/tab-panel.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-tab-panel",
+          "declaration": {
+            "name": "SlTabPanel",
+            "module": "components/tab-panel/tab-panel.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/tag/tag.js",
       "declarations": [
         {
@@ -15180,126 +15300,6 @@
           "declaration": {
             "name": "SlTag",
             "module": "components/tag/tag.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/tab-panel/tab-panel.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlTabPanel",
-          "cssProperties": [
-            {
-              "description": "The tab panel's padding.",
-              "name": "--padding"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The tab panel's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "attrId",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private",
-              "default": "++id"
-            },
-            {
-              "kind": "field",
-              "name": "componentId",
-              "privacy": "private",
-              "default": "`sl-tab-panel-${this.attrId}`"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The tab panel's name.",
-              "attribute": "name",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "active",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, the tab panel will be shown.",
-              "attribute": "active",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleActiveChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The tab panel's name.",
-              "fieldName": "name"
-            },
-            {
-              "name": "active",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, the tab panel will be shown.",
-              "fieldName": "active"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.",
-          "documentation": "https://shoelace.style/components/tab-panel",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-tab-panel",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlTabPanel",
-            "module": "components/tab-panel/tab-panel.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-tab-panel",
-          "declaration": {
-            "name": "SlTabPanel",
-            "module": "components/tab-panel/tab-panel.js"
           }
         }
       ]
@@ -16460,372 +16460,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/tree/tree.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlTree",
-          "cssProperties": [
-            {
-              "description": "The size of the indentation for nested items.",
-              "name": "--indent-size",
-              "default": "var(--sl-spacing-medium)"
-            },
-            {
-              "description": "The color of the indentation line.",
-              "name": "--indent-guide-color",
-              "default": "var(--sl-color-neutral-200)"
-            },
-            {
-              "description": "The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position.",
-              "name": "--indent-guide-offset",
-              "default": "0"
-            },
-            {
-              "description": "The style of the indentation line, e.g. solid, dotted, dashed.",
-              "name": "--indent-guide-style",
-              "default": "solid"
-            },
-            {
-              "description": "The width of the indentation line.",
-              "name": "--indent-guide-width",
-              "default": "0"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default slot.",
-              "name": ""
-            },
-            {
-              "description": "The icon to show when the tree item is expanded. Works best with `<sl-icon>`.",
-              "name": "expand-icon"
-            },
-            {
-              "description": "The icon to show when the tree item is collapsed. Works best with `<sl-icon>`.",
-              "name": "collapse-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "expandedIconSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "collapsedIconSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "selection",
-              "type": {
-                "text": "'single' | 'multiple' | 'leaf'"
-              },
-              "default": "'single'",
-              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-              "attribute": "selection"
-            },
-            {
-              "kind": "field",
-              "name": "lastFocusedItem",
-              "type": {
-                "text": "SlTreeItem"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "mutationObserver",
-              "type": {
-                "text": "MutationObserver"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "clickTarget",
-              "type": {
-                "text": "SlTreeItem | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "method",
-              "name": "getExpandButtonIcon",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "status",
-                  "type": {
-                    "text": "'expand' | 'collapse'"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "field",
-              "name": "initTreeItem",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleTreeChanged",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "mutations",
-                  "type": {
-                    "text": "MutationRecord[]"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "syncTreeItems",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "selectedItem",
-                  "type": {
-                    "text": "SlTreeItem"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "selectItem",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "selectedItem",
-                  "type": {
-                    "text": "SlTreeItem"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "getAllTreeItems",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "focusItem",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "item",
-                  "optional": true,
-                  "type": {
-                    "text": "SlTreeItem | null"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "Event"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseDown",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleFocusOut",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "FocusEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleFocusIn",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "FocusEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleSelectionChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ selection: SlTreeItem[] }"
-              },
-              "description": "Emitted when a tree item is selected or deselected.",
-              "name": "sl-selection-change",
-              "reactName": "onSlSelectionChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "selection",
-              "type": {
-                "text": "'single' | 'multiple' | 'leaf'"
-              },
-              "default": "'single'",
-              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-              "fieldName": "selection"
-            }
-          ],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.",
-          "documentation": "https://shoelace.style/components/tree",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-tree",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlTree",
-            "module": "components/tree/tree.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-tree",
-          "declaration": {
-            "name": "SlTree",
-            "module": "components/tree/tree.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/visually-hidden/visually-hidden.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SlVisuallyHidden",
-          "slots": [
-            {
-              "description": "The content to be visually hidden.",
-              "name": ""
-            }
-          ],
-          "members": [],
-          "superclass": {
-            "name": "ShoelaceElement",
-            "module": "/src/internal/shoelace-element"
-          },
-          "summary": "The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.",
-          "documentation": "https://shoelace.style/components/visually-hidden",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "sl-visually-hidden",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "SlVisuallyHidden",
-            "module": "components/visually-hidden/visually-hidden.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "sl-visually-hidden",
-          "declaration": {
-            "name": "SlVisuallyHidden",
-            "module": "components/visually-hidden/visually-hidden.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/tree-item/tree-item.js",
       "declarations": [
         {
@@ -17190,6 +16824,372 @@
           "declaration": {
             "name": "SlTreeItem",
             "module": "components/tree-item/tree-item.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/tree/tree.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlTree",
+          "cssProperties": [
+            {
+              "description": "The size of the indentation for nested items.",
+              "name": "--indent-size",
+              "default": "var(--sl-spacing-medium)"
+            },
+            {
+              "description": "The color of the indentation line.",
+              "name": "--indent-guide-color",
+              "default": "var(--sl-color-neutral-200)"
+            },
+            {
+              "description": "The amount of vertical spacing to leave between the top and bottom of the indentation line's starting position.",
+              "name": "--indent-guide-offset",
+              "default": "0"
+            },
+            {
+              "description": "The style of the indentation line, e.g. solid, dotted, dashed.",
+              "name": "--indent-guide-style",
+              "default": "solid"
+            },
+            {
+              "description": "The width of the indentation line.",
+              "name": "--indent-guide-width",
+              "default": "0"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "The icon to show when the tree item is expanded. Works best with `<sl-icon>`.",
+              "name": "expand-icon"
+            },
+            {
+              "description": "The icon to show when the tree item is collapsed. Works best with `<sl-icon>`.",
+              "name": "collapse-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "expandedIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "collapsedIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "selection",
+              "type": {
+                "text": "'single' | 'multiple' | 'leaf'"
+              },
+              "default": "'single'",
+              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
+              "attribute": "selection"
+            },
+            {
+              "kind": "field",
+              "name": "lastFocusedItem",
+              "type": {
+                "text": "SlTreeItem"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "mutationObserver",
+              "type": {
+                "text": "MutationObserver"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "clickTarget",
+              "type": {
+                "text": "SlTreeItem | null"
+              },
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "method",
+              "name": "getExpandButtonIcon",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "status",
+                  "type": {
+                    "text": "'expand' | 'collapse'"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "initTreeItem",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleTreeChanged",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "mutations",
+                  "type": {
+                    "text": "MutationRecord[]"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "syncTreeItems",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "selectedItem",
+                  "type": {
+                    "text": "SlTreeItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "selectItem",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "selectedItem",
+                  "type": {
+                    "text": "SlTreeItem"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getAllTreeItems",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "focusItem",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "item",
+                  "optional": true,
+                  "type": {
+                    "text": "SlTreeItem | null"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseDown",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleFocusOut",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "FocusEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleFocusIn",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "FocusEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleSelectionChange"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ selection: SlTreeItem[] }"
+              },
+              "description": "Emitted when a tree item is selected or deselected.",
+              "name": "sl-selection-change",
+              "reactName": "onSlSelectionChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "selection",
+              "type": {
+                "text": "'single' | 'multiple' | 'leaf'"
+              },
+              "default": "'single'",
+              "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
+              "fieldName": "selection"
+            }
+          ],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.",
+          "documentation": "https://shoelace.style/components/tree",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-tree",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlTree",
+            "module": "components/tree/tree.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-tree",
+          "declaration": {
+            "name": "SlTree",
+            "module": "components/tree/tree.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/visually-hidden/visually-hidden.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SlVisuallyHidden",
+          "slots": [
+            {
+              "description": "The content to be visually hidden.",
+              "name": ""
+            }
+          ],
+          "members": [],
+          "superclass": {
+            "name": "ShoelaceElement",
+            "module": "/src/internal/shoelace-element"
+          },
+          "summary": "The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.",
+          "documentation": "https://shoelace.style/components/visually-hidden",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "sl-visually-hidden",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "SlVisuallyHidden",
+            "module": "components/visually-hidden/visually-hidden.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sl-visually-hidden",
+          "declaration": {
+            "name": "SlVisuallyHidden",
+            "module": "components/visually-hidden/visually-hidden.js"
           }
         }
       ]

@@ -1,6 +1,6 @@
 import {
   SlSplitPanel
-} from "./chunk.TQGWTVS5.js";
+} from "./chunk.J73UHMAS.js";
 
 // src/react/split-panel/index.ts
 import * as React from "react";

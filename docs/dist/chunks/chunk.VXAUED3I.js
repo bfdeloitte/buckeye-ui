@@ -5,11 +5,11 @@ import {
   i
 } from "./chunk.B6IYY6FB.js";
 import {
-  l
-} from "./chunk.V47DPYLL.js";
-import {
   LocalizeController
 } from "./chunk.MQ6XKY3Z.js";
+import {
+  l
+} from "./chunk.V47DPYLL.js";
 import {
   o
 } from "./chunk.ORW72H2K.js";
