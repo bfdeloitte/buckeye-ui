@@ -1,69 +1,69 @@
 # Tree
 
-[component-header:sl-tree]
+[component-header:bui-tree]
 
 ```html preview
-<sl-tree>
-  <sl-tree-item>
+<bui-tree>
+  <bui-tree-item>
     Deciduous
-    <sl-tree-item>Birch</sl-tree-item>
-    <sl-tree-item>
+    <bui-tree-item>Birch</bui-tree-item>
+    <bui-tree-item>
       Maple
-      <sl-tree-item>Field maple</sl-tree-item>
-      <sl-tree-item>Red maple</sl-tree-item>
-      <sl-tree-item>Sugar maple</sl-tree-item>
-    </sl-tree-item>
-    <sl-tree-item>Oak</sl-tree-item>
-  </sl-tree-item>
+      <bui-tree-item>Field maple</bui-tree-item>
+      <bui-tree-item>Red maple</bui-tree-item>
+      <bui-tree-item>Sugar maple</bui-tree-item>
+    </bui-tree-item>
+    <bui-tree-item>Oak</bui-tree-item>
+  </bui-tree-item>
 
-  <sl-tree-item>
+  <bui-tree-item>
     Coniferous
-    <sl-tree-item>Cedar</sl-tree-item>
-    <sl-tree-item>Pine</sl-tree-item>
-    <sl-tree-item>Spruce</sl-tree-item>
-  </sl-tree-item>
+    <bui-tree-item>Cedar</bui-tree-item>
+    <bui-tree-item>Pine</bui-tree-item>
+    <bui-tree-item>Spruce</bui-tree-item>
+  </bui-tree-item>
 
-  <sl-tree-item>
+  <bui-tree-item>
     Non-trees
-    <sl-tree-item>Bamboo</sl-tree-item>
-    <sl-tree-item>Cactus</sl-tree-item>
-    <sl-tree-item>Fern</sl-tree-item>
-  </sl-tree-item>
-</sl-tree>
+    <bui-tree-item>Bamboo</bui-tree-item>
+    <bui-tree-item>Cactus</bui-tree-item>
+    <bui-tree-item>Fern</bui-tree-item>
+  </bui-tree-item>
+</bui-tree>
 ```
 
 <!-- prettier-ignore -->
 ```jsx react
-import { SlTree, SlTreeItem } from 'buckeye-ui/dist/react';
+import { Tree, TreeItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlTree>
-    <SlTreeItem>
+  <Tree>
+    <TreeItem>
       Deciduous
-      <SlTreeItem>Birch</SlTreeItem>
-      <SlTreeItem>
+      <TreeItem>Birch</TreeItem>
+      <TreeItem>
         Maple
-        <SlTreeItem>Field maple</SlTreeItem>
-        <SlTreeItem>Red maple</SlTreeItem>
-        <SlTreeItem>Sugar maple</SlTreeItem>
-      </SlTreeItem>
-      <SlTreeItem>Oak</SlTreeItem>
-    </SlTreeItem>
+        <TreeItem>Field maple</TreeItem>
+        <TreeItem>Red maple</TreeItem>
+        <TreeItem>Sugar maple</TreeItem>
+      </TreeItem>
+      <TreeItem>Oak</TreeItem>
+    </TreeItem>
 
-    <SlTreeItem>
+    <TreeItem>
       Coniferous
-      <SlTreeItem>Cedar</SlTreeItem>
-      <SlTreeItem>Pine</SlTreeItem>
-      <SlTreeItem>Spruce</SlTreeItem>
-    </SlTreeItem>
+      <TreeItem>Cedar</TreeItem>
+      <TreeItem>Pine</TreeItem>
+      <TreeItem>Spruce</TreeItem>
+    </TreeItem>
 
-    <SlTreeItem>
+    <TreeItem>
       Non-trees
-      <SlTreeItem>Bamboo</SlTreeItem>
-      <SlTreeItem>Cactus</SlTreeItem>
-      <SlTreeItem>Fern</SlTreeItem>
-    </SlTreeItem>
-  </SlTree>
+      <TreeItem>Bamboo</TreeItem>
+      <TreeItem>Cactus</TreeItem>
+      <TreeItem>Fern</TreeItem>
+    </TreeItem>
+  </Tree>
 );
 ```
 
@@ -78,36 +78,36 @@ The `selection` attribute lets you change the selection behavior of the tree.
 - Use `leaf` to only allow leaf nodes to be selected.
 
 ```html preview
-<sl-select id="selection-mode" value="single" label="Selection">
-  <sl-option value="single">Single</sl-option>
-  <sl-option value="multiple">Multiple</sl-option>
-  <sl-option value="leaf">Leaf</sl-option>
-</sl-select>
+<bui-select id="selection-mode" value="single" label="Selection">
+  <bui-option value="single">Single</bui-option>
+  <bui-option value="multiple">Multiple</bui-option>
+  <bui-option value="leaf">Leaf</bui-option>
+</bui-select>
 
 <br />
 
-<sl-tree class="tree-selectable">
-  <sl-tree-item>
+<bui-tree class="tree-selectable">
+  <bui-tree-item>
     Item 1
-    <sl-tree-item>
+    <bui-tree-item>
       Item A
-      <sl-tree-item>Item Z</sl-tree-item>
-      <sl-tree-item>Item Y</sl-tree-item>
-      <sl-tree-item>Item X</sl-tree-item>
-    </sl-tree-item>
-    <sl-tree-item>Item B</sl-tree-item>
-    <sl-tree-item>Item C</sl-tree-item>
-  </sl-tree-item>
-  <sl-tree-item>Item 2</sl-tree-item>
-  <sl-tree-item>Item 3</sl-tree-item>
-</sl-tree>
+      <bui-tree-item>Item Z</bui-tree-item>
+      <bui-tree-item>Item Y</bui-tree-item>
+      <bui-tree-item>Item X</bui-tree-item>
+    </bui-tree-item>
+    <bui-tree-item>Item B</bui-tree-item>
+    <bui-tree-item>Item C</bui-tree-item>
+  </bui-tree-item>
+  <bui-tree-item>Item 2</bui-tree-item>
+  <bui-tree-item>Item 3</bui-tree-item>
+</bui-tree>
 
 <script>
   const selectionMode = document.querySelector('#selection-mode');
   const tree = document.querySelector('.tree-selectable');
 
-  selectionMode.addEventListener('sl-change', () => {
-    tree.querySelectorAll('sl-tree-item').forEach(item => (item.selected = false));
+  selectionMode.addEventListener('bui-change', () => {
+    tree.querySelectorAll('bui-tree-item').forEach(item => (item.selected = false));
     tree.selection = selectionMode.value;
   });
 </script>
@@ -115,36 +115,36 @@ The `selection` attribute lets you change the selection behavior of the tree.
 
 <!-- prettier-ignore -->
 ```jsx react
-import { SlTree, SlTreeItem } from 'buckeye-ui/dist/react';
+import { Tree, TreeItem } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const [selection, setSelection] = useState('single');
 
   return (
     <>
-      <SlSelect label="Selection" value={selection} onSlChange={event => setSelection(event.target.value)}>
-        <SlMenuItem value="single">single</SlMenuItem>
-        <SlMenuItem value="multiple">multiple</SlMenuItem>
-        <SlMenuItem value="leaf">leaf</SlMenuItem>
+      <SlSelect label="Selection" value={selection} onChange={event => setSelection(event.target.value)}>
+        <MenuItem value="single">single</MenuItem>
+        <MenuItem value="multiple">multiple</MenuItem>
+        <MenuItem value="leaf">leaf</MenuItem>
       </SlSelect>
 
       <br />
 
-      <SlTree selection={selection}>
-        <SlTreeItem>
+      <Tree selection={selection}>
+        <TreeItem>
           Item 1
-          <SlTreeItem>
+          <TreeItem>
             Item A
-            <SlTreeItem>Item Z</SlTreeItem>
-            <SlTreeItem>Item Y</SlTreeItem>
-            <SlTreeItem>Item X</SlTreeItem>
-          </SlTreeItem>
-          <SlTreeItem>Item B</SlTreeItem>
-          <SlTreeItem>Item C</SlTreeItem>
-        </SlTreeItem>
-        <SlTreeItem>Item 2</SlTreeItem>
-        <SlTreeItem>Item 3</SlTreeItem>
-      </SlTree>
+            <TreeItem>Item Z</TreeItem>
+            <TreeItem>Item Y</TreeItem>
+            <TreeItem>Item X</TreeItem>
+          </TreeItem>
+          <TreeItem>Item B</TreeItem>
+          <TreeItem>Item C</TreeItem>
+        </TreeItem>
+        <TreeItem>Item 2</TreeItem>
+        <TreeItem>Item 3</TreeItem>
+      </Tree>
     </>
   );
 };
@@ -155,33 +155,33 @@ const App = () => {
 Indent guides can be drawn by setting `--indent-guide-width`. You can also change the color, offset, and style, using `--indent-guide-color`, `--indent-guide-style`, and `--indent-guide-offset`, respectively.
 
 ```html preview
-<sl-tree class="tree-with-lines">
-  <sl-tree-item expanded>
+<bui-tree class="tree-with-lines">
+  <bui-tree-item expanded>
     Deciduous
-    <sl-tree-item>Birch</sl-tree-item>
-    <sl-tree-item expanded>
+    <bui-tree-item>Birch</bui-tree-item>
+    <bui-tree-item expanded>
       Maple
-      <sl-tree-item>Field maple</sl-tree-item>
-      <sl-tree-item>Red maple</sl-tree-item>
-      <sl-tree-item>Sugar maple</sl-tree-item>
-    </sl-tree-item>
-    <sl-tree-item>Oak</sl-tree-item>
-  </sl-tree-item>
+      <bui-tree-item>Field maple</bui-tree-item>
+      <bui-tree-item>Red maple</bui-tree-item>
+      <bui-tree-item>Sugar maple</bui-tree-item>
+    </bui-tree-item>
+    <bui-tree-item>Oak</bui-tree-item>
+  </bui-tree-item>
 
-  <sl-tree-item>
+  <bui-tree-item>
     Coniferous
-    <sl-tree-item>Cedar</sl-tree-item>
-    <sl-tree-item>Pine</sl-tree-item>
-    <sl-tree-item>Spruce</sl-tree-item>
-  </sl-tree-item>
+    <bui-tree-item>Cedar</bui-tree-item>
+    <bui-tree-item>Pine</bui-tree-item>
+    <bui-tree-item>Spruce</bui-tree-item>
+  </bui-tree-item>
 
-  <sl-tree-item>
+  <bui-tree-item>
     Non-trees
-    <sl-tree-item>Bamboo</sl-tree-item>
-    <sl-tree-item>Cactus</sl-tree-item>
-    <sl-tree-item>Fern</sl-tree-item>
-  </sl-tree-item>
-</sl-tree>
+    <bui-tree-item>Bamboo</bui-tree-item>
+    <bui-tree-item>Cactus</bui-tree-item>
+    <bui-tree-item>Fern</bui-tree-item>
+  </bui-tree-item>
+</bui-tree>
 
 <style>
   .tree-with-lines {
@@ -192,60 +192,60 @@ Indent guides can be drawn by setting `--indent-guide-width`. You can also chang
 
 <!-- prettier-ignore -->
 ```jsx react
-import { SlTree, SlTreeItem } from 'buckeye-ui/dist/react';
+import { Tree, TreeItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlTree class="tree-with-lines" style={{ '--indent-guide-width': '1px' }}>
-    <SlTreeItem expanded>
+  <Tree class="tree-with-lines" style={{ '--indent-guide-width': '1px' }}>
+    <TreeItem expanded>
       Deciduous
-      <SlTreeItem>Birch</SlTreeItem>
-      <SlTreeItem expanded>
+      <TreeItem>Birch</TreeItem>
+      <TreeItem expanded>
         Maple
-        <SlTreeItem>Field maple</SlTreeItem>
-        <SlTreeItem>Red maple</SlTreeItem>
-        <SlTreeItem>Sugar maple</SlTreeItem>
-      </SlTreeItem>
-      <SlTreeItem>Oak</SlTreeItem>
-    </SlTreeItem>
+        <TreeItem>Field maple</TreeItem>
+        <TreeItem>Red maple</TreeItem>
+        <TreeItem>Sugar maple</TreeItem>
+      </TreeItem>
+      <TreeItem>Oak</TreeItem>
+    </TreeItem>
 
-    <SlTreeItem>
+    <TreeItem>
       Coniferous
-      <SlTreeItem>Cedar</SlTreeItem>
-      <SlTreeItem>Pine</SlTreeItem>
-      <SlTreeItem>Spruce</SlTreeItem>
-    </SlTreeItem>
+      <TreeItem>Cedar</TreeItem>
+      <TreeItem>Pine</TreeItem>
+      <TreeItem>Spruce</TreeItem>
+    </TreeItem>
 
-    <SlTreeItem>
+    <TreeItem>
       Non-trees
-      <SlTreeItem>Bamboo</SlTreeItem>
-      <SlTreeItem>Cactus</SlTreeItem>
-      <SlTreeItem>Fern</SlTreeItem>
-    </SlTreeItem>
-  </SlTree>
+      <TreeItem>Bamboo</TreeItem>
+      <TreeItem>Cactus</TreeItem>
+      <TreeItem>Fern</TreeItem>
+    </TreeItem>
+  </Tree>
 );
 ```
 
 ### Lazy Loading
 
-Use the `lazy` attribute on a tree item to indicate that the content is not yet present and will be loaded later. When the user tries to expand the node, the `loading` state is set to `true` and the `sl-lazy-load` event will be emitted to allow you to load data asynchronously. The item will remain in a loading state until its content is changed.
+Use the `lazy` attribute on a tree item to indicate that the content is not yet present and will be loaded later. When the user tries to expand the node, the `loading` state is set to `true` and the `bui-lazy-load` event will be emitted to allow you to load data asynchronously. The item will remain in a loading state until its content is changed.
 
 If you want to disable this behavior after the first load, simply remove the `lazy` attribute and, on the next expand, the existing content will be shown instead.
 
 ```html preview
-<sl-tree>
-  <sl-tree-item lazy>Available Trees</sl-tree-item>
-</sl-tree>
+<bui-tree>
+  <bui-tree-item lazy>Available Trees</bui-tree-item>
+</bui-tree>
 
 <script type="module">
-  const lazyItem = document.querySelector('sl-tree-item[lazy]');
+  const lazyItem = document.querySelector('bui-tree-item[lazy]');
 
-  lazyItem.addEventListener('sl-lazy-load', () => {
+  lazyItem.addEventListener('bui-lazy-load', () => {
     // Simulate asynchronous loading
     setTimeout(() => {
       const subItems = ['Birch', 'Cedar', 'Maple', 'Pine'];
 
       for (const item of subItems) {
-        const treeItem = document.createElement('sl-tree-item');
+        const treeItem = document.createElement('bui-tree-item');
         treeItem.innerText = item;
         lazyItem.append(treeItem);
       }
@@ -258,7 +258,7 @@ If you want to disable this behavior after the first load, simply remove the `la
 ```
 
 ```jsx react
-import { SlTree, SlTreeItem } from 'buckeye-ui/dist/react';
+import { Tree, TreeItem } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const [childItems, setChildItems] = useState([]);
@@ -275,14 +275,14 @@ const App = () => {
   };
 
   return (
-    <SlTree>
-      <SlTreeItem lazy={lazy} onSlLazyLoad={handleLazyLoad}>
+    <Tree>
+      <TreeItem lazy={lazy} onLazyLoad={handleLazyLoad}>
         Available Trees
         {childItems.map(item => (
-          <SlTreeItem>{item}</SlTreeItem>
+          <TreeItem>{item}</TreeItem>
         ))}
-      </SlTreeItem>
-    </SlTree>
+      </TreeItem>
+    </Tree>
   );
 };
 ```
@@ -292,39 +292,39 @@ const App = () => {
 Use the `expand-icon` and `collapse-icon` slots to change the expand and collapse icons, respectively. To disable the animation, override the `rotate` property on the `expand-button` part as shown below.
 
 ```html preview
-<sl-tree class="custom-icons">
-  <sl-icon name="plus-square" slot="expand-icon"></sl-icon>
-  <sl-icon name="dash-square" slot="collapse-icon"></sl-icon>
+<bui-tree class="custom-icons">
+  <bui-icon name="plus-square" slot="expand-icon"></bui-icon>
+  <bui-icon name="dash-square" slot="collapse-icon"></bui-icon>
 
-  <sl-tree-item>
+  <bui-tree-item>
     Deciduous
-    <sl-tree-item>Birch</sl-tree-item>
-    <sl-tree-item>
+    <bui-tree-item>Birch</bui-tree-item>
+    <bui-tree-item>
       Maple
-      <sl-tree-item>Field maple</sl-tree-item>
-      <sl-tree-item>Red maple</sl-tree-item>
-      <sl-tree-item>Sugar maple</sl-tree-item>
-    </sl-tree-item>
-    <sl-tree-item>Oak</sl-tree-item>
-  </sl-tree-item>
+      <bui-tree-item>Field maple</bui-tree-item>
+      <bui-tree-item>Red maple</bui-tree-item>
+      <bui-tree-item>Sugar maple</bui-tree-item>
+    </bui-tree-item>
+    <bui-tree-item>Oak</bui-tree-item>
+  </bui-tree-item>
 
-  <sl-tree-item>
+  <bui-tree-item>
     Coniferous
-    <sl-tree-item>Cedar</sl-tree-item>
-    <sl-tree-item>Pine</sl-tree-item>
-    <sl-tree-item>Spruce</sl-tree-item>
-  </sl-tree-item>
+    <bui-tree-item>Cedar</bui-tree-item>
+    <bui-tree-item>Pine</bui-tree-item>
+    <bui-tree-item>Spruce</bui-tree-item>
+  </bui-tree-item>
 
-  <sl-tree-item>
+  <bui-tree-item>
     Non-trees
-    <sl-tree-item>Bamboo</sl-tree-item>
-    <sl-tree-item>Cactus</sl-tree-item>
-    <sl-tree-item>Fern</sl-tree-item>
-  </sl-tree-item>
-</sl-tree>
+    <bui-tree-item>Bamboo</bui-tree-item>
+    <bui-tree-item>Cactus</bui-tree-item>
+    <bui-tree-item>Fern</bui-tree-item>
+  </bui-tree-item>
+</bui-tree>
 
 <style>
-  .custom-icons sl-tree-item::part(expand-button) {
+  .custom-icons bui-tree-item::part(expand-button) {
     /* Disable the expand/collapse animation */
     rotate: none;
   }
@@ -333,39 +333,39 @@ Use the `expand-icon` and `collapse-icon` slots to change the expand and collaps
 
 <!-- prettier-ignore -->
 ```jsx react
-import { SlTree, SlTreeItem } from 'buckeye-ui/dist/react';
+import { Tree, TreeItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlTree>
-    <SlIcon name="plus-square" slot="expand-icon"></SlIcon>
-    <SlIcon name="dash-square" slot="collapse-icon"></SlIcon>
+  <Tree>
+    <Icon name="plus-square" slot="expand-icon"></Icon>
+    <Icon name="dash-square" slot="collapse-icon"></Icon>
 
-    <SlTreeItem>
+    <TreeItem>
       Deciduous
-      <SlTreeItem>Birch</SlTreeItem>
-      <SlTreeItem>
+      <TreeItem>Birch</TreeItem>
+      <TreeItem>
         Maple
-        <SlTreeItem>Field maple</SlTreeItem>
-        <SlTreeItem>Red maple</SlTreeItem>
-        <SlTreeItem>Sugar maple</SlTreeItem>
-      </SlTreeItem>
-      <SlTreeItem>Oak</SlTreeItem>
-    </SlTreeItem>
+        <TreeItem>Field maple</TreeItem>
+        <TreeItem>Red maple</TreeItem>
+        <TreeItem>Sugar maple</TreeItem>
+      </TreeItem>
+      <TreeItem>Oak</TreeItem>
+    </TreeItem>
 
-    <SlTreeItem>
+    <TreeItem>
       Coniferous
-      <SlTreeItem>Cedar</SlTreeItem>
-      <SlTreeItem>Pine</SlTreeItem>
-      <SlTreeItem>Spruce</SlTreeItem>
-    </SlTreeItem>
+      <TreeItem>Cedar</TreeItem>
+      <TreeItem>Pine</TreeItem>
+      <TreeItem>Spruce</TreeItem>
+    </TreeItem>
 
-    <SlTreeItem>
+    <TreeItem>
       Non-trees
-      <SlTreeItem>Bamboo</SlTreeItem>
-      <SlTreeItem>Cactus</SlTreeItem>
-      <SlTreeItem>Fern</SlTreeItem>
-    </SlTreeItem>
-  </SlTree>
+      <TreeItem>Bamboo</TreeItem>
+      <TreeItem>Cactus</TreeItem>
+      <TreeItem>Fern</TreeItem>
+    </TreeItem>
+  </Tree>
 );
 ```
 
@@ -374,91 +374,91 @@ const App = () => (
 Decorative icons can be used before labels to provide hints for each node.
 
 ```html preview
-<sl-tree class="tree-with-icons">
-  <sl-tree-item expanded>
-    <sl-icon name="folder"></sl-icon>
+<bui-tree class="tree-with-icons">
+  <bui-tree-item expanded>
+    <bui-icon name="folder"></bui-icon>
     Documents
 
-    <sl-tree-item>
-      <sl-icon name="folder"> </sl-icon>
+    <bui-tree-item>
+      <bui-icon name="folder"> </bui-icon>
       Photos
-      <sl-tree-item>
-        <sl-icon name="image"></sl-icon>
+      <bui-tree-item>
+        <bui-icon name="image"></bui-icon>
         birds.jpg
-      </sl-tree-item>
-      <sl-tree-item>
-        <sl-icon name="image"></sl-icon>
+      </bui-tree-item>
+      <bui-tree-item>
+        <bui-icon name="image"></bui-icon>
         kitten.jpg
-      </sl-tree-item>
-      <sl-tree-item>
-        <sl-icon name="image"></sl-icon>
+      </bui-tree-item>
+      <bui-tree-item>
+        <bui-icon name="image"></bui-icon>
         puppy.jpg
-      </sl-tree-item>
-    </sl-tree-item>
+      </bui-tree-item>
+    </bui-tree-item>
 
-    <sl-tree-item>
-      <sl-icon name="folder"></sl-icon>
+    <bui-tree-item>
+      <bui-icon name="folder"></bui-icon>
       Writing
-      <sl-tree-item>
-        <sl-icon name="file"></sl-icon>
+      <bui-tree-item>
+        <bui-icon name="file"></bui-icon>
         draft.txt
-      </sl-tree-item>
-      <sl-tree-item>
-        <sl-icon name="file-pdf"></sl-icon>
+      </bui-tree-item>
+      <bui-tree-item>
+        <bui-icon name="file-pdf"></bui-icon>
         final.pdf
-      </sl-tree-item>
-      <sl-tree-item>
-        <sl-icon name="file-bar-graph"></sl-icon>
+      </bui-tree-item>
+      <bui-tree-item>
+        <bui-icon name="file-bar-graph"></bui-icon>
         sales.xls
-      </sl-tree-item>
-    </sl-tree-item>
-  </sl-tree-item>
-</sl-tree>
+      </bui-tree-item>
+    </bui-tree-item>
+  </bui-tree-item>
+</bui-tree>
 ```
 
 ```jsx react
-import { SlIcon, SlTree, SlTreeItem } from 'buckeye-ui/dist/react';
+import { Icon, Tree, TreeItem } from 'buckeye-ui/dist/react';
 
 const App = () => {
   return (
-    <SlTree class="tree-with-icons">
-      <SlTreeItem expanded>
-        <SlIcon name="folder" />
+    <Tree class="tree-with-icons">
+      <TreeItem expanded>
+        <Icon name="folder" />
         Root
-        <SlTreeItem>
-          <SlIcon name="folder" />
-          Folder 1<SlTreeItem>
-            <SlIcon name="files" />
+        <TreeItem>
+          <Icon name="folder" />
+          Folder 1<TreeItem>
+            <Icon name="files" />
             File 1 - 1
-          </SlTreeItem>
-          <SlTreeItem disabled>
-            <SlIcon name="files" />
+          </TreeItem>
+          <TreeItem disabled>
+            <Icon name="files" />
             File 1 - 2
-          </SlTreeItem>
-          <SlTreeItem>
-            <SlIcon name="files" />
+          </TreeItem>
+          <TreeItem>
+            <Icon name="files" />
             File 1 - 3
-          </SlTreeItem>
-        </SlTreeItem>
-        <SlTreeItem>
-          <SlIcon name="files" />
-          Folder 2<SlTreeItem>
-            <SlIcon name="files" />
+          </TreeItem>
+        </TreeItem>
+        <TreeItem>
+          <Icon name="files" />
+          Folder 2<TreeItem>
+            <Icon name="files" />
             File 2 - 1
-          </SlTreeItem>
-          <SlTreeItem>
-            <SlIcon name="files" />
+          </TreeItem>
+          <TreeItem>
+            <Icon name="files" />
             File 2 - 2
-          </SlTreeItem>
-        </SlTreeItem>
-        <SlTreeItem>
-          <SlIcon name="files" />
+          </TreeItem>
+        </TreeItem>
+        <TreeItem>
+          <Icon name="files" />
           File 1
-        </SlTreeItem>
-      </SlTreeItem>
-    </SlTree>
+        </TreeItem>
+      </TreeItem>
+    </Tree>
   );
 };
 ```
 
-[component-metadata:sl-tree]
+[component-metadata:bui-tree]

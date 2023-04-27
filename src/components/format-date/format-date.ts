@@ -9,8 +9,8 @@ import BuckeyeElement from '../../internal/buckeye-element';
  * @status stable
  * @since 2.0
  */
-@customElement('sl-format-date')
-export default class SlFormatDate extends BuckeyeElement {
+@customElement('bui-format-date')
+export default class FormatDate extends BuckeyeElement {
   private readonly localize = new LocalizeController(this);
 
   /**
@@ -84,6 +84,6 @@ export default class SlFormatDate extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-format-date': SlFormatDate;
+    'bui-format-date': FormatDate;
   }
 }

@@ -1,33 +1,33 @@
 # Breadcrumb Item
 
-[component-header:sl-breadcrumb-item]
+[component-header:bui-breadcrumb-item]
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>
-    <sl-icon slot="prefix" name="house"></sl-icon>
+<bui-breadcrumb>
+  <bui-breadcrumb-item>
+    <bui-icon slot="prefix" name="house"></bui-icon>
     Home
-  </sl-breadcrumb-item>
-  <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Shirts</sl-breadcrumb-item>
-</sl-breadcrumb>
+  </bui-breadcrumb-item>
+  <bui-breadcrumb-item>Clothing</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Shirts</bui-breadcrumb-item>
+</bui-breadcrumb>
 ```
 
 ```jsx react
-import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from 'buckeye-ui/dist/react';
+import { Breadcrumb, BreadcrumbItem, Icon } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlBreadcrumb>
-    <SlBreadcrumbItem>
-      <SlIcon slot="prefix" name="house"></SlIcon>
+  <Breadcrumb>
+    <BreadcrumbItem>
+      <Icon slot="prefix" name="house"></Icon>
       Home
-    </SlBreadcrumbItem>
-    <SlBreadcrumbItem>Clothing</SlBreadcrumbItem>
-    <SlBreadcrumbItem>Shirts</SlBreadcrumbItem>
-  </SlBreadcrumb>
+    </BreadcrumbItem>
+    <BreadcrumbItem>Clothing</BreadcrumbItem>
+    <BreadcrumbItem>Shirts</BreadcrumbItem>
+  </Breadcrumb>
 );
 ```
 
 ?> Additional demonstrations can be found in the [breadcrumb examples](/components/breadcrumb).
 
-[component-metadata:sl-breadcrumb-item]
+[component-metadata:bui-breadcrumb-item]

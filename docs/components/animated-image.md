@@ -1,19 +1,19 @@
 # Animated Image
 
-[component-header:sl-animated-image]
+[component-header:bui-animated-image]
 
 ```html preview
-<sl-animated-image
+<bui-animated-image
   src="https://buckeyeui.com/assets/images/walk.gif"
   alt="Animation of untied shoes walking on pavement"
-></sl-animated-image>
+></bui-animated-image>
 ```
 
 ```jsx react
-import { SlAnimatedImage } from 'buckeye-ui/dist/react';
+import { AnimatedImage } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlAnimatedImage
+  <AnimatedImage
     src="https://buckeyeui.com/assets/images/walk.gif"
     alt="Animation of untied shoes walking on pavement"
   />
@@ -29,17 +29,17 @@ const App = () => (
 Both GIF and WEBP images are supported.
 
 ```html preview
-<sl-animated-image
+<bui-animated-image
   src="https://buckeyeui.com/assets/images/tie.webp"
   alt="Animation of a shoe being tied"
-></sl-animated-image>
+></bui-animated-image>
 ```
 
 ```jsx react
-import { SlAnimatedImage } from 'buckeye-ui/dist/react';
+import { AnimatedImage } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlAnimatedImage src="https://buckeyeui.com/assets/images/tie.webp" alt="Animation of a shoe being tied" />
+  <AnimatedImage src="https://buckeyeui.com/assets/images/tie.webp" alt="Animation of a shoe being tied" />
 );
 ```
 
@@ -48,19 +48,19 @@ const App = () => (
 To set a custom size, apply a width and/or height to the host element.
 
 ```html preview
-<sl-animated-image
+<bui-animated-image
   src="https://buckeyeui.com/assets/images/walk.gif"
   alt="Animation of untied shoes walking on pavement"
   style="width: 150px; height: 200px;"
 >
-</sl-animated-image>
+</bui-animated-image>
 ```
 
 ```jsx react
-import { SlAnimatedImage } from 'buckeye-ui/dist/react';
+import { AnimatedImage } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlAnimatedImage
+  <AnimatedImage
     src="https://buckeyeui.com/assets/images/walk.gif"
     alt="Animation of untied shoes walking on pavement"
     style={{ width: '150px', height: '200px' }}
@@ -73,11 +73,11 @@ const App = () => (
 You can change the appearance and location of the control box by targeting the `control-box` part in your styles.
 
 ```html preview
-<sl-animated-image
+<bui-animated-image
   src="https://buckeyeui.com/assets/images/walk.gif"
   alt="Animation of untied shoes walking on pavement"
   class="animated-image-custom-control-box"
-></sl-animated-image>
+></bui-animated-image>
 
 <style>
   .animated-image-custom-control-box::part(control-box) {
@@ -93,7 +93,7 @@ You can change the appearance and location of the control box by targeting the `
 ```
 
 ```jsx react
-import { SlAnimatedImage } from 'buckeye-ui/dist/react';
+import { AnimatedImage } from 'buckeye-ui/dist/react';
 
 const css = `
   .animated-image-custom-control-box::part(control-box) {
@@ -109,7 +109,7 @@ const css = `
 
 const App = () => (
   <>
-    <SlAnimatedImage
+    <AnimatedImage
       className="animated-image-custom-control-box"
       src="https://buckeyeui.com/assets/images/walk.gif"
       alt="Animation of untied shoes walking on pavement"
@@ -120,4 +120,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-animated-image]
+[component-metadata:bui-animated-image]

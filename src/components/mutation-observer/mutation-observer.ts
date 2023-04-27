@@ -11,12 +11,12 @@ import type { CSSResultGroup } from 'lit';
  * @status stable
  * @since 2.0
  *
- * @event {{ mutationList: MutationRecord[] }} sl-mutation - Emitted when a mutation occurs.
+ * @event {{ mutationList: MutationRecord[] }} bui-mutation - Emitted when a mutation occurs.
  *
  * @slot - The content to watch for mutations.
  */
-@customElement('sl-mutation-observer')
-export default class SlMutationObserver extends BuckeyeElement {
+@customElement('bui-mutation-observer')
+export default class MutationObserver extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private mutationObserver: MutationObserver;
@@ -58,7 +58,7 @@ export default class SlMutationObserver extends BuckeyeElement {
   }
 
   private handleMutation(mutationList: MutationRecord[]) {
-    this.emit('sl-mutation', {
+    this.emit('bui-mutation', {
       detail: { mutationList }
     });
   }
@@ -116,6 +116,6 @@ export default class SlMutationObserver extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-mutation-observer': SlMutationObserver;
+    'bui-mutation-observer': MutationObserver;
   }
 }

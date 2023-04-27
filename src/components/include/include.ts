@@ -12,11 +12,11 @@ import type { CSSResultGroup } from 'lit';
  * @status stable
  * @since 2.0
  *
- * @event sl-load - Emitted when the included file is loaded.
- * @event {{ status: number }} sl-error - Emitted when the included file fails to load due to an error.
+ * @event bui-load - Emitted when the included file is loaded.
+ * @event {{ status: number }} bui-error - Emitted when the included file fails to load due to an error.
  */
-@customElement('sl-include')
-export default class SlInclude extends BuckeyeElement {
+@customElement('bui-include')
+export default class Include extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   /**
@@ -54,7 +54,7 @@ export default class SlInclude extends BuckeyeElement {
       }
 
       if (!file.ok) {
-        this.emit('sl-error', { detail: { status: file.status } });
+        this.emit('bui-error', { detail: { status: file.status } });
         return;
       }
 
@@ -64,9 +64,9 @@ export default class SlInclude extends BuckeyeElement {
         [...this.querySelectorAll('script')].forEach(script => this.executeScript(script));
       }
 
-      this.emit('sl-load');
+      this.emit('bui-load');
     } catch {
-      this.emit('sl-error', { detail: { status: -1 } });
+      this.emit('bui-error', { detail: { status: -1 } });
     }
   }
 
@@ -77,6 +77,6 @@ export default class SlInclude extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-include': SlInclude;
+    'bui-include': Include;
   }
 }

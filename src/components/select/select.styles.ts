@@ -20,7 +20,7 @@ export default css`
   }
 
   .select::part(popup) {
-    z-index: var(--sl-z-index-dropdown);
+    z-index: var(--bui-z-index-dropdown);
   }
 
   .select[data-current-placement^='top']::part(popup) {
@@ -40,14 +40,14 @@ export default css`
     position: relative;
     align-items: center;
     justify-content: start;
-    font-family: var(--sl-input-font-family);
-    font-weight: var(--sl-input-font-weight);
-    letter-spacing: var(--sl-input-letter-spacing);
+    font-family: var(--bui-input-font-family);
+    font-weight: var(--bui-input-font-weight);
+    letter-spacing: var(--bui-input-letter-spacing);
     vertical-align: middle;
     overflow: hidden;
     cursor: pointer;
-    transition: var(--sl-transition-fast) color, var(--sl-transition-fast) border, var(--sl-transition-fast) box-shadow,
-      var(--sl-transition-fast) background-color;
+    transition: var(--bui-transition-fast) color, var(--bui-transition-fast) border,
+      var(--bui-transition-fast) box-shadow, var(--bui-transition-fast) background-color;
   }
 
   .select__display-input {
@@ -56,7 +56,7 @@ export default css`
     font: inherit;
     border: none;
     background: none;
-    color: var(--sl-input-color);
+    color: var(--bui-input-color);
     cursor: inherit;
     overflow: hidden;
     padding: 0;
@@ -65,7 +65,7 @@ export default css`
   }
 
   .select:not(.select--disabled):hover .select__display-input {
-    color: var(--sl-input-color-hover);
+    color: var(--bui-input-color-hover);
   }
 
   .select__display-input:focus {
@@ -100,28 +100,28 @@ export default css`
     flex: 1;
     align-items: center;
     flex-wrap: wrap;
-    margin-inline-start: var(--sl-spacing-2x-small);
+    margin-inline-start: var(--bui-spacing-2x-small);
   }
 
-  .select__tags::slotted(sl-tag) {
+  .select__tags::slotted(bui-tag) {
     cursor: pointer !important;
   }
 
   .select--disabled .select__tags,
-  .select--disabled .select__tags::slotted(sl-tag) {
+  .select--disabled .select__tags::slotted(bui-tag) {
     cursor: not-allowed !important;
   }
 
   /* Standard selects */
   .select--standard .select__combobox {
-    background-color: var(--sl-input-background-color);
-    border: solid var(--sl-input-border-width) var(--sl-input-border-color);
+    background-color: var(--bui-input-background-color);
+    border: solid var(--bui-input-border-width) var(--bui-input-border-color);
   }
 
   .select--standard.select--disabled .select__combobox {
-    background-color: var(--sl-input-background-color-disabled);
-    border-color: var(--sl-input-border-color-disabled);
-    color: var(--sl-input-color-disabled);
+    background-color: var(--bui-input-background-color-disabled);
+    border-color: var(--bui-input-border-color-disabled);
+    color: var(--bui-input-color-disabled);
     opacity: 0.5;
     cursor: not-allowed;
     outline: none;
@@ -129,49 +129,49 @@ export default css`
 
   .select--standard:not(.select--disabled).select--open .select__combobox,
   .select--standard:not(.select--disabled).select--focused .select__combobox {
-    background-color: var(--sl-input-background-color-focus);
-    border-color: var(--sl-input-border-color-focus);
-    box-shadow: 0 0 0 var(--sl-focus-ring-width) var(--sl-input-focus-ring-color);
+    background-color: var(--bui-input-background-color-focus);
+    border-color: var(--bui-input-border-color-focus);
+    box-shadow: 0 0 0 var(--bui-focus-ring-width) var(--bui-input-focus-ring-color);
   }
 
   /* Filled selects */
   .select--filled .select__combobox {
     border: none;
-    background-color: var(--sl-input-filled-background-color);
-    color: var(--sl-input-color);
+    background-color: var(--bui-input-filled-background-color);
+    color: var(--bui-input-color);
   }
 
   .select--filled:hover:not(.select--disabled) .select__combobox {
-    background-color: var(--sl-input-filled-background-color-hover);
+    background-color: var(--bui-input-filled-background-color-hover);
   }
 
   .select--filled.select--disabled .select__combobox {
-    background-color: var(--sl-input-filled-background-color-disabled);
+    background-color: var(--bui-input-filled-background-color-disabled);
     opacity: 0.5;
     cursor: not-allowed;
   }
 
   .select--filled:not(.select--disabled).select--open .select__combobox,
   .select--filled:not(.select--disabled).select--focused .select__combobox {
-    background-color: var(--sl-input-filled-background-color-focus);
-    outline: var(--sl-focus-ring);
+    background-color: var(--bui-input-filled-background-color-focus);
+    outline: var(--bui-focus-ring);
   }
 
   /* Sizes */
   .select--small .select__combobox {
-    border-radius: var(--sl-input-border-radius-small);
-    font-size: var(--sl-input-font-size-small);
-    min-height: var(--sl-input-height-small);
+    border-radius: var(--bui-input-border-radius-small);
+    font-size: var(--bui-input-font-size-small);
+    min-height: var(--bui-input-height-small);
     padding-block: 0;
-    padding-inline: var(--sl-input-spacing-small);
+    padding-inline: var(--bui-input-spacing-small);
   }
 
   .select--small .select__clear {
-    margin-inline-start: var(--sl-input-spacing-small);
+    margin-inline-start: var(--bui-input-spacing-small);
   }
 
   .select--small .select__prefix::slotted(*) {
-    margin-inline-end: var(--sl-input-spacing-small);
+    margin-inline-end: var(--bui-input-spacing-small);
   }
 
   .select--small.select--multiple:not(.select--placeholder-visible) .select__combobox {
@@ -184,19 +184,19 @@ export default css`
   }
 
   .select--medium .select__combobox {
-    border-radius: var(--sl-input-border-radius-medium);
-    font-size: var(--sl-input-font-size-medium);
-    min-height: var(--sl-input-height-medium);
+    border-radius: var(--bui-input-border-radius-medium);
+    font-size: var(--bui-input-font-size-medium);
+    min-height: var(--bui-input-height-medium);
     padding-block: 0;
-    padding-inline: var(--sl-input-spacing-medium);
+    padding-inline: var(--bui-input-spacing-medium);
   }
 
   .select--medium .select__clear {
-    margin-inline-start: var(--sl-input-spacing-medium);
+    margin-inline-start: var(--bui-input-spacing-medium);
   }
 
   .select--medium .select__prefix::slotted(*) {
-    margin-inline-end: var(--sl-input-spacing-medium);
+    margin-inline-end: var(--bui-input-spacing-medium);
   }
 
   .select--medium.select--multiple:not(.select--placeholder-visible) .select__combobox {
@@ -209,19 +209,19 @@ export default css`
   }
 
   .select--large .select__combobox {
-    border-radius: var(--sl-input-border-radius-large);
-    font-size: var(--sl-input-font-size-large);
-    min-height: var(--sl-input-height-large);
+    border-radius: var(--bui-input-border-radius-large);
+    font-size: var(--bui-input-font-size-large);
+    min-height: var(--bui-input-height-large);
     padding-block: 0;
-    padding-inline: var(--sl-input-spacing-large);
+    padding-inline: var(--bui-input-spacing-large);
   }
 
   .select--large .select__clear {
-    margin-inline-start: var(--sl-input-spacing-large);
+    margin-inline-start: var(--bui-input-spacing-large);
   }
 
   .select--large .select__prefix::slotted(*) {
-    margin-inline-end: var(--sl-input-spacing-large);
+    margin-inline-end: var(--bui-input-spacing-large);
   }
 
   .select--large.select--multiple:not(.select--placeholder-visible) .select__combobox {
@@ -235,15 +235,15 @@ export default css`
 
   /* Pills */
   .select--pill.select--small .select__combobox {
-    border-radius: var(--sl-input-height-small);
+    border-radius: var(--bui-input-height-small);
   }
 
   .select--pill.select--medium .select__combobox {
-    border-radius: var(--sl-input-height-medium);
+    border-radius: var(--bui-input-height-medium);
   }
 
   .select--pill.select--large .select__combobox {
-    border-radius: var(--sl-input-height-large);
+    border-radius: var(--bui-input-height-large);
   }
 
   /* Prefix */
@@ -251,7 +251,7 @@ export default css`
     flex: 0;
     display: inline-flex;
     align-items: center;
-    color: var(--sl-input-placeholder-color);
+    color: var(--bui-input-placeholder-color);
   }
 
   /* Clear button */
@@ -260,16 +260,16 @@ export default css`
     align-items: center;
     justify-content: center;
     font-size: inherit;
-    color: var(--sl-input-icon-color);
+    color: var(--bui-input-icon-color);
     border: none;
     background: none;
     padding: 0;
-    transition: var(--sl-transition-fast) color;
+    transition: var(--bui-transition-fast) color;
     cursor: pointer;
   }
 
   .select__clear:hover {
-    color: var(--sl-input-icon-color-hover);
+    color: var(--bui-input-icon-color-hover);
   }
 
   .select__clear:focus {
@@ -281,9 +281,9 @@ export default css`
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    transition: var(--sl-transition-medium) rotate ease;
+    transition: var(--bui-transition-medium) rotate ease;
     rotate: 0;
-    margin-inline-start: var(--sl-spacing-small);
+    margin-inline-start: var(--bui-spacing-small);
   }
 
   .select--open .select__expand-icon {
@@ -294,14 +294,14 @@ export default css`
   .select__listbox {
     display: block;
     position: relative;
-    font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-medium);
-    font-weight: var(--sl-font-weight-normal);
-    box-shadow: var(--sl-shadow-large);
-    background: var(--sl-panel-background-color);
-    border: solid var(--sl-panel-border-width) var(--sl-panel-border-color);
-    border-radius: var(--sl-border-radius-medium);
-    padding-block: var(--sl-spacing-x-small);
+    font-family: var(--bui-font-sans);
+    font-size: var(--bui-font-size-medium);
+    font-weight: var(--bui-font-weight-normal);
+    box-shadow: var(--bui-shadow-large);
+    background: var(--bui-panel-background-color);
+    border: solid var(--bui-panel-border-width) var(--bui-panel-border-color);
+    border-radius: var(--bui-border-radius-medium);
+    padding-block: var(--bui-spacing-x-small);
     padding-inline: 0;
     overflow: auto;
     overscroll-behavior: none;
@@ -311,15 +311,15 @@ export default css`
     max-height: var(--auto-size-available-height);
   }
 
-  .select__listbox::slotted(sl-divider) {
-    --spacing: var(--sl-spacing-x-small);
+  .select__listbox::slotted(bui-divider) {
+    --spacing: var(--bui-spacing-x-small);
   }
 
   .select__listbox::slotted(small) {
-    font-size: var(--sl-font-size-small);
-    font-weight: var(--sl-font-weight-semibold);
-    color: var(--sl-color-neutral-500);
-    padding-block: var(--sl-spacing-x-small);
-    padding-inline: var(--sl-spacing-x-large);
+    font-size: var(--bui-font-size-small);
+    font-weight: var(--bui-font-weight-semibold);
+    color: var(--bui-color-neutral-500);
+    padding-block: var(--bui-spacing-x-small);
+    padding-inline: var(--bui-spacing-x-large);
   }
 `;

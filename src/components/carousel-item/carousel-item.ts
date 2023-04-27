@@ -15,8 +15,8 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --aspect-ratio - The slide's aspect ratio. Inherited from the carousel by default.
  *
  */
-@customElement('sl-carousel-item')
-export default class SlCarouselItem extends BuckeyeElement {
+@customElement('bui-carousel-item')
+export default class CarouselItem extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   static isCarouselItem(node: Node) {
@@ -35,6 +35,6 @@ export default class SlCarouselItem extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-carousel-item': SlCarouselItem;
+    'bui-carousel-item': CarouselItem;
   }
 }

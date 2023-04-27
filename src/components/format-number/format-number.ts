@@ -8,8 +8,8 @@ import BuckeyeElement from '../../internal/buckeye-element';
  * @status stable
  * @since 2.0
  */
-@customElement('sl-format-number')
-export default class SlFormatNumber extends BuckeyeElement {
+@customElement('bui-format-number')
+export default class FormatNumber extends BuckeyeElement {
   private readonly localize = new LocalizeController(this);
 
   /** The number to format. */
@@ -63,6 +63,6 @@ export default class SlFormatNumber extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-format-number': SlFormatNumber;
+    'bui-format-number': FormatNumber;
   }
 }

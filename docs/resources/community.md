@@ -13,10 +13,10 @@ The [discussion forum](https://github.com/bfdeloitte/buckeye-ui/discussions) is 
 - Show the community what you're working on
 - Learn more about the project, its values, and its roadmap
 
-<sl-button variant="primary" href="https://github.com/bfdeloitte/buckeye-ui/discussions" target="_blank">
-  <sl-icon name="github" slot="prefix"></sl-icon>
+<bui-button variant="primary" href="https://github.com/bfdeloitte/buckeye-ui/discussions" target="_blank">
+  <bui-icon name="github" slot="prefix"></bui-icon>
   Join the Discussion
-</sl-button>
+</bui-button>
 
 ## Community Chat
 
@@ -27,19 +27,19 @@ The [community chat](https://discord.gg/mg8f26C) is open to the public and power
 - Show the community what you're working on
 - Chat live with other designers, developers, and BuckeyeUI fans
 
-<sl-button variant="primary" href="https://discord.gg/mg8f26C" target="_blank">
-  <sl-icon name="discord" slot="prefix"></sl-icon>
+<bui-button variant="primary" href="https://discord.gg/mg8f26C" target="_blank">
+  <bui-icon name="discord" slot="prefix"></bui-icon>
   Join the Chat
-</sl-button>
+</bui-button>
 
 ## Stack Overflow
 
 You can post questions on Stack Overflow using [the "buckeye" tag](https://stackoverflow.com/questions/tagged/buckeye). This is a public forum where talented developers answer questions. It's a great way to get help, but it is not maintained by the BuckeyeUI author.
 
-<sl-button variant="primary" href="https://stackoverflow.com/questions/ask?tags=buckeye" target="_blank">
-  <sl-icon name="stack-overflow" slot="prefix"></sl-icon>
+<bui-button variant="primary" href="https://stackoverflow.com/questions/ask?tags=buckeye" target="_blank">
+  <bui-icon name="stack-overflow" slot="prefix"></bui-icon>
   Ask for Help
-</sl-button>
+</bui-button>
 
 ## Twitter
 
@@ -47,7 +47,7 @@ Follow [@buckeyeui](https://twitter.com/buckeyeui) on Twitter for general update
 
 **Please avoid using Twitter for support questions.** The [discussion forum](https://github.com/bfdeloitte/buckeye-ui/discussions) is a much better place to share code snippets, screenshots, and other troubleshooting info. You'll have much better luck there, as more users will have a chance to help you.
 
-<sl-button variant="primary" href="https://twitter.com/buckeyeui" target="_blank">
-  <sl-icon name="twitter" slot="prefix"></sl-icon>
+<bui-button variant="primary" href="https://twitter.com/buckeyeui" target="_blank">
+  <bui-icon name="twitter" slot="prefix"></bui-icon>
   Follow on Twitter
-</sl-button>
+</bui-button>

@@ -17,26 +17,26 @@ export default css`
     position: relative;
     display: flex;
     align-items: center;
-    font-family: var(--sl-font-sans);
-    font-size: var(--sl-font-size-medium);
-    font-weight: var(--sl-font-weight-normal);
-    line-height: var(--sl-line-height-normal);
-    letter-spacing: var(--sl-letter-spacing-normal);
-    color: var(--sl-color-neutral-700);
-    padding: var(--sl-spacing-x-small) var(--sl-spacing-medium) var(--sl-spacing-x-small) var(--sl-spacing-x-small);
-    transition: var(--sl-transition-fast) fill;
+    font-family: var(--bui-font-sans);
+    font-size: var(--bui-font-size-medium);
+    font-weight: var(--bui-font-weight-normal);
+    line-height: var(--bui-line-height-normal);
+    letter-spacing: var(--bui-letter-spacing-normal);
+    color: var(--bui-color-neutral-700);
+    padding: var(--bui-spacing-x-small) var(--bui-spacing-medium) var(--bui-spacing-x-small) var(--bui-spacing-x-small);
+    transition: var(--bui-transition-fast) fill;
     cursor: pointer;
   }
 
   .option--hover:not(.option--current):not(.option--disabled) {
-    background-color: var(--sl-color-neutral-100);
-    color: var(--sl-color-neutral-1000);
+    background-color: var(--bui-color-neutral-100);
+    color: var(--bui-color-neutral-1000);
   }
 
   .option--current,
   .option--current.option--disabled {
-    background-color: var(--sl-color-primary-600);
-    color: var(--sl-color-neutral-0);
+    background-color: var(--bui-color-primary-600);
+    color: var(--bui-color-neutral-0);
     opacity: 1;
   }
 
@@ -49,7 +49,7 @@ export default css`
   .option__label {
     flex: 1 1 auto;
     display: inline-block;
-    line-height: var(--sl-line-height-dense);
+    line-height: var(--bui-line-height-dense);
   }
 
   .option .option__check {
@@ -58,7 +58,7 @@ export default css`
     align-items: center;
     justify-content: center;
     visibility: hidden;
-    padding-inline-end: var(--sl-spacing-2x-small);
+    padding-inline-end: var(--bui-spacing-2x-small);
   }
 
   .option--selected .option__check {
@@ -73,11 +73,11 @@ export default css`
   }
 
   .option__prefix::slotted(*) {
-    margin-inline-end: var(--sl-spacing-x-small);
+    margin-inline-end: var(--bui-spacing-x-small);
   }
 
   .option__suffix::slotted(*) {
-    margin-inline-start: var(--sl-spacing-x-small);
+    margin-inline-start: var(--bui-spacing-x-small);
   }
 
   @media (forced-colors: active) {

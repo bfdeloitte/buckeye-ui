@@ -1,25 +1,25 @@
 # Tag
 
-[component-header:sl-tag]
+[component-header:bui-tag]
 
 ```html preview
-<sl-tag variant="primary">Primary</sl-tag>
-<sl-tag variant="success">Success</sl-tag>
-<sl-tag variant="neutral">Neutral</sl-tag>
-<sl-tag variant="warning">Warning</sl-tag>
-<sl-tag variant="danger">Danger</sl-tag>
+<bui-tag variant="primary">Primary</bui-tag>
+<bui-tag variant="success">Success</bui-tag>
+<bui-tag variant="neutral">Neutral</bui-tag>
+<bui-tag variant="warning">Warning</bui-tag>
+<bui-tag variant="danger">Danger</bui-tag>
 ```
 
 ```jsx react
-import { SlTag } from 'buckeye-ui/dist/react';
+import { Tag } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlTag variant="primary">Primary</SlTag>
-    <SlTag variant="success">Success</SlTag>
-    <SlTag variant="neutral">Neutral</SlTag>
-    <SlTag variant="warning">Warning</SlTag>
-    <SlTag variant="danger">Danger</SlTag>
+    <Tag variant="primary">Primary</Tag>
+    <Tag variant="success">Success</Tag>
+    <Tag variant="neutral">Neutral</Tag>
+    <Tag variant="warning">Warning</Tag>
+    <Tag variant="danger">Danger</Tag>
   </>
 );
 ```
@@ -31,19 +31,19 @@ const App = () => (
 Use the `size` attribute to change a tab's size.
 
 ```html preview
-<sl-tag size="small">Small</sl-tag>
-<sl-tag size="medium">Medium</sl-tag>
-<sl-tag size="large">Large</sl-tag>
+<bui-tag size="small">Small</bui-tag>
+<bui-tag size="medium">Medium</bui-tag>
+<bui-tag size="large">Large</bui-tag>
 ```
 
 ```jsx react
-import { SlTag } from 'buckeye-ui/dist/react';
+import { Tag } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlTag size="small">Small</SlTag>
-    <SlTag size="medium">Medium</SlTag>
-    <SlTag size="large">Large</SlTag>
+    <Tag size="small">Small</Tag>
+    <Tag size="medium">Medium</Tag>
+    <Tag size="large">Large</Tag>
   </>
 );
 ```
@@ -53,25 +53,25 @@ const App = () => (
 Use the `pill` attribute to give tabs rounded edges.
 
 ```html preview
-<sl-tag size="small" pill>Small</sl-tag>
-<sl-tag size="medium" pill>Medium</sl-tag>
-<sl-tag size="large" pill>Large</sl-tag>
+<bui-tag size="small" pill>Small</bui-tag>
+<bui-tag size="medium" pill>Medium</bui-tag>
+<bui-tag size="large" pill>Large</bui-tag>
 ```
 
 ```jsx react
-import { SlTag } from 'buckeye-ui/dist/react';
+import { Tag } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlTag size="small" pill>
+    <Tag size="small" pill>
       Small
-    </SlTag>
-    <SlTag size="medium" pill>
+    </Tag>
+    <Tag size="medium" pill>
       Medium
-    </SlTag>
-    <SlTag size="large" pill>
+    </Tag>
+    <Tag size="large" pill>
       Large
-    </SlTag>
+    </Tag>
   </>
 );
 ```
@@ -82,15 +82,15 @@ Use the `removable` attribute to add a remove button to the tag.
 
 ```html preview
 <div class="tags-removable">
-  <sl-tag size="small" removable>Small</sl-tag>
-  <sl-tag size="medium" removable>Medium</sl-tag>
-  <sl-tag size="large" removable>Large</sl-tag>
+  <bui-tag size="small" removable>Small</bui-tag>
+  <bui-tag size="medium" removable>Medium</bui-tag>
+  <bui-tag size="large" removable>Large</bui-tag>
 </div>
 
 <script>
   const div = document.querySelector('.tags-removable');
 
-  div.addEventListener('sl-remove', event => {
+  div.addEventListener('bui-remove', event => {
     const tag = event.target;
     tag.style.opacity = '0';
     setTimeout(() => (tag.style.opacity = '1'), 2000);
@@ -98,18 +98,18 @@ Use the `removable` attribute to add a remove button to the tag.
 </script>
 
 <style>
-  .tags-removable sl-tag {
-    transition: var(--sl-transition-medium) opacity;
+  .tags-removable bui-tag {
+    transition: var(--bui-transition-medium) opacity;
   }
 </style>
 ```
 
 ```jsx react
-import { SlTag } from 'buckeye-ui/dist/react';
+import { Tag } from 'buckeye-ui/dist/react';
 
 const css = `
-  .tags-removable sl-tag {
-    transition: var(--sl-transition-medium) opacity;
+  .tags-removable bui-tag {
+    transition: var(--bui-transition-medium) opacity;
   }
 `;
 
@@ -123,17 +123,17 @@ const App = () => {
   return (
     <>
       <div className="tags-removable">
-        <SlTag size="small" removable onSlRemove={handleRemove}>
+        <Tag size="small" removable onRemove={handleRemove}>
           Small
-        </SlTag>
+        </Tag>
 
-        <SlTag size="medium" removable onSlRemove={handleRemove}>
+        <Tag size="medium" removable onRemove={handleRemove}>
           Medium
-        </SlTag>
+        </Tag>
 
-        <SlTag size="large" removable onSlRemove={handleRemove}>
+        <Tag size="large" removable onRemove={handleRemove}>
           Large
-        </SlTag>
+        </Tag>
       </div>
 
       <style>{css}</style>
@@ -142,4 +142,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-tag]
+[component-metadata:bui-tag]

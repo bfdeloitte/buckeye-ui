@@ -17,10 +17,10 @@ import type { CSSResultGroup } from 'lit';
  * @status stable
  * @since 2.0
  *
- * @dependency sl-icon
+ * @dependency bui-icon
  *
- * @event sl-change - Emitted when the rating's value changes.
- * @event {{ phase: 'start' | 'move' | 'end', value: number }} sl-hover - Emitted when the user hovers over a value. The
+ * @event bui-change - Emitted when the rating's value changes.
+ * @event {{ phase: 'start' | 'move' | 'end', value: number }} bui-hover - Emitted when the user hovers over a value. The
  *  `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the
  *  rating's value would be if the user were to commit to the hovered value.
  *
@@ -31,8 +31,8 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --symbol-size - The size of symbols.
  * @cssproperty --symbol-spacing - The spacing to use around symbols.
  */
-@customElement('sl-rating')
-export default class SlRating extends BuckeyeElement {
+@customElement('bui-rating')
+export default class Rating extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly localize = new LocalizeController(this);
@@ -66,9 +66,9 @@ export default class SlRating extends BuckeyeElement {
   /**
    * A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.
    * The function should return a string containing trusted HTML of the symbol to render at the specified value. Works
-   * well with `<sl-icon>` elements.
+   * well with `<bui-icon>` elements.
    */
-  @property() getSymbol: (value: number) => string = () => '<sl-icon name="star-fill" library="system"></sl-icon>';
+  @property() getSymbol: (value: number) => string = () => '<bui-icon name="star-fill" library="system"></bui-icon>';
 
   private getValueFromMousePosition(event: MouseEvent) {
     return this.getValueFromXCoordinate(event.clientX);
@@ -94,7 +94,7 @@ export default class SlRating extends BuckeyeElement {
     }
 
     this.setValue(this.getValueFromMousePosition(event));
-    this.emit('sl-change');
+    this.emit('bui-change');
   }
 
   private setValue(newValue: number) {
@@ -138,7 +138,7 @@ export default class SlRating extends BuckeyeElement {
     }
 
     if (this.value !== oldValue) {
-      this.emit('sl-change');
+      this.emit('bui-change');
     }
   }
 
@@ -171,7 +171,7 @@ export default class SlRating extends BuckeyeElement {
   private handleTouchEnd(event: TouchEvent) {
     this.isHovering = false;
     this.setValue(this.hoverValue);
-    this.emit('sl-change');
+    this.emit('bui-change');
 
     // Prevent click on mobile devices
     event.preventDefault();
@@ -184,7 +184,7 @@ export default class SlRating extends BuckeyeElement {
 
   @watch('hoverValue')
   handleHoverValueChange() {
-    this.emit('sl-hover', {
+    this.emit('bui-hover', {
       detail: {
         phase: 'move',
         value: this.hoverValue
@@ -194,7 +194,7 @@ export default class SlRating extends BuckeyeElement {
 
   @watch('isHovering')
   handleIsHoveringChange() {
-    this.emit('sl-hover', {
+    this.emit('bui-hover', {
       detail: {
         phase: this.isHovering ? 'start' : 'end',
         value: this.hoverValue
@@ -299,6 +299,6 @@ export default class SlRating extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-rating': SlRating;
+    'bui-rating': Rating;
   }
 }

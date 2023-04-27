@@ -10,12 +10,12 @@ import type { CSSResultGroup } from 'lit';
  * @status stable
  * @since 2.0
  *
- * @slot - One or more `<sl-button>` elements to display in the button group.
+ * @slot - One or more `<bui-button>` elements to display in the button group.
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-button-group')
-export default class SlButtonGroup extends BuckeyeElement {
+@customElement('bui-button-group')
+export default class ButtonGroup extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @query('slot') defaultSlot: HTMLSlotElement;
@@ -30,22 +30,22 @@ export default class SlButtonGroup extends BuckeyeElement {
 
   private handleFocus(event: Event) {
     const button = findButton(event.target as HTMLElement);
-    button?.classList.add('sl-button-group__button--focus');
+    button?.classList.add('bui-button-group__button--focus');
   }
 
   private handleBlur(event: Event) {
     const button = findButton(event.target as HTMLElement);
-    button?.classList.remove('sl-button-group__button--focus');
+    button?.classList.remove('bui-button-group__button--focus');
   }
 
   private handleMouseOver(event: Event) {
     const button = findButton(event.target as HTMLElement);
-    button?.classList.add('sl-button-group__button--hover');
+    button?.classList.add('bui-button-group__button--hover');
   }
 
   private handleMouseOut(event: Event) {
     const button = findButton(event.target as HTMLElement);
-    button?.classList.remove('sl-button-group__button--hover');
+    button?.classList.remove('bui-button-group__button--hover');
   }
 
   private handleSlotChange() {
@@ -56,11 +56,11 @@ export default class SlButtonGroup extends BuckeyeElement {
       const button = findButton(el);
 
       if (button !== null) {
-        button.classList.add('sl-button-group__button');
-        button.classList.toggle('sl-button-group__button--first', index === 0);
-        button.classList.toggle('sl-button-group__button--inner', index > 0 && index < slottedElements.length - 1);
-        button.classList.toggle('sl-button-group__button--last', index === slottedElements.length - 1);
-        button.classList.toggle('sl-button-group__button--radio', button.tagName.toLowerCase() === 'sl-radio-button');
+        button.classList.add('bui-button-group__button');
+        button.classList.toggle('bui-button-group__button--first', index === 0);
+        button.classList.toggle('bui-button-group__button--inner', index > 0 && index < slottedElements.length - 1);
+        button.classList.toggle('bui-button-group__button--last', index === slottedElements.length - 1);
+        button.classList.toggle('bui-button-group__button--radio', button.tagName.toLowerCase() === 'bui-radio-button');
       }
     });
   }
@@ -84,7 +84,7 @@ export default class SlButtonGroup extends BuckeyeElement {
 }
 
 function findButton(el: HTMLElement) {
-  const selector = 'sl-button, sl-radio-button';
+  const selector = 'bui-button, bui-radio-button';
 
   // The button could be the target element or a child of it (e.g. a dropdown or tooltip anchor)
   return el.closest(selector) ?? el.querySelector(selector);
@@ -92,6 +92,6 @@ function findButton(el: HTMLElement) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-button-group': SlButtonGroup;
+    'bui-button-group': ButtonGroup;
   }
 }

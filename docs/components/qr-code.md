@@ -1,25 +1,25 @@
 # QR Code
 
-[component-header:sl-qr-code]
+[component-header:bui-qr-code]
 
 QR codes are useful for providing small pieces of information to users who can quickly scan them with a smartphone. Most smartphones have built-in QR code scanners, so simply pointing the camera at a QR code will decode it and allow the user to visit a website, dial a phone number, read a message, etc.
 
 ```html preview
 <div class="qr-overview">
-  <sl-qr-code value="https://buckeyeui.com" label="Scan this code to visit BuckeyeUI on the web!"></sl-qr-code>
+  <bui-qr-code value="https://buckeyeui.com" label="Scan this code to visit BuckeyeUI on the web!"></bui-qr-code>
   <br />
 
-  <sl-input maxlength="255" clearable label="Value"></sl-input>
+  <bui-input maxlength="255" clearable label="Value"></bui-input>
 </div>
 
 <script>
   const container = document.querySelector('.qr-overview');
-  const qrCode = container.querySelector('sl-qr-code');
-  const input = container.querySelector('sl-input');
+  const qrCode = container.querySelector('bui-qr-code');
+  const input = container.querySelector('bui-input');
 
-  customElements.whenDefined('sl-qr-code').then(() => {
+  customElements.whenDefined('bui-qr-code').then(() => {
     input.value = qrCode.value;
-    input.addEventListener('sl-input', () => (qrCode.value = input.value));
+    input.addEventListener('bui-input', () => (qrCode.value = input.value));
   });
 </script>
 
@@ -28,7 +28,7 @@ QR codes are useful for providing small pieces of information to users who can q
     max-width: 256px;
   }
 
-  .qr-overview sl-input {
+  .qr-overview bui-input {
     margin-top: 1rem;
   }
 </style>
@@ -36,14 +36,14 @@ QR codes are useful for providing small pieces of information to users who can q
 
 ```jsx react
 import { useState } from 'react';
-import { SlQrCode, SlInput } from 'buckeye-ui/dist/react';
+import { QrCode, Input } from 'buckeye-ui/dist/react';
 
 const css = `
   .qr-overview {
     max-width: 256px;
   }
 
-  .qr-overview sl-input {
+  .qr-overview bui-input {
     margin-top: 1rem;
   }
 `;
@@ -54,10 +54,10 @@ const App = () => {
   return (
     <>
       <div className="qr-overview">
-        <SlQrCode value={value} label="Scan this code to visit BuckeyeUI on the web!" />
+        <QrCode value={value} label="Scan this code to visit BuckeyeUI on the web!" />
         <br />
 
-        <SlInput maxlength="255" clearable onInput={event => setValue(event.target.value)} />
+        <Input maxlength="255" clearable onInput={event => setValue(event.target.value)} />
       </div>
 
       <style>{css}</style>
@@ -73,13 +73,13 @@ const App = () => {
 Use the `fill` and `background` attributes to modify the QR code's colors. You should always ensure good contrast for optimal compatibility with QR code scanners.
 
 ```html preview
-<sl-qr-code value="https://buckeyeui.com/" fill="deeppink" background="white"></sl-qr-code>
+<bui-qr-code value="https://buckeyeui.com/" fill="deeppink" background="white"></bui-qr-code>
 ```
 
 ```jsx react
-import { SlQrCode } from 'buckeye-ui/dist/react';
+import { QrCode } from 'buckeye-ui/dist/react';
 
-const App = () => <SlQrCode value="https://buckeyeui.com/" fill="deeppink" background="white" />;
+const App = () => <QrCode value="https://buckeyeui.com/" fill="deeppink" background="white" />;
 ```
 
 ### Size
@@ -87,13 +87,13 @@ const App = () => <SlQrCode value="https://buckeyeui.com/" fill="deeppink" backg
 Use the `size` attribute to change the size of the QR code.
 
 ```html preview
-<sl-qr-code value="https://buckeyeui.com/" size="64"></sl-qr-code>
+<bui-qr-code value="https://buckeyeui.com/" size="64"></bui-qr-code>
 ```
 
 ```jsx react
-import { SlQrCode } from 'buckeye-ui/dist/react';
+import { QrCode } from 'buckeye-ui/dist/react';
 
-const App = () => <SlQrCode value="https://buckeyeui.com/" size="64" />;
+const App = () => <QrCode value="https://buckeyeui.com/" size="64" />;
 ```
 
 ### Radius
@@ -101,13 +101,13 @@ const App = () => <SlQrCode value="https://buckeyeui.com/" size="64" />;
 Create a rounded effect with the `radius` attribute.
 
 ```html preview
-<sl-qr-code value="https://buckeyeui.com/" radius="0.5"></sl-qr-code>
+<bui-qr-code value="https://buckeyeui.com/" radius="0.5"></bui-qr-code>
 ```
 
 ```jsx react
-import { SlQrCode } from 'buckeye-ui/dist/react';
+import { QrCode } from 'buckeye-ui/dist/react';
 
-const App = () => <SlQrCode value="https://buckeyeui.com/" radius="0.5" />;
+const App = () => <QrCode value="https://buckeyeui.com/" radius="0.5" />;
 ```
 
 ### Error Correction
@@ -116,10 +116,10 @@ QR codes can be rendered with various levels of [error correction](https://www.q
 
 ```html preview
 <div class="qr-error-correction">
-  <sl-qr-code value="https://buckeyeui.com/" error-correction="L"></sl-qr-code>
-  <sl-qr-code value="https://buckeyeui.com/" error-correction="M"></sl-qr-code>
-  <sl-qr-code value="https://buckeyeui.com/" error-correction="Q"></sl-qr-code>
-  <sl-qr-code value="https://buckeyeui.com/" error-correction="H"></sl-qr-code>
+  <bui-qr-code value="https://buckeyeui.com/" error-correction="L"></bui-qr-code>
+  <bui-qr-code value="https://buckeyeui.com/" error-correction="M"></bui-qr-code>
+  <bui-qr-code value="https://buckeyeui.com/" error-correction="Q"></bui-qr-code>
+  <bui-qr-code value="https://buckeyeui.com/" error-correction="H"></bui-qr-code>
 </div>
 
 <style>
@@ -132,7 +132,7 @@ QR codes can be rendered with various levels of [error correction](https://www.q
 ```
 
 ```jsx react
-import { SlQrCode } from 'buckeye-ui/dist/react';
+import { QrCode } from 'buckeye-ui/dist/react';
 
 const css = `
   .qr-error-correction {
@@ -146,10 +146,10 @@ const App = () => {
   return (
     <>
       <div className="qr-error-correction">
-        <SlQrCode value="https://buckeyeui.com/" error-correction="L" />
-        <SlQrCode value="https://buckeyeui.com/" error-correction="M" />
-        <SlQrCode value="https://buckeyeui.com/" error-correction="Q" />
-        <SlQrCode value="https://buckeyeui.com/" error-correction="H" />
+        <QrCode value="https://buckeyeui.com/" error-correction="L" />
+        <QrCode value="https://buckeyeui.com/" error-correction="M" />
+        <QrCode value="https://buckeyeui.com/" error-correction="Q" />
+        <QrCode value="https://buckeyeui.com/" error-correction="H" />
       </div>
 
       <style>{css}</style>
@@ -158,4 +158,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-qr-code]
+[component-metadata:bui-qr-code]

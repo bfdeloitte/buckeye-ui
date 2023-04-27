@@ -1,24 +1,24 @@
 # Tooltip
 
-[component-header:sl-tooltip]
+[component-header:bui-tooltip]
 
 A tooltip's target is its _first child element_, so you should only wrap one element inside of the tooltip. If you need the tooltip to show up for multiple elements, nest them inside a container first.
 
 Tooltips use `display: contents` so they won't interfere with how elements are positioned in a flex or grid layout.
 
 ```html preview
-<sl-tooltip content="This is a tooltip">
-  <sl-button>Hover Me</sl-button>
-</sl-tooltip>
+<bui-tooltip content="This is a tooltip">
+  <bui-button>Hover Me</bui-button>
+</bui-tooltip>
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from 'buckeye-ui/dist/react';
+import { Button, Tooltip } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlTooltip content="This is a tooltip">
-    <SlButton>Hover Me</SlButton>
-  </SlTooltip>
+  <Tooltip content="This is a tooltip">
+    <Button>Hover Me</Button>
+  </Tooltip>
 );
 ```
 
@@ -31,61 +31,61 @@ Use the `placement` attribute to set the preferred placement of the tooltip.
 ```html preview
 <div class="tooltip-placement-example">
   <div class="tooltip-placement-example-row">
-    <sl-tooltip content="top-start" placement="top-start">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="top-start" placement="top-start">
+      <bui-button></bui-button>
+    </bui-tooltip>
 
-    <sl-tooltip content="top" placement="top">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="top" placement="top">
+      <bui-button></bui-button>
+    </bui-tooltip>
 
-    <sl-tooltip content="top-end" placement="top-end">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="top-end" placement="top-end">
+      <bui-button></bui-button>
+    </bui-tooltip>
   </div>
 
   <div class="tooltip-placement-example-row">
-    <sl-tooltip content="left-start" placement="left-start">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="left-start" placement="left-start">
+      <bui-button></bui-button>
+    </bui-tooltip>
 
-    <sl-tooltip content="right-start" placement="right-start">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="right-start" placement="right-start">
+      <bui-button></bui-button>
+    </bui-tooltip>
   </div>
 
   <div class="tooltip-placement-example-row">
-    <sl-tooltip content="left" placement="left">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="left" placement="left">
+      <bui-button></bui-button>
+    </bui-tooltip>
 
-    <sl-tooltip content="right" placement="right">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="right" placement="right">
+      <bui-button></bui-button>
+    </bui-tooltip>
   </div>
 
   <div class="tooltip-placement-example-row">
-    <sl-tooltip content="left-end" placement="left-end">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="left-end" placement="left-end">
+      <bui-button></bui-button>
+    </bui-tooltip>
 
-    <sl-tooltip content="right-end" placement="right-end">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="right-end" placement="right-end">
+      <bui-button></bui-button>
+    </bui-tooltip>
   </div>
 
   <div class="tooltip-placement-example-row">
-    <sl-tooltip content="bottom-start" placement="bottom-start">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="bottom-start" placement="bottom-start">
+      <bui-button></bui-button>
+    </bui-tooltip>
 
-    <sl-tooltip content="bottom" placement="bottom">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="bottom" placement="bottom">
+      <bui-button></bui-button>
+    </bui-tooltip>
 
-    <sl-tooltip content="bottom-end" placement="bottom-end">
-      <sl-button></sl-button>
-    </sl-tooltip>
+    <bui-tooltip content="bottom-end" placement="bottom-end">
+      <bui-button></bui-button>
+    </bui-tooltip>
   </div>
 </div>
 
@@ -101,28 +101,28 @@ Use the `placement` attribute to set the preferred placement of the tooltip.
     clear: both;
   }
 
-  .tooltip-placement-example sl-button {
+  .tooltip-placement-example bui-button {
     float: left;
     width: 2.5rem;
     margin-right: 0.25rem;
     margin-bottom: 0.25rem;
   }
 
-  .tooltip-placement-example-row:nth-child(1) sl-tooltip:first-child sl-button,
-  .tooltip-placement-example-row:nth-child(5) sl-tooltip:first-child sl-button {
+  .tooltip-placement-example-row:nth-child(1) bui-tooltip:first-child bui-button,
+  .tooltip-placement-example-row:nth-child(5) bui-tooltip:first-child bui-button {
     margin-left: calc(40px + 0.25rem);
   }
 
-  .tooltip-placement-example-row:nth-child(2) sl-tooltip:nth-child(2) sl-button,
-  .tooltip-placement-example-row:nth-child(3) sl-tooltip:nth-child(2) sl-button,
-  .tooltip-placement-example-row:nth-child(4) sl-tooltip:nth-child(2) sl-button {
+  .tooltip-placement-example-row:nth-child(2) bui-tooltip:nth-child(2) bui-button,
+  .tooltip-placement-example-row:nth-child(3) bui-tooltip:nth-child(2) bui-button,
+  .tooltip-placement-example-row:nth-child(4) bui-tooltip:nth-child(2) bui-button {
     margin-left: calc((40px * 3) + (0.25rem * 3));
   }
 </style>
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from 'buckeye-ui/dist/react';
+import { Button, Tooltip } from 'buckeye-ui/dist/react';
 
 const css = `
   .tooltip-placement-example {
@@ -135,21 +135,21 @@ const css = `
     clear: both;
   }
 
-  .tooltip-placement-example sl-button {
+  .tooltip-placement-example bui-button {
     float: left;
     width: 2.5rem;
     margin-right: 0.25rem;
     margin-bottom: 0.25rem;
   }
 
-  .tooltip-placement-example-row:nth-child(1) sl-tooltip:first-child sl-button,
-  .tooltip-placement-example-row:nth-child(5) sl-tooltip:first-child sl-button {
+  .tooltip-placement-example-row:nth-child(1) bui-tooltip:first-child bui-button,
+  .tooltip-placement-example-row:nth-child(5) bui-tooltip:first-child bui-button {
     margin-left: calc(40px + 0.25rem);
   }
 
-  .tooltip-placement-example-row:nth-child(2) sl-tooltip:nth-child(2) sl-button,
-  .tooltip-placement-example-row:nth-child(3) sl-tooltip:nth-child(2) sl-button,
-  .tooltip-placement-example-row:nth-child(4) sl-tooltip:nth-child(2) sl-button {
+  .tooltip-placement-example-row:nth-child(2) bui-tooltip:nth-child(2) bui-button,
+  .tooltip-placement-example-row:nth-child(3) bui-tooltip:nth-child(2) bui-button,
+  .tooltip-placement-example-row:nth-child(4) bui-tooltip:nth-child(2) bui-button {
     margin-left: calc((40px * 3) + (0.25rem * 3));
   }
 `;
@@ -158,61 +158,61 @@ const App = () => (
   <>
     <div className="tooltip-placement-example">
       <div className="tooltip-placement-example-row">
-        <SlTooltip content="top-start" placement="top-start">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="top-start" placement="top-start">
+          <Button />
+        </Tooltip>
 
-        <SlTooltip content="top" placement="top">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="top" placement="top">
+          <Button />
+        </Tooltip>
 
-        <SlTooltip content="top-end" placement="top-end">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="top-end" placement="top-end">
+          <Button />
+        </Tooltip>
       </div>
 
       <div className="tooltip-placement-example-row">
-        <SlTooltip content="left-start" placement="left-start">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="left-start" placement="left-start">
+          <Button />
+        </Tooltip>
 
-        <SlTooltip content="right-start" placement="right-start">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="right-start" placement="right-start">
+          <Button />
+        </Tooltip>
       </div>
 
       <div className="tooltip-placement-example-row">
-        <SlTooltip content="left" placement="left">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="left" placement="left">
+          <Button />
+        </Tooltip>
 
-        <SlTooltip content="right" placement="right">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="right" placement="right">
+          <Button />
+        </Tooltip>
       </div>
 
       <div className="tooltip-placement-example-row">
-        <SlTooltip content="left-end" placement="left-end">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="left-end" placement="left-end">
+          <Button />
+        </Tooltip>
 
-        <SlTooltip content="right-end" placement="right-end">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="right-end" placement="right-end">
+          <Button />
+        </Tooltip>
       </div>
 
       <div className="tooltip-placement-example-row">
-        <SlTooltip content="bottom-start" placement="bottom-start">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="bottom-start" placement="bottom-start">
+          <Button />
+        </Tooltip>
 
-        <SlTooltip content="bottom" placement="bottom">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="bottom" placement="bottom">
+          <Button />
+        </Tooltip>
 
-        <SlTooltip content="bottom-end" placement="bottom-end">
-          <SlButton />
-        </SlTooltip>
+        <Tooltip content="bottom-end" placement="bottom-end">
+          <Button />
+        </Tooltip>
       </div>
     </div>
 
@@ -226,18 +226,18 @@ const App = () => (
 Set the `trigger` attribute to `click` to toggle the tooltip on click instead of hover.
 
 ```html preview
-<sl-tooltip content="Click again to dismiss" trigger="click">
-  <sl-button>Click to Toggle</sl-button>
-</sl-tooltip>
+<bui-tooltip content="Click again to dismiss" trigger="click">
+  <bui-button>Click to Toggle</bui-button>
+</bui-tooltip>
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from 'buckeye-ui/dist/react';
+import { Button, Tooltip } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlTooltip content="Click again to dismiss" trigger="click">
-    <SlButton>Click to Toggle</SlButton>
-  </SlTooltip>
+  <Tooltip content="Click again to dismiss" trigger="click">
+    <Button>Click to Toggle</Button>
+  </Tooltip>
 );
 ```
 
@@ -246,11 +246,11 @@ const App = () => (
 Tooltips can be controller programmatically by setting the `trigger` attribute to `manual`. Use the `open` attribute to control when the tooltip is shown.
 
 ```html preview
-<sl-button style="margin-right: 4rem;">Toggle Manually</sl-button>
+<bui-button style="margin-right: 4rem;">Toggle Manually</bui-button>
 
-<sl-tooltip content="This is an avatar" trigger="manual" class="manual-tooltip">
-  <sl-avatar label="User"></sl-avatar>
-</sl-tooltip>
+<bui-tooltip content="This is an avatar" trigger="manual" class="manual-tooltip">
+  <bui-avatar label="User"></bui-avatar>
+</bui-tooltip>
 
 <script>
   const tooltip = document.querySelector('.manual-tooltip');
@@ -262,20 +262,20 @@ Tooltips can be controller programmatically by setting the `trigger` attribute t
 
 ```jsx react
 import { useState } from 'react';
-import { SlAvatar, SlButton, SlTooltip } from 'buckeye-ui/dist/react';
+import { Avatar, Button, Tooltip } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <SlButton style={{ marginRight: '4rem' }} onClick={() => setOpen(!open)}>
+      <Button style={{ marginRight: '4rem' }} onClick={() => setOpen(!open)}>
         Toggle Manually
-      </SlButton>
+      </Button>
 
-      <SlTooltip open={open} content="This is an avatar" trigger="manual">
-        <SlAvatar />
-      </SlTooltip>
+      <Tooltip open={open} content="This is an avatar" trigger="manual">
+        <Avatar />
+      </Tooltip>
     </>
   );
 };
@@ -283,26 +283,26 @@ const App = () => {
 
 ### Removing Arrows
 
-You can control the size of tooltip arrows by overriding the `--sl-tooltip-arrow-size` design token. To remove them, set the value to `0` as shown below.
+You can control the size of tooltip arrows by overriding the `--bui-tooltip-arrow-size` design token. To remove them, set the value to `0` as shown below.
 
 ```html preview
-<sl-tooltip content="This is a tooltip" style="--sl-tooltip-arrow-size: 0;">
-  <sl-button>No Arrow</sl-button>
-</sl-tooltip>
+<bui-tooltip content="This is a tooltip" style="--bui-tooltip-arrow-size: 0;">
+  <bui-button>No Arrow</bui-button>
+</bui-tooltip>
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from 'buckeye-ui/dist/react';
+import { Button, Tooltip } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <div style={{ '--sl-tooltip-arrow-size': '0' }}>
-    <SlTooltip content="This is a tooltip">
-      <SlButton>Above</SlButton>
-    </SlTooltip>
+  <div style={{ '--bui-tooltip-arrow-size': '0' }}>
+    <Tooltip content="This is a tooltip">
+      <Button>Above</Button>
+    </Tooltip>
 
-    <SlTooltip content="This is a tooltip" placement="bottom">
-      <SlButton>Below</SlButton>
-    </SlTooltip>
+    <Tooltip content="This is a tooltip" placement="bottom">
+      <Button>Below</Button>
+    </Tooltip>
   </div>
 );
 ```
@@ -311,7 +311,7 @@ To override it globally, set it in a root block in your stylesheet after the Buc
 
 ```css
 :root {
-  --sl-tooltip-arrow-size: 0;
+  --bui-tooltip-arrow-size: 0;
 }
 ```
 
@@ -320,24 +320,24 @@ To override it globally, set it in a root block in your stylesheet after the Buc
 Use the `content` slot to create tooltips with HTML content. Tooltips are designed only for text and presentational elements. Avoid placing interactive content, such as buttons, links, and form controls, in a tooltip.
 
 ```html preview
-<sl-tooltip>
+<bui-tooltip>
   <div slot="content">I'm not <strong>just</strong> a tooltip, I'm a <em>tooltip</em> with HTML!</div>
 
-  <sl-button>Hover me</sl-button>
-</sl-tooltip>
+  <bui-button>Hover me</bui-button>
+</bui-tooltip>
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from 'buckeye-ui/dist/react';
+import { Button, Tooltip } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlTooltip>
+  <Tooltip>
     <div slot="content">
       I'm not <strong>just</strong> a tooltip, I'm a <em>tooltip</em> with HTML!
     </div>
 
-    <SlButton>Hover Me</SlButton>
-  </SlTooltip>
+    <Button>Hover Me</Button>
+  </Tooltip>
 );
 ```
 
@@ -346,18 +346,18 @@ const App = () => (
 Use the `--max-width` custom property to change the width the tooltip can grow to before wrapping occurs.
 
 ```html preview
-<sl-tooltip style="--max-width: 80px;" content="This tooltip will wrap after only 80 pixels.">
-  <sl-button>Hover me</sl-button>
-</sl-tooltip>
+<bui-tooltip style="--max-width: 80px;" content="This tooltip will wrap after only 80 pixels.">
+  <bui-button>Hover me</bui-button>
+</bui-tooltip>
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from 'buckeye-ui/dist/react';
+import { Button, Tooltip } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlTooltip style={{ '--max-width': '80px' }} content="This tooltip will wrap after only 80 pixels.">
-    <SlButton>Hover Me</SlButton>
-  </SlTooltip>
+  <Tooltip style={{ '--max-width': '80px' }} content="This tooltip will wrap after only 80 pixels.">
+    <Button>Hover Me</Button>
+  </Tooltip>
 );
 ```
 
@@ -367,33 +367,33 @@ Tooltips will be clipped if they're inside a container that has `overflow: auto|
 
 ```html preview
 <div class="tooltip-hoist">
-  <sl-tooltip content="This is a tooltip">
-    <sl-button>No Hoist</sl-button>
-  </sl-tooltip>
+  <bui-tooltip content="This is a tooltip">
+    <bui-button>No Hoist</bui-button>
+  </bui-tooltip>
 
-  <sl-tooltip content="This is a tooltip" hoist>
-    <sl-button>Hoist</sl-button>
-  </sl-tooltip>
+  <bui-tooltip content="This is a tooltip" hoist>
+    <bui-button>Hoist</bui-button>
+  </bui-tooltip>
 </div>
 
 <style>
   .tooltip-hoist {
     position: relative;
-    border: solid 2px var(--sl-panel-border-color);
+    border: solid 2px var(--bui-panel-border-color);
     overflow: hidden;
-    padding: var(--sl-spacing-medium);
+    padding: var(--bui-spacing-medium);
   }
 </style>
 ```
 
 ```jsx react
-import { SlButton, SlTooltip } from 'buckeye-ui/dist/react';
+import { Button, Tooltip } from 'buckeye-ui/dist/react';
 
 const css = `
   .tooltip-hoist {
-    border: solid 2px var(--sl-panel-border-color);
+    border: solid 2px var(--bui-panel-border-color);
     overflow: hidden;
-    padding: var(--sl-spacing-medium);
+    padding: var(--bui-spacing-medium);
     position: relative;
   }
 `;
@@ -401,13 +401,13 @@ const css = `
 const App = () => (
   <>
     <div class="tooltip-hoist">
-      <SlTooltip content="This is a tooltip">
-        <SlButton>No Hoist</SlButton>
-      </SlTooltip>
+      <Tooltip content="This is a tooltip">
+        <Button>No Hoist</Button>
+      </Tooltip>
 
-      <SlTooltip content="This is a tooltip" hoist>
-        <SlButton>Hoist</SlButton>
-      </SlTooltip>
+      <Tooltip content="This is a tooltip" hoist>
+        <Button>Hoist</Button>
+      </Tooltip>
     </div>
 
     <style>{css}</style>
@@ -415,4 +415,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-tooltip]
+[component-metadata:bui-tooltip]

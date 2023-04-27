@@ -1,17 +1,17 @@
 # Icon Button
 
-[component-header:sl-icon-button]
+[component-header:bui-icon-button]
 
 For a full list of icons that come bundled with BuckeyeUI, refer to the [icon component](/components/icon).
 
 ```html preview
-<sl-icon-button name="gear" label="Settings"></sl-icon-button>
+<bui-icon-button name="gear" label="Settings"></bui-icon-button>
 ```
 
 ```jsx react
-import { SlIconButton } from 'buckeye-ui/dist/react';
+import { IconButton } from 'buckeye-ui/dist/react';
 
-const App = () => <SlIconButton name="gear" label="Settings" />;
+const App = () => <IconButton name="gear" label="Settings" />;
 ```
 
 ## Examples
@@ -21,19 +21,19 @@ const App = () => <SlIconButton name="gear" label="Settings" />;
 Icon buttons inherit their parent element's `font-size`.
 
 ```html preview
-<sl-icon-button name="pencil" label="Edit" style="font-size: 1.5rem;"></sl-icon-button>
-<sl-icon-button name="pencil" label="Edit" style="font-size: 2rem;"></sl-icon-button>
-<sl-icon-button name="pencil" label="Edit" style="font-size: 2.5rem;"></sl-icon-button>
+<bui-icon-button name="pencil" label="Edit" style="font-size: 1.5rem;"></bui-icon-button>
+<bui-icon-button name="pencil" label="Edit" style="font-size: 2rem;"></bui-icon-button>
+<bui-icon-button name="pencil" label="Edit" style="font-size: 2.5rem;"></bui-icon-button>
 ```
 
 ```jsx react
-import { SlIconButton } from 'buckeye-ui/dist/react';
+import { IconButton } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlIconButton name="pencil" label="Edit" style={{ fontSize: '1.5rem' }} />
-    <SlIconButton name="pencil" label="Edit" style={{ fontSize: '2rem' }} />
-    <SlIconButton name="pencil" label="Edit" style={{ fontSize: '2.5rem' }} />
+    <IconButton name="pencil" label="Edit" style={{ fontSize: '1.5rem' }} />
+    <IconButton name="pencil" label="Edit" style={{ fontSize: '2rem' }} />
+    <IconButton name="pencil" label="Edit" style={{ fontSize: '2.5rem' }} />
   </>
 );
 ```
@@ -44,41 +44,41 @@ Icon buttons are designed to have a uniform appearance, so their color is not in
 
 ```html preview
 <div class="icon-button-color">
-  <sl-icon-button name="type-bold" label="Bold"></sl-icon-button>
-  <sl-icon-button name="type-italic" label="Italic"></sl-icon-button>
-  <sl-icon-button name="type-underline" label="Underline"></sl-icon-button>
+  <bui-icon-button name="type-bold" label="Bold"></bui-icon-button>
+  <bui-icon-button name="type-italic" label="Italic"></bui-icon-button>
+  <bui-icon-button name="type-underline" label="Underline"></bui-icon-button>
 </div>
 
 <style>
-  .icon-button-color sl-icon-button::part(base) {
+  .icon-button-color bui-icon-button::part(base) {
     color: #b00091;
   }
 
-  .icon-button-color sl-icon-button::part(base):hover,
-  .icon-button-color sl-icon-button::part(base):focus {
+  .icon-button-color bui-icon-button::part(base):hover,
+  .icon-button-color bui-icon-button::part(base):focus {
     color: #c913aa;
   }
 
-  .icon-button-color sl-icon-button::part(base):active {
+  .icon-button-color bui-icon-button::part(base):active {
     color: #960077;
   }
 </style>
 ```
 
 ```jsx react
-import { SlIconButton } from 'buckeye-ui/dist/react';
+import { IconButton } from 'buckeye-ui/dist/react';
 
 const css = `
-  .icon-button-color sl-icon-button::part(base) {
+  .icon-button-color bui-icon-button::part(base) {
     color: #b00091;
   }
 
-  .icon-button-color sl-icon-button::part(base):hover,
-  .icon-button-color sl-icon-button::part(base):focus {
+  .icon-button-color bui-icon-button::part(base):hover,
+  .icon-button-color bui-icon-button::part(base):focus {
     color: #c913aa;
   }
 
-  .icon-button-color sl-icon-button::part(base):active {
+  .icon-button-color bui-icon-button::part(base):active {
     color: #960077;
   }
 `;
@@ -86,9 +86,9 @@ const css = `
 const App = () => (
   <>
     <div className="icon-button-color">
-      <SlIconButton name="type-bold" label="Bold" />
-      <SlIconButton name="type-italic" label="Italic" />
-      <SlIconButton name="type-underline" label="Underline" />
+      <IconButton name="type-bold" label="Bold" />
+      <IconButton name="type-italic" label="Italic" />
+      <IconButton name="type-underline" label="Underline" />
     </div>
 
     <style>{css}</style>
@@ -101,13 +101,13 @@ const App = () => (
 Use the `href` attribute to convert the button to a link.
 
 ```html preview
-<sl-icon-button name="gear" label="Settings" href="https://example.com" target="_blank"></sl-icon-button>
+<bui-icon-button name="gear" label="Settings" href="https://example.com" target="_blank"></bui-icon-button>
 ```
 
 ```jsx react
-import { SlIconButton } from 'buckeye-ui/dist/react';
+import { IconButton } from 'buckeye-ui/dist/react';
 
-const App = () => <SlIconButton name="gear" label="Settings" href="https://example.com" target="_blank" />;
+const App = () => <IconButton name="gear" label="Settings" href="https://example.com" target="_blank" />;
 ```
 
 ### Icon Button with Tooltip
@@ -115,18 +115,18 @@ const App = () => <SlIconButton name="gear" label="Settings" href="https://examp
 Wrap a tooltip around an icon button to provide contextual information to the user.
 
 ```html preview
-<sl-tooltip content="Settings">
-  <sl-icon-button name="gear" label="Settings"></sl-icon-button>
-</sl-tooltip>
+<bui-tooltip content="Settings">
+  <bui-icon-button name="gear" label="Settings"></bui-icon-button>
+</bui-tooltip>
 ```
 
 ```jsx react
-import { SlIconButton, SlTooltip } from 'buckeye-ui/dist/react';
+import { IconButton, Tooltip } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlTooltip content="Settings">
-    <SlIconButton name="gear" label="Settings" />
-  </SlTooltip>
+  <Tooltip content="Settings">
+    <IconButton name="gear" label="Settings" />
+  </Tooltip>
 );
 ```
 
@@ -135,13 +135,13 @@ const App = () => (
 Use the `disabled` attribute to disable the icon button.
 
 ```html preview
-<sl-icon-button name="gear" label="Settings" disabled></sl-icon-button>
+<bui-icon-button name="gear" label="Settings" disabled></bui-icon-button>
 ```
 
 ```jsx react
-import { SlIconButton } from 'buckeye-ui/dist/react';
+import { IconButton } from 'buckeye-ui/dist/react';
 
-const App = () => <SlIconButton name="gear" label="Settings" disabled />;
+const App = () => <IconButton name="gear" label="Settings" disabled />;
 ```
 
-[component-metadata:sl-icon-button]
+[component-metadata:bui-icon-button]

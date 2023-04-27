@@ -1,15 +1,15 @@
 # Animation
 
-[component-header:sl-animation]
+[component-header:bui-animation]
 
-To animate an element, wrap it in `<sl-animation>` and set an animation `name`. The animation will not start until you add the `play` attribute. Refer to the [properties table](#properties) for a list of all animation options.
+To animate an element, wrap it in `<bui-animation>` and set an animation `name`. The animation will not start until you add the `play` attribute. Refer to the [properties table](#properties) for a list of all animation options.
 
 ```html preview
 <div class="animation-overview">
-  <sl-animation name="bounce" duration="2000" play><div class="box"></div></sl-animation>
-  <sl-animation name="jello" duration="2000" play><div class="box"></div></sl-animation>
-  <sl-animation name="heartBeat" duration="2000" play><div class="box"></div></sl-animation>
-  <sl-animation name="flip" duration="2000" play><div class="box"></div></sl-animation>
+  <bui-animation name="bounce" duration="2000" play><div class="box"></div></bui-animation>
+  <bui-animation name="jello" duration="2000" play><div class="box"></div></bui-animation>
+  <bui-animation name="heartBeat" duration="2000" play><div class="box"></div></bui-animation>
+  <bui-animation name="flip" duration="2000" play><div class="box"></div></bui-animation>
 </div>
 
 <style>
@@ -17,21 +17,21 @@ To animate an element, wrap it in `<sl-animation>` and set an animation `name`. 
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--bui-color-primary-600);
     margin: 1.5rem;
   }
 </style>
 ```
 
 ```jsx react
-import { SlAnimation } from 'buckeye-ui/dist/react';
+import { Animation } from 'buckeye-ui/dist/react';
 
 const css = `
   .animation-overview .box {
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--bui-color-primary-600);
     margin: 1.5rem;
   }
 `;
@@ -39,18 +39,18 @@ const css = `
 const App = () => (
   <>
     <div class="animation-overview">
-      <SlAnimation name="bounce" duration={2000} play>
+      <Animation name="bounce" duration={2000} play>
         <div class="box" />
-      </SlAnimation>
-      <SlAnimation name="jello" duration={2000} play>
+      </Animation>
+      <Animation name="jello" duration={2000} play>
         <div class="box" />
-      </SlAnimation>
-      <SlAnimation name="heartBeat" duration={2000} play>
+      </Animation>
+      <Animation name="heartBeat" duration={2000} play>
         <div class="box" />
-      </SlAnimation>
-      <SlAnimation name="flip" duration={2000} play>
+      </Animation>
+      <Animation name="flip" duration={2000} play>
         <div class="box" />
-      </SlAnimation>
+      </Animation>
     </div>
 
     <style>{css}</style>
@@ -58,7 +58,7 @@ const App = () => (
 );
 ```
 
-?> The animation will only be applied to the first child element found in `<sl-animation>`.
+?> The animation will only be applied to the first child element found in `<bui-animation>`.
 
 ## Examples
 
@@ -68,14 +68,14 @@ This example demonstrates all of the baked-in animations and easings. Animations
 
 ```html preview
 <div class="animation-sandbox">
-  <sl-animation name="bounce" easing="ease-in-out" duration="2000" play>
+  <bui-animation name="bounce" easing="ease-in-out" duration="2000" play>
     <div class="box"></div>
-  </sl-animation>
+  </bui-animation>
 
   <div class="controls">
-    <sl-select label="Animation" value="bounce"></sl-select>
-    <sl-select label="Easing" value="linear"></sl-select>
-    <sl-input label="Playback Rate" type="number" min="0" max="2" step=".25" value="1"></sl-input>
+    <bui-select label="Animation" value="bounce"></bui-select>
+    <bui-select label="Easing" value="linear"></bui-select>
+    <bui-input label="Playback Rate" type="number" min="0" max="2" step=".25" value="1"></bui-input>
   </div>
 </div>
 
@@ -83,15 +83,15 @@ This example demonstrates all of the baked-in animations and easings. Animations
   import { getAnimationNames, getEasingNames } from '/dist/utilities/animation.js';
 
   const container = document.querySelector('.animation-sandbox');
-  const animation = container.querySelector('sl-animation');
-  const animationName = container.querySelector('.controls sl-select:nth-child(1)');
-  const easingName = container.querySelector('.controls sl-select:nth-child(2)');
-  const playbackRate = container.querySelector('sl-input[type="number"]');
+  const animation = container.querySelector('bui-animation');
+  const animationName = container.querySelector('.controls bui-select:nth-child(1)');
+  const easingName = container.querySelector('.controls bui-select:nth-child(2)');
+  const playbackRate = container.querySelector('bui-input[type="number"]');
   const animations = getAnimationNames();
   const easings = getEasingNames();
 
   animations.map(name => {
-    const option = Object.assign(document.createElement('sl-option'), {
+    const option = Object.assign(document.createElement('bui-option'), {
       textContent: name,
       value: name
     });
@@ -99,23 +99,23 @@ This example demonstrates all of the baked-in animations and easings. Animations
   });
 
   easings.map(name => {
-    const option = Object.assign(document.createElement('sl-option'), {
+    const option = Object.assign(document.createElement('bui-option'), {
       textContent: name,
       value: name
     });
     easingName.appendChild(option);
   });
 
-  animationName.addEventListener('sl-change', () => (animation.name = animationName.value));
-  easingName.addEventListener('sl-change', () => (animation.easing = easingName.value));
-  playbackRate.addEventListener('sl-input', () => (animation.playbackRate = playbackRate.value));
+  animationName.addEventListener('bui-change', () => (animation.name = animationName.value));
+  easingName.addEventListener('bui-change', () => (animation.easing = easingName.value));
+  playbackRate.addEventListener('bui-input', () => (animation.playbackRate = playbackRate.value));
 </script>
 
 <style>
   .animation-sandbox .box {
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--bui-color-primary-600);
   }
 
   .animation-sandbox .controls {
@@ -123,7 +123,7 @@ This example demonstrates all of the baked-in animations and easings. Animations
     margin-top: 2rem;
   }
 
-  .animation-sandbox .controls sl-select {
+  .animation-sandbox .controls bui-select {
     margin-bottom: 1rem;
   }
 </style>
@@ -135,12 +135,12 @@ Use an [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/
 
 ```html preview
 <div class="animation-scroll">
-  <sl-animation name="jackInTheBox" duration="2000" iterations="1"><div class="box"></div></sl-animation>
+  <bui-animation name="jackInTheBox" duration="2000" iterations="1"><div class="box"></div></bui-animation>
 </div>
 
 <script>
   const container = document.querySelector('.animation-scroll');
-  const animation = container.querySelector('sl-animation');
+  const animation = container.querySelector('bui-animation');
   const box = animation.querySelector('.box');
 
   // Watch for the box to enter and exit the viewport. Note that we're observing the box, not the animation element!
@@ -161,14 +161,14 @@ Use an [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--bui-color-primary-600);
   }
 </style>
 ```
 
 ```jsx react
 import { useEffect, useRef, useState } from 'react';
-import { SlAnimation } from 'buckeye-ui/dist/react';
+import { Animation } from 'buckeye-ui/dist/react';
 
 const css = `
   .animation-scroll {
@@ -179,7 +179,7 @@ const css = `
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--bui-color-primary-600);
   }
 `;
 
@@ -205,9 +205,9 @@ const App = () => {
   return (
     <>
       <div class="animation-scroll">
-        <SlAnimation ref={animation} name="jackInTheBox" duration={2000} iterations={1}>
+        <Animation ref={animation} name="jackInTheBox" duration={2000} iterations={1}>
           <div ref={box} class="box" />
-        </SlAnimation>
+        </Animation>
       </div>
 
       <style>{css}</style>
@@ -222,13 +222,13 @@ Supply your own [keyframe formats](https://developer.mozilla.org/en-US/docs/Web/
 
 ```html preview
 <div class="animation-keyframes">
-  <sl-animation easing="ease-in-out" duration="2000" play>
+  <bui-animation easing="ease-in-out" duration="2000" play>
     <div class="box"></div>
-  </sl-animation>
+  </bui-animation>
 </div>
 
 <script>
-  const animation = document.querySelector('.animation-keyframes sl-animation');
+  const animation = document.querySelector('.animation-keyframes bui-animation');
   animation.keyframes = [
     {
       offset: 0,
@@ -251,26 +251,26 @@ Supply your own [keyframe formats](https://developer.mozilla.org/en-US/docs/Web/
   .animation-keyframes .box {
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--bui-color-primary-600);
   }
 </style>
 ```
 
 ```jsx react
-import { SlAnimation } from 'buckeye-ui/dist/react';
+import { Animation } from 'buckeye-ui/dist/react';
 
 const css = `
   .animation-keyframes .box {
     width: 100px;
     height: 100px;
-    background-color: var(--sl-color-primary-600);
+    background-color: var(--bui-color-primary-600);
   }
 `;
 
 const App = () => (
   <>
     <div class="animation-keyframes">
-      <SlAnimation
+      <Animation
         easing="ease-in-out"
         duration={2000}
         play
@@ -292,7 +292,7 @@ const App = () => (
         ]}
       >
         <div class="box" />
-      </SlAnimation>
+      </Animation>
     </div>
 
     <style>{css}</style>
@@ -306,15 +306,15 @@ Animations won't play until you apply the `play` attribute. You can omit it init
 
 ```html preview
 <div class="animation-form">
-  <sl-animation name="rubberBand" duration="1000" iterations="1">
-    <sl-button variant="primary">Click me</sl-button>
-  </sl-animation>
+  <bui-animation name="rubberBand" duration="1000" iterations="1">
+    <bui-button variant="primary">Click me</bui-button>
+  </bui-animation>
 </div>
 
 <script>
   const container = document.querySelector('.animation-form');
-  const animation = container.querySelector('sl-animation');
-  const button = container.querySelector('sl-button');
+  const animation = container.querySelector('bui-animation');
+  const button = container.querySelector('bui-button');
 
   button.addEventListener('click', () => {
     animation.play = true;
@@ -324,21 +324,21 @@ Animations won't play until you apply the `play` attribute. You can omit it init
 
 ```jsx react
 import { useState } from 'react';
-import { SlAnimation, SlButton } from 'buckeye-ui/dist/react';
+import { Animation, Button } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const [play, setPlay] = useState(false);
 
   return (
     <div class="animation-form">
-      <SlAnimation name="rubberBand" duration={1000} iterations={1} play={play} onSlFinish={() => setPlay(false)}>
-        <SlButton variant="primary" onClick={() => setPlay(true)}>
+      <Animation name="rubberBand" duration={1000} iterations={1} play={play} onFinish={() => setPlay(false)}>
+        <Button variant="primary" onClick={() => setPlay(true)}>
           Click me
-        </SlButton>
-      </SlAnimation>
+        </Button>
+      </Animation>
     </div>
   );
 };
 ```
 
-[component-metadata:sl-animation]
+[component-metadata:bui-animation]

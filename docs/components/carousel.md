@@ -1,79 +1,79 @@
 # Carousel
 
-[component-header:sl-carousel]
+[component-header:bui-carousel]
 
 ```html preview
-<sl-carousel pagination navigation mouse-dragging loop>
-  <sl-carousel-item>
+<bui-carousel pagination navigation mouse-dragging loop>
+  <bui-carousel-item>
     <img
       alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
       src="/assets/examples/carousel/mountains.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
       src="/assets/examples/carousel/waterfall.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
       src="/assets/examples/carousel/sunset.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
       src="/assets/examples/carousel/field.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
       src="/assets/examples/carousel/valley.jpg"
     />
-  </sl-carousel-item>
-</sl-carousel>
+  </bui-carousel-item>
+</bui-carousel>
 ```
 
 ```jsx react
-import { SlCarousel, SlCarouselItem } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlCarousel pagination mouse-dragging>
-      <SlCarouselItem>
+    <Carousel pagination mouse-dragging>
+      <CarouselItem>
         <img
           alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
           src="/assets/examples/carousel/mountains.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
           src="/assets/examples/carousel/waterfall.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
           src="/assets/examples/carousel/sunset.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
           src="/assets/examples/carousel/field.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
           src="/assets/examples/carousel/valley.jpg"
         />
-      </SlCarouselItem>
-    </SlCarousel>
+      </CarouselItem>
+    </Carousel>
   </>
 );
 ```
@@ -85,76 +85,76 @@ const App = () => (
 Use the `pagination` attribute to show the total number of slides and the current slide as a set of interactive dots.
 
 ```html preview
-<sl-carousel pagination>
-  <sl-carousel-item>
+<bui-carousel pagination>
+  <bui-carousel-item>
     <img
       alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
       src="/assets/examples/carousel/mountains.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
       src="/assets/examples/carousel/waterfall.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
       src="/assets/examples/carousel/sunset.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
       src="/assets/examples/carousel/field.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
       src="/assets/examples/carousel/valley.jpg"
     />
-  </sl-carousel-item>
-</sl-carousel>
+  </bui-carousel-item>
+</bui-carousel>
 ```
 
 ```jsx react
-import { SlCarousel, SlCarouselItem } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlCarousel pagination>
-    <SlCarouselItem>
+  <Carousel pagination>
+    <CarouselItem>
       <img
         alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
         src="/assets/examples/carousel/mountains.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
         src="/assets/examples/carousel/waterfall.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
         src="/assets/examples/carousel/sunset.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
         src="/assets/examples/carousel/field.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
         src="/assets/examples/carousel/valley.jpg"
       />
-    </SlCarouselItem>
-  </SlCarousel>
+    </CarouselItem>
+  </Carousel>
 );
 ```
 
@@ -163,76 +163,76 @@ const App = () => (
 Use the `navigation` attribute to show previous and next buttons.
 
 ```html preview
-<sl-carousel navigation>
-  <sl-carousel-item>
+<bui-carousel navigation>
+  <bui-carousel-item>
     <img
       alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
       src="/assets/examples/carousel/mountains.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
       src="/assets/examples/carousel/waterfall.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
       src="/assets/examples/carousel/sunset.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
       src="/assets/examples/carousel/field.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
       src="/assets/examples/carousel/valley.jpg"
     />
-  </sl-carousel-item>
-</sl-carousel>
+  </bui-carousel-item>
+</bui-carousel>
 ```
 
 ```jsx react
-import { SlCarousel, SlCarouselItem } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlCarousel navigation>
-    <SlCarouselItem>
+  <Carousel navigation>
+    <CarouselItem>
       <img
         alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
         src="/assets/examples/carousel/mountains.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
         src="/assets/examples/carousel/waterfall.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
         src="/assets/examples/carousel/sunset.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
         src="/assets/examples/carousel/field.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
         src="/assets/examples/carousel/valley.jpg"
       />
-    </SlCarouselItem>
-  </SlCarousel>
+    </CarouselItem>
+  </Carousel>
 );
 ```
 
@@ -241,76 +241,76 @@ const App = () => (
 By default, the carousel will not advanced beyond the first and last slides. You can change this behavior and force the carousel to "wrap" with the `loop` attribute.
 
 ```html preview
-<sl-carousel loop navigation pagination>
-  <sl-carousel-item>
+<bui-carousel loop navigation pagination>
+  <bui-carousel-item>
     <img
       alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
       src="/assets/examples/carousel/mountains.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
       src="/assets/examples/carousel/waterfall.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
       src="/assets/examples/carousel/sunset.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
       src="/assets/examples/carousel/field.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
       src="/assets/examples/carousel/valley.jpg"
     />
-  </sl-carousel-item>
-</sl-carousel>
+  </bui-carousel-item>
+</bui-carousel>
 ```
 
 ```jsx react
-import { SlCarousel, SlCarouselItem } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlCarousel loop navigation pagination>
-    <SlCarouselItem>
+  <Carousel loop navigation pagination>
+    <CarouselItem>
       <img
         alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
         src="/assets/examples/carousel/mountains.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
         src="/assets/examples/carousel/waterfall.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
         src="/assets/examples/carousel/sunset.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
         src="/assets/examples/carousel/field.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
         src="/assets/examples/carousel/valley.jpg"
       />
-    </SlCarouselItem>
-  </SlCarousel>
+    </CarouselItem>
+  </Carousel>
 );
 ```
 
@@ -319,76 +319,76 @@ const App = () => (
 The carousel will automatically advance when the `autoplay` attribute is used. To change how long a slide is shown before advancing, set `autoplay-interval` to the desired number of milliseconds. For best results, use the `loop` attribute when autoplay is enabled. Note that autoplay will pause while the user interacts with the carousel.
 
 ```html preview
-<sl-carousel autoplay loop pagination>
-  <sl-carousel-item>
+<bui-carousel autoplay loop pagination>
+  <bui-carousel-item>
     <img
       alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
       src="/assets/examples/carousel/mountains.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
       src="/assets/examples/carousel/waterfall.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
       src="/assets/examples/carousel/sunset.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
       src="/assets/examples/carousel/field.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
       src="/assets/examples/carousel/valley.jpg"
     />
-  </sl-carousel-item>
-</sl-carousel>
+  </bui-carousel-item>
+</bui-carousel>
 ```
 
 ```jsx react
-import { SlCarousel, SlCarouselItem } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlCarousel autoplay loop pagination>
-    <SlCarouselItem>
+  <Carousel autoplay loop pagination>
+    <CarouselItem>
       <img
         alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
         src="/assets/examples/carousel/mountains.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
         src="/assets/examples/carousel/waterfall.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
         src="/assets/examples/carousel/sunset.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
         src="/assets/examples/carousel/field.jpg"
       />
-    </SlCarouselItem>
-    <SlCarouselItem>
+    </CarouselItem>
+    <CarouselItem>
       <img
         alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
         src="/assets/examples/carousel/valley.jpg"
       />
-    </SlCarouselItem>
-  </SlCarousel>
+    </CarouselItem>
+  </Carousel>
 );
 ```
 
@@ -400,50 +400,50 @@ This example is best demonstrated using a mouse. Try clicking and dragging the s
 
 ```html preview
 <div class="mouse-dragging">
-  <sl-carousel pagination>
-    <sl-carousel-item>
+  <bui-carousel pagination>
+    <bui-carousel-item>
       <img
         alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
         src="/assets/examples/carousel/mountains.jpg"
       />
-    </sl-carousel-item>
-    <sl-carousel-item>
+    </bui-carousel-item>
+    <bui-carousel-item>
       <img
         alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
         src="/assets/examples/carousel/waterfall.jpg"
       />
-    </sl-carousel-item>
-    <sl-carousel-item>
+    </bui-carousel-item>
+    <bui-carousel-item>
       <img
         alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
         src="/assets/examples/carousel/sunset.jpg"
       />
-    </sl-carousel-item>
-    <sl-carousel-item>
+    </bui-carousel-item>
+    <bui-carousel-item>
       <img
         alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
         src="/assets/examples/carousel/field.jpg"
       />
-    </sl-carousel-item>
-    <sl-carousel-item>
+    </bui-carousel-item>
+    <bui-carousel-item>
       <img
         alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
         src="/assets/examples/carousel/valley.jpg"
       />
-    </sl-carousel-item>
-  </sl-carousel>
+    </bui-carousel-item>
+  </bui-carousel>
 
-  <sl-divider></sl-divider>
+  <bui-divider></bui-divider>
 
-  <sl-switch>Enable mouse dragging</sl-switch>
+  <bui-switch>Enable mouse dragging</bui-switch>
 </div>
 
 <script>
   const container = document.querySelector('.mouse-dragging');
-  const carousel = container.querySelector('sl-carousel');
-  const toggle = container.querySelector('sl-switch');
+  const carousel = container.querySelector('bui-carousel');
+  const toggle = container.querySelector('bui-switch');
 
-  toggle.addEventListener('sl-change', () => {
+  toggle.addEventListener('bui-change', () => {
     carousel.toggleAttribute('mouse-dragging', toggle.checked);
   });
 </script>
@@ -451,49 +451,49 @@ This example is best demonstrated using a mouse. Try clicking and dragging the s
 
 ```jsx react
 import { useState } from 'react';
-import { SlCarousel, SlCarouselItem, SlDivider, SlSwitch } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem, Divider, SlSwitch } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const [isEnabled, setIsEnabled] = useState(false);
 
   return (
     <>
-      <SlCarousel navigation mouseDragging={isEnabled}>
-        <SlCarouselItem>
+      <Carousel navigation mouseDragging={isEnabled}>
+        <CarouselItem>
           <img
             alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
             src="/assets/examples/carousel/mountains.jpg"
           />
-        </SlCarouselItem>
-        <SlCarouselItem>
+        </CarouselItem>
+        <CarouselItem>
           <img
             alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
             src="/assets/examples/carousel/waterfall.jpg"
           />
-        </SlCarouselItem>
-        <SlCarouselItem>
+        </CarouselItem>
+        <CarouselItem>
           <img
             alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
             src="/assets/examples/carousel/sunset.jpg"
           />
-        </SlCarouselItem>
-        <SlCarouselItem>
+        </CarouselItem>
+        <CarouselItem>
           <img
             alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
             src="/assets/examples/carousel/field.jpg"
           />
-        </SlCarouselItem>
-        <SlCarouselItem>
+        </CarouselItem>
+        <CarouselItem>
           <img
             alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
             src="/assets/examples/carousel/valley.jpg"
           />
-        </SlCarouselItem>
-      </SlCarousel>
+        </CarouselItem>
+      </Carousel>
 
-      <SlDivider></SlDivider>
+      <Divider></Divider>
 
-      <SlSwitch checked={isEnabled} onSlInput={() => setIsEnabled(!isEnabled)}>
+      <SlSwitch checked={isEnabled} onInput={() => setIsEnabled(!isEnabled)}>
         Enable mouse dragging
       </SlSwitch>
     </>
@@ -506,28 +506,28 @@ const App = () => {
 The `slides-per-view` attribute makes it possible to display multiple slides at a time. You can also use the `slides-per-move` attribute to advance more than once slide at a time, if desired.
 
 ```html preview
-<sl-carousel navigation pagination slides-per-page="2" slides-per-move="2">
-  <sl-carousel-item style="background: var(--sl-color-red-200);">Slide 1</sl-carousel-item>
-  <sl-carousel-item style="background: var(--sl-color-orange-200);">Slide 2</sl-carousel-item>
-  <sl-carousel-item style="background: var(--sl-color-yellow-200);">Slide 3</sl-carousel-item>
-  <sl-carousel-item style="background: var(--sl-color-green-200);">Slide 4</sl-carousel-item>
-  <sl-carousel-item style="background: var(--sl-color-blue-200);">Slide 5</sl-carousel-item>
-  <sl-carousel-item style="background: var(--sl-color-violet-200);">Slide 6</sl-carousel-item>
-</sl-carousel>
+<bui-carousel navigation pagination slides-per-page="2" slides-per-move="2">
+  <bui-carousel-item style="background: var(--bui-color-red-200);">Slide 1</bui-carousel-item>
+  <bui-carousel-item style="background: var(--bui-color-orange-200);">Slide 2</bui-carousel-item>
+  <bui-carousel-item style="background: var(--bui-color-yellow-200);">Slide 3</bui-carousel-item>
+  <bui-carousel-item style="background: var(--bui-color-green-200);">Slide 4</bui-carousel-item>
+  <bui-carousel-item style="background: var(--bui-color-blue-200);">Slide 5</bui-carousel-item>
+  <bui-carousel-item style="background: var(--bui-color-violet-200);">Slide 6</bui-carousel-item>
+</bui-carousel>
 ```
 
 ```jsx react
-import { SlCarousel, SlCarouselItem } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlCarousel navigation pagination slidesPerPage={2} slidesPerMove={2}>
-    <SlCarouselItem style={{ background: 'var(--sl-color-red-200)' }}>Slide 1</SlCarouselItem>
-    <SlCarouselItem style={{ background: 'var(--sl-color-orange-200)' }}>Slide 2</SlCarouselItem>
-    <SlCarouselItem style={{ background: 'var(--sl-color-yellow-200)' }}>Slide 3</SlCarouselItem>
-    <SlCarouselItem style={{ background: 'var(--sl-color-green-200)' }}>Slide 4</SlCarouselItem>
-    <SlCarouselItem style={{ background: 'var(--sl-color-blue-200)' }}>Slide 5</SlCarouselItem>
-    <SlCarouselItem style={{ background: 'var(--sl-color-violet-200)' }}>Slide 6</SlCarouselItem>
-  </SlCarousel>
+  <Carousel navigation pagination slidesPerPage={2} slidesPerMove={2}>
+    <CarouselItem style={{ background: 'var(--bui-color-red-200)' }}>Slide 1</CarouselItem>
+    <CarouselItem style={{ background: 'var(--bui-color-orange-200)' }}>Slide 2</CarouselItem>
+    <CarouselItem style={{ background: 'var(--bui-color-yellow-200)' }}>Slide 3</CarouselItem>
+    <CarouselItem style={{ background: 'var(--bui-color-green-200)' }}>Slide 4</CarouselItem>
+    <CarouselItem style={{ background: 'var(--bui-color-blue-200)' }}>Slide 5</CarouselItem>
+    <CarouselItem style={{ background: 'var(--bui-color-violet-200)' }}>Slide 6</CarouselItem>
+  </Carousel>
 );
 ```
 
@@ -536,15 +536,15 @@ const App = () => (
 The content of the carousel can be changed by adding or removing carousel items. The carousel will update itself automatically.
 
 ```html preview
-<sl-carousel class="dynamic-carousel" pagination navigation>
-  <sl-carousel-item style="background: var(--sl-color-red-200)">Slide 1</sl-carousel-item>
-  <sl-carousel-item style="background: var(--sl-color-orange-200)">Slide 2</sl-carousel-item>
-  <sl-carousel-item style="background: var(--sl-color-yellow-200)">Slide 3</sl-carousel-item>
-</sl-carousel>
+<bui-carousel class="dynamic-carousel" pagination navigation>
+  <bui-carousel-item style="background: var(--bui-color-red-200)">Slide 1</bui-carousel-item>
+  <bui-carousel-item style="background: var(--bui-color-orange-200)">Slide 2</bui-carousel-item>
+  <bui-carousel-item style="background: var(--bui-color-yellow-200)">Slide 3</bui-carousel-item>
+</bui-carousel>
 
 <div class="carousel-options">
-  <sl-button id="dynamic-add">Add slide</sl-button>
-  <sl-button id="dynamic-remove">Remove slide</sl-button>
+  <bui-button id="dynamic-add">Add slide</bui-button>
+  <bui-button id="dynamic-remove">Remove slide</bui-button>
 </div>
 
 <style>
@@ -555,16 +555,16 @@ The content of the carousel can be changed by adding or removing carousel items.
   .dynamic-carousel ~ .carousel-options {
     display: flex;
     justify-content: center;
-    gap: var(--sl-spacing-x-small);
-    margin-top: var(--sl-spacing-large);
+    gap: var(--bui-spacing-x-small);
+    margin-top: var(--bui-spacing-large);
   }
 
-  .dynamic-carousel sl-carousel-item {
+  .dynamic-carousel bui-carousel-item {
     flex: 0 0 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--sl-font-size-2x-large);
+    font-size: var(--bui-font-size-2x-large);
   }
 </style>
 
@@ -577,17 +577,17 @@ The content of the carousel can be changed by adding or removing carousel items.
     let colorIndex = 2;
 
     const addSlide = () => {
-      const slide = document.createElement('sl-carousel-item');
+      const slide = document.createElement('bui-carousel-item');
       const color = colors[++colorIndex % colors.length];
       slide.innerText = `Slide ${dynamicCarousel.children.length + 1}`;
-      slide.style.setProperty('background', `var(--sl-color-${color}-200)`);
+      slide.style.setProperty('background', `var(--bui-color-${color}-200)`);
       dynamicCarousel.appendChild(slide);
       dynamicRemove.disabled = false;
     };
 
     const removeSlide = () => {
       const slide = dynamicCarousel.children[dynamicCarousel.children.length - 1];
-      const numSlides = dynamicCarousel.querySelectorAll('sl-carousel-item').length;
+      const numSlides = dynamicCarousel.querySelectorAll('bui-carousel-item').length;
 
       if (numSlides > 1) {
         slide.remove();
@@ -605,7 +605,7 @@ The content of the carousel can be changed by adding or removing carousel items.
 
 ```jsx react
 import { useState } from 'react';
-import { SlCarousel, SlCarouselItem } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem } from 'buckeye-ui/dist/react';
 
 const css = `
   .dynamic-carousel {
@@ -615,16 +615,16 @@ const css = `
   .dynamic-carousel ~ .carousel-options {
     display: flex;
     justify-content: center;
-    margin-top: var(--sl-spacing-large);
+    margin-top: var(--bui-spacing-large);
   }
 
-  .dynamic-carousel sl-carousel-item {
+  .dynamic-carousel bui-carousel-item {
     flex: 0 0 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: var(--sl-font-size-2x-large);
+    font-size: var(--bui-font-size-2x-large);
   }
 `;
 
@@ -642,17 +642,17 @@ const App = () => {
 
   return (
     <>
-      <SlCarousel className="dynamic-carousel" pagination navigation>
+      <Carousel className="dynamic-carousel" pagination navigation>
         {slides.map((color, i) => (
-          <SlCarouselItem style={{ background: colors[i % colors.length }}>
+          <CarouselItem style={{ background: colors[i % colors.length }}>
             Slide {i}
-          </SlCarouselItem>
+          </CarouselItem>
         ))}
-      </SlCarousel>
+      </Carousel>
 
       <div className="carousel-options">
-        <SlButton onClick={addSlide}>Add slide</SlButton>
-        <SlButton onClick={removeSlide}>Remove slide</SlButton>
+        <Button onClick={addSlide}>Add slide</Button>
+        <Button onClick={removeSlide}>Remove slide</Button>
       </div>
 
       <style>{css}</style>
@@ -666,38 +666,38 @@ const App = () => {
 Setting the `orientation` attribute to `vertical` will render the carousel in a vertical layout. If the content of your slides vary in height, you will need to set amn explicit `height` or `max-height` on the carousel using CSS.
 
 ```html preview
-<sl-carousel class="vertical" pagination orientation="vertical">
-  <sl-carousel-item>
+<bui-carousel class="vertical" pagination orientation="vertical">
+  <bui-carousel-item>
     <img
       alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
       src="/assets/examples/carousel/mountains.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
       src="/assets/examples/carousel/waterfall.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
       src="/assets/examples/carousel/sunset.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
       src="/assets/examples/carousel/field.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
       src="/assets/examples/carousel/valley.jpg"
     />
-  </sl-carousel-item>
-</sl-carousel>
+  </bui-carousel-item>
+</bui-carousel>
 <style>
   .vertical {
     max-height: 400px;
@@ -719,7 +719,7 @@ Setting the `orientation` attribute to `vertical` will render the carousel in a 
 ```
 
 ```jsx react
-import { SlCarousel, SlCarouselItem } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem } from 'buckeye-ui/dist/react';
 
 const css = `
   .vertical {
@@ -742,38 +742,38 @@ const css = `
 
 const App = () => (
   <>
-    <SlCarousel className="vertical" loop pagination orientation="vertical">
-      <SlCarouselItem>
+    <Carousel className="vertical" loop pagination orientation="vertical">
+      <CarouselItem>
         <img
           alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
           src="/assets/examples/carousel/mountains.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
           src="/assets/examples/carousel/waterfall.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
           src="/assets/examples/carousel/sunset.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
           src="/assets/examples/carousel/field.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
           src="/assets/examples/carousel/valley.jpg"
         />
-      </SlCarouselItem>
-    </SlCarousel>
+      </CarouselItem>
+    </Carousel>
     <style>{css}</style>
   </>
 );
@@ -784,53 +784,53 @@ const App = () => (
 Use the `--aspect-ratio` custom property to customize the size of the carousel's viewport.
 
 ```html preview
-<sl-carousel class="aspect-ratio" navigation pagination style="--aspect-ratio: 3/2;">
-  <sl-carousel-item>
+<bui-carousel class="aspect-ratio" navigation pagination style="--aspect-ratio: 3/2;">
+  <bui-carousel-item>
     <img
       alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
       src="/assets/examples/carousel/mountains.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
       src="/assets/examples/carousel/waterfall.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
       src="/assets/examples/carousel/sunset.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
       src="/assets/examples/carousel/field.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
       src="/assets/examples/carousel/valley.jpg"
     />
-  </sl-carousel-item>
-</sl-carousel>
+  </bui-carousel-item>
+</bui-carousel>
 
-<sl-divider></sl-divider>
+<bui-divider></bui-divider>
 
-<sl-select label="Aspect ratio" name="aspect" value="3/2">
-  <sl-option value="1/1">1/1</sl-option>
-  <sl-option value="3/2">3/2</sl-option>
-  <sl-option value="16/9">16/9</sl-option>
-</sl-select>
+<bui-select label="Aspect ratio" name="aspect" value="3/2">
+  <bui-option value="1/1">1/1</bui-option>
+  <bui-option value="3/2">3/2</bui-option>
+  <bui-option value="16/9">16/9</bui-option>
+</bui-select>
 
 <script>
   (() => {
-    const carousel = document.querySelector('sl-carousel.aspect-ratio');
-    const aspectRatio = document.querySelector('sl-select[name="aspect"]');
+    const carousel = document.querySelector('bui-carousel.aspect-ratio');
+    const aspectRatio = document.querySelector('bui-select[name="aspect"]');
 
-    aspectRatio.addEventListener('sl-change', () => {
+    aspectRatio.addEventListener('bui-change', () => {
       carousel.style.setProperty('--aspect-ratio', aspectRatio.value);
     });
   })();
@@ -839,57 +839,57 @@ Use the `--aspect-ratio` custom property to customize the size of the carousel's
 
 ```jsx react
 import { useState } from 'react';
-import { SlCarousel, SlCarouselItem, SlDivider, SlSelect, SlOption } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem, Divider, SlSelect, Option } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const [aspectRatio, setAspectRatio] = useState('3/2');
 
   return (
     <>
-      <SlCarousel className="aspect-ratio" navigation pagination style={{ '--aspect-ratio': aspectRatio }}>
-        <SlCarouselItem>
+      <Carousel className="aspect-ratio" navigation pagination style={{ '--aspect-ratio': aspectRatio }}>
+        <CarouselItem>
           <img
             alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
             src="/assets/examples/carousel/mountains.jpg"
           />
-        </SlCarouselItem>
-        <SlCarouselItem>
+        </CarouselItem>
+        <CarouselItem>
           <img
             alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
             src="/assets/examples/carousel/waterfall.jpg"
           />
-        </SlCarouselItem>
-        <SlCarouselItem>
+        </CarouselItem>
+        <CarouselItem>
           <img
             alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
             src="/assets/examples/carousel/sunset.jpg"
           />
-        </SlCarouselItem>
-        <SlCarouselItem>
+        </CarouselItem>
+        <CarouselItem>
           <img
             alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
             src="/assets/examples/carousel/field.jpg"
           />
-        </SlCarouselItem>
-        <SlCarouselItem>
+        </CarouselItem>
+        <CarouselItem>
           <img
             alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
             src="/assets/examples/carousel/valley.jpg"
           />
-        </SlCarouselItem>
-      </SlCarousel>
+        </CarouselItem>
+      </Carousel>
 
-      <SlDivider />
+      <Divider />
 
       <SlSelect
         label="Aspect ratio"
         name="aspect"
         value={aspectRatio}
-        onSlChange={event => setAspectRatio(event.target.value)}
+        onChange={event => setAspectRatio(event.target.value)}
       >
-        <SlOption value="1 / 1">1 / 1</SlOption>
-        <SlOption value="3 / 2">3 / 2</SlOption>
-        <SlOption value="16 / 9">16 / 9</SlOption>
+        <Option value="1 / 1">1 / 1</Option>
+        <Option value="3 / 2">3 / 2</Option>
+        <Option value="16 / 9">16 / 9</Option>
       </SlSelect>
 
       <style>{css}</style>
@@ -903,78 +903,78 @@ const App = () => {
 Use the `--scroll-hint` custom property to add inline padding in horizontal carousels and block padding in vertical carousels. This will make the closest slides slightly visible, hinting that there are more items in the carousel.
 
 ```html preview
-<sl-carousel class="scroll-hint" pagination style="--scroll-hint: 10%;">
-  <sl-carousel-item>
+<bui-carousel class="scroll-hint" pagination style="--scroll-hint: 10%;">
+  <bui-carousel-item>
     <img
       alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
       src="/assets/examples/carousel/mountains.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
       src="/assets/examples/carousel/waterfall.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
       src="/assets/examples/carousel/sunset.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
       src="/assets/examples/carousel/field.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
       src="/assets/examples/carousel/valley.jpg"
     />
-  </sl-carousel-item>
-</sl-carousel>
+  </bui-carousel-item>
+</bui-carousel>
 ```
 
 ```jsx react
 import { useState } from 'react';
-import { SlCarousel, SlCarouselItem, SlDivider, SlRange } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem, Divider, Range } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlCarousel className="scroll-hint" pagination style={{ '--scroll-hint': '10%' }}>
-      <SlCarouselItem>
+    <Carousel className="scroll-hint" pagination style={{ '--scroll-hint': '10%' }}>
+      <CarouselItem>
         <img
           alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
           src="/assets/examples/carousel/mountains.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
           src="/assets/examples/carousel/waterfall.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
           src="/assets/examples/carousel/sunset.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
           src="/assets/examples/carousel/field.jpg"
         />
-      </SlCarouselItem>
-      <SlCarouselItem>
+      </CarouselItem>
+      <CarouselItem>
         <img
           alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
           src="/assets/examples/carousel/valley.jpg"
         />
-      </SlCarouselItem>
-    </SlCarousel>
+      </CarouselItem>
+    </Carousel>
   </>
 );
 ```
@@ -984,38 +984,38 @@ const App = () => (
 The carousel has a robust API that makes it possible to extend and customize. This example syncs the active slide with a set of thumbnails, effectively creating a gallery-style carousel.
 
 ```html preview
-<sl-carousel class="carousel-thumbnails" navigation loop>
-  <sl-carousel-item>
+<bui-carousel class="carousel-thumbnails" navigation loop>
+  <bui-carousel-item>
     <img
       alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
       src="/assets/examples/carousel/mountains.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
       src="/assets/examples/carousel/waterfall.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
       src="/assets/examples/carousel/sunset.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
       src="/assets/examples/carousel/field.jpg"
     />
-  </sl-carousel-item>
-  <sl-carousel-item>
+  </bui-carousel-item>
+  <bui-carousel-item>
     <img
       alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
       src="/assets/examples/carousel/valley.jpg"
     />
-  </sl-carousel-item>
-</sl-carousel>
+  </bui-carousel-item>
+</bui-carousel>
 
 <div class="thumbnails">
   <div class="thumbnails__scroller">
@@ -1039,11 +1039,11 @@ The carousel has a robust API that makes it possible to extend and customize. Th
 
   .thumbnails__scroller {
     display: flex;
-    gap: var(--sl-spacing-small);
+    gap: var(--bui-spacing-small);
     overflow-x: auto;
     scrollbar-width: none;
     scroll-behavior: smooth;
-    scroll-padding: var(--sl-spacing-small);
+    scroll-padding: var(--bui-spacing-small);
   }
 
   .thumbnails__scroller::-webkit-scrollbar {
@@ -1082,7 +1082,7 @@ The carousel has a robust API that makes it possible to extend and customize. Th
       }
     });
 
-    carousel.addEventListener('sl-slide-change', e => {
+    carousel.addEventListener('bui-slide-change', e => {
       const slideIndex = e.detail.index;
 
       [...thumbnails].forEach((thumb, i) => {
@@ -1100,7 +1100,7 @@ The carousel has a robust API that makes it possible to extend and customize. Th
 
 ```jsx react
 import { useRef } from 'react';
-import { SlCarousel, SlCarouselItem, SlDivider, SlRange } from 'buckeye-ui/dist/react';
+import { Carousel, CarouselItem, Divider, Range } from 'buckeye-ui/dist/react';
 
 const css = `
   .carousel-thumbnails {
@@ -1114,11 +1114,11 @@ const css = `
 
   .thumbnails__scroller {
     display: flex;
-    gap: var(--sl-spacing-small);
+    gap: var(--bui-spacing-small);
     overflow-x: auto;
     scrollbar-width: none;
     scroll-behavior: smooth;
-    scroll-padding: var(--sl-spacing-small);
+    scroll-padding: var(--bui-spacing-small);
   }
 
   .thumbnails__scroller::-webkit-scrollbar {
@@ -1189,16 +1189,16 @@ const App = () => {
 
   return (
     <>
-      <SlCarousel className="carousel-thumbnails" navigation loop onSlSlideChange={handleSlideChange}>
+      <Carousel className="carousel-thumbnails" navigation loop onSlSlideChange={handleSlideChange}>
         {images.map({ src, alt }) => (
-          <SlCarouselItem>
+          <CarouselItem>
             <img
               alt={alt}
               src={src}
             />
-          </SlCarouselItem>
+          </CarouselItem>
         )}
-      </SlCarousel>
+      </Carousel>
 
       <div class="thumbnails">
         <div class="thumbnails__scroller">
@@ -1218,4 +1218,4 @@ const App = () => {
 };
 ```
 
-[component-metadata:sl-carousel]
+[component-metadata:bui-carousel]

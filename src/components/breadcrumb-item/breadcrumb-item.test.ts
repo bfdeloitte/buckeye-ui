@@ -1,12 +1,12 @@
 import { expect, fixture, html } from '@open-wc/testing';
-import type SlBreadcrumbItem from './breadcrumb-item';
+import type BreadcrumbItem from './breadcrumb-item';
 
-describe('<sl-breadcrumb-item>', () => {
-  let el: SlBreadcrumbItem;
+describe('<bui-breadcrumb-item>', () => {
+  let el: BreadcrumbItem;
 
   describe('when not provided a href attribute', () => {
     before(async () => {
-      el = await fixture<SlBreadcrumbItem>(html` <sl-breadcrumb-item>Home</sl-breadcrumb-item> `);
+      el = await fixture<BreadcrumbItem>(html` <bui-breadcrumb-item>Home</bui-breadcrumb-item> `);
     });
 
     it('should pass accessibility tests', async () => {
@@ -28,8 +28,8 @@ describe('<sl-breadcrumb-item>', () => {
   describe('when provided a href attribute', () => {
     describe('and no target', () => {
       before(async () => {
-        el = await fixture<SlBreadcrumbItem>(html`
-          <sl-breadcrumb-item href="https://jsonplaceholder.typicode.com/">Home</sl-breadcrumb-item>
+        el = await fixture<BreadcrumbItem>(html`
+          <bui-breadcrumb-item href="https://jsonplaceholder.typicode.com/">Home</bui-breadcrumb-item>
         `);
       });
 
@@ -45,8 +45,8 @@ describe('<sl-breadcrumb-item>', () => {
 
     describe('and target, without rel', () => {
       before(async () => {
-        el = await fixture<SlBreadcrumbItem>(html`
-          <sl-breadcrumb-item href="https://jsonplaceholder.typicode.com/" target="_blank">Help</sl-breadcrumb-item>
+        el = await fixture<BreadcrumbItem>(html`
+          <bui-breadcrumb-item href="https://jsonplaceholder.typicode.com/" target="_blank">Help</bui-breadcrumb-item>
         `);
       });
 
@@ -73,9 +73,9 @@ describe('<sl-breadcrumb-item>', () => {
 
     describe('and target, with rel', () => {
       before(async () => {
-        el = await fixture<SlBreadcrumbItem>(html`
-          <sl-breadcrumb-item href="https://jsonplaceholder.typicode.com/" target="_blank" rel="alternate"
-            >Help</sl-breadcrumb-item
+        el = await fixture<BreadcrumbItem>(html`
+          <bui-breadcrumb-item href="https://jsonplaceholder.typicode.com/" target="_blank" rel="alternate"
+            >Help</bui-breadcrumb-item
           >
         `);
       });
@@ -104,11 +104,11 @@ describe('<sl-breadcrumb-item>', () => {
 
   describe('when provided an element in the slot "prefix" to support prefix icons', () => {
     before(async () => {
-      el = await fixture<SlBreadcrumbItem>(html`
-        <sl-breadcrumb-item>
+      el = await fixture<BreadcrumbItem>(html`
+        <bui-breadcrumb-item>
           <span class="prefix-example" slot="prefix">/</span>
           Home
-        </sl-breadcrumb-item>
+        </bui-breadcrumb-item>
       `);
     });
 
@@ -131,11 +131,11 @@ describe('<sl-breadcrumb-item>', () => {
 
   describe('when provided an element in the slot "suffix" to support suffix icons', () => {
     before(async () => {
-      el = await fixture<SlBreadcrumbItem>(html`
-        <sl-breadcrumb-item>
+      el = await fixture<BreadcrumbItem>(html`
+        <bui-breadcrumb-item>
           <span class="prefix-example" slot="suffix">/</span>
           Security
-        </sl-breadcrumb-item>
+        </bui-breadcrumb-item>
       `);
     });
 

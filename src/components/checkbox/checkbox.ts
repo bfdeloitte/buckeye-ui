@@ -18,32 +18,32 @@ import type { CSSResultGroup } from 'lit';
  * @status stable
  * @since 2.0
  *
- * @dependency sl-icon
+ * @dependency bui-icon
  *
  * @slot - The checkbox's label.
  *
- * @event sl-blur - Emitted when the checkbox loses focus.
- * @event sl-change - Emitted when the checked state changes.
- * @event sl-focus - Emitted when the checkbox gains focus.
- * @event sl-input - Emitted when the checkbox receives input.
- * @event sl-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.
+ * @event bui-blur - Emitted when the checkbox loses focus.
+ * @event bui-change - Emitted when the checked state changes.
+ * @event bui-focus - Emitted when the checkbox gains focus.
+ * @event bui-input - Emitted when the checkbox receives input.
+ * @event bui-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.
  *
  * @csspart base - The component's base wrapper.
  * @csspart control - The square container that wraps the checkbox's checked state.
  * @csspart control--checked - Matches the control part when the checkbox is checked.
  * @csspart control--indeterminate - Matches the control part when the checkbox is indeterminate.
- * @csspart checked-icon - The checked icon, an `<sl-icon>` element.
- * @csspart indeterminate-icon - The indeterminate icon, an `<sl-icon>` element.
+ * @csspart checked-icon - The checked icon, an `<bui-icon>` element.
+ * @csspart indeterminate-icon - The indeterminate icon, an `<bui-icon>` element.
  * @csspart label - The container that wraps the checkbox's label.
  */
-@customElement('sl-checkbox')
-export default class SlCheckbox extends BuckeyeElement implements BuckeyeFormControl {
+@customElement('bui-checkbox')
+export default class Checkbox extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this, {
-    value: (control: SlCheckbox) => (control.checked ? control.value || 'on' : undefined),
-    defaultValue: (control: SlCheckbox) => control.defaultChecked,
-    setValue: (control: SlCheckbox, checked: boolean) => (control.checked = checked)
+    value: (control: Checkbox) => (control.checked ? control.value || 'on' : undefined),
+    defaultValue: (control: Checkbox) => control.defaultChecked,
+    setValue: (control: Checkbox, checked: boolean) => (control.checked = checked)
   });
 
   @query('input[type="checkbox"]') input: HTMLInputElement;
@@ -103,16 +103,16 @@ export default class SlCheckbox extends BuckeyeElement implements BuckeyeFormCon
   private handleClick() {
     this.checked = !this.checked;
     this.indeterminate = false;
-    this.emit('sl-change');
+    this.emit('bui-change');
   }
 
   private handleBlur() {
     this.hasFocus = false;
-    this.emit('sl-blur');
+    this.emit('bui-blur');
   }
 
   private handleInput() {
-    this.emit('sl-input');
+    this.emit('bui-input');
   }
 
   private handleInvalid(event: Event) {
@@ -122,7 +122,7 @@ export default class SlCheckbox extends BuckeyeElement implements BuckeyeFormCon
 
   private handleFocus() {
     this.hasFocus = true;
-    this.emit('sl-focus');
+    this.emit('bui-focus');
   }
 
   @watch('disabled', { waitUntilFirstUpdate: true })
@@ -221,17 +221,17 @@ export default class SlCheckbox extends BuckeyeElement implements BuckeyeFormCon
         >
           ${this.checked
             ? html`
-                <sl-icon part="checked-icon" class="checkbox__checked-icon" library="system" name="check"></sl-icon>
+                <bui-icon part="checked-icon" class="checkbox__checked-icon" library="system" name="check"></bui-icon>
               `
             : ''}
           ${!this.checked && this.indeterminate
             ? html`
-                <sl-icon
+                <bui-icon
                   part="indeterminate-icon"
                   class="checkbox__indeterminate-icon"
                   library="system"
                   name="indeterminate"
-                ></sl-icon>
+                ></bui-icon>
               `
             : ''}
         </span>
@@ -246,6 +246,6 @@ export default class SlCheckbox extends BuckeyeElement implements BuckeyeFormCon
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-checkbox': SlCheckbox;
+    'bui-checkbox': Checkbox;
   }
 }

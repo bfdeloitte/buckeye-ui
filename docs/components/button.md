@@ -1,15 +1,15 @@
 # Button
 
-[component-header:sl-button]
+[component-header:bui-button]
 
 ```html preview
-<sl-button>Button</sl-button>
+<bui-button>Button</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
-const App = () => <SlButton>Button</SlButton>;
+const App = () => <Button>Button</Button>;
 ```
 
 ## Examples
@@ -19,25 +19,25 @@ const App = () => <SlButton>Button</SlButton>;
 Use the `variant` attribute to set the button's variant.
 
 ```html preview
-<sl-button variant="default">Default</sl-button>
-<sl-button variant="primary">Primary</sl-button>
-<sl-button variant="success">Success</sl-button>
-<sl-button variant="neutral">Neutral</sl-button>
-<sl-button variant="warning">Warning</sl-button>
-<sl-button variant="danger">Danger</sl-button>
+<bui-button variant="default">Default</bui-button>
+<bui-button variant="primary">Primary</bui-button>
+<bui-button variant="success">Success</bui-button>
+<bui-button variant="neutral">Neutral</bui-button>
+<bui-button variant="warning">Warning</bui-button>
+<bui-button variant="danger">Danger</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton variant="default">Default</SlButton>
-    <SlButton variant="primary">Primary</SlButton>
-    <SlButton variant="success">Success</SlButton>
-    <SlButton variant="neutral">Neutral</SlButton>
-    <SlButton variant="warning">Warning</SlButton>
-    <SlButton variant="danger">Danger</SlButton>
+    <Button variant="default">Default</Button>
+    <Button variant="primary">Primary</Button>
+    <Button variant="success">Success</Button>
+    <Button variant="neutral">Neutral</Button>
+    <Button variant="warning">Warning</Button>
+    <Button variant="danger">Danger</Button>
   </>
 );
 ```
@@ -47,19 +47,19 @@ const App = () => (
 Use the `size` attribute to change a button's size.
 
 ```html preview
-<sl-button size="small">Small</sl-button>
-<sl-button size="medium">Medium</sl-button>
-<sl-button size="large">Large</sl-button>
+<bui-button size="small">Small</bui-button>
+<bui-button size="medium">Medium</bui-button>
+<bui-button size="large">Large</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton size="small">Small</SlButton>
-    <SlButton size="medium">Medium</SlButton>
-    <SlButton size="large">Large</SlButton>
+    <Button size="small">Small</Button>
+    <Button size="medium">Medium</Button>
+    <Button size="large">Large</Button>
   </>
 );
 ```
@@ -69,37 +69,37 @@ const App = () => (
 Use the `outline` attribute to draw outlined buttons with transparent backgrounds.
 
 ```html preview
-<sl-button variant="default" outline>Default</sl-button>
-<sl-button variant="primary" outline>Primary</sl-button>
-<sl-button variant="success" outline>Success</sl-button>
-<sl-button variant="neutral" outline>Neutral</sl-button>
-<sl-button variant="warning" outline>Warning</sl-button>
-<sl-button variant="danger" outline>Danger</sl-button>
+<bui-button variant="default" outline>Default</bui-button>
+<bui-button variant="primary" outline>Primary</bui-button>
+<bui-button variant="success" outline>Success</bui-button>
+<bui-button variant="neutral" outline>Neutral</bui-button>
+<bui-button variant="warning" outline>Warning</bui-button>
+<bui-button variant="danger" outline>Danger</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton variant="default" outline>
+    <Button variant="default" outline>
       Default
-    </SlButton>
-    <SlButton variant="primary" outline>
+    </Button>
+    <Button variant="primary" outline>
       Primary
-    </SlButton>
-    <SlButton variant="success" outline>
+    </Button>
+    <Button variant="success" outline>
       Success
-    </SlButton>
-    <SlButton variant="neutral" outline>
+    </Button>
+    <Button variant="neutral" outline>
       Neutral
-    </SlButton>
-    <SlButton variant="warning" outline>
+    </Button>
+    <Button variant="warning" outline>
       Warning
-    </SlButton>
-    <SlButton variant="danger" outline>
+    </Button>
+    <Button variant="danger" outline>
       Danger
-    </SlButton>
+    </Button>
   </>
 );
 ```
@@ -109,61 +109,61 @@ const App = () => (
 Use the `pill` attribute to give buttons rounded edges.
 
 ```html preview
-<sl-button size="small" pill>Small</sl-button>
-<sl-button size="medium" pill>Medium</sl-button>
-<sl-button size="large" pill>Large</sl-button>
+<bui-button size="small" pill>Small</bui-button>
+<bui-button size="medium" pill>Medium</bui-button>
+<bui-button size="large" pill>Large</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton size="small" pill>
+    <Button size="small" pill>
       Small
-    </SlButton>
-    <SlButton size="medium" pill>
+    </Button>
+    <Button size="medium" pill>
       Medium
-    </SlButton>
-    <SlButton size="large" pill>
+    </Button>
+    <Button size="large" pill>
       Large
-    </SlButton>
+    </Button>
   </>
 );
 ```
 
 ### Circle Buttons
 
-Use the `circle` attribute to create circular icon buttons. When this attribute is set, the button expects a single `<sl-icon>` in the default slot.
+Use the `circle` attribute to create circular icon buttons. When this attribute is set, the button expects a single `<bui-icon>` in the default slot.
 
 ```html preview
-<sl-button variant="default" size="small" circle>
-  <sl-icon name="gear" label="Settings"></sl-icon>
-</sl-button>
+<bui-button variant="default" size="small" circle>
+  <bui-icon name="gear" label="Settings"></bui-icon>
+</bui-button>
 
-<sl-button variant="default" size="medium" circle>
-  <sl-icon name="gear" label="Settings"></sl-icon>
-</sl-button>
+<bui-button variant="default" size="medium" circle>
+  <bui-icon name="gear" label="Settings"></bui-icon>
+</bui-button>
 
-<sl-button variant="default" size="large" circle>
-  <sl-icon name="gear" label="Settings"></sl-icon>
-</sl-button>
+<bui-button variant="default" size="large" circle>
+  <bui-icon name="gear" label="Settings"></bui-icon>
+</bui-button>
 ```
 
 ```jsx react
-import { SlButton, SlIcon } from 'buckeye-ui/dist/react';
+import { Button, Icon } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton variant="default" size="small" circle>
-      <SlIcon name="gear" />
-    </SlButton>
-    <SlButton variant="default" size="medium" circle>
-      <SlIcon name="gear" />
-    </SlButton>
-    <SlButton variant="default" size="large" circle>
-      <SlIcon name="gear" />
-    </SlButton>
+    <Button variant="default" size="small" circle>
+      <Icon name="gear" />
+    </Button>
+    <Button variant="default" size="medium" circle>
+      <Icon name="gear" />
+    </Button>
+    <Button variant="default" size="large" circle>
+      <Icon name="gear" />
+    </Button>
   </>
 );
 ```
@@ -173,25 +173,25 @@ const App = () => (
 Use the `text` variant to create text buttons that share the same size as regular buttons but don't have backgrounds or borders.
 
 ```html preview
-<sl-button variant="text" size="small">Text</sl-button>
-<sl-button variant="text" size="medium">Text</sl-button>
-<sl-button variant="text" size="large">Text</sl-button>
+<bui-button variant="text" size="small">Text</bui-button>
+<bui-button variant="text" size="medium">Text</bui-button>
+<bui-button variant="text" size="large">Text</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton variant="text" size="small">
+    <Button variant="text" size="small">
       Text
-    </SlButton>
-    <SlButton variant="text" size="medium">
+    </Button>
+    <Button variant="text" size="medium">
       Text
-    </SlButton>
-    <SlButton variant="text" size="large">
+    </Button>
+    <Button variant="text" size="large">
       Text
-    </SlButton>
+    </Button>
   </>
 );
 ```
@@ -201,27 +201,27 @@ const App = () => (
 It's often helpful to have a button that works like a link. This is possible by setting the `href` attribute, which will make the component render an `<a>` under the hood. This gives you all the default link behavior the browser provides (e.g. <kbd>CMD/CTRL/SHIFT + CLICK</kbd>) and exposes the `target` and `download` attributes.
 
 ```html preview
-<sl-button href="https://example.com/">Link</sl-button>
-<sl-button href="https://example.com/" target="_blank">New Window</sl-button>
-<sl-button href="/assets/images/buckeyeui.png" download="buckeyeui.png">Download</sl-button>
-<sl-button href="https://example.com/" disabled>Disabled</sl-button>
+<bui-button href="https://example.com/">Link</bui-button>
+<bui-button href="https://example.com/" target="_blank">New Window</bui-button>
+<bui-button href="/assets/images/buckeyeui.png" download="buckeyeui.png">Download</bui-button>
+<bui-button href="https://example.com/" disabled>Disabled</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton href="https://example.com/">Link</SlButton>
-    <SlButton href="https://example.com/" target="_blank">
+    <Button href="https://example.com/">Link</Button>
+    <Button href="https://example.com/" target="_blank">
       New Window
-    </SlButton>
-    <SlButton href="/assets/images/buckeyeui.png" download="buckeyeui.png">
+    </Button>
+    <Button href="/assets/images/buckeyeui.png" download="buckeyeui.png">
       Download
-    </SlButton>
-    <SlButton href="https://example.com/" disabled>
+    </Button>
+    <Button href="https://example.com/" disabled>
       Disabled
-    </SlButton>
+    </Button>
   </>
 );
 ```
@@ -233,25 +233,25 @@ const App = () => (
 As expected, buttons can be given a custom width by setting the `width` attribute. This is useful for making buttons span the full width of their container on smaller screens.
 
 ```html preview
-<sl-button variant="default" size="small" style="width: 100%; margin-bottom: 1rem;">Small</sl-button>
-<sl-button variant="default" size="medium" style="width: 100%; margin-bottom: 1rem;">Medium</sl-button>
-<sl-button variant="default" size="large" style="width: 100%;">Large</sl-button>
+<bui-button variant="default" size="small" style="width: 100%; margin-bottom: 1rem;">Small</bui-button>
+<bui-button variant="default" size="medium" style="width: 100%; margin-bottom: 1rem;">Medium</bui-button>
+<bui-button variant="default" size="large" style="width: 100%;">Large</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton variant="default" size="small" style={{ width: '100%', marginBottom: '1rem' }}>
+    <Button variant="default" size="small" style={{ width: '100%', marginBottom: '1rem' }}>
       Small
-    </SlButton>
-    <SlButton variant="default" size="medium" style={{ width: '100%', marginBottom: '1rem' }}>
+    </Button>
+    <Button variant="default" size="medium" style={{ width: '100%', marginBottom: '1rem' }}>
       Medium
-    </SlButton>
-    <SlButton variant="default" size="large" style={{ width: '100%' }}>
+    </Button>
+    <Button variant="default" size="large" style={{ width: '100%' }}>
       Large
-    </SlButton>
+    </Button>
   </>
 );
 ```
@@ -261,117 +261,117 @@ const App = () => (
 Use the `prefix` and `suffix` slots to add icons.
 
 ```html preview
-<sl-button variant="default" size="small">
-  <sl-icon slot="prefix" name="gear"></sl-icon>
+<bui-button variant="default" size="small">
+  <bui-icon slot="prefix" name="gear"></bui-icon>
   Settings
-</sl-button>
+</bui-button>
 
-<sl-button variant="default" size="small">
-  <sl-icon slot="suffix" name="arrow-counterclockwise"></sl-icon>
+<bui-button variant="default" size="small">
+  <bui-icon slot="suffix" name="arrow-counterclockwise"></bui-icon>
   Refresh
-</sl-button>
+</bui-button>
 
-<sl-button variant="default" size="small">
-  <sl-icon slot="prefix" name="link-45deg"></sl-icon>
-  <sl-icon slot="suffix" name="box-arrow-up-right"></sl-icon>
+<bui-button variant="default" size="small">
+  <bui-icon slot="prefix" name="link-45deg"></bui-icon>
+  <bui-icon slot="suffix" name="box-arrow-up-right"></bui-icon>
   Open
-</sl-button>
+</bui-button>
 
 <br /><br />
 
-<sl-button variant="default">
-  <sl-icon slot="prefix" name="gear"></sl-icon>
+<bui-button variant="default">
+  <bui-icon slot="prefix" name="gear"></bui-icon>
   Settings
-</sl-button>
+</bui-button>
 
-<sl-button variant="default">
-  <sl-icon slot="suffix" name="arrow-counterclockwise"></sl-icon>
+<bui-button variant="default">
+  <bui-icon slot="suffix" name="arrow-counterclockwise"></bui-icon>
   Refresh
-</sl-button>
+</bui-button>
 
-<sl-button variant="default">
-  <sl-icon slot="prefix" name="link-45deg"></sl-icon>
-  <sl-icon slot="suffix" name="box-arrow-up-right"></sl-icon>
+<bui-button variant="default">
+  <bui-icon slot="prefix" name="link-45deg"></bui-icon>
+  <bui-icon slot="suffix" name="box-arrow-up-right"></bui-icon>
   Open
-</sl-button>
+</bui-button>
 
 <br /><br />
 
-<sl-button variant="default" size="large">
-  <sl-icon slot="prefix" name="gear"></sl-icon>
+<bui-button variant="default" size="large">
+  <bui-icon slot="prefix" name="gear"></bui-icon>
   Settings
-</sl-button>
+</bui-button>
 
-<sl-button variant="default" size="large">
-  <sl-icon slot="suffix" name="arrow-counterclockwise"></sl-icon>
+<bui-button variant="default" size="large">
+  <bui-icon slot="suffix" name="arrow-counterclockwise"></bui-icon>
   Refresh
-</sl-button>
+</bui-button>
 
-<sl-button variant="default" size="large">
-  <sl-icon slot="prefix" name="link-45deg"></sl-icon>
-  <sl-icon slot="suffix" name="box-arrow-up-right"></sl-icon>
+<bui-button variant="default" size="large">
+  <bui-icon slot="prefix" name="link-45deg"></bui-icon>
+  <bui-icon slot="suffix" name="box-arrow-up-right"></bui-icon>
   Open
-</sl-button>
+</bui-button>
 ```
 
 ```jsx react
-import { SlButton, SlIcon } from 'buckeye-ui/dist/react';
+import { Button, Icon } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton variant="default" size="small">
-      <SlIcon slot="prefix" name="gear"></SlIcon>
+    <Button variant="default" size="small">
+      <Icon slot="prefix" name="gear"></Icon>
       Settings
-    </SlButton>
+    </Button>
 
-    <SlButton variant="default" size="small">
-      <SlIcon slot="suffix" name="arrow-counterclockwise"></SlIcon>
+    <Button variant="default" size="small">
+      <Icon slot="suffix" name="arrow-counterclockwise"></Icon>
       Refresh
-    </SlButton>
+    </Button>
 
-    <SlButton variant="default" size="small">
-      <SlIcon slot="prefix" name="link-45deg"></SlIcon>
-      <SlIcon slot="suffix" name="box-arrow-up-right"></SlIcon>
+    <Button variant="default" size="small">
+      <Icon slot="prefix" name="link-45deg"></Icon>
+      <Icon slot="suffix" name="box-arrow-up-right"></Icon>
       Open
-    </SlButton>
+    </Button>
 
     <br />
     <br />
 
-    <SlButton variant="default">
-      <SlIcon slot="prefix" name="gear"></SlIcon>
+    <Button variant="default">
+      <Icon slot="prefix" name="gear"></Icon>
       Settings
-    </SlButton>
+    </Button>
 
-    <SlButton variant="default">
-      <SlIcon slot="suffix" name="arrow-counterclockwise"></SlIcon>
+    <Button variant="default">
+      <Icon slot="suffix" name="arrow-counterclockwise"></Icon>
       Refresh
-    </SlButton>
+    </Button>
 
-    <SlButton variant="default">
-      <SlIcon slot="prefix" name="link-45deg"></SlIcon>
-      <SlIcon slot="suffix" name="box-arrow-up-right"></SlIcon>
+    <Button variant="default">
+      <Icon slot="prefix" name="link-45deg"></Icon>
+      <Icon slot="suffix" name="box-arrow-up-right"></Icon>
       Open
-    </SlButton>
+    </Button>
 
     <br />
     <br />
 
-    <SlButton variant="default" size="large">
-      <SlIcon slot="prefix" name="gear"></SlIcon>
+    <Button variant="default" size="large">
+      <Icon slot="prefix" name="gear"></Icon>
       Settings
-    </SlButton>
+    </Button>
 
-    <SlButton variant="default" size="large">
-      <SlIcon slot="suffix" name="arrow-counterclockwise"></SlIcon>
+    <Button variant="default" size="large">
+      <Icon slot="suffix" name="arrow-counterclockwise"></Icon>
       Refresh
-    </SlButton>
+    </Button>
 
-    <SlButton variant="default" size="large">
-      <SlIcon slot="prefix" name="link-45deg"></SlIcon>
-      <SlIcon slot="suffix" name="box-arrow-up-right"></SlIcon>
+    <Button variant="default" size="large">
+      <Icon slot="prefix" name="link-45deg"></Icon>
+      <Icon slot="suffix" name="box-arrow-up-right"></Icon>
       Open
-    </SlButton>
+    </Button>
   </>
 );
 ```
@@ -381,25 +381,25 @@ const App = () => (
 Use the `caret` attribute to add a dropdown indicator when a button will trigger a dropdown, menu, or popover.
 
 ```html preview
-<sl-button size="small" caret>Small</sl-button>
-<sl-button size="medium" caret>Medium</sl-button>
-<sl-button size="large" caret>Large</sl-button>
+<bui-button size="small" caret>Small</bui-button>
+<bui-button size="medium" caret>Medium</bui-button>
+<bui-button size="large" caret>Large</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton size="small" caret>
+    <Button size="small" caret>
       Small
-    </SlButton>
-    <SlButton size="medium" caret>
+    </Button>
+    <Button size="medium" caret>
       Medium
-    </SlButton>
-    <SlButton size="large" caret>
+    </Button>
+    <Button size="large" caret>
       Large
-    </SlButton>
+    </Button>
   </>
 );
 ```
@@ -409,37 +409,37 @@ const App = () => (
 Use the `loading` attribute to make a button busy. The width will remain the same as before, preventing adjacent elements from moving around. Clicks will be suppressed until the loading state is removed.
 
 ```html preview
-<sl-button variant="default" loading>Default</sl-button>
-<sl-button variant="primary" loading>Primary</sl-button>
-<sl-button variant="success" loading>Success</sl-button>
-<sl-button variant="neutral" loading>Neutral</sl-button>
-<sl-button variant="warning" loading>Warning</sl-button>
-<sl-button variant="danger" loading>Danger</sl-button>
+<bui-button variant="default" loading>Default</bui-button>
+<bui-button variant="primary" loading>Primary</bui-button>
+<bui-button variant="success" loading>Success</bui-button>
+<bui-button variant="neutral" loading>Neutral</bui-button>
+<bui-button variant="warning" loading>Warning</bui-button>
+<bui-button variant="danger" loading>Danger</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton variant="default" loading>
+    <Button variant="default" loading>
       Default
-    </SlButton>
-    <SlButton variant="primary" loading>
+    </Button>
+    <Button variant="primary" loading>
       Primary
-    </SlButton>
-    <SlButton variant="success" loading>
+    </Button>
+    <Button variant="success" loading>
       Success
-    </SlButton>
-    <SlButton variant="neutral" loading>
+    </Button>
+    <Button variant="neutral" loading>
       Neutral
-    </SlButton>
-    <SlButton variant="warning" loading>
+    </Button>
+    <Button variant="warning" loading>
       Warning
-    </SlButton>
-    <SlButton variant="danger" loading>
+    </Button>
+    <Button variant="danger" loading>
       Danger
-    </SlButton>
+    </Button>
   </>
 );
 ```
@@ -449,58 +449,58 @@ const App = () => (
 Use the `disabled` attribute to disable a button. Clicks will be suppressed until the disabled state is removed.
 
 ```html preview
-<sl-button variant="default" disabled>Default</sl-button>
-<sl-button variant="primary" disabled>Primary</sl-button>
-<sl-button variant="success" disabled>Success</sl-button>
-<sl-button variant="neutral" disabled>Neutral</sl-button>
-<sl-button variant="warning" disabled>Warning</sl-button>
-<sl-button variant="danger" disabled>Danger</sl-button>
+<bui-button variant="default" disabled>Default</bui-button>
+<bui-button variant="primary" disabled>Primary</bui-button>
+<bui-button variant="success" disabled>Success</bui-button>
+<bui-button variant="neutral" disabled>Neutral</bui-button>
+<bui-button variant="warning" disabled>Warning</bui-button>
+<bui-button variant="danger" disabled>Danger</bui-button>
 ```
 
 ```jsx react
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton variant="default" disabled>
+    <Button variant="default" disabled>
       Default
-    </SlButton>
+    </Button>
 
-    <SlButton variant="primary" disabled>
+    <Button variant="primary" disabled>
       Primary
-    </SlButton>
+    </Button>
 
-    <SlButton variant="success" disabled>
+    <Button variant="success" disabled>
       Success
-    </SlButton>
+    </Button>
 
-    <SlButton variant="neutral" disabled>
+    <Button variant="neutral" disabled>
       Neutral
-    </SlButton>
+    </Button>
 
-    <SlButton variant="warning" disabled>
+    <Button variant="warning" disabled>
       Warning
-    </SlButton>
+    </Button>
 
-    <SlButton variant="danger" disabled>
+    <Button variant="danger" disabled>
       Danger
-    </SlButton>
+    </Button>
   </>
 );
 ```
 
 ### Styling Buttons
 
-This example demonstrates how to style buttons using a custom class. This is the recommended approach if you need to add additional variations. To customize an existing variation, modify the selector to target the button's `variant` attribute instead of a class (e.g. `sl-button[variant="primary"]`).
+This example demonstrates how to style buttons using a custom class. This is the recommended approach if you need to add additional variations. To customize an existing variation, modify the selector to target the button's `variant` attribute instead of a class (e.g. `bui-button[variant="primary"]`).
 
 ```html preview
-<sl-button class="pink">Pink Button</sl-button>
+<bui-button class="pink">Pink Button</bui-button>
 
 <style>
-  sl-button.pink::part(base) {
+  bui-button.pink::part(base) {
     /* Set design tokens for height and border width */
-    --sl-input-height-medium: 48px;
-    --sl-input-border-width: 4px;
+    --bui-input-height-medium: 48px;
+    --bui-input-border-width: 4px;
 
     border-radius: 0;
     background-color: #ff1493;
@@ -511,14 +511,14 @@ This example demonstrates how to style buttons using a custom class. This is the
     color: white;
     font-size: 1.125rem;
     box-shadow: 0 2px 10px #0002;
-    transition: var(--sl-transition-medium) transform ease, var(--sl-transition-medium) border ease;
+    transition: var(--bui-transition-medium) transform ease, var(--bui-transition-medium) border ease;
   }
 
-  sl-button.pink::part(base):hover {
+  bui-button.pink::part(base):hover {
     transform: scale(1.05) rotate(-1deg);
   }
 
-  sl-button.pink::part(base):active {
+  bui-button.pink::part(base):active {
     border-top-color: #ad005c;
     border-right-color: #ff7ac1;
     border-bottom-color: #ff7ac1;
@@ -526,11 +526,11 @@ This example demonstrates how to style buttons using a custom class. This is the
     transform: scale(1.05) rotate(-1deg) translateY(2px);
   }
 
-  sl-button.pink::part(base):focus-visible {
+  bui-button.pink::part(base):focus-visible {
     outline: dashed 2px deeppink;
     outline-offset: 4px;
   }
 </style>
 ```
 
-[component-metadata:sl-button]
+[component-metadata:bui-button]

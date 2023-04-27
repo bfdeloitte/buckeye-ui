@@ -17,13 +17,13 @@ import type { CSSResultGroup } from 'lit';
  * @status stable
  * @since 2.0
  *
- * @dependency sl-icon
+ * @dependency bui-icon
  *
  * @slot before - The before image, an `<img>` or `<svg>` element.
  * @slot after - The after image, an `<img>` or `<svg>` element.
  * @slot handle - The icon used inside the handle.
  *
- * @event sl-change - Emitted when the position changes.
+ * @event bui-change - Emitted when the position changes.
  *
  * @csspart base - The component's base wrapper.
  * @csspart before - The container that wraps the before image.
@@ -34,8 +34,8 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --divider-width - The width of the dividing line.
  * @cssproperty --handle-size - The size of the compare handle.
  */
-@customElement('sl-image-comparer')
-export default class SlImageComparer extends BuckeyeElement {
+@customElement('bui-image-comparer')
+export default class ImageComparer extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly localize = new LocalizeController(this);
@@ -91,7 +91,7 @@ export default class SlImageComparer extends BuckeyeElement {
 
   @watch('position', { waitUntilFirstUpdate: true })
   handlePositionChange() {
-    this.emit('sl-change');
+    this.emit('bui-change');
   }
 
   render() {
@@ -140,7 +140,7 @@ export default class SlImageComparer extends BuckeyeElement {
             aria-controls="image-comparer"
             tabindex="0"
           >
-            <sl-icon library="system" name="grip-vertical"></sl-icon>
+            <bui-icon library="system" name="grip-vertical"></bui-icon>
           </slot>
         </div>
       </div>
@@ -150,6 +150,6 @@ export default class SlImageComparer extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-image-comparer': SlImageComparer;
+    'bui-image-comparer': ImageComparer;
   }
 }

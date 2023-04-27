@@ -11,11 +11,11 @@ import { watch } from '../../internal/watch';
 import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './dropdown.styles';
 import type { CSSResultGroup } from 'lit';
-import type SlButton from '../button/button';
-import type SlIconButton from '../icon-button/icon-button';
-import type SlMenu from '../menu/menu';
-import type SlPopup from '../popup/popup';
-import type SlSelectEvent from '../../events/sl-select';
+import type Button from '../button/button';
+import type IconButton from '../icon-button/icon-button';
+import type Menu from '../menu/menu';
+import type Popup from '../popup/popup';
+import type SlSelectEvent from '../../events/bui-select';
 
 /**
  * @summary Dropdowns expose additional content that "drops down" in a panel.
@@ -23,15 +23,15 @@ import type SlSelectEvent from '../../events/sl-select';
  * @status stable
  * @since 2.0
  *
- * @dependency sl-popup
+ * @dependency bui-popup
  *
  * @slot - The dropdown's main content.
- * @slot trigger - The dropdown's trigger, usually a `<sl-button>` element.
+ * @slot trigger - The dropdown's trigger, usually a `<bui-button>` element.
  *
- * @event sl-show - Emitted when the dropdown opens.
- * @event sl-after-show - Emitted after the dropdown opens and all animations are complete.
- * @event sl-hide - Emitted when the dropdown closes.
- * @event sl-after-hide - Emitted after the dropdown closes and all animations are complete.
+ * @event bui-show - Emitted when the dropdown opens.
+ * @event bui-after-show - Emitted after the dropdown opens and all animations are complete.
+ * @event bui-hide - Emitted when the dropdown closes.
+ * @event bui-after-hide - Emitted after the dropdown closes and all animations are complete.
  *
  * @csspart base - The component's base wrapper.
  * @csspart trigger - The container that wraps the trigger.
@@ -40,11 +40,11 @@ import type SlSelectEvent from '../../events/sl-select';
  * @animation dropdown.show - The animation to use when showing the dropdown.
  * @animation dropdown.hide - The animation to use when hiding the dropdown.
  */
-@customElement('sl-dropdown')
-export default class SlDropdown extends BuckeyeElement {
+@customElement('bui-dropdown')
+export default class Dropdown extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
-  @query('.dropdown') popup: SlPopup;
+  @query('.dropdown') popup: Popup;
   @query('.dropdown__trigger') trigger: HTMLSlotElement;
   @query('.dropdown__panel') panel: HTMLSlotElement;
 
@@ -137,8 +137,8 @@ export default class SlDropdown extends BuckeyeElement {
   }
 
   getMenu() {
-    return this.panel.assignedElements({ flatten: true }).find(el => el.tagName.toLowerCase() === 'sl-menu') as
-      | SlMenu
+    return this.panel.assignedElements({ flatten: true }).find(el => el.tagName.toLowerCase() === 'bui-menu') as
+      | Menu
       | undefined;
   }
 
@@ -164,7 +164,7 @@ export default class SlDropdown extends BuckeyeElement {
     // Handle tabbing
     if (event.key === 'Tab') {
       // Tabbing within an open menu should close the dropdown and refocus the trigger
-      if (this.open && document.activeElement?.tagName.toLowerCase() === 'sl-menu-item') {
+      if (this.open && document.activeElement?.tagName.toLowerCase() === 'bui-menu-item') {
         event.preventDefault();
         this.hide();
         this.focusOnTrigger();
@@ -203,7 +203,7 @@ export default class SlDropdown extends BuckeyeElement {
     const target = event.target as HTMLElement;
 
     // Hide the dropdown when a menu item is selected
-    if (!this.stayOpenOnSelect && target.tagName.toLowerCase() === 'sl-menu') {
+    if (!this.stayOpenOnSelect && target.tagName.toLowerCase() === 'bui-menu') {
       this.hide();
       this.focusOnTrigger();
     }
@@ -280,7 +280,7 @@ export default class SlDropdown extends BuckeyeElement {
   // that gets slotted in) so screen readers will understand them. The accessible trigger could be the slotted element,
   // a child of the slotted element, or an element in the slotted element's shadow root.
   //
-  // For example, the accessible trigger of an <sl-button> is a <button> located inside its shadow root.
+  // For example, the accessible trigger of an <bui-button> is a <button> located inside its shadow root.
   //
   // To determine this, we assume the first tabbable element in the trigger slot is the "accessible trigger."
   //
@@ -292,9 +292,9 @@ export default class SlDropdown extends BuckeyeElement {
     if (accessibleTrigger) {
       switch (accessibleTrigger.tagName.toLowerCase()) {
         // BuckeyeUI buttons have to update the internal button so it's announced correctly by screen readers
-        case 'sl-button':
-        case 'sl-icon-button':
-          target = (accessibleTrigger as SlButton | SlIconButton).button;
+        case 'bui-button':
+        case 'bui-icon-button':
+          target = (accessibleTrigger as Button | IconButton).button;
           break;
 
         default:
@@ -313,7 +313,7 @@ export default class SlDropdown extends BuckeyeElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'bui-after-show');
   }
 
   /** Hides the dropdown panel */
@@ -323,7 +323,7 @@ export default class SlDropdown extends BuckeyeElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'bui-after-hide');
   }
 
   /**
@@ -335,7 +335,7 @@ export default class SlDropdown extends BuckeyeElement {
   }
 
   addOpenListeners() {
-    this.panel.addEventListener('sl-select', this.handlePanelSelect);
+    this.panel.addEventListener('bui-select', this.handlePanelSelect);
     this.panel.addEventListener('keydown', this.handleKeyDown);
     document.addEventListener('keydown', this.handleDocumentKeyDown);
     document.addEventListener('mousedown', this.handleDocumentMouseDown);
@@ -343,7 +343,7 @@ export default class SlDropdown extends BuckeyeElement {
 
   removeOpenListeners() {
     if (this.panel) {
-      this.panel.removeEventListener('sl-select', this.handlePanelSelect);
+      this.panel.removeEventListener('bui-select', this.handlePanelSelect);
       this.panel.removeEventListener('keydown', this.handleKeyDown);
     }
     document.removeEventListener('keydown', this.handleDocumentKeyDown);
@@ -361,7 +361,7 @@ export default class SlDropdown extends BuckeyeElement {
 
     if (this.open) {
       // Show
-      this.emit('sl-show');
+      this.emit('bui-show');
       this.addOpenListeners();
 
       await stopAnimations(this);
@@ -370,10 +370,10 @@ export default class SlDropdown extends BuckeyeElement {
       const { keyframes, options } = getAnimation(this, 'dropdown.show', { dir: this.localize.dir() });
       await animateTo(this.popup.popup, keyframes, options);
 
-      this.emit('sl-after-show');
+      this.emit('bui-after-show');
     } else {
       // Hide
-      this.emit('sl-hide');
+      this.emit('bui-hide');
       this.removeOpenListeners();
 
       await stopAnimations(this);
@@ -382,13 +382,13 @@ export default class SlDropdown extends BuckeyeElement {
       this.panel.hidden = true;
       this.popup.active = false;
 
-      this.emit('sl-after-hide');
+      this.emit('bui-after-hide');
     }
   }
 
   render() {
     return html`
-      <sl-popup
+      <bui-popup
         part="base"
         id="dropdown"
         placement=${this.placement}
@@ -421,7 +421,7 @@ export default class SlDropdown extends BuckeyeElement {
           aria-hidden=${this.open ? 'false' : 'true'}
           aria-labelledby="dropdown"
         ></slot>
-      </sl-popup>
+      </bui-popup>
     `;
   }
 }
@@ -444,6 +444,6 @@ setDefaultAnimation('dropdown.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-dropdown': SlDropdown;
+    'bui-dropdown': Dropdown;
   }
 }

@@ -13,19 +13,19 @@ import type { CSSResultGroup } from 'lit';
  * @status stable
  * @since 2.0
  *
- * @dependency sl-icon-button
+ * @dependency bui-icon-button
  *
  * @slot - The tag's content.
  *
- * @event sl-remove - Emitted when the remove button is activated.
+ * @event bui-remove - Emitted when the remove button is activated.
  *
  * @csspart base - The component's base wrapper.
  * @csspart content - The tag's content.
- * @csspart remove-button - The tag's remove button, an `<sl-icon-button>`.
+ * @csspart remove-button - The tag's remove button, an `<bui-icon-button>`.
  * @csspart remove-button__base - The remove button's exported `base` part.
  */
-@customElement('sl-tag')
-export default class SlTag extends BuckeyeElement {
+@customElement('bui-tag')
+export default class Tag extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
   private readonly localize = new LocalizeController(this);
 
@@ -42,7 +42,7 @@ export default class SlTag extends BuckeyeElement {
   @property({ type: Boolean }) removable = false;
 
   private handleRemoveClick() {
-    this.emit('sl-remove');
+    this.emit('bui-remove');
   }
 
   render() {
@@ -74,7 +74,7 @@ export default class SlTag extends BuckeyeElement {
 
         ${this.removable
           ? html`
-              <sl-icon-button
+              <bui-icon-button
                 part="remove-button"
                 exportparts="base:remove-button__base"
                 name="x-lg"
@@ -83,7 +83,7 @@ export default class SlTag extends BuckeyeElement {
                 class="tag__remove"
                 @click=${this.handleRemoveClick}
                 tabindex="-1"
-              ></sl-icon-button>
+              ></bui-icon-button>
             `
           : ''}
       </span>
@@ -93,6 +93,6 @@ export default class SlTag extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tag': SlTag;
+    'bui-tag': Tag;
   }
 }

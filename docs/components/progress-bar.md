@@ -1,15 +1,15 @@
 # Progress Bar
 
-[component-header:sl-progress-bar]
+[component-header:bui-progress-bar]
 
 ```html preview
-<sl-progress-bar value="50"></sl-progress-bar>
+<bui-progress-bar value="50"></bui-progress-bar>
 ```
 
 ```jsx react
-import { SlProgressBar } from 'buckeye-ui/dist/react';
+import { ProgressBar } from 'buckeye-ui/dist/react';
 
-const App = () => <SlProgressBar value={50} />;
+const App = () => <ProgressBar value={50} />;
 ```
 
 ## Examples
@@ -19,13 +19,13 @@ const App = () => <SlProgressBar value={50} />;
 Use the `label` attribute to label the progress bar and tell assistive devices how to announce it.
 
 ```html preview
-<sl-progress-bar value="50" label="Upload progress"></sl-progress-bar>
+<bui-progress-bar value="50" label="Upload progress"></bui-progress-bar>
 ```
 
 ```jsx react
-import { SlProgressBar } from 'buckeye-ui/dist/react';
+import { ProgressBar } from 'buckeye-ui/dist/react';
 
-const App = () => <SlProgressBar value="50" label="Upload progress" />;
+const App = () => <ProgressBar value="50" label="Upload progress" />;
 ```
 
 ### Custom Height
@@ -33,13 +33,13 @@ const App = () => <SlProgressBar value="50" label="Upload progress" />;
 Use the `--height` custom property to set the progress bar's height.
 
 ```html preview
-<sl-progress-bar value="50" style="--height: 6px;"></sl-progress-bar>
+<bui-progress-bar value="50" style="--height: 6px;"></bui-progress-bar>
 ```
 
 ```jsx react
-import { SlProgressBar } from 'buckeye-ui/dist/react';
+import { ProgressBar } from 'buckeye-ui/dist/react';
 
-const App = () => <SlProgressBar value={50} style={{ '--height': '6px' }} />;
+const App = () => <ProgressBar value={50} style={{ '--height': '6px' }} />;
 ```
 
 ### Showing Values
@@ -47,12 +47,12 @@ const App = () => <SlProgressBar value={50} style={{ '--height': '6px' }} />;
 Use the default slot to show a value.
 
 ```html preview
-<sl-progress-bar value="50" class="progress-bar-values">50%</sl-progress-bar>
+<bui-progress-bar value="50" class="progress-bar-values">50%</bui-progress-bar>
 
 <br />
 
-<sl-button circle><sl-icon name="dash" label="Decrease"></sl-icon></sl-button>
-<sl-button circle><sl-icon name="plus" label="Increase"></sl-icon></sl-button>
+<bui-button circle><bui-icon name="dash" label="Decrease"></bui-icon></bui-button>
+<bui-button circle><bui-icon name="plus" label="Increase"></bui-icon></bui-button>
 
 <script>
   const progressBar = document.querySelector('.progress-bar-values');
@@ -75,7 +75,7 @@ Use the default slot to show a value.
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlIcon, SlProgressBar } from 'buckeye-ui/dist/react';
+import { Button, Icon, ProgressBar } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const [value, setValue] = useState(50);
@@ -89,17 +89,17 @@ const App = () => {
 
   return (
     <>
-      <SlProgressBar value={value}>{value}%</SlProgressBar>
+      <ProgressBar value={value}>{value}%</ProgressBar>
 
       <br />
 
-      <SlButton circle onClick={() => adjustValue(-10)}>
-        <SlIcon name="dash" label="Decrease" />
-      </SlButton>
+      <Button circle onClick={() => adjustValue(-10)}>
+        <Icon name="dash" label="Decrease" />
+      </Button>
 
-      <SlButton circle onClick={() => adjustValue(10)}>
-        <SlIcon name="plus" label="Increase" />
-      </SlButton>
+      <Button circle onClick={() => adjustValue(10)}>
+        <Icon name="plus" label="Increase" />
+      </Button>
     </>
   );
 };
@@ -110,13 +110,13 @@ const App = () => {
 The `indeterminate` attribute can be used to inform the user that the operation is pending, but its status cannot currently be determined. In this state, `value` is ignored and the label, if present, will not be shown.
 
 ```html preview
-<sl-progress-bar indeterminate></sl-progress-bar>
+<bui-progress-bar indeterminate></bui-progress-bar>
 ```
 
 ```jsx react
-import { SlProgressBar } from 'buckeye-ui/dist/react';
+import { ProgressBar } from 'buckeye-ui/dist/react';
 
-const App = () => <SlProgressBar indeterminate />;
+const App = () => <ProgressBar indeterminate />;
 ```
 
-[component-metadata:sl-progress-bar]
+[component-metadata:bui-progress-bar]

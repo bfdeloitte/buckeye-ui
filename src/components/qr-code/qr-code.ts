@@ -15,8 +15,8 @@ import type { CSSResultGroup } from 'lit';
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-qr-code')
-export default class SlQrCode extends BuckeyeElement {
+@customElement('bui-qr-code')
+export default class QrCode extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @query('canvas') canvas: HTMLElement;
@@ -84,6 +84,6 @@ export default class SlQrCode extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-qr-code': SlQrCode;
+    'bui-qr-code': QrCode;
   }
 }

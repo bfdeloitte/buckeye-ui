@@ -1,9 +1,9 @@
 # Switch
 
-[component-header:sl-switch]
+[component-header:bui-switch]
 
 ```html preview
-<sl-switch>Switch</sl-switch>
+<bui-switch>Switch</bui-switch>
 ```
 
 ```jsx react
@@ -21,7 +21,7 @@ const App = () => <SlSwitch>Switch</SlSwitch>;
 Use the `checked` attribute to activate the switch.
 
 ```html preview
-<sl-switch checked>Checked</sl-switch>
+<bui-switch checked>Checked</bui-switch>
 ```
 
 ```jsx react
@@ -35,7 +35,7 @@ const App = () => <SlSwitch checked>Checked</SlSwitch>;
 Use the `disabled` attribute to disable the switch.
 
 ```html preview
-<sl-switch disabled>Disabled</sl-switch>
+<bui-switch disabled>Disabled</bui-switch>
 ```
 
 ```jsx react
@@ -49,11 +49,11 @@ const App = () => <SlSwitch disabled>Disabled</SlSwitch>;
 Use the `size` attribute to change a switch's size.
 
 ```html preview
-<sl-switch size="small">Small</sl-switch>
+<bui-switch size="small">Small</bui-switch>
 <br />
-<sl-switch size="medium">Medium</sl-switch>
+<bui-switch size="medium">Medium</bui-switch>
 <br />
-<sl-switch size="large">Large</sl-switch>
+<bui-switch size="large">Large</bui-switch>
 ```
 
 ```jsx react
@@ -75,7 +75,7 @@ const App = () => (
 Use the available custom properties to change how the switch is styled.
 
 ```html preview
-<sl-switch style="--width: 80px; --height: 40px; --thumb-size: 36px;">Really big</sl-switch>
+<bui-switch style="--width: 80px; --height: 40px; --thumb-size: 36px;">Really big</bui-switch>
 ```
 
 ```jsx react
@@ -92,4 +92,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-switch]
+[component-metadata:bui-switch]

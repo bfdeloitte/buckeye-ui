@@ -13,15 +13,15 @@ import type { CSSResultGroup } from 'lit';
  * @status stable
  * @since 2.0
  *
- * @dependency sl-icon
+ * @dependency bui-icon
  *
- * @event sl-blur - Emitted when the icon button loses focus.
- * @event sl-focus - Emitted when the icon button gains focus.
+ * @event bui-blur - Emitted when the icon button loses focus.
+ * @event bui-focus - Emitted when the icon button gains focus.
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-icon-button')
-export default class SlIconButton extends BuckeyeElement {
+@customElement('bui-icon-button')
+export default class IconButton extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @query('.icon-button') button: HTMLButtonElement | HTMLLinkElement;
@@ -60,12 +60,12 @@ export default class SlIconButton extends BuckeyeElement {
 
   private handleBlur() {
     this.hasFocus = false;
-    this.emit('sl-blur');
+    this.emit('bui-blur');
   }
 
   private handleFocus() {
     this.hasFocus = true;
-    this.emit('sl-focus');
+    this.emit('bui-focus');
   }
 
   private handleClick(event: MouseEvent) {
@@ -117,13 +117,13 @@ export default class SlIconButton extends BuckeyeElement {
         @focus=${this.handleFocus}
         @click=${this.handleClick}
       >
-        <sl-icon
+        <bui-icon
           class="icon-button__icon"
           name=${ifDefined(this.name)}
           library=${ifDefined(this.library)}
           src=${ifDefined(this.src)}
           aria-hidden="true"
-        ></sl-icon>
+        ></bui-icon>
       </${tag}>
     `;
   }
@@ -131,6 +131,6 @@ export default class SlIconButton extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-icon-button': SlIconButton;
+    'bui-icon-button': IconButton;
   }
 }

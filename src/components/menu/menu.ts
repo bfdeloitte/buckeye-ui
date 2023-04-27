@@ -3,9 +3,9 @@ import { html } from 'lit';
 import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './menu.styles';
 import type { CSSResultGroup } from 'lit';
-import type SlMenuItem from '../menu-item/menu-item';
+import type MenuItem from '../menu-item/menu-item';
 export interface MenuSelectEventDetail {
-  item: SlMenuItem;
+  item: MenuItem;
 }
 
 /**
@@ -16,10 +16,10 @@ export interface MenuSelectEventDetail {
  *
  * @slot - The menu's content, including menu items, menu labels, and dividers.
  *
- * @event {{ item: SlMenuItem }} sl-select - Emitted when a menu item is selected.
+ * @event {{ item: MenuItem }} bui-select - Emitted when a menu item is selected.
  */
-@customElement('sl-menu')
-export default class SlMenu extends BuckeyeElement {
+@customElement('bui-menu')
+export default class Menu extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @query('slot') defaultSlot: HTMLSlotElement;
@@ -31,7 +31,7 @@ export default class SlMenu extends BuckeyeElement {
 
   private handleClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
-    const item = target.closest('sl-menu-item');
+    const item = target.closest('bui-menu-item');
 
     if (!item || item.disabled || item.inert) {
       return;
@@ -41,7 +41,7 @@ export default class SlMenu extends BuckeyeElement {
       item.checked = !item.checked;
     }
 
-    this.emit('sl-select', { detail: { item } });
+    this.emit('bui-select', { detail: { item } });
   }
 
   private handleKeyDown(event: KeyboardEvent) {
@@ -95,7 +95,7 @@ export default class SlMenu extends BuckeyeElement {
     const target = event.target as HTMLElement;
 
     if (this.isMenuItem(target)) {
-      this.setCurrentItem(target as SlMenuItem);
+      this.setCurrentItem(target as MenuItem);
     }
   }
 
@@ -110,7 +110,7 @@ export default class SlMenu extends BuckeyeElement {
 
   private isMenuItem(item: HTMLElement) {
     return (
-      item.tagName.toLowerCase() === 'sl-menu-item' ||
+      item.tagName.toLowerCase() === 'bui-menu-item' ||
       ['menuitem', 'menuitemcheckbox', 'menuitemradio'].includes(item.getAttribute('role') ?? '')
     );
   }
@@ -122,7 +122,7 @@ export default class SlMenu extends BuckeyeElement {
         return false;
       }
       return true;
-    }) as SlMenuItem[];
+    }) as MenuItem[];
   }
 
   /**
@@ -137,7 +137,7 @@ export default class SlMenu extends BuckeyeElement {
    * @internal Sets the current menu item to the specified element. This sets `tabindex="0"` on the target element and
    * `tabindex="-1"` to all other items. This method must be called prior to setting focus on a menu item.
    */
-  setCurrentItem(item: SlMenuItem) {
+  setCurrentItem(item: MenuItem) {
     const items = this.getAllItems();
 
     // Update tab indexes
@@ -160,6 +160,6 @@ export default class SlMenu extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-menu': SlMenu;
+    'bui-menu': Menu;
   }
 }

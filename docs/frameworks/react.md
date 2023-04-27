@@ -28,12 +28,12 @@ Now you can start using components!
 
 ### Importing Components
 
-Every BuckeyeUI component is available to import as a React component. Note that we're importing the `<SlButton>` _React component_ instead of the `<sl-button>` _custom element_ in the example below.
+Every BuckeyeUI component is available to import as a React component. Note that we're importing the `<Button>` _React component_ instead of the `<bui-button>` _custom element_ in the example below.
 
 ```jsx
-import { SlButton } from 'buckeye-ui/dist/react';
+import { Button } from 'buckeye-ui/dist/react';
 
-const MyComponent = () => <SlButton variant="primary">Click me</SlButton>;
+const MyComponent = () => <Button variant="primary">Click me</Button>;
 
 export default MyComponent;
 ```
@@ -42,18 +42,18 @@ You can find a copy + paste import for each component in the "importing" section
 
 ### Event Handling
 
-Many BuckeyeUI components emit [custom events](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). For example, the [input component](/components/input) emits the `sl-input` event when it receives input. In React, you can listen for the event using `onSlInput`.
+Many BuckeyeUI components emit [custom events](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). For example, the [input component](/components/input) emits the `bui-input` event when it receives input. In React, you can listen for the event using `onInput`.
 
 Here's how you can bind the input's value to a state variable.
 
 ```jsx
 import { useState } from 'react';
-import { SlInput } from 'buckeye-ui/dist/react';
+import { Input } from 'buckeye-ui/dist/react';
 
 function MyComponent() {
   const [value, setValue] = useState('');
 
-  return <SlInput value={value} onSlInput={event => setValue(event.target.value)} />;
+  return <Input value={value} onInput={event => setValue(event.target.value)} />;
 }
 
 export default MyComponent;
@@ -63,13 +63,13 @@ If you're using TypeScript, it's important to note that `event.target` will be a
 
 ```tsx
 import { useState } from 'react';
-import { SlInput } from 'buckeye-ui/dist/react';
-import type SlInputElement from 'buckeye-ui/dist/components/input/input';
+import { Input } from 'buckeye-ui/dist/react';
+import type InputElement from 'buckeye-ui/dist/components/input/input';
 
 function MyComponent() {
   const [value, setValue] = useState('');
 
-  return <SlInput value={value} onSlInput={event => setValue((event.target as SlInputElement).value)} />;
+  return <Input value={value} onInput={event => setValue((event.target as InputElement).value)} />;
 }
 
 export default MyComponent;

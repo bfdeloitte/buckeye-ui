@@ -1,15 +1,15 @@
 # Rating
 
-[component-header:sl-rating]
+[component-header:bui-rating]
 
 ```html preview
-<sl-rating label="Rating"></sl-rating>
+<bui-rating label="Rating"></bui-rating>
 ```
 
 ```jsx react
-import { SlRating } from 'buckeye-ui/dist/react';
+import { Rating } from 'buckeye-ui/dist/react';
 
-const App = () => <SlRating label="Rating" />;
+const App = () => <Rating label="Rating" />;
 ```
 
 ## Examples
@@ -19,13 +19,13 @@ const App = () => <SlRating label="Rating" />;
 Ratings are commonly identified contextually, so labels aren't displayed. However, you should always provide one for assistive devices using the `label` attribute.
 
 ```html preview
-<sl-rating label="Rate this component"></sl-rating>
+<bui-rating label="Rate this component"></bui-rating>
 ```
 
 ```jsx react
-import { SlRating } from 'buckeye-ui/dist/react';
+import { Rating } from 'buckeye-ui/dist/react';
 
-const App = () => <SlRating label="Rate this component" />;
+const App = () => <Rating label="Rate this component" />;
 ```
 
 ### Maximum Value
@@ -33,13 +33,13 @@ const App = () => <SlRating label="Rate this component" />;
 Ratings are 0-5 by default. To change the maximum possible value, use the `max` attribute.
 
 ```html preview
-<sl-rating label="Rating" max="3"></sl-rating>
+<bui-rating label="Rating" max="3"></bui-rating>
 ```
 
 ```jsx react
-import { SlRating } from 'buckeye-ui/dist/react';
+import { Rating } from 'buckeye-ui/dist/react';
 
-const App = () => <SlRating label="Rating" max={3} />;
+const App = () => <Rating label="Rating" max={3} />;
 ```
 
 ### Precision
@@ -47,13 +47,13 @@ const App = () => <SlRating label="Rating" max={3} />;
 Use the `precision` attribute to let users select fractional ratings.
 
 ```html preview
-<sl-rating label="Rating" precision="0.5" value="2.5"></sl-rating>
+<bui-rating label="Rating" precision="0.5" value="2.5"></bui-rating>
 ```
 
 ```jsx react
-import { SlRating } from 'buckeye-ui/dist/react';
+import { Rating } from 'buckeye-ui/dist/react';
 
-const App = () => <SlRating label="Rating" precision={0.5} value={2.5} />;
+const App = () => <Rating label="Rating" precision={0.5} value={2.5} />;
 ```
 
 ### Symbol Sizes
@@ -61,13 +61,13 @@ const App = () => <SlRating label="Rating" precision={0.5} value={2.5} />;
 Set the `--symbol-size` custom property to adjust the size.
 
 ```html preview
-<sl-rating label="Rating" style="--symbol-size: 2rem;"></sl-rating>
+<bui-rating label="Rating" style="--symbol-size: 2rem;"></bui-rating>
 ```
 
 ```jsx react
-import { SlRating } from 'buckeye-ui/dist/react';
+import { Rating } from 'buckeye-ui/dist/react';
 
-const App = () => <SlRating label="Rating" style={{ '--symbol-size': '2rem' }} />;
+const App = () => <Rating label="Rating" style={{ '--symbol-size': '2rem' }} />;
 ```
 
 ### Readonly
@@ -75,13 +75,13 @@ const App = () => <SlRating label="Rating" style={{ '--symbol-size': '2rem' }} /
 Use the `readonly` attribute to display a rating that users can't change.
 
 ```html preview
-<sl-rating label="Rating" readonly value="3"></sl-rating>
+<bui-rating label="Rating" readonly value="3"></bui-rating>
 ```
 
 ```jsx react
-import { SlRating } from 'buckeye-ui/dist/react';
+import { Rating } from 'buckeye-ui/dist/react';
 
-const App = () => <SlRating label="Rating" readonly value={3} />;
+const App = () => <Rating label="Rating" readonly value={3} />;
 ```
 
 ### Disabled
@@ -89,33 +89,33 @@ const App = () => <SlRating label="Rating" readonly value={3} />;
 Use the `disable` attribute to disable the rating.
 
 ```html preview
-<sl-rating label="Rating" disabled value="3"></sl-rating>
+<bui-rating label="Rating" disabled value="3"></bui-rating>
 ```
 
 ```jsx react
-import { SlRating } from 'buckeye-ui/dist/react';
+import { Rating } from 'buckeye-ui/dist/react';
 
-const App = () => <SlRating label="Rating" disabled value={3} />;
+const App = () => <Rating label="Rating" disabled value={3} />;
 ```
 
 ### Detecting Hover
 
-Use the `sl-hover` event to detect when the user hovers over (or touch and drag) the rating. This lets you hook into values as the user interacts with the rating, but before they select a value.
+Use the `bui-hover` event to detect when the user hovers over (or touch and drag) the rating. This lets you hook into values as the user interacts with the rating, but before they select a value.
 
 The event has a payload with `phase` and `value` properties. The `phase` property tells when hovering starts, moves to a new value, and ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.
 
 ```html preview
 <div class="detect-hover">
-  <sl-rating label="Rating"></sl-rating>
+  <bui-rating label="Rating"></bui-rating>
   <span></span>
 </div>
 
 <script>
-  const rating = document.querySelector('.detect-hover > sl-rating');
+  const rating = document.querySelector('.detect-hover > bui-rating');
   const span = rating.nextElementSibling;
   const terms = ['No rating', 'Terrible', 'Bad', 'OK', 'Good', 'Excellent'];
 
-  rating.addEventListener('sl-hover', event => {
+  rating.addEventListener('bui-hover', event => {
     span.textContent = terms[event.detail.value];
 
     // Clear feedback when hovering stops
@@ -130,9 +130,9 @@ The event has a payload with `phase` and `value` properties. The `phase` propert
     position: relative;
     top: -4px;
     left: 8px;
-    border-radius: var(--sl-border-radius-small);
-    background: var(--sl-color-neutral-900);
-    color: var(--sl-color-neutral-0);
+    border-radius: var(--bui-border-radius-small);
+    background: var(--bui-color-neutral-900);
+    color: var(--bui-color-neutral-0);
     text-align: center;
     padding: 4px 6px;
   }
@@ -145,7 +145,7 @@ The event has a payload with `phase` and `value` properties. The `phase` propert
 
 ```jsx react
 import { useState } from 'react';
-import { SlRating } from 'buckeye-ui/dist/react';
+import { Rating } from 'buckeye-ui/dist/react';
 
 const terms = ['No rating', 'Terrible', 'Bad', 'OK', 'Good', 'Excellent'];
 const css = `
@@ -153,9 +153,9 @@ const css = `
     position: relative;
     top: -4px;
     left: 8px;
-    border-radius: var(--sl-border-radius-small);
-    background: var(--sl-color-neutral-900);
-    color: var(--sl-color-neutral-0);
+    border-radius: var(--bui-border-radius-small);
+    background: var(--bui-color-neutral-900);
+    color: var(--bui-color-neutral-0);
     text-align: center;
     padding: 4px 6px;
   }
@@ -166,7 +166,7 @@ const css = `
 `;
 
 function handleHover(event) {
-  rating.addEventListener('sl-hover', event => {
+  rating.addEventListener('bui-hover', event => {
     setFeedback(terms[event.detail.value]);
 
     // Clear feedback when hovering stops
@@ -182,7 +182,7 @@ const App = () => {
   return (
     <>
       <div class="detect-hover">
-        <SlRating label="Rating" onSlHover={handleHover} />
+        <Rating label="Rating" onHover={handleHover} />
         <span>{feedback}</span>
       </div>
       <style>{css}</style>
@@ -196,21 +196,21 @@ const App = () => {
 You can provide custom icons by passing a function to the `getSymbol` property.
 
 ```html preview
-<sl-rating label="Rating" class="rating-hearts" style="--symbol-color-active: #ff4136;"></sl-rating>
+<bui-rating label="Rating" class="rating-hearts" style="--symbol-color-active: #ff4136;"></bui-rating>
 
 <script>
   const rating = document.querySelector('.rating-hearts');
-  rating.getSymbol = () => '<sl-icon name="heart-fill"></sl-icon>';
+  rating.getSymbol = () => '<bui-icon name="heart-fill"></bui-icon>';
 </script>
 ```
 
 ```jsx react
-import { SlRating } from 'buckeye-ui/dist/react';
+import { Rating } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRating
+  <Rating
     label="Rating"
-    getSymbol={() => '<sl-icon name="heart-fill"></sl-icon>'}
+    getSymbol={() => '<bui-icon name="heart-fill"></bui-icon>'}
     style={{ '--symbol-color-active': '#ff4136' }}
   />
 );
@@ -221,27 +221,27 @@ const App = () => (
 You can also use the `getSymbol` property to render different icons based on value.
 
 ```html preview
-<sl-rating label="Rating" class="rating-emojis"></sl-rating>
+<bui-rating label="Rating" class="rating-emojis"></bui-rating>
 
 <script>
   const rating = document.querySelector('.rating-emojis');
 
   rating.getSymbol = value => {
     const icons = ['emoji-angry', 'emoji-frown', 'emoji-expressionless', 'emoji-smile', 'emoji-laughing'];
-    return `<sl-icon name="${icons[value - 1]}"></sl-icon>`;
+    return `<bui-icon name="${icons[value - 1]}"></bui-icon>`;
   };
 </script>
 ```
 
 ```jsx react
-import { SlRating } from 'buckeye-ui/dist/react';
+import { Rating } from 'buckeye-ui/dist/react';
 
 function getSymbol(value) {
   const icons = ['emoji-angry', 'emoji-frown', 'emoji-expressionless', 'emoji-smile', 'emoji-laughing'];
-  return `<sl-icon name="${icons[value - 1]}"></sl-icon>`;
+  return `<bui-icon name="${icons[value - 1]}"></bui-icon>`;
 }
 
-const App = () => <SlRating label="Rating" getSymbol={getSymbol} />;
+const App = () => <Rating label="Rating" getSymbol={getSymbol} />;
 ```
 
-[component-metadata:sl-rating]
+[component-metadata:bui-rating]

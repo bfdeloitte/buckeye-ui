@@ -17,9 +17,9 @@ import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './select.styles';
 import type { BuckeyeFormControl } from '../../internal/buckeye-element';
 import type { CSSResultGroup } from 'lit';
-import type SlOption from '../option/option';
-import type SlPopup from '../popup/popup';
-import type SlRemoveEvent from '../../events/sl-remove';
+import type Option from '../option/option';
+import type Popup from '../popup/popup';
+import type RemoveEvent from '../../events/bui-remove';
 
 /**
  * @summary Selects allow you to choose items from a menu of predefined options.
@@ -27,27 +27,27 @@ import type SlRemoveEvent from '../../events/sl-remove';
  * @status stable
  * @since 2.0
  *
- * @dependency sl-icon
- * @dependency sl-popup
- * @dependency sl-tag
+ * @dependency bui-icon
+ * @dependency bui-popup
+ * @dependency bui-tag
  *
- * @slot - The listbox options. Must be `<sl-option>` elements. You can use `<sl-divider>` to group items visually.
+ * @slot - The listbox options. Must be `<bui-option>` elements. You can use `<bui-divider>` to group items visually.
  * @slot label - The input's label. Alternatively, you can use the `label` attribute.
  * @slot prefix - Used to prepend a presentational icon or similar element to the combobox.
  * @slot clear-icon - An icon to use in lieu of the default clear icon.
  * @slot expand-icon - The icon to show when the control is expanded and collapsed. Rotates on open and close.
  * @slot help-text - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.
  *
- * @event sl-change - Emitted when the control's value changes.
- * @event sl-clear - Emitted when the control's value is cleared.
- * @event sl-input - Emitted when the control receives input.
- * @event sl-focus - Emitted when the control gains focus.
- * @event sl-blur - Emitted when the control loses focus.
- * @event sl-show - Emitted when the select's menu opens.
- * @event sl-after-show - Emitted after the select's menu opens and all animations are complete.
- * @event sl-hide - Emitted when the select's menu closes.
- * @event sl-after-hide - Emitted after the select's menu closes and all animations are complete.
- * @event sl-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.
+ * @event bui-change - Emitted when the control's value changes.
+ * @event bui-clear - Emitted when the control's value is cleared.
+ * @event bui-input - Emitted when the control receives input.
+ * @event bui-focus - Emitted when the control gains focus.
+ * @event bui-blur - Emitted when the control loses focus.
+ * @event bui-show - Emitted when the select's menu opens.
+ * @event bui-after-show - Emitted after the select's menu opens and all animations are complete.
+ * @event bui-hide - Emitted when the select's menu closes.
+ * @event bui-after-hide - Emitted after the select's menu closes and all animations are complete.
+ * @event bui-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.
  *
  * @csspart form-control - The form control that wraps the label, input, and help text.
  * @csspart form-control-label - The label's wrapper.
@@ -66,19 +66,19 @@ import type SlRemoveEvent from '../../events/sl-remove';
  * @csspart clear-button - The clear button.
  * @csspart expand-icon - The container that wraps the expand icon.
  */
-@customElement('sl-select')
+@customElement('bui-select')
 export default class SlSelect extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this, {
-    assumeInteractionOn: ['sl-blur', 'sl-input']
+    assumeInteractionOn: ['bui-blur', 'bui-input']
   });
   private readonly hasSlotController = new HasSlotController(this, 'help-text', 'label');
   private readonly localize = new LocalizeController(this);
   private typeToSelectString = '';
   private typeToSelectTimeout: number;
 
-  @query('.select') popup: SlPopup;
+  @query('.select') popup: Popup;
   @query('.select__combobox') combobox: HTMLSlotElement;
   @query('.select__display-input') displayInput: HTMLInputElement;
   @query('.select__value-input') valueInput: HTMLInputElement;
@@ -86,8 +86,8 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
 
   @state() private hasFocus = false;
   @state() displayLabel = '';
-  @state() currentOption: SlOption;
-  @state() selectedOptions: SlOption[] = [];
+  @state() currentOption: Option;
+  @state() selectedOptions: Option[] = [];
 
   /** The name of the select, submitted as a name/value pair with form data. */
   @property() name = '';
@@ -203,12 +203,12 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
   private handleFocus() {
     this.hasFocus = true;
     this.displayInput.setSelectionRange(0, 0);
-    this.emit('sl-focus');
+    this.emit('bui-focus');
   }
 
   private handleBlur() {
     this.hasFocus = false;
-    this.emit('sl-blur');
+    this.emit('bui-blur');
   }
 
   private handleDocumentFocusIn(event: KeyboardEvent) {
@@ -222,9 +222,9 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
   private handleDocumentKeyDown(event: KeyboardEvent) {
     const target = event.target as HTMLElement;
     const isClearButton = target.closest('.select__clear') !== null;
-    const isIconButton = target.closest('sl-icon-button') !== null;
+    const isIconButton = target.closest('bui-icon-button') !== null;
 
-    // Ignore presses when the target is an icon button (e.g. the remove button in <sl-tag>)
+    // Ignore presses when the target is an icon button (e.g. the remove button in <bui-tag>)
     if (isClearButton || isIconButton) {
       return;
     }
@@ -259,8 +259,8 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
 
         // Emit after updating
         this.updateComplete.then(() => {
-          this.emit('sl-input');
-          this.emit('sl-change');
+          this.emit('bui-input');
+          this.emit('bui-change');
         });
 
         if (!this.multiple) {
@@ -362,7 +362,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
 
   private handleComboboxMouseDown(event: MouseEvent) {
     const path = event.composedPath();
-    const isIconButton = path.some(el => el instanceof Element && el.tagName.toLowerCase() === 'sl-icon-button');
+    const isIconButton = path.some(el => el instanceof Element && el.tagName.toLowerCase() === 'bui-icon-button');
 
     // Ignore disabled controls and clicks on tags (remove buttons)
     if (this.disabled || isIconButton) {
@@ -388,9 +388,9 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
 
       // Emit after update
       this.updateComplete.then(() => {
-        this.emit('sl-clear');
-        this.emit('sl-input');
-        this.emit('sl-change');
+        this.emit('bui-clear');
+        this.emit('bui-input');
+        this.emit('bui-change');
       });
     }
   }
@@ -403,7 +403,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
 
   private handleOptionClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
-    const option = target.closest('sl-option');
+    const option = target.closest('bui-option');
     const oldValue = this.value;
 
     if (option && !option.disabled) {
@@ -419,8 +419,8 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
       if (this.value !== oldValue) {
         // Emit after updating
         this.updateComplete.then(() => {
-          this.emit('sl-input');
-          this.emit('sl-change');
+          this.emit('bui-input');
+          this.emit('bui-change');
         });
       }
 
@@ -437,18 +437,18 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
     const values: string[] = [];
 
     // Check for duplicate values in menu items
-    if (customElements.get('sl-option')) {
+    if (customElements.get('bui-option')) {
       allOptions.forEach(option => values.push(option.value));
 
       // Select only the options that match the new value
       this.setSelectedOptions(allOptions.filter(el => value.includes(el.value)));
     } else {
-      // Rerun this handler when <sl-option> is registered
-      customElements.whenDefined('sl-option').then(() => this.handleDefaultSlotChange());
+      // Rerun this handler when <bui-option> is registered
+      customElements.whenDefined('bui-option').then(() => this.handleDefaultSlotChange());
     }
   }
 
-  private handleTagRemove(event: SlRemoveEvent, option: SlOption) {
+  private handleTagRemove(event: RemoveEvent, option: Option) {
     event.stopPropagation();
 
     if (!this.disabled) {
@@ -456,25 +456,25 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
 
       // Emit after updating
       this.updateComplete.then(() => {
-        this.emit('sl-input');
-        this.emit('sl-change');
+        this.emit('bui-input');
+        this.emit('bui-change');
       });
     }
   }
 
-  // Gets an array of all <sl-option> elements
+  // Gets an array of all <bui-option> elements
   private getAllOptions() {
-    return [...this.querySelectorAll<SlOption>('sl-option')];
+    return [...this.querySelectorAll<Option>('bui-option')];
   }
 
-  // Gets the first <sl-option> element
+  // Gets the first <bui-option> element
   private getFirstOption() {
-    return this.querySelector<SlOption>('sl-option');
+    return this.querySelector<Option>('bui-option');
   }
 
   // Sets the current option, which is the option the user is currently interacting with (e.g. via keyboard). Only one
   // option may be "current" at a time.
-  private setCurrentOption(option: SlOption | null) {
+  private setCurrentOption(option: Option | null) {
     const allOptions = this.getAllOptions();
 
     // Clear selection
@@ -493,7 +493,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
   }
 
   // Sets the selected option(s)
-  private setSelectedOptions(option: SlOption | SlOption[]) {
+  private setSelectedOptions(option: Option | Option[]) {
     const allOptions = this.getAllOptions();
     const newSelectedOptions = Array.isArray(option) ? option : [option];
 
@@ -510,7 +510,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
   }
 
   // Toggles an option's selected state
-  private toggleOptionSelection(option: SlOption, force?: boolean) {
+  private toggleOptionSelection(option: Option, force?: boolean) {
     if (force === true || force === false) {
       option.selected = force;
     } else {
@@ -577,7 +577,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
       this.setCurrentOption(this.selectedOptions[0] || this.getFirstOption());
 
       // Show
-      this.emit('sl-show');
+      this.emit('bui-show');
       this.addOpenListeners();
 
       await stopAnimations(this);
@@ -597,10 +597,10 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
         scrollIntoView(this.currentOption, this.listbox, 'vertical', 'auto');
       }
 
-      this.emit('sl-after-show');
+      this.emit('bui-after-show');
     } else {
       // Hide
-      this.emit('sl-hide');
+      this.emit('bui-hide');
       this.removeOpenListeners();
 
       await stopAnimations(this);
@@ -609,7 +609,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
       this.listbox.hidden = true;
       this.popup.active = false;
 
-      this.emit('sl-after-hide');
+      this.emit('bui-after-hide');
     }
   }
 
@@ -621,7 +621,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'bui-after-show');
   }
 
   /** Hides the listbox. */
@@ -632,7 +632,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'bui-after-hide');
   }
 
   /** Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid. */
@@ -697,7 +697,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
         </label>
 
         <div part="form-control-input" class="form-control-input">
-          <sl-popup
+          <bui-popup
             class=${classMap({
               select: true,
               'select--standard': true,
@@ -760,7 +760,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
                       ${this.selectedOptions.map((option, index) => {
                         if (index < this.maxOptionsVisible || this.maxOptionsVisible <= 0) {
                           return html`
-                            <sl-tag
+                            <bui-tag
                               part="tag"
                               exportparts="
                                 base:tag__base,
@@ -771,13 +771,13 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
                               ?pill=${this.pill}
                               size=${this.size}
                               removable
-                              @sl-remove=${(event: SlRemoveEvent) => this.handleTagRemove(event, option)}
+                              @bui-remove=${(event: RemoveEvent) => this.handleTagRemove(event, option)}
                             >
                               ${option.getTextLabel()}
-                            </sl-tag>
+                            </bui-tag>
                           `;
                         } else if (index === this.maxOptionsVisible) {
-                          return html` <sl-tag size=${this.size}> +${this.selectedOptions.length - index} </sl-tag> `;
+                          return html` <bui-tag size=${this.size}> +${this.selectedOptions.length - index} </bui-tag> `;
                         } else {
                           return null;
                         }
@@ -810,14 +810,14 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
                       tabindex="-1"
                     >
                       <slot name="clear-icon">
-                        <sl-icon name="x-circle-fill" library="system"></sl-icon>
+                        <bui-icon name="x-circle-fill" library="system"></bui-icon>
                       </slot>
                     </button>
                   `
                 : ''}
 
               <slot name="expand-icon" part="expand-icon" class="select__expand-icon">
-                <sl-icon library="system" name="chevron-down"></sl-icon>
+                <bui-icon library="system" name="chevron-down"></bui-icon>
               </slot>
             </div>
 
@@ -835,7 +835,7 @@ export default class SlSelect extends BuckeyeElement implements BuckeyeFormContr
             >
               <slot></slot>
             </div>
-          </sl-popup>
+          </bui-popup>
         </div>
 
         <slot
@@ -870,6 +870,6 @@ setDefaultAnimation('select.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-select': SlSelect;
+    'bui-select': SlSelect;
   }
 }

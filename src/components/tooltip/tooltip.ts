@@ -10,7 +10,7 @@ import { watch } from '../../internal/watch';
 import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './tooltip.styles';
 import type { CSSResultGroup } from 'lit';
-import type SlPopup from '../popup/popup';
+import type Popup from '../popup/popup';
 
 /**
  * @summary Tooltips display additional information based on a specific action.
@@ -18,17 +18,17 @@ import type SlPopup from '../popup/popup';
  * @status stable
  * @since 2.0
  *
- * @dependency sl-popup
+ * @dependency bui-popup
  *
  * @slot - The tooltip's target element. Avoid slotting in more than one element, as subsequent ones will be ignored.
  * @slot content - The content to render in the tooltip. Alternatively, you can use the `content` attribute.
  *
- * @event sl-show - Emitted when the tooltip begins to show.
- * @event sl-after-show - Emitted after the tooltip has shown and all animations are complete.
- * @event sl-hide - Emitted when the tooltip begins to hide.
- * @event sl-after-hide - Emitted after the tooltip has hidden and all animations are complete.
+ * @event bui-show - Emitted when the tooltip begins to show.
+ * @event bui-after-show - Emitted after the tooltip has shown and all animations are complete.
+ * @event bui-hide - Emitted when the tooltip begins to hide.
+ * @event bui-after-hide - Emitted after the tooltip has hidden and all animations are complete.
  *
- * @csspart base - The component's base wrapper, an `<sl-popup>` element.
+ * @csspart base - The component's base wrapper, an `<bui-popup>` element.
  * @csspart base__popup - The popup's exported `popup` part. Use this to target the tooltip's popup container.
  * @csspart base__arrow - The popup's exported `arrow` part. Use this to target the tooltip's arrow.
  * @csspart body - The tooltip's body where its content is rendered.
@@ -40,8 +40,8 @@ import type SlPopup from '../popup/popup';
  * @animation tooltip.show - The animation to use when showing the tooltip.
  * @animation tooltip.hide - The animation to use when hiding the tooltip.
  */
-@customElement('sl-tooltip')
-export default class SlTooltip extends BuckeyeElement {
+@customElement('bui-tooltip')
+export default class Tooltip extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private hoverTimeout: number;
@@ -49,7 +49,7 @@ export default class SlTooltip extends BuckeyeElement {
 
   @query('slot:not([name])') defaultSlot: HTMLSlotElement;
   @query('.tooltip__body') body: HTMLElement;
-  @query('sl-popup') popup: SlPopup;
+  @query('bui-popup') popup: Popup;
 
   /** The tooltip's content. If you need to display HTML, use the `content` slot instead. */
   @property() content = '';
@@ -196,7 +196,7 @@ export default class SlTooltip extends BuckeyeElement {
       }
 
       // Show
-      this.emit('sl-show');
+      this.emit('bui-show');
 
       await stopAnimations(this.body);
       this.body.hidden = false;
@@ -204,10 +204,10 @@ export default class SlTooltip extends BuckeyeElement {
       const { keyframes, options } = getAnimation(this, 'tooltip.show', { dir: this.localize.dir() });
       await animateTo(this.popup.popup, keyframes, options);
 
-      this.emit('sl-after-show');
+      this.emit('bui-after-show');
     } else {
       // Hide
-      this.emit('sl-hide');
+      this.emit('bui-hide');
 
       await stopAnimations(this.body);
       const { keyframes, options } = getAnimation(this, 'tooltip.hide', { dir: this.localize.dir() });
@@ -215,7 +215,7 @@ export default class SlTooltip extends BuckeyeElement {
       this.popup.active = false;
       this.body.hidden = true;
 
-      this.emit('sl-after-hide');
+      this.emit('bui-after-hide');
     }
   }
 
@@ -241,7 +241,7 @@ export default class SlTooltip extends BuckeyeElement {
     }
 
     this.open = true;
-    return waitForEvent(this, 'sl-after-show');
+    return waitForEvent(this, 'bui-after-show');
   }
 
   /** Hides the tooltip */
@@ -251,12 +251,12 @@ export default class SlTooltip extends BuckeyeElement {
     }
 
     this.open = false;
-    return waitForEvent(this, 'sl-after-hide');
+    return waitForEvent(this, 'bui-after-hide');
   }
 
   render() {
     return html`
-      <sl-popup
+      <bui-popup
         part="base"
         exportparts="
           popup:base__popup,
@@ -286,7 +286,7 @@ export default class SlTooltip extends BuckeyeElement {
         >
           ${this.content}
         </slot>
-      </sl-popup>
+      </bui-popup>
     `;
   }
 }
@@ -309,6 +309,6 @@ setDefaultAnimation('tooltip.hide', {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tooltip': SlTooltip;
+    'bui-tooltip': Tooltip;
   }
 }

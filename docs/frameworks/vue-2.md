@@ -25,13 +25,13 @@ setBasePath('https://cdn.jsdelivr.net/npm/buckeye-ui@%VERSION%/dist/');
 
 ## Configuration
 
-You'll need to tell Vue to ignore BuckeyeUI components. This is pretty easy because they all start with `sl-`.
+You'll need to tell Vue to ignore BuckeyeUI components. This is pretty easy because they all start with `bui-`.
 
 ```js
 import Vue from 'vue';
 import App from './App.vue';
 
-Vue.config.ignoredElements = [/sl-/];
+Vue.config.ignoredElements = [/bui-/];
 
 const app = new Vue({
   render: h => h(App)
@@ -49,7 +49,7 @@ Now you can start using BuckeyeUI components in your app!
 When binding complex data such as objects and arrays, use the `.prop` modifier to make Vue bind them as a property instead of an attribute.
 
 ```html
-<sl-color-picker :swatches.prop="mySwatches" />
+<bui-color-picker :swatches.prop="mySwatches" />
 ```
 
 ### Two-way Binding
@@ -58,26 +58,26 @@ One caveat is there's currently [no support for v-model on custom elements](http
 
 ```html
 <!-- This doesn't work -->
-<sl-input v-model="name"></sl-input>
+<bui-input v-model="name"></bui-input>
 <!-- This works, but it's a bit longer -->
-<sl-input :value="name" @input="name = $event.target.value"></sl-input>
+<bui-input :value="name" @input="name = $event.target.value"></bui-input>
 ```
 
-If that's too verbose for your liking, you can use a custom directive instead. [This utility](https://www.npmjs.com/package/@shoelace-style/vue-sl-model) adds a custom directive that will work just like `v-model` but for BuckeyeUI components. To install it, use this command.
+If that's too verbose for your liking, you can use a custom directive instead. [This utility](https://www.npmjs.com/package/@shoelace-style/vue-bui-model) adds a custom directive that will work just like `v-model` but for BuckeyeUI components. To install it, use this command.
 
 ```bash
-npm install @shoelace-style/vue-sl-model@1
+npm install @shoelace-style/vue-bui-model@1
 ```
 
 Next, import the directive and enable it like this.
 
 ```js
 import Vue from 'vue';
-import BuckeyeModelDirective from '@shoelace-style/vue-sl-model';
+import BuckeyeModelDirective from '@shoelace-style/vue-bui-model';
 import App from './App.vue';
 
 Vue.use(BuckeyeModelDirective);
-Vue.config.ignoredElements = [/sl-/];
+Vue.config.ignoredElements = [/bui-/];
 
 const app = new Vue({
   render: h => h(App)
@@ -86,10 +86,10 @@ const app = new Vue({
 app.$mount('#app');
 ```
 
-Now you can use the `v-sl-model` directive to keep your data in sync!
+Now you can use the `v-bui-model` directive to keep your data in sync!
 
 ```html
-<sl-input v-sl-model="name"></sl-input>
+<bui-input v-bui-model="name"></bui-input>
 ```
 
 ?> Are you using BuckeyeUI with Vue? [Help us improve this page!](https://github.com/bfdeloitte/buckeye-ui/blob/next/docs/frameworks/vue-2.md)

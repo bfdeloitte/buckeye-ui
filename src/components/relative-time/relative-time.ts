@@ -24,8 +24,8 @@ const availableUnits: UnitConfig[] = [
  * @status stable
  * @since 2.0
  */
-@customElement('sl-relative-time')
-export default class SlRelativeTime extends BuckeyeElement {
+@customElement('bui-relative-time')
+export default class RelativeTime extends BuckeyeElement {
   private readonly localize = new LocalizeController(this);
   private updateTimeout: number;
 
@@ -123,6 +123,6 @@ function getTimeUntilNextUnit(unit: 'second' | 'minute' | 'hour' | 'day') {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-relative-time': SlRelativeTime;
+    'bui-relative-time': RelativeTime;
   }
 }

@@ -12,8 +12,8 @@ import type { CSSResultGroup } from 'lit';
  *
  * @slot - The content to be visually hidden.
  */
-@customElement('sl-visually-hidden')
-export default class SlVisuallyHidden extends BuckeyeElement {
+@customElement('bui-visually-hidden')
+export default class VisuallyHidden extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   render() {
@@ -23,6 +23,6 @@ export default class SlVisuallyHidden extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-visually-hidden': SlVisuallyHidden;
+    'bui-visually-hidden': VisuallyHidden;
   }
 }

@@ -1,9 +1,9 @@
 # Spinner
 
-[component-header:sl-spinner]
+[component-header:bui-spinner]
 
 ```html preview
-<sl-spinner></sl-spinner>
+<bui-spinner></bui-spinner>
 ```
 
 ```jsx react
@@ -19,9 +19,9 @@ const App = () => <SlSpinner />;
 Spinners are sized based on the current font size. To change their size, set the `font-size` property on the spinner itself or on a parent element as shown below.
 
 ```html preview
-<sl-spinner></sl-spinner>
-<sl-spinner style="font-size: 2rem;"></sl-spinner>
-<sl-spinner style="font-size: 3rem;"></sl-spinner>
+<bui-spinner></bui-spinner>
+<bui-spinner style="font-size: 2rem;"></bui-spinner>
+<bui-spinner style="font-size: 3rem;"></bui-spinner>
 ```
 
 ```jsx react
@@ -41,7 +41,7 @@ const App = () => (
 The width of the spinner's track can be changed by setting the `--track-width` custom property.
 
 ```html preview
-<sl-spinner style="font-size: 50px; --track-width: 10px;"></sl-spinner>
+<bui-spinner style="font-size: 50px; --track-width: 10px;"></bui-spinner>
 ```
 
 ```jsx react
@@ -62,7 +62,7 @@ const App = () => (
 The spinner's colors can be changed by setting the `--indicator-color` and `--track-color` custom properties.
 
 ```html preview
-<sl-spinner style="font-size: 3rem; --indicator-color: deeppink; --track-color: pink;"></sl-spinner>
+<bui-spinner style="font-size: 3rem; --indicator-color: deeppink; --track-color: pink;"></bui-spinner>
 ```
 
 ```jsx react
@@ -79,4 +79,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-spinner]
+[component-metadata:bui-spinner]

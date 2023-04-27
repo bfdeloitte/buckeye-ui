@@ -1,22 +1,22 @@
 # Alert
 
-[component-header:sl-alert]
+[component-header:bui-alert]
 
 ```html preview
-<sl-alert open>
-  <sl-icon slot="icon" name="info-circle"></sl-icon>
+<bui-alert open>
+  <bui-icon slot="icon" name="info-circle"></bui-icon>
   This is a standard alert. You can customize its content and even the icon.
-</sl-alert>
+</bui-alert>
 ```
 
 ```jsx react
-import { SlAlert, SlIcon } from 'buckeye-ui/dist/react';
+import { Alert, Icon } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlAlert open>
-    <SlIcon slot="icon" name="info-circle" />
+  <Alert open>
+    <Icon slot="icon" name="info-circle" />
     This is a standard alert. You can customize its content and even the icon.
-  </SlAlert>
+  </Alert>
 );
 ```
 
@@ -29,92 +29,92 @@ const App = () => (
 Set the `variant` attribute to change the alert's variant.
 
 ```html preview
-<sl-alert variant="primary" open>
-  <sl-icon slot="icon" name="info-circle"></sl-icon>
+<bui-alert variant="primary" open>
+  <bui-icon slot="icon" name="info-circle"></bui-icon>
   <strong>This is super informative</strong><br />
   You can tell by how pretty the alert is.
-</sl-alert>
+</bui-alert>
 
 <br />
 
-<sl-alert variant="success" open>
-  <sl-icon slot="icon" name="check2-circle"></sl-icon>
+<bui-alert variant="success" open>
+  <bui-icon slot="icon" name="check2-circle"></bui-icon>
   <strong>Your changes have been saved</strong><br />
   You can safely exit the app now.
-</sl-alert>
+</bui-alert>
 
 <br />
 
-<sl-alert variant="neutral" open>
-  <sl-icon slot="icon" name="gear"></sl-icon>
+<bui-alert variant="neutral" open>
+  <bui-icon slot="icon" name="gear"></bui-icon>
   <strong>Your settings have been updated</strong><br />
   Settings will take affect on next login.
-</sl-alert>
+</bui-alert>
 
 <br />
 
-<sl-alert variant="warning" open>
-  <sl-icon slot="icon" name="exclamation-triangle"></sl-icon>
+<bui-alert variant="warning" open>
+  <bui-icon slot="icon" name="exclamation-triangle"></bui-icon>
   <strong>Your session has ended</strong><br />
   Please login again to continue.
-</sl-alert>
+</bui-alert>
 
 <br />
 
-<sl-alert variant="danger" open>
-  <sl-icon slot="icon" name="exclamation-octagon"></sl-icon>
+<bui-alert variant="danger" open>
+  <bui-icon slot="icon" name="exclamation-octagon"></bui-icon>
   <strong>Your account has been deleted</strong><br />
   We're very sorry to see you go!
-</sl-alert>
+</bui-alert>
 ```
 
 ```jsx react
-import { SlAlert, SlIcon } from 'buckeye-ui/dist/react';
+import { Alert, Icon } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlAlert variant="primary" open>
-      <SlIcon slot="icon" name="info-circle" />
+    <Alert variant="primary" open>
+      <Icon slot="icon" name="info-circle" />
       <strong>This is super informative</strong>
       <br />
       You can tell by how pretty the alert is.
-    </SlAlert>
+    </Alert>
 
     <br />
 
-    <SlAlert variant="success" open>
-      <SlIcon slot="icon" name="check2-circle" />
+    <Alert variant="success" open>
+      <Icon slot="icon" name="check2-circle" />
       <strong>Your changes have been saved</strong>
       <br />
       You can safely exit the app now.
-    </SlAlert>
+    </Alert>
 
     <br />
 
-    <SlAlert variant="neutral" open>
-      <SlIcon slot="icon" name="gear" />
+    <Alert variant="neutral" open>
+      <Icon slot="icon" name="gear" />
       <strong>Your settings have been updated</strong>
       <br />
       Settings will take affect on next login.
-    </SlAlert>
+    </Alert>
 
     <br />
 
-    <SlAlert variant="warning" open>
-      <SlIcon slot="icon" name="exclamation-triangle" />
+    <Alert variant="warning" open>
+      <Icon slot="icon" name="exclamation-triangle" />
       <strong>Your session has ended</strong>
       <br />
       Please login again to continue.
-    </SlAlert>
+    </Alert>
 
     <br />
 
-    <SlAlert variant="danger" open>
-      <SlIcon slot="icon" name="exclamation-octagon" />
+    <Alert variant="danger" open>
+      <Icon slot="icon" name="exclamation-octagon" />
       <strong>Your account has been deleted</strong>
       <br />
       We're very sorry to see you go!
-    </SlAlert>
+    </Alert>
   </>
 );
 ```
@@ -124,14 +124,14 @@ const App = () => (
 Add the `closable` attribute to show a close button that will hide the alert.
 
 ```html preview
-<sl-alert variant="primary" open closable class="alert-closable">
-  <sl-icon slot="icon" name="info-circle"></sl-icon>
+<bui-alert variant="primary" open closable class="alert-closable">
+  <bui-icon slot="icon" name="info-circle"></bui-icon>
   You can close this alert any time!
-</sl-alert>
+</bui-alert>
 
 <script>
   const alert = document.querySelector('.alert-closable');
-  alert.addEventListener('sl-after-hide', () => {
+  alert.addEventListener('bui-after-hide', () => {
     setTimeout(() => (alert.open = true), 2000);
   });
 </script>
@@ -139,7 +139,7 @@ Add the `closable` attribute to show a close button that will hide the alert.
 
 ```jsx react
 import { useState } from 'react';
-import { SlAlert, SlIcon } from 'buckeye-ui/dist/react';
+import { Alert, Icon } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const [open, setOpen] = useState(true);
@@ -150,10 +150,10 @@ const App = () => {
   }
 
   return (
-    <SlAlert open={open} closable onSlAfterHide={handleHide}>
-      <SlIcon slot="icon" name="info-circle" />
+    <Alert open={open} closable onAfterHide={handleHide}>
+      <Icon slot="icon" name="info-circle" />
       You can close this alert any time!
-    </SlAlert>
+    </Alert>
   );
 };
 ```
@@ -163,16 +163,16 @@ const App = () => {
 Icons are optional. Simply omit the `icon` slot if you don't want them.
 
 ```html preview
-<sl-alert variant="primary" open> Nothing fancy here, just a simple alert. </sl-alert>
+<bui-alert variant="primary" open> Nothing fancy here, just a simple alert. </bui-alert>
 ```
 
 ```jsx react
-import { SlAlert } from 'buckeye-ui/dist/react';
+import { Alert } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlAlert variant="primary" open>
+  <Alert variant="primary" open>
     Nothing fancy here, just a simple alert.
-  </SlAlert>
+  </Alert>
 );
 ```
 
@@ -182,36 +182,36 @@ Set the `duration` attribute to automatically hide an alert after a period of ti
 
 ```html preview
 <div class="alert-duration">
-  <sl-button variant="primary">Show Alert</sl-button>
+  <bui-button variant="primary">Show Alert</bui-button>
 
-  <sl-alert variant="primary" duration="3000" closable>
-    <sl-icon slot="icon" name="info-circle"></sl-icon>
+  <bui-alert variant="primary" duration="3000" closable>
+    <bui-icon slot="icon" name="info-circle"></bui-icon>
     This alert will automatically hide itself after three seconds, unless you interact with it.
-  </sl-alert>
+  </bui-alert>
 </div>
 
 <script>
   const container = document.querySelector('.alert-duration');
-  const button = container.querySelector('sl-button');
-  const alert = container.querySelector('sl-alert');
+  const button = container.querySelector('bui-button');
+  const alert = container.querySelector('bui-alert');
 
   button.addEventListener('click', () => alert.show());
 </script>
 
 <style>
-  .alert-duration sl-alert {
-    margin-top: var(--sl-spacing-medium);
+  .alert-duration bui-alert {
+    margin-top: var(--bui-spacing-medium);
   }
 </style>
 ```
 
 ```jsx react
 import { useState } from 'react';
-import { SlAlert, SlButton, SlIcon } from 'buckeye-ui/dist/react';
+import { Alert, Button, Icon } from 'buckeye-ui/dist/react';
 
 const css = `
-  .alert-duration sl-alert {
-    margin-top: var(--sl-spacing-medium);
+  .alert-duration bui-alert {
+    margin-top: var(--bui-spacing-medium);
   }
 `;
 
@@ -221,14 +221,14 @@ const App = () => {
   return (
     <>
       <div className="alert-duration">
-        <SlButton variant="primary" onClick={() => setOpen(true)}>
+        <Button variant="primary" onClick={() => setOpen(true)}>
           Show Alert
-        </SlButton>
+        </Button>
 
-        <SlAlert variant="primary" duration="3000" open={open} closable onSlAfterHide={() => setOpen(false)}>
-          <SlIcon slot="icon" name="info-circle" />
+        <Alert variant="primary" duration="3000" open={open} closable onAfterHide={() => setOpen(false)}>
+          <Icon slot="icon" name="info-circle" />
           This alert will automatically hide itself after three seconds, unless you interact with it.
-        </SlAlert>
+        </Alert>
       </div>
 
       <style>{css}</style>
@@ -245,49 +245,49 @@ You should always use the `closable` attribute so users can dismiss the notifica
 
 ```html preview
 <div class="alert-toast">
-  <sl-button variant="primary">Primary</sl-button>
-  <sl-button variant="success">Success</sl-button>
-  <sl-button variant="neutral">Neutral</sl-button>
-  <sl-button variant="warning">Warning</sl-button>
-  <sl-button variant="danger">Danger</sl-button>
+  <bui-button variant="primary">Primary</bui-button>
+  <bui-button variant="success">Success</bui-button>
+  <bui-button variant="neutral">Neutral</bui-button>
+  <bui-button variant="warning">Warning</bui-button>
+  <bui-button variant="danger">Danger</bui-button>
 
-  <sl-alert variant="primary" duration="3000" closable>
-    <sl-icon slot="icon" name="info-circle"></sl-icon>
+  <bui-alert variant="primary" duration="3000" closable>
+    <bui-icon slot="icon" name="info-circle"></bui-icon>
     <strong>This is super informative</strong><br />
     You can tell by how pretty the alert is.
-  </sl-alert>
+  </bui-alert>
 
-  <sl-alert variant="success" duration="3000" closable>
-    <sl-icon slot="icon" name="check2-circle"></sl-icon>
+  <bui-alert variant="success" duration="3000" closable>
+    <bui-icon slot="icon" name="check2-circle"></bui-icon>
     <strong>Your changes have been saved</strong><br />
     You can safely exit the app now.
-  </sl-alert>
+  </bui-alert>
 
-  <sl-alert variant="neutral" duration="3000" closable>
-    <sl-icon slot="icon" name="gear"></sl-icon>
+  <bui-alert variant="neutral" duration="3000" closable>
+    <bui-icon slot="icon" name="gear"></bui-icon>
     <strong>Your settings have been updated</strong><br />
     Settings will take affect on next login.
-  </sl-alert>
+  </bui-alert>
 
-  <sl-alert variant="warning" duration="3000" closable>
-    <sl-icon slot="icon" name="exclamation-triangle"></sl-icon>
+  <bui-alert variant="warning" duration="3000" closable>
+    <bui-icon slot="icon" name="exclamation-triangle"></bui-icon>
     <strong>Your session has ended</strong><br />
     Please login again to continue.
-  </sl-alert>
+  </bui-alert>
 
-  <sl-alert variant="danger" duration="3000" closable>
-    <sl-icon slot="icon" name="exclamation-octagon"></sl-icon>
+  <bui-alert variant="danger" duration="3000" closable>
+    <bui-icon slot="icon" name="exclamation-octagon"></bui-icon>
     <strong>Your account has been deleted</strong><br />
     We're very sorry to see you go!
-  </sl-alert>
+  </bui-alert>
 </div>
 
 <script>
   const container = document.querySelector('.alert-toast');
 
   ['primary', 'success', 'neutral', 'warning', 'danger'].map(variant => {
-    const button = container.querySelector(`sl-button[variant="${variant}"]`);
-    const alert = container.querySelector(`sl-alert[variant="${variant}"]`);
+    const button = container.querySelector(`bui-button[variant="${variant}"]`);
+    const alert = container.querySelector(`bui-alert[variant="${variant}"]`);
 
     button.addEventListener('click', () => alert.toast());
   });
@@ -296,7 +296,7 @@ You should always use the `closable` attribute so users can dismiss the notifica
 
 ```jsx react
 import { useRef } from 'react';
-import { SlAlert, SlButton, SlIcon } from 'buckeye-ui/dist/react';
+import { Alert, Button, Icon } from 'buckeye-ui/dist/react';
 
 function showToast(alert) {
   alert.toast();
@@ -311,60 +311,60 @@ const App = () => {
 
   return (
     <>
-      <SlButton variant="primary" onClick={() => primary.current.toast()}>
+      <Button variant="primary" onClick={() => primary.current.toast()}>
         Primary
-      </SlButton>
+      </Button>
 
-      <SlButton variant="success" onClick={() => success.current.toast()}>
+      <Button variant="success" onClick={() => success.current.toast()}>
         Success
-      </SlButton>
+      </Button>
 
-      <SlButton variant="neutral" onClick={() => neutral.current.toast()}>
+      <Button variant="neutral" onClick={() => neutral.current.toast()}>
         Neutral
-      </SlButton>
+      </Button>
 
-      <SlButton variant="warning" onClick={() => warning.current.toast()}>
+      <Button variant="warning" onClick={() => warning.current.toast()}>
         Warning
-      </SlButton>
+      </Button>
 
-      <SlButton variant="danger" onClick={() => danger.current.toast()}>
+      <Button variant="danger" onClick={() => danger.current.toast()}>
         Danger
-      </SlButton>
+      </Button>
 
-      <SlAlert ref={primary} variant="primary" duration="3000" closable>
-        <SlIcon slot="icon" name="info-circle" />
+      <Alert ref={primary} variant="primary" duration="3000" closable>
+        <Icon slot="icon" name="info-circle" />
         <strong>This is super informative</strong>
         <br />
         You can tell by how pretty the alert is.
-      </SlAlert>
+      </Alert>
 
-      <SlAlert ref={success} variant="success" duration="3000" closable>
-        <SlIcon slot="icon" name="check2-circle" />
+      <Alert ref={success} variant="success" duration="3000" closable>
+        <Icon slot="icon" name="check2-circle" />
         <strong>Your changes have been saved</strong>
         <br />
         You can safely exit the app now.
-      </SlAlert>
+      </Alert>
 
-      <SlAlert ref={neutral} variant="neutral" duration="3000" closable>
-        <SlIcon slot="icon" name="gear" />
+      <Alert ref={neutral} variant="neutral" duration="3000" closable>
+        <Icon slot="icon" name="gear" />
         <strong>Your settings have been updated</strong>
         <br />
         Settings will take affect on next login.
-      </SlAlert>
+      </Alert>
 
-      <SlAlert ref={warning} variant="warning" duration="3000" closable>
-        <SlIcon slot="icon" name="exclamation-triangle" />
+      <Alert ref={warning} variant="warning" duration="3000" closable>
+        <Icon slot="icon" name="exclamation-triangle" />
         <strong>Your session has ended</strong>
         <br />
         Please login again to continue.
-      </SlAlert>
+      </Alert>
 
-      <SlAlert ref={danger} variant="danger" duration="3000" closable>
-        <SlIcon slot="icon" name="exclamation-octagon" />
+      <Alert ref={danger} variant="danger" duration="3000" closable>
+        <Icon slot="icon" name="exclamation-octagon" />
         <strong>Your account has been deleted</strong>
         <br />
         We're very sorry to see you go!
-      </SlAlert>
+      </Alert>
     </>
   );
 };
@@ -376,12 +376,12 @@ For convenience, you can create a utility that emits toast notifications with a 
 
 ```html preview
 <div class="alert-toast-wrapper">
-  <sl-button variant="primary">Create Toast</sl-button>
+  <bui-button variant="primary">Create Toast</bui-button>
 </div>
 
 <script>
   const container = document.querySelector('.alert-toast-wrapper');
-  const button = container.querySelector('sl-button');
+  const button = container.querySelector('bui-button');
   let count = 0;
 
   // Always escape HTML for text arguments!
@@ -393,12 +393,12 @@ For convenience, you can create a utility that emits toast notifications with a 
 
   // Custom function to emit toast notifications
   function notify(message, variant = 'primary', icon = 'info-circle', duration = 3000) {
-    const alert = Object.assign(document.createElement('sl-alert'), {
+    const alert = Object.assign(document.createElement('bui-alert'), {
       variant,
       closable: true,
       duration: duration,
       innerHTML: `
-        <sl-icon name="${icon}" slot="icon"></sl-icon>
+        <bui-icon name="${icon}" slot="icon"></bui-icon>
         ${escapeHtml(message)}
       `
     });
@@ -417,10 +417,10 @@ For convenience, you can create a utility that emits toast notifications with a 
 
 The toast stack is a fixed position singleton element created and managed internally by the alert component. It will be added and removed from the DOM as needed when toasts are shown. When more than one toast is visible, they will stack vertically in the toast stack.
 
-By default, the toast stack is positioned at the top-right of the viewport. You can change its position by targeting `.sl-toast-stack` in your stylesheet. To make toasts appear at the top-left of the viewport, for example, use the following styles.
+By default, the toast stack is positioned at the top-right of the viewport. You can change its position by targeting `.bui-toast-stack` in your stylesheet. To make toasts appear at the top-left of the viewport, for example, use the following styles.
 
 ```css
-.sl-toast-stack {
+.bui-toast-stack {
   left: 0;
   right: auto;
 }
@@ -428,4 +428,4 @@ By default, the toast stack is positioned at the top-right of the viewport. You 
 
 ?> By design, it is not possible to show toasts in more than one stack simultaneously. Such behavior is confusing and makes for a poor user experience.
 
-[component-metadata:sl-alert]
+[component-metadata:bui-alert]

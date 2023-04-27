@@ -1,26 +1,26 @@
 # Radio Button
 
-[component-header:sl-radio-button]
+[component-header:bui-radio-button]
 
 Radio buttons are designed to be used with [radio groups](/components/radio-group). When a radio button has focus, the arrow keys can be used to change the selected option just like standard radio controls.
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio-button value="1">Option 1</sl-radio-button>
-  <sl-radio-button value="2">Option 2</sl-radio-button>
-  <sl-radio-button value="3">Option 3</sl-radio-button>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio-button value="1">Option 1</bui-radio-button>
+  <bui-radio-button value="2">Option 2</bui-radio-button>
+  <bui-radio-button value="3">Option 3</bui-radio-button>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadioButton, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { RadioButton, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton value="1">Option 1</SlRadioButton>
-    <SlRadioButton value="2">Option 2</SlRadioButton>
-    <SlRadioButton value="3">Option 3</SlRadioButton>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton value="1">Option 1</RadioButton>
+    <RadioButton value="2">Option 2</RadioButton>
+    <RadioButton value="3">Option 3</RadioButton>
+  </RadioGroup>
 );
 ```
 
@@ -31,22 +31,22 @@ const App = () => (
 To set the initial value and checked state, use the `value` attribute on the containing radio group.
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio-button value="1">Option 1</sl-radio-button>
-  <sl-radio-button value="2">Option 2</sl-radio-button>
-  <sl-radio-button value="3">Option 3</sl-radio-button>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio-button value="1">Option 1</bui-radio-button>
+  <bui-radio-button value="2">Option 2</bui-radio-button>
+  <bui-radio-button value="3">Option 3</bui-radio-button>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadioButton, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { RadioButton, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton value="1">Option 1</SlRadioButton>
-    <SlRadioButton value="2">Option 2</SlRadioButton>
-    <SlRadioButton value="3">Option 3</SlRadioButton>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton value="1">Option 1</RadioButton>
+    <RadioButton value="2">Option 2</RadioButton>
+    <RadioButton value="3">Option 3</RadioButton>
+  </RadioGroup>
 );
 ```
 
@@ -55,24 +55,24 @@ const App = () => (
 Use the `disabled` attribute to disable a radio button.
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio-button value="1">Option 1</sl-radio-button>
-  <sl-radio-button value="2" disabled>Option 2</sl-radio-button>
-  <sl-radio-button value="3">Option 3</sl-radio-button>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio-button value="1">Option 1</bui-radio-button>
+  <bui-radio-button value="2" disabled>Option 2</bui-radio-button>
+  <bui-radio-button value="3">Option 3</bui-radio-button>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadioButton, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { RadioButton, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton value="1">Option 1</SlRadioButton>
-    <SlRadioButton value="2" disabled>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton value="1">Option 1</RadioButton>
+    <RadioButton value="2" disabled>
       Option 2
-    </SlRadioButton>
-    <SlRadioButton value="3">Option 3</SlRadioButton>
-  </SlRadioGroup>
+    </RadioButton>
+    <RadioButton value="3">Option 3</RadioButton>
+  </RadioGroup>
 );
 ```
 
@@ -81,54 +81,54 @@ const App = () => (
 Use the `size` attribute to change a radio button's size.
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio-button size="small" value="1">Option 1</sl-radio-button>
-  <sl-radio-button size="small" value="2">Option 2</sl-radio-button>
-  <sl-radio-button size="small" value="3">Option 3</sl-radio-button>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio-button size="small" value="1">Option 1</bui-radio-button>
+  <bui-radio-button size="small" value="2">Option 2</bui-radio-button>
+  <bui-radio-button size="small" value="3">Option 3</bui-radio-button>
+</bui-radio-group>
 
 <br />
 
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio-button size="medium" value="1">Option 1</sl-radio-button>
-  <sl-radio-button size="medium" value="2">Option 2</sl-radio-button>
-  <sl-radio-button size="medium" value="3">Option 3</sl-radio-button>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio-button size="medium" value="1">Option 1</bui-radio-button>
+  <bui-radio-button size="medium" value="2">Option 2</bui-radio-button>
+  <bui-radio-button size="medium" value="3">Option 3</bui-radio-button>
+</bui-radio-group>
 
 <br />
 
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio-button size="large" value="1">Option 1</sl-radio-button>
-  <sl-radio-button size="large" value="2">Option 2</sl-radio-button>
-  <sl-radio-button size="large" value="3">Option 3</sl-radio-button>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio-button size="large" value="1">Option 1</bui-radio-button>
+  <bui-radio-button size="large" value="2">Option 2</bui-radio-button>
+  <bui-radio-button size="large" value="3">Option 3</bui-radio-button>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadioButton, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { RadioButton, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton size="small" value="1">Option 1</SlRadioButton>
-    <SlRadioButton size="small" value="2">Option 2</SlRadioButton>
-    <SlRadioButton size="small" value="3">Option 3</SlRadioButton>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton size="small" value="1">Option 1</RadioButton>
+    <RadioButton size="small" value="2">Option 2</RadioButton>
+    <RadioButton size="small" value="3">Option 3</RadioButton>
+  </RadioGroup>
 
   <br />
 
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton size="medium" value="1">Option 1</SlRadioButton>
-    <SlRadioButton size="medium" value="2">Option 2</SlRadioButton>
-    <SlRadioButton size="medium" value="3">Option 3</SlRadioButton>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton size="medium" value="1">Option 1</RadioButton>
+    <RadioButton size="medium" value="2">Option 2</RadioButton>
+    <RadioButton size="medium" value="3">Option 3</RadioButton>
+  </RadioGroup>
 
   <br />
 
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton size="large" value="1">Option 1</SlRadioButton>
-    <SlRadioButton size="large" value="2">Option 2</SlRadioButton>
-    <SlRadioButton size="large" value="3">Option 3</SlRadioButton>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton size="large" value="1">Option 1</RadioButton>
+    <RadioButton size="large" value="2">Option 2</RadioButton>
+    <RadioButton size="large" value="3">Option 3</RadioButton>
+  </RadioGroup>
 );
 ```
 
@@ -137,54 +137,54 @@ const App = () => (
 Use the `pill` attribute to give radio buttons rounded edges.
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio-button pill size="small" value="1">Option 1</sl-radio-button>
-  <sl-radio-button pill size="small" value="2">Option 2</sl-radio-button>
-  <sl-radio-button pill size="small" value="3">Option 3</sl-radio-button>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio-button pill size="small" value="1">Option 1</bui-radio-button>
+  <bui-radio-button pill size="small" value="2">Option 2</bui-radio-button>
+  <bui-radio-button pill size="small" value="3">Option 3</bui-radio-button>
+</bui-radio-group>
 
 <br />
 
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio-button pill size="medium" value="1">Option 1</sl-radio-button>
-  <sl-radio-button pill size="medium" value="2">Option 2</sl-radio-button>
-  <sl-radio-button pill size="medium" value="3">Option 3</sl-radio-button>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio-button pill size="medium" value="1">Option 1</bui-radio-button>
+  <bui-radio-button pill size="medium" value="2">Option 2</bui-radio-button>
+  <bui-radio-button pill size="medium" value="3">Option 3</bui-radio-button>
+</bui-radio-group>
 
 <br />
 
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio-button pill size="large" value="1">Option 1</sl-radio-button>
-  <sl-radio-button pill size="large" value="2">Option 2</sl-radio-button>
-  <sl-radio-button pill size="large" value="3">Option 3</sl-radio-button>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio-button pill size="large" value="1">Option 1</bui-radio-button>
+  <bui-radio-button pill size="large" value="2">Option 2</bui-radio-button>
+  <bui-radio-button pill size="large" value="3">Option 3</bui-radio-button>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadioButton, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { RadioButton, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton pill size="small" value="1">Option 1</SlRadioButton>
-    <SlRadioButton pill size="small" value="2">Option 2</SlRadioButton>
-    <SlRadioButton pill size="small" value="3">Option 3</SlRadioButton>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton pill size="small" value="1">Option 1</RadioButton>
+    <RadioButton pill size="small" value="2">Option 2</RadioButton>
+    <RadioButton pill size="small" value="3">Option 3</RadioButton>
+  </RadioGroup>
 
   <br />
 
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton pill size="medium" value="1">Option 1</SlRadioButton>
-    <SlRadioButton pill size="medium" value="2">Option 2</SlRadioButton>
-    <SlRadioButton pill size="medium" value="3">Option 3</SlRadioButton>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton pill size="medium" value="1">Option 1</RadioButton>
+    <RadioButton pill size="medium" value="2">Option 2</RadioButton>
+    <RadioButton pill size="medium" value="3">Option 3</RadioButton>
+  </RadioGroup>
 
   <br />
 
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton pill size="large" value="1">Option 1</SlRadioButton>
-    <SlRadioButton pill size="large" value="2">Option 2</SlRadioButton>
-    <SlRadioButton pill size="large" value="3">Option 3</SlRadioButton>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton pill size="large" value="1">Option 1</RadioButton>
+    <RadioButton pill size="large" value="2">Option 2</RadioButton>
+    <RadioButton pill size="large" value="3">Option 3</RadioButton>
+  </RadioGroup>
 );
 ```
 
@@ -193,46 +193,46 @@ const App = () => (
 Use the `prefix` and `suffix` slots to add icons.
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio-button value="1">
-    <sl-icon slot="prefix" name="archive"></sl-icon>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio-button value="1">
+    <bui-icon slot="prefix" name="archive"></bui-icon>
     Option 1
-  </sl-radio-button>
+  </bui-radio-button>
 
-  <sl-radio-button value="2">
-    <sl-icon slot="suffix" name="bag"></sl-icon>
+  <bui-radio-button value="2">
+    <bui-icon slot="suffix" name="bag"></bui-icon>
     Option 2
-  </sl-radio-button>
+  </bui-radio-button>
 
-  <sl-radio-button value="3">
-    <sl-icon slot="prefix" name="gift"></sl-icon>
-    <sl-icon slot="suffix" name="cart"></sl-icon>
+  <bui-radio-button value="3">
+    <bui-icon slot="prefix" name="gift"></bui-icon>
+    <bui-icon slot="suffix" name="cart"></bui-icon>
     Option 3
-  </sl-radio-button>
-</sl-radio-group>
+  </bui-radio-button>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlIcon, SlRadioButton, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { Icon, RadioButton, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton value="1">
-      <SlIcon slot="prefix" name="archive" />
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton value="1">
+      <Icon slot="prefix" name="archive" />
       Option 1
-    </SlRadioButton>
+    </RadioButton>
 
-    <SlRadioButton value="2">
-      <SlIcon slot="suffix" name="bag" />
+    <RadioButton value="2">
+      <Icon slot="suffix" name="bag" />
       Option 2
-    </SlRadioButton>
+    </RadioButton>
 
-    <SlRadioButton value="3">
-      <SlIcon slot="prefix" name="gift" />
-      <SlIcon slot="suffix" name="cart" />
+    <RadioButton value="3">
+      <Icon slot="prefix" name="gift" />
+      <Icon slot="suffix" name="cart" />
       Option 3
-    </SlRadioButton>
-  </SlRadioGroup>
+    </RadioButton>
+  </RadioGroup>
 );
 ```
 
@@ -241,55 +241,55 @@ const App = () => (
 You can omit button labels and use icons instead. Make sure to set a `label` attribute on each icon so screen readers will announce each option correctly.
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="neutral">
-  <sl-radio-button value="angry">
-    <sl-icon name="emoji-angry" label="Angry"></sl-icon>
-  </sl-radio-button>
+<bui-radio-group label="Select an option" name="a" value="neutral">
+  <bui-radio-button value="angry">
+    <bui-icon name="emoji-angry" label="Angry"></bui-icon>
+  </bui-radio-button>
 
-  <sl-radio-button value="sad">
-    <sl-icon name="emoji-frown" label="Sad"></sl-icon>
-  </sl-radio-button>
+  <bui-radio-button value="sad">
+    <bui-icon name="emoji-frown" label="Sad"></bui-icon>
+  </bui-radio-button>
 
-  <sl-radio-button value="neutral">
-    <sl-icon name="emoji-neutral" label="Neutral"></sl-icon>
-  </sl-radio-button>
+  <bui-radio-button value="neutral">
+    <bui-icon name="emoji-neutral" label="Neutral"></bui-icon>
+  </bui-radio-button>
 
-  <sl-radio-button value="happy">
-    <sl-icon name="emoji-smile" label="Happy"></sl-icon>
-  </sl-radio-button>
+  <bui-radio-button value="happy">
+    <bui-icon name="emoji-smile" label="Happy"></bui-icon>
+  </bui-radio-button>
 
-  <sl-radio-button value="laughing">
-    <sl-icon name="emoji-laughing" label="Laughing"></sl-icon>
-  </sl-radio-button>
-</sl-radio-group>
+  <bui-radio-button value="laughing">
+    <bui-icon name="emoji-laughing" label="Laughing"></bui-icon>
+  </bui-radio-button>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlIcon, SlRadioButton, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { Icon, RadioButton, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="neutral">
-    <SlRadioButton value="angry">
-      <SlIcon name="emoji-angry" label="Angry" />
-    </SlRadioButton>
+  <RadioGroup label="Select an option" name="a" value="neutral">
+    <RadioButton value="angry">
+      <Icon name="emoji-angry" label="Angry" />
+    </RadioButton>
 
-    <SlRadioButton value="sad">
-      <SlIcon name="emoji-frown" label="Sad" />
-    </SlRadioButton>
+    <RadioButton value="sad">
+      <Icon name="emoji-frown" label="Sad" />
+    </RadioButton>
 
-    <SlRadioButton value="neutral">
-      <SlIcon name="emoji-neutral" label="Neutral" />
-    </SlRadioButton>
+    <RadioButton value="neutral">
+      <Icon name="emoji-neutral" label="Neutral" />
+    </RadioButton>
 
-    <SlRadioButton value="happy">
-      <SlIcon name="emoji-smile" label="Happy" />
-    </SlRadioButton>
+    <RadioButton value="happy">
+      <Icon name="emoji-smile" label="Happy" />
+    </RadioButton>
 
-    <SlRadioButton value="laughing">
-      <SlIcon name="emoji-laughing" label="Laughing" />
-    </SlRadioButton>
-  </SlRadioGroup>
+    <RadioButton value="laughing">
+      <Icon name="emoji-laughing" label="Laughing" />
+    </RadioButton>
+  </RadioGroup>
 );
 ```
 
-[component-metadata:sl-radio-button]
+[component-metadata:bui-radio-button]

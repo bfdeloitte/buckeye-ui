@@ -1,24 +1,24 @@
 # Button Group
 
-[component-header:sl-button-group]
+[component-header:bui-button-group]
 
 ```html preview
-<sl-button-group label="Alignment">
-  <sl-button>Left</sl-button>
-  <sl-button>Center</sl-button>
-  <sl-button>Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button>Left</bui-button>
+  <bui-button>Center</bui-button>
+  <bui-button>Right</bui-button>
+</bui-button-group>
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup } from 'buckeye-ui/dist/react';
+import { Button, ButtonGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlButtonGroup label="Alignment">
-    <SlButton>Left</SlButton>
-    <SlButton>Center</SlButton>
-    <SlButton>Right</SlButton>
-  </SlButtonGroup>
+  <ButtonGroup label="Alignment">
+    <Button>Left</Button>
+    <Button>Center</Button>
+    <Button>Right</Button>
+  </ButtonGroup>
 );
 ```
 
@@ -29,57 +29,57 @@ const App = () => (
 All button sizes are supported, but avoid mixing sizes within the same button group.
 
 ```html preview
-<sl-button-group label="Alignment">
-  <sl-button size="small">Left</sl-button>
-  <sl-button size="small">Center</sl-button>
-  <sl-button size="small">Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button size="small">Left</bui-button>
+  <bui-button size="small">Center</bui-button>
+  <bui-button size="small">Right</bui-button>
+</bui-button-group>
 
 <br /><br />
 
-<sl-button-group label="Alignment">
-  <sl-button size="medium">Left</sl-button>
-  <sl-button size="medium">Center</sl-button>
-  <sl-button size="medium">Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button size="medium">Left</bui-button>
+  <bui-button size="medium">Center</bui-button>
+  <bui-button size="medium">Right</bui-button>
+</bui-button-group>
 
 <br /><br />
 
-<sl-button-group label="Alignment">
-  <sl-button size="large">Left</sl-button>
-  <sl-button size="large">Center</sl-button>
-  <sl-button size="large">Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button size="large">Left</bui-button>
+  <bui-button size="large">Center</bui-button>
+  <bui-button size="large">Right</bui-button>
+</bui-button-group>
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup } from 'buckeye-ui/dist/react';
+import { Button, ButtonGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButtonGroup label="Alignment">
-      <SlButton size="small">Left</SlButton>
-      <SlButton size="small">Center</SlButton>
-      <SlButton size="small">Right</SlButton>
-    </SlButtonGroup>
+    <ButtonGroup label="Alignment">
+      <Button size="small">Left</Button>
+      <Button size="small">Center</Button>
+      <Button size="small">Right</Button>
+    </ButtonGroup>
 
     <br />
     <br />
 
-    <SlButtonGroup label="Alignment">
-      <SlButton size="medium">Left</SlButton>
-      <SlButton size="medium">Center</SlButton>
-      <SlButton size="medium">Right</SlButton>
-    </SlButtonGroup>
+    <ButtonGroup label="Alignment">
+      <Button size="medium">Left</Button>
+      <Button size="medium">Center</Button>
+      <Button size="medium">Right</Button>
+    </ButtonGroup>
 
     <br />
     <br />
 
-    <SlButtonGroup label="Alignment">
-      <SlButton size="large">Left</SlButton>
-      <SlButton size="large">Center</SlButton>
-      <SlButton size="large">Right</SlButton>
-    </SlButtonGroup>
+    <ButtonGroup label="Alignment">
+      <Button size="large">Left</Button>
+      <Button size="large">Center</Button>
+      <Button size="large">Right</Button>
+    </ButtonGroup>
   </>
 );
 ```
@@ -89,91 +89,91 @@ const App = () => (
 Theme buttons are supported through the button's `variant` attribute.
 
 ```html preview
-<sl-button-group label="Alignment">
-  <sl-button variant="primary">Left</sl-button>
-  <sl-button variant="primary">Center</sl-button>
-  <sl-button variant="primary">Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button variant="primary">Left</bui-button>
+  <bui-button variant="primary">Center</bui-button>
+  <bui-button variant="primary">Right</bui-button>
+</bui-button-group>
 
 <br /><br />
 
-<sl-button-group label="Alignment">
-  <sl-button variant="success">Left</sl-button>
-  <sl-button variant="success">Center</sl-button>
-  <sl-button variant="success">Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button variant="success">Left</bui-button>
+  <bui-button variant="success">Center</bui-button>
+  <bui-button variant="success">Right</bui-button>
+</bui-button-group>
 
 <br /><br />
 
-<sl-button-group label="Alignment">
-  <sl-button variant="neutral">Left</sl-button>
-  <sl-button variant="neutral">Center</sl-button>
-  <sl-button variant="neutral">Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button variant="neutral">Left</bui-button>
+  <bui-button variant="neutral">Center</bui-button>
+  <bui-button variant="neutral">Right</bui-button>
+</bui-button-group>
 
 <br /><br />
 
-<sl-button-group label="Alignment">
-  <sl-button variant="warning">Left</sl-button>
-  <sl-button variant="warning">Center</sl-button>
-  <sl-button variant="warning">Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button variant="warning">Left</bui-button>
+  <bui-button variant="warning">Center</bui-button>
+  <bui-button variant="warning">Right</bui-button>
+</bui-button-group>
 
 <br /><br />
 
-<sl-button-group label="Alignment">
-  <sl-button variant="danger">Left</sl-button>
-  <sl-button variant="danger">Center</sl-button>
-  <sl-button variant="danger">Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button variant="danger">Left</bui-button>
+  <bui-button variant="danger">Center</bui-button>
+  <bui-button variant="danger">Right</bui-button>
+</bui-button-group>
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup } from 'buckeye-ui/dist/react';
+import { Button, ButtonGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButtonGroup label="Alignment">
-      <SlButton variant="primary">Left</SlButton>
-      <SlButton variant="primary">Center</SlButton>
-      <SlButton variant="primary">Right</SlButton>
-    </SlButtonGroup>
+    <ButtonGroup label="Alignment">
+      <Button variant="primary">Left</Button>
+      <Button variant="primary">Center</Button>
+      <Button variant="primary">Right</Button>
+    </ButtonGroup>
 
     <br />
     <br />
 
-    <SlButtonGroup label="Alignment">
-      <SlButton variant="success">Left</SlButton>
-      <SlButton variant="success">Center</SlButton>
-      <SlButton variant="success">Right</SlButton>
-    </SlButtonGroup>
+    <ButtonGroup label="Alignment">
+      <Button variant="success">Left</Button>
+      <Button variant="success">Center</Button>
+      <Button variant="success">Right</Button>
+    </ButtonGroup>
 
     <br />
     <br />
 
-    <SlButtonGroup label="Alignment">
-      <SlButton variant="neutral">Left</SlButton>
-      <SlButton variant="neutral">Center</SlButton>
-      <SlButton variant="neutral">Right</SlButton>
-    </SlButtonGroup>
+    <ButtonGroup label="Alignment">
+      <Button variant="neutral">Left</Button>
+      <Button variant="neutral">Center</Button>
+      <Button variant="neutral">Right</Button>
+    </ButtonGroup>
 
     <br />
     <br />
 
-    <SlButtonGroup label="Alignment">
-      <SlButton variant="warning">Left</SlButton>
-      <SlButton variant="warning">Center</SlButton>
-      <SlButton variant="warning">Right</SlButton>
-    </SlButtonGroup>
+    <ButtonGroup label="Alignment">
+      <Button variant="warning">Left</Button>
+      <Button variant="warning">Center</Button>
+      <Button variant="warning">Right</Button>
+    </ButtonGroup>
 
     <br />
     <br />
 
-    <SlButtonGroup label="Alignment">
-      <SlButton variant="danger">Left</SlButton>
-      <SlButton variant="danger">Center</SlButton>
-      <SlButton variant="danger">Right</SlButton>
-    </SlButtonGroup>
+    <ButtonGroup label="Alignment">
+      <Button variant="danger">Left</Button>
+      <Button variant="danger">Center</Button>
+      <Button variant="danger">Right</Button>
+    </ButtonGroup>
   </>
 );
 ```
@@ -183,116 +183,116 @@ const App = () => (
 Pill buttons are supported through the button's `pill` attribute.
 
 ```html preview
-<sl-button-group label="Alignment">
-  <sl-button size="small" pill>Left</sl-button>
-  <sl-button size="small" pill>Center</sl-button>
-  <sl-button size="small" pill>Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button size="small" pill>Left</bui-button>
+  <bui-button size="small" pill>Center</bui-button>
+  <bui-button size="small" pill>Right</bui-button>
+</bui-button-group>
 
 <br /><br />
 
-<sl-button-group label="Alignment">
-  <sl-button size="medium" pill>Left</sl-button>
-  <sl-button size="medium" pill>Center</sl-button>
-  <sl-button size="medium" pill>Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button size="medium" pill>Left</bui-button>
+  <bui-button size="medium" pill>Center</bui-button>
+  <bui-button size="medium" pill>Right</bui-button>
+</bui-button-group>
 
 <br /><br />
 
-<sl-button-group label="Alignment">
-  <sl-button size="large" pill>Left</sl-button>
-  <sl-button size="large" pill>Center</sl-button>
-  <sl-button size="large" pill>Right</sl-button>
-</sl-button-group>
+<bui-button-group label="Alignment">
+  <bui-button size="large" pill>Left</bui-button>
+  <bui-button size="large" pill>Center</bui-button>
+  <bui-button size="large" pill>Right</bui-button>
+</bui-button-group>
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup } from 'buckeye-ui/dist/react';
+import { Button, ButtonGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButtonGroup label="Alignment">
-      <SlButton size="small" pill>
+    <ButtonGroup label="Alignment">
+      <Button size="small" pill>
         Left
-      </SlButton>
-      <SlButton size="small" pill>
+      </Button>
+      <Button size="small" pill>
         Center
-      </SlButton>
-      <SlButton size="small" pill>
+      </Button>
+      <Button size="small" pill>
         Right
-      </SlButton>
-    </SlButtonGroup>
+      </Button>
+    </ButtonGroup>
 
     <br />
     <br />
 
-    <SlButtonGroup label="Alignment">
-      <SlButton size="medium" pill>
+    <ButtonGroup label="Alignment">
+      <Button size="medium" pill>
         Left
-      </SlButton>
-      <SlButton size="medium" pill>
+      </Button>
+      <Button size="medium" pill>
         Center
-      </SlButton>
-      <SlButton size="medium" pill>
+      </Button>
+      <Button size="medium" pill>
         Right
-      </SlButton>
-    </SlButtonGroup>
+      </Button>
+    </ButtonGroup>
 
     <br />
     <br />
 
-    <SlButtonGroup label="Alignment">
-      <SlButton size="large" pill>
+    <ButtonGroup label="Alignment">
+      <Button size="large" pill>
         Left
-      </SlButton>
-      <SlButton size="large" pill>
+      </Button>
+      <Button size="large" pill>
         Center
-      </SlButton>
-      <SlButton size="large" pill>
+      </Button>
+      <Button size="large" pill>
         Right
-      </SlButton>
-    </SlButtonGroup>
+      </Button>
+    </ButtonGroup>
   </>
 );
 ```
 
 ### Dropdowns in Button Groups
 
-Dropdowns can be placed inside button groups as long as the trigger is an `<sl-button>` element.
+Dropdowns can be placed inside button groups as long as the trigger is an `<bui-button>` element.
 
 ```html preview
-<sl-button-group label="Example Button Group">
-  <sl-button>Button</sl-button>
-  <sl-button>Button</sl-button>
-  <sl-dropdown>
-    <sl-button slot="trigger" caret>Dropdown</sl-button>
-    <sl-menu>
-      <sl-menu-item>Item 1</sl-menu-item>
-      <sl-menu-item>Item 2</sl-menu-item>
-      <sl-menu-item>Item 3</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
-</sl-button-group>
+<bui-button-group label="Example Button Group">
+  <bui-button>Button</bui-button>
+  <bui-button>Button</bui-button>
+  <bui-dropdown>
+    <bui-button slot="trigger" caret>Dropdown</bui-button>
+    <bui-menu>
+      <bui-menu-item>Item 1</bui-menu-item>
+      <bui-menu-item>Item 2</bui-menu-item>
+      <bui-menu-item>Item 3</bui-menu-item>
+    </bui-menu>
+  </bui-dropdown>
+</bui-button-group>
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup, SlDropdown, SlMenu, SlMenuItem } from 'buckeye-ui/dist/react';
+import { Button, ButtonGroup, Dropdown, Menu, MenuItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlButtonGroup label="Example Button Group">
-    <SlButton>Button</SlButton>
-    <SlButton>Button</SlButton>
-    <SlDropdown>
-      <SlButton slot="trigger" caret>
+  <ButtonGroup label="Example Button Group">
+    <Button>Button</Button>
+    <Button>Button</Button>
+    <Dropdown>
+      <Button slot="trigger" caret>
         Dropdown
-      </SlButton>
-      <SlMenu>
-        <SlMenuItem>Item 1</SlMenuItem>
-        <SlMenuItem>Item 2</SlMenuItem>
-        <SlMenuItem>Item 3</SlMenuItem>
-      </SlMenu>
-    </SlDropdown>
-  </SlButtonGroup>
+      </Button>
+      <Menu>
+        <MenuItem>Item 1</MenuItem>
+        <MenuItem>Item 2</MenuItem>
+        <MenuItem>Item 3</MenuItem>
+      </Menu>
+    </Dropdown>
+  </ButtonGroup>
 );
 ```
 
@@ -301,36 +301,36 @@ const App = () => (
 Create a split button using a button and a dropdown. Use a [visually hidden](/components/visually-hidden) label to ensure the dropdown is accessible to users with assistive devices.
 
 ```html preview
-<sl-button-group label="Example Button Group">
-  <sl-button variant="primary">Save</sl-button>
-  <sl-dropdown placement="bottom-end">
-    <sl-button slot="trigger" variant="primary" caret>
-      <sl-visually-hidden>More options</sl-visually-hidden>
-    </sl-button>
-    <sl-menu>
-      <sl-menu-item>Save</sl-menu-item>
-      <sl-menu-item>Save as&hellip;</sl-menu-item>
-      <sl-menu-item>Save all</sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
-</sl-button-group>
+<bui-button-group label="Example Button Group">
+  <bui-button variant="primary">Save</bui-button>
+  <bui-dropdown placement="bottom-end">
+    <bui-button slot="trigger" variant="primary" caret>
+      <bui-visually-hidden>More options</bui-visually-hidden>
+    </bui-button>
+    <bui-menu>
+      <bui-menu-item>Save</bui-menu-item>
+      <bui-menu-item>Save as&hellip;</bui-menu-item>
+      <bui-menu-item>Save all</bui-menu-item>
+    </bui-menu>
+  </bui-dropdown>
+</bui-button-group>
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup, SlDropdown, SlMenu, SlMenuItem } from 'buckeye-ui/dist/react';
+import { Button, ButtonGroup, Dropdown, Menu, MenuItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlButtonGroup label="Example Button Group">
-    <SlButton variant="primary">Save</SlButton>
-    <SlDropdown placement="bottom-end">
-      <SlButton slot="trigger" variant="primary" caret></SlButton>
-      <SlMenu>
-        <SlMenuItem>Save</SlMenuItem>
-        <SlMenuItem>Save as&hellip;</SlMenuItem>
-        <SlMenuItem>Save all</SlMenuItem>
-      </SlMenu>
-    </SlDropdown>
-  </SlButtonGroup>
+  <ButtonGroup label="Example Button Group">
+    <Button variant="primary">Save</Button>
+    <Dropdown placement="bottom-end">
+      <Button slot="trigger" variant="primary" caret></Button>
+      <Menu>
+        <MenuItem>Save</MenuItem>
+        <MenuItem>Save as&hellip;</MenuItem>
+        <MenuItem>Save all</MenuItem>
+      </Menu>
+    </Dropdown>
+  </ButtonGroup>
 );
 ```
 
@@ -339,39 +339,39 @@ const App = () => (
 Buttons can be wrapped in tooltips to provide more detail when the user interacts with them.
 
 ```html preview
-<sl-button-group label="Alignment">
-  <sl-tooltip content="I'm on the left">
-    <sl-button>Left</sl-button>
-  </sl-tooltip>
+<bui-button-group label="Alignment">
+  <bui-tooltip content="I'm on the left">
+    <bui-button>Left</bui-button>
+  </bui-tooltip>
 
-  <sl-tooltip content="I'm in the middle">
-    <sl-button>Center</sl-button>
-  </sl-tooltip>
+  <bui-tooltip content="I'm in the middle">
+    <bui-button>Center</bui-button>
+  </bui-tooltip>
 
-  <sl-tooltip content="I'm on the right">
-    <sl-button>Right</sl-button>
-  </sl-tooltip>
-</sl-button-group>
+  <bui-tooltip content="I'm on the right">
+    <bui-button>Right</bui-button>
+  </bui-tooltip>
+</bui-button-group>
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup, SlTooltip } from 'buckeye-ui/dist/react';
+import { Button, ButtonGroup, Tooltip } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButtonGroup label="Alignment">
-      <SlTooltip content="I'm on the left">
-        <SlButton>Left</SlButton>
-      </SlTooltip>
+    <ButtonGroup label="Alignment">
+      <Tooltip content="I'm on the left">
+        <Button>Left</Button>
+      </Tooltip>
 
-      <SlTooltip content="I'm in the middle">
-        <SlButton>Center</SlButton>
-      </SlTooltip>
+      <Tooltip content="I'm in the middle">
+        <Button>Center</Button>
+      </Tooltip>
 
-      <SlTooltip content="I'm on the right">
-        <SlButton>Right</SlButton>
-      </SlTooltip>
-    </SlButtonGroup>
+      <Tooltip content="I'm on the right">
+        <Button>Right</Button>
+      </Tooltip>
+    </ButtonGroup>
   </>
 );
 ```
@@ -382,107 +382,107 @@ Create interactive toolbars with button groups.
 
 ```html preview
 <div class="button-group-toolbar">
-  <sl-button-group label="History">
-    <sl-tooltip content="Undo">
-      <sl-button><sl-icon name="arrow-counterclockwise" label="Undo"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Redo">
-      <sl-button><sl-icon name="arrow-clockwise" label="Redo"></sl-icon></sl-button>
-    </sl-tooltip>
-  </sl-button-group>
+  <bui-button-group label="History">
+    <bui-tooltip content="Undo">
+      <bui-button><bui-icon name="arrow-counterclockwise" label="Undo"></bui-icon></bui-button>
+    </bui-tooltip>
+    <bui-tooltip content="Redo">
+      <bui-button><bui-icon name="arrow-clockwise" label="Redo"></bui-icon></bui-button>
+    </bui-tooltip>
+  </bui-button-group>
 
-  <sl-button-group label="Formatting">
-    <sl-tooltip content="Bold">
-      <sl-button><sl-icon name="type-bold" label="Bold"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Italic">
-      <sl-button><sl-icon name="type-italic" label="Italic"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Underline">
-      <sl-button><sl-icon name="type-underline" label="Underline"></sl-icon></sl-button>
-    </sl-tooltip>
-  </sl-button-group>
+  <bui-button-group label="Formatting">
+    <bui-tooltip content="Bold">
+      <bui-button><bui-icon name="type-bold" label="Bold"></bui-icon></bui-button>
+    </bui-tooltip>
+    <bui-tooltip content="Italic">
+      <bui-button><bui-icon name="type-italic" label="Italic"></bui-icon></bui-button>
+    </bui-tooltip>
+    <bui-tooltip content="Underline">
+      <bui-button><bui-icon name="type-underline" label="Underline"></bui-icon></bui-button>
+    </bui-tooltip>
+  </bui-button-group>
 
-  <sl-button-group label="Alignment">
-    <sl-tooltip content="Align Left">
-      <sl-button><sl-icon name="justify-left" label="Align Left"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Align Center">
-      <sl-button><sl-icon name="justify" label="Align Center"></sl-icon></sl-button>
-    </sl-tooltip>
-    <sl-tooltip content="Align Right">
-      <sl-button><sl-icon name="justify-right" label="Align Right"></sl-icon></sl-button>
-    </sl-tooltip>
-  </sl-button-group>
+  <bui-button-group label="Alignment">
+    <bui-tooltip content="Align Left">
+      <bui-button><bui-icon name="justify-left" label="Align Left"></bui-icon></bui-button>
+    </bui-tooltip>
+    <bui-tooltip content="Align Center">
+      <bui-button><bui-icon name="justify" label="Align Center"></bui-icon></bui-button>
+    </bui-tooltip>
+    <bui-tooltip content="Align Right">
+      <bui-button><bui-icon name="justify-right" label="Align Right"></bui-icon></bui-button>
+    </bui-tooltip>
+  </bui-button-group>
 </div>
 
 <style>
-  .button-group-toolbar sl-button-group:not(:last-of-type) {
-    margin-right: var(--sl-spacing-x-small);
+  .button-group-toolbar bui-button-group:not(:last-of-type) {
+    margin-right: var(--bui-spacing-x-small);
   }
 </style>
 ```
 
 ```jsx react
-import { SlButton, SlButtonGroup, SlIcon, SlTooltip } from 'buckeye-ui/dist/react';
+import { Button, ButtonGroup, Icon, Tooltip } from 'buckeye-ui/dist/react';
 
 const css = `
-  .button-group-toolbar sl-button-group:not(:last-of-type) {
-    margin-right: var(--sl-spacing-x-small);
+  .button-group-toolbar bui-button-group:not(:last-of-type) {
+    margin-right: var(--bui-spacing-x-small);
   }
 `;
 
 const App = () => (
   <>
     <div className="button-group-toolbar">
-      <SlButtonGroup label="History">
-        <SlTooltip content="Undo">
-          <SlButton>
-            <SlIcon name="arrow-counterclockwise"></SlIcon>
-          </SlButton>
-        </SlTooltip>
-        <SlTooltip content="Redo">
-          <SlButton>
-            <SlIcon name="arrow-clockwise"></SlIcon>
-          </SlButton>
-        </SlTooltip>
-      </SlButtonGroup>
+      <ButtonGroup label="History">
+        <Tooltip content="Undo">
+          <Button>
+            <Icon name="arrow-counterclockwise"></Icon>
+          </Button>
+        </Tooltip>
+        <Tooltip content="Redo">
+          <Button>
+            <Icon name="arrow-clockwise"></Icon>
+          </Button>
+        </Tooltip>
+      </ButtonGroup>
 
-      <SlButtonGroup label="Formatting">
-        <SlTooltip content="Bold">
-          <SlButton>
-            <SlIcon name="type-bold"></SlIcon>
-          </SlButton>
-        </SlTooltip>
-        <SlTooltip content="Italic">
-          <SlButton>
-            <SlIcon name="type-italic"></SlIcon>
-          </SlButton>
-        </SlTooltip>
-        <SlTooltip content="Underline">
-          <SlButton>
-            <SlIcon name="type-underline"></SlIcon>
-          </SlButton>
-        </SlTooltip>
-      </SlButtonGroup>
+      <ButtonGroup label="Formatting">
+        <Tooltip content="Bold">
+          <Button>
+            <Icon name="type-bold"></Icon>
+          </Button>
+        </Tooltip>
+        <Tooltip content="Italic">
+          <Button>
+            <Icon name="type-italic"></Icon>
+          </Button>
+        </Tooltip>
+        <Tooltip content="Underline">
+          <Button>
+            <Icon name="type-underline"></Icon>
+          </Button>
+        </Tooltip>
+      </ButtonGroup>
 
-      <SlButtonGroup label="Alignment">
-        <SlTooltip content="Align Left">
-          <SlButton>
-            <SlIcon name="justify-left"></SlIcon>
-          </SlButton>
-        </SlTooltip>
-        <SlTooltip content="Align Center">
-          <SlButton>
-            <SlIcon name="justify"></SlIcon>
-          </SlButton>
-        </SlTooltip>
-        <SlTooltip content="Align Right">
-          <SlButton>
-            <SlIcon name="justify-right"></SlIcon>
-          </SlButton>
-        </SlTooltip>
-      </SlButtonGroup>
+      <ButtonGroup label="Alignment">
+        <Tooltip content="Align Left">
+          <Button>
+            <Icon name="justify-left"></Icon>
+          </Button>
+        </Tooltip>
+        <Tooltip content="Align Center">
+          <Button>
+            <Icon name="justify"></Icon>
+          </Button>
+        </Tooltip>
+        <Tooltip content="Align Right">
+          <Button>
+            <Icon name="justify-right"></Icon>
+          </Button>
+        </Tooltip>
+      </ButtonGroup>
     </div>
 
     <style>{css}</style>
@@ -490,4 +490,4 @@ const App = () => (
 );
 ```
 
-[component-metadata:sl-button-group]
+[component-metadata:bui-button-group]

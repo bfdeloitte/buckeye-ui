@@ -1,15 +1,15 @@
 # Badge
 
-[component-header:sl-badge]
+[component-header:bui-badge]
 
 ```html preview
-<sl-badge>Badge</sl-badge>
+<bui-badge>Badge</bui-badge>
 ```
 
 ```jsx react
-import { SlBadge } from 'buckeye-ui/dist/react';
+import { Badge } from 'buckeye-ui/dist/react';
 
-const App = () => <SlBadge>Badge</SlBadge>;
+const App = () => <Badge>Badge</Badge>;
 ```
 
 ## Examples
@@ -19,23 +19,23 @@ const App = () => <SlBadge>Badge</SlBadge>;
 Set the `variant` attribute to change the badge's variant.
 
 ```html preview
-<sl-badge variant="primary">Primary</sl-badge>
-<sl-badge variant="success">Success</sl-badge>
-<sl-badge variant="neutral">Neutral</sl-badge>
-<sl-badge variant="warning">Warning</sl-badge>
-<sl-badge variant="danger">Danger</sl-badge>
+<bui-badge variant="primary">Primary</bui-badge>
+<bui-badge variant="success">Success</bui-badge>
+<bui-badge variant="neutral">Neutral</bui-badge>
+<bui-badge variant="warning">Warning</bui-badge>
+<bui-badge variant="danger">Danger</bui-badge>
 ```
 
 ```jsx react
-import { SlBadge } from 'buckeye-ui/dist/react';
+import { Badge } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlBadge variant="primary">Primary</SlBadge>
-    <SlBadge variant="success">Success</SlBadge>
-    <SlBadge variant="neutral">Neutral</SlBadge>
-    <SlBadge variant="warning">Warning</SlBadge>
-    <SlBadge variant="danger">Danger</SlBadge>
+    <Badge variant="primary">Primary</Badge>
+    <Badge variant="success">Success</Badge>
+    <Badge variant="neutral">Neutral</Badge>
+    <Badge variant="warning">Warning</Badge>
+    <Badge variant="danger">Danger</Badge>
   </>
 );
 ```
@@ -45,33 +45,33 @@ const App = () => (
 Use the `pill` attribute to give badges rounded edges.
 
 ```html preview
-<sl-badge variant="primary" pill>Primary</sl-badge>
-<sl-badge variant="success" pill>Success</sl-badge>
-<sl-badge variant="neutral" pill>Neutral</sl-badge>
-<sl-badge variant="warning" pill>Warning</sl-badge>
-<sl-badge variant="danger" pill>Danger</sl-badge>
+<bui-badge variant="primary" pill>Primary</bui-badge>
+<bui-badge variant="success" pill>Success</bui-badge>
+<bui-badge variant="neutral" pill>Neutral</bui-badge>
+<bui-badge variant="warning" pill>Warning</bui-badge>
+<bui-badge variant="danger" pill>Danger</bui-badge>
 ```
 
 ```jsx react
-import { SlBadge } from 'buckeye-ui/dist/react';
+import { Badge } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlBadge variant="primary" pill>
+    <Badge variant="primary" pill>
       Primary
-    </SlBadge>
-    <SlBadge variant="success" pill>
+    </Badge>
+    <Badge variant="success" pill>
       Success
-    </SlBadge>
-    <SlBadge variant="neutral" pill>
+    </Badge>
+    <Badge variant="neutral" pill>
       Neutral
-    </SlBadge>
-    <SlBadge variant="warning" pill>
+    </Badge>
+    <Badge variant="warning" pill>
       Warning
-    </SlBadge>
-    <SlBadge variant="danger" pill>
+    </Badge>
+    <Badge variant="danger" pill>
       Danger
-    </SlBadge>
+    </Badge>
   </>
 );
 ```
@@ -82,25 +82,25 @@ Use the `pulse` attribute to draw attention to the badge with a subtle animation
 
 ```html preview
 <div class="badge-pulse">
-  <sl-badge variant="primary" pill pulse>1</sl-badge>
-  <sl-badge variant="success" pill pulse>1</sl-badge>
-  <sl-badge variant="neutral" pill pulse>1</sl-badge>
-  <sl-badge variant="warning" pill pulse>1</sl-badge>
-  <sl-badge variant="danger" pill pulse>1</sl-badge>
+  <bui-badge variant="primary" pill pulse>1</bui-badge>
+  <bui-badge variant="success" pill pulse>1</bui-badge>
+  <bui-badge variant="neutral" pill pulse>1</bui-badge>
+  <bui-badge variant="warning" pill pulse>1</bui-badge>
+  <bui-badge variant="danger" pill pulse>1</bui-badge>
 </div>
 
 <style>
-  .badge-pulse sl-badge:not(:last-of-type) {
+  .badge-pulse bui-badge:not(:last-of-type) {
     margin-right: 1rem;
   }
 </style>
 ```
 
 ```jsx react
-import { SlBadge } from 'buckeye-ui/dist/react';
+import { Badge } from 'buckeye-ui/dist/react';
 
 const css = `
-  .badge-pulse sl-badge:not(:last-of-type) {
+  .badge-pulse bui-badge:not(:last-of-type) {
     margin-right: 1rem;
   }
 `;
@@ -108,21 +108,21 @@ const css = `
 const App = () => (
   <>
     <div className="badge-pulse">
-      <SlBadge variant="primary" pill pulse>
+      <Badge variant="primary" pill pulse>
         1
-      </SlBadge>
-      <SlBadge variant="success" pill pulse>
+      </Badge>
+      <Badge variant="success" pill pulse>
         1
-      </SlBadge>
-      <SlBadge variant="neutral" pill pulse>
+      </Badge>
+      <Badge variant="neutral" pill pulse>
         1
-      </SlBadge>
-      <SlBadge variant="warning" pill pulse>
+      </Badge>
+      <Badge variant="warning" pill pulse>
         1
-      </SlBadge>
-      <SlBadge variant="danger" pill pulse>
+      </Badge>
+      <Badge variant="danger" pill pulse>
         1
-      </SlBadge>
+      </Badge>
     </div>
 
     <style>{css}</style>
@@ -135,45 +135,45 @@ const App = () => (
 One of the most common use cases for badges is attaching them to buttons. To make this easier, badges will be automatically positioned at the top-right when they're a child of a button.
 
 ```html preview
-<sl-button>
+<bui-button>
   Requests
-  <sl-badge pill>30</sl-badge>
-</sl-button>
+  <bui-badge pill>30</bui-badge>
+</bui-button>
 
-<sl-button style="margin-inline-start: 1rem;">
+<bui-button style="margin-inline-start: 1rem;">
   Warnings
-  <sl-badge variant="warning" pill>8</sl-badge>
-</sl-button>
+  <bui-badge variant="warning" pill>8</bui-badge>
+</bui-button>
 
-<sl-button style="margin-inline-start: 1rem;">
+<bui-button style="margin-inline-start: 1rem;">
   Errors
-  <sl-badge variant="danger" pill>6</sl-badge>
-</sl-button>
+  <bui-badge variant="danger" pill>6</bui-badge>
+</bui-button>
 ```
 
 ```jsx react
-import { SlBadge, SlButton } from 'buckeye-ui/dist/react';
+import { Badge, Button } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlButton>
+    <Button>
       Requests
-      <SlBadge pill>30</SlBadge>
-    </SlButton>
+      <Badge pill>30</Badge>
+    </Button>
 
-    <SlButton style={{ marginInlineStart: '1rem' }}>
+    <Button style={{ marginInlineStart: '1rem' }}>
       Warnings
-      <SlBadge variant="warning" pill>
+      <Badge variant="warning" pill>
         8
-      </SlBadge>
-    </SlButton>
+      </Badge>
+    </Button>
 
-    <SlButton style={{ marginInlineStart: '1rem' }}>
+    <Button style={{ marginInlineStart: '1rem' }}>
       Errors
-      <SlBadge variant="danger" pill>
+      <Badge variant="danger" pill>
         6
-      </SlBadge>
-    </SlButton>
+      </Badge>
+    </Button>
   </>
 );
 ```
@@ -183,39 +183,39 @@ const App = () => (
 When including badges in menu items, use the `suffix` slot to make sure they're aligned correctly.
 
 ```html preview
-<sl-menu style="max-width: 240px;">
-  <sl-menu-label>Messages</sl-menu-label>
-  <sl-menu-item>Comments <sl-badge slot="suffix" variant="neutral" pill>4</sl-badge></sl-menu-item>
-  <sl-menu-item>Replies <sl-badge slot="suffix" variant="neutral" pill>12</sl-badge></sl-menu-item>
-</sl-menu>
+<bui-menu style="max-width: 240px;">
+  <bui-menu-label>Messages</bui-menu-label>
+  <bui-menu-item>Comments <bui-badge slot="suffix" variant="neutral" pill>4</bui-badge></bui-menu-item>
+  <bui-menu-item>Replies <bui-badge slot="suffix" variant="neutral" pill>12</bui-badge></bui-menu-item>
+</bui-menu>
 ```
 
 ```jsx react
-import { SlBadge, SlButton, SlMenu, SlMenuItem, SlMenuLabel } from 'buckeye-ui/dist/react';
+import { Badge, Button, Menu, MenuItem, MenuLabel } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlMenu
+  <Menu
     style={{
       maxWidth: '240px',
-      border: 'solid 1px var(--sl-panel-border-color)',
-      borderRadius: 'var(--sl-border-radius-medium)'
+      border: 'solid 1px var(--bui-panel-border-color)',
+      borderRadius: 'var(--bui-border-radius-medium)'
     }}
   >
-    <SlMenuLabel>Messages</SlMenuLabel>
-    <SlMenuItem>
+    <MenuLabel>Messages</MenuLabel>
+    <MenuItem>
       Comments
-      <SlBadge slot="suffix" variant="neutral" pill>
+      <Badge slot="suffix" variant="neutral" pill>
         4
-      </SlBadge>
-    </SlMenuItem>
-    <SlMenuItem>
+      </Badge>
+    </MenuItem>
+    <MenuItem>
       Replies
-      <SlBadge slot="suffix" variant="neutral" pill>
+      <Badge slot="suffix" variant="neutral" pill>
         12
-      </SlBadge>
-    </SlMenuItem>
-  </SlMenu>
+      </Badge>
+    </MenuItem>
+  </Menu>
 );
 ```
 
-[component-metadata:sl-badge]
+[component-metadata:bui-badge]

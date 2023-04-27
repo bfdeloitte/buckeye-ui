@@ -92,36 +92,36 @@ function runAllValidityTests(
       expect(control.reportValidity()).to.equal(true);
     });
 
-    it('should not emit an `sl-invalid` event when `.checkValidity()` is called while valid', async () => {
+    it('should not emit an `bui-invalid` event when `.checkValidity()` is called while valid', async () => {
       const control = await createControl();
-      const emittedEvents = checkEventEmissions(control, 'sl-invalid', () => control.checkValidity());
+      const emittedEvents = checkEventEmissions(control, 'bui-invalid', () => control.checkValidity());
       expect(emittedEvents.length).to.equal(0);
     });
 
-    it('should not emit an `sl-invalid` event when `.reportValidity()` is called while valid', async () => {
+    it('should not emit an `bui-invalid` event when `.reportValidity()` is called while valid', async () => {
       const control = await createControl();
-      const emittedEvents = checkEventEmissions(control, 'sl-invalid', () => control.reportValidity());
+      const emittedEvents = checkEventEmissions(control, 'bui-invalid', () => control.reportValidity());
       expect(emittedEvents.length).to.equal(0);
     });
 
-    // TODO: As soon as `SlRadioGroup` has a property `disabled` this
+    // TODO: As soon as `RadioGroup` has a property `disabled` this
     // condition can be removed
-    if (tagName !== 'sl-radio-group') {
-      it('should not emit an `sl-invalid` event when `.checkValidity()` is called in custom error case while disabled', async () => {
+    if (tagName !== 'bui-radio-group') {
+      it('should not emit an `bui-invalid` event when `.checkValidity()` is called in custom error case while disabled', async () => {
         const control = await createControl();
         control.setCustomValidity('error');
         control.disabled = true;
         await control.updateComplete;
-        const emittedEvents = checkEventEmissions(control, 'sl-invalid', () => control.checkValidity());
+        const emittedEvents = checkEventEmissions(control, 'bui-invalid', () => control.checkValidity());
         expect(emittedEvents.length).to.equal(0);
       });
 
-      it('should not emit an `sl-invalid` event when `.reportValidity()` is called in custom error case while disabled', async () => {
+      it('should not emit an `bui-invalid` event when `.reportValidity()` is called in custom error case while disabled', async () => {
         const control = await createControl();
         control.setCustomValidity('error');
         control.disabled = true;
         await control.updateComplete;
-        const emittedEvents = checkEventEmissions(control, 'sl-invalid', () => control.reportValidity());
+        const emittedEvents = checkEventEmissions(control, 'bui-invalid', () => control.reportValidity());
         expect(emittedEvents.length).to.equal(0);
       });
     }
@@ -141,7 +141,7 @@ function runAllValidityTests(
 }
 
 //
-//  Special tests for <sl-button type="button">
+//  Special tests for <bui-button type="button">
 //
 function runSpecialTests_slButtonOfTypeButton(createControl: CreateControlFn) {
   it('should make sure that `.validity.valid` is `false` in custom error case', async () => {
@@ -162,28 +162,28 @@ function runSpecialTests_slButtonOfTypeButton(createControl: CreateControlFn) {
     expect(control.reportValidity()).to.equal(true);
   });
 
-  it('should not emit an `sl-invalid` event when `.checkValidity()` is called in custom error case, and not disabled', async () => {
+  it('should not emit an `bui-invalid` event when `.checkValidity()` is called in custom error case, and not disabled', async () => {
     const control = await createControl();
     control.setCustomValidity('error');
     control.disabled = false;
     await control.updateComplete;
-    const emittedEvents = checkEventEmissions(control, 'sl-invalid', () => control.checkValidity());
+    const emittedEvents = checkEventEmissions(control, 'bui-invalid', () => control.checkValidity());
     expect(emittedEvents.length).to.equal(0);
   });
 
-  it('should not emit an `sl-invalid` event when `.reportValidity()` is called in custom error case, and not disabled', async () => {
+  it('should not emit an `bui-invalid` event when `.reportValidity()` is called in custom error case, and not disabled', async () => {
     const control = await createControl();
     control.setCustomValidity('error');
     control.disabled = false;
     await control.updateComplete;
-    const emittedEvents = checkEventEmissions(control, 'sl-invalid', () => control.reportValidity());
+    const emittedEvents = checkEventEmissions(control, 'bui-invalid', () => control.reportValidity());
 
     expect(emittedEvents.length).to.equal(0);
   });
 }
 
 //
-// Special tests for <sl-button href="...">
+// Special tests for <bui-button href="...">
 //
 function runSpecialTests_slButtonWithHref(createControl: CreateControlFn) {
   it('should make sure that calling `.checkValidity()` will return `true` in custom error case', async () => {
@@ -198,19 +198,19 @@ function runSpecialTests_slButtonWithHref(createControl: CreateControlFn) {
     expect(control.reportValidity()).to.equal(true);
   });
 
-  it('should not emit an `sl-invalid` event when `.checkValidity()` is called in custom error case', async () => {
+  it('should not emit an `bui-invalid` event when `.checkValidity()` is called in custom error case', async () => {
     const control = await createControl();
     control.setCustomValidity('error');
     await control.updateComplete;
-    const emittedEvents = checkEventEmissions(control, 'sl-invalid', () => control.checkValidity());
+    const emittedEvents = checkEventEmissions(control, 'bui-invalid', () => control.checkValidity());
     expect(emittedEvents.length).to.equal(0);
   });
 
-  it('should not emit an `sl-invalid` event when `.reportValidity()` is called in custom error case', async () => {
+  it('should not emit an `bui-invalid` event when `.reportValidity()` is called in custom error case', async () => {
     const control = await createControl();
     control.setCustomValidity('error');
     await control.updateComplete;
-    const emittedEvents = checkEventEmissions(control, 'sl-invalid', () => control.reportValidity());
+    const emittedEvents = checkEventEmissions(control, 'bui-invalid', () => control.reportValidity());
     expect(emittedEvents.length).to.equal(0);
   });
 }
@@ -237,21 +237,21 @@ function runSpecialTests_standard(createControl: CreateControlFn) {
     expect(control.reportValidity()).to.equal(false);
   });
 
-  it('should emit an `sl-invalid` event when `.checkValidity()` is called in custom error case and not disabled', async () => {
+  it('should emit an `bui-invalid` event when `.checkValidity()` is called in custom error case and not disabled', async () => {
     const control = await createControl();
     control.setCustomValidity('error');
     control.disabled = false;
     await control.updateComplete;
-    const emittedEvents = checkEventEmissions(control, 'sl-invalid', () => control.checkValidity());
+    const emittedEvents = checkEventEmissions(control, 'bui-invalid', () => control.checkValidity());
     expect(emittedEvents.length).to.equal(1);
   });
 
-  it('should emit an `sl-invalid` event when `.reportValidity()` is called in custom error case and not disabled', async () => {
+  it('should emit an `bui-invalid` event when `.reportValidity()` is called in custom error case and not disabled', async () => {
     const control = await createControl();
     control.setCustomValidity('error');
     control.disabled = false;
     await control.updateComplete;
-    const emittedEvents = checkEventEmissions(control, 'sl-invalid', () => control.reportValidity());
+    const emittedEvents = checkEventEmissions(control, 'bui-invalid', () => control.reportValidity());
     expect(emittedEvents.length).to.equal(1);
   });
 }
@@ -284,11 +284,11 @@ function checkEventEmissions(control: BuckeyeFormControl, eventType: string, act
   return emittedEvents;
 }
 
-// Component `sl-button` behaves quite different to the other components. To keep things simple we use simple conditions
-// here. `sl-button` might stay the only component in BuckeyeUI core behaves that way, so we just hard code it here.
+// Component `bui-button` behaves quite different to the other components. To keep things simple we use simple conditions
+// here. `bui-button` might stay the only component in BuckeyeUI core behaves that way, so we just hard code it here.
 function getMode(control: BuckeyeFormControl) {
   if (
-    control.localName === 'sl-button' && //
+    control.localName === 'bui-button' && //
     'href' in control &&
     'type' in control &&
     control.type === 'button' &&
@@ -297,8 +297,8 @@ function getMode(control: BuckeyeFormControl) {
     return 'slButtonOfTypeButton';
   }
 
-  // <sl-button href="...">
-  if (control.localName === 'sl-button' && 'href' in control && !!control.href) {
+  // <bui-button href="...">
+  if (control.localName === 'bui-button' && 'href' in control && !!control.href) {
     return 'slButtonWithHRef';
   }
 

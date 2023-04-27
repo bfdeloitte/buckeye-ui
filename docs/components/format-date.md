@@ -1,18 +1,18 @@
 # Format Date
 
-[component-header:sl-format-date]
+[component-header:bui-format-date]
 
 Localization is handled by the browser's [`Intl.DateTimeFormat` API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat). No language packs are required.
 
 ```html preview
 <!-- BuckeyeUI creation date 🎉 -->
-<sl-format-date date="2023-04-26T02:37:00-04:00"></sl-format-date>
+<bui-format-date date="2023-04-26T02:37:00-04:00"></bui-format-date>
 ```
 
 ```jsx react
-import { SlFormatDate } from 'buckeye-ui/dist/react';
+import { FormatDate } from 'buckeye-ui/dist/react';
 
-const App = () => <SlFormatDate date="2020-07-15T09:17:00-04:00" />;
+const App = () => <FormatDate date="2020-07-15T09:17:00-04:00" />;
 ```
 
 The `date` attribute determines the date/time to use when formatting. It must be a string that [`Date.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) can interpret or a [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object set via JavaScript. If omitted, the current date/time will be assumed.
@@ -27,51 +27,51 @@ Formatting options are based on those found in the [`Intl.DateTimeFormat` API](h
 
 ```html preview
 <!-- Human-readable date -->
-<sl-format-date month="long" day="numeric" year="numeric"></sl-format-date><br />
+<bui-format-date month="long" day="numeric" year="numeric"></bui-format-date><br />
 
 <!-- Time -->
-<sl-format-date hour="numeric" minute="numeric"></sl-format-date><br />
+<bui-format-date hour="numeric" minute="numeric"></bui-format-date><br />
 
 <!-- Weekday -->
-<sl-format-date weekday="long"></sl-format-date><br />
+<bui-format-date weekday="long"></bui-format-date><br />
 
 <!-- Month -->
-<sl-format-date month="long"></sl-format-date><br />
+<bui-format-date month="long"></bui-format-date><br />
 
 <!-- Year -->
-<sl-format-date year="numeric"></sl-format-date><br />
+<bui-format-date year="numeric"></bui-format-date><br />
 
 <!-- No formatting options -->
-<sl-format-date></sl-format-date>
+<bui-format-date></bui-format-date>
 ```
 
 ```jsx react
-import { SlFormatDate } from 'buckeye-ui/dist/react';
+import { FormatDate } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
     {/* Human-readable date */}
-    <SlFormatDate month="long" day="numeric" year="numeric" />
+    <FormatDate month="long" day="numeric" year="numeric" />
     <br />
 
     {/* Time */}
-    <SlFormatDate hour="numeric" minute="numeric" />
+    <FormatDate hour="numeric" minute="numeric" />
     <br />
 
     {/* Weekday */}
-    <SlFormatDate weekday="long" />
+    <FormatDate weekday="long" />
     <br />
 
     {/* Month */}
-    <SlFormatDate month="long" />
+    <FormatDate month="long" />
     <br />
 
     {/* Year */}
-    <SlFormatDate year="numeric" />
+    <FormatDate year="numeric" />
     <br />
 
     {/* No formatting options */}
-    <SlFormatDate />
+    <FormatDate />
   </>
 );
 ```
@@ -81,18 +81,18 @@ const App = () => (
 By default, the browser will determine whether to use 12-hour or 24-hour time. To force one or the other, set the `hour-format` attribute to `12` or `24`.
 
 ```html preview
-<sl-format-date hour="numeric" minute="numeric" hour-format="12"></sl-format-date><br />
-<sl-format-date hour="numeric" minute="numeric" hour-format="24"></sl-format-date>
+<bui-format-date hour="numeric" minute="numeric" hour-format="12"></bui-format-date><br />
+<bui-format-date hour="numeric" minute="numeric" hour-format="24"></bui-format-date>
 ```
 
 ```jsx react
-import { SlFormatDate } from 'buckeye-ui/dist/react';
+import { FormatDate } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlFormatDate hour="numeric" minute="numeric" hour-format="12" />
+    <FormatDate hour="numeric" minute="numeric" hour-format="12" />
     <br />
-    <SlFormatDate hour="numeric" minute="numeric" hour-format="24" />
+    <FormatDate hour="numeric" minute="numeric" hour-format="24" />
   </>
 );
 ```
@@ -102,23 +102,23 @@ const App = () => (
 Use the `lang` attribute to set the date/time formatting locale.
 
 ```html preview
-English: <sl-format-date lang="en"></sl-format-date><br />
-French: <sl-format-date lang="fr"></sl-format-date><br />
-Russian: <sl-format-date lang="ru"></sl-format-date>
+English: <bui-format-date lang="en"></bui-format-date><br />
+French: <bui-format-date lang="fr"></bui-format-date><br />
+Russian: <bui-format-date lang="ru"></bui-format-date>
 ```
 
 ```jsx react
-import { SlFormatDate } from 'buckeye-ui/dist/react';
+import { FormatDate } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    English: <SlFormatDate lang="en" />
+    English: <FormatDate lang="en" />
     <br />
-    French: <SlFormatDate lang="fr" />
+    French: <FormatDate lang="fr" />
     <br />
-    Russian: <SlFormatDate lang="ru" />
+    Russian: <FormatDate lang="ru" />
   </>
 );
 ```
 
-[component-metadata:sl-format-date]
+[component-metadata:bui-format-date]

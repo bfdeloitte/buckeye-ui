@@ -3,16 +3,16 @@ import { expect, fixture, html, oneEvent, waitUntil } from '@open-wc/testing';
 import { runFormControlBaseTests } from '../../internal/test/form-control-base-tests';
 import { sendKeys } from '@web/test-runner-commands';
 import sinon from 'sinon';
-import type SlCheckbox from './checkbox';
+import type Checkbox from './checkbox';
 
-describe('<sl-checkbox>', () => {
+describe('<bui-checkbox>', () => {
   it('should pass accessibility tests', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox>Checkbox</sl-checkbox> `);
+    const el = await fixture<Checkbox>(html` <bui-checkbox>Checkbox</bui-checkbox> `);
     await expect(el).to.be.accessible();
   });
 
   it('default properties', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+    const el = await fixture<Checkbox>(html` <bui-checkbox></bui-checkbox> `);
 
     expect(el.name).to.equal('');
     expect(el.value).to.be.undefined;
@@ -25,21 +25,21 @@ describe('<sl-checkbox>', () => {
   });
 
   it('should have title if title attribute is set', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox title="Test"></sl-checkbox> `);
+    const el = await fixture<Checkbox>(html` <bui-checkbox title="Test"></bui-checkbox> `);
     const input = el.shadowRoot!.querySelector('input')!;
 
     expect(input.title).to.equal('Test');
   });
 
   it('should be disabled with the disabled attribute', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox disabled></sl-checkbox> `);
+    const el = await fixture<Checkbox>(html` <bui-checkbox disabled></bui-checkbox> `);
     const checkbox = el.shadowRoot!.querySelector('input')!;
 
     expect(checkbox.disabled).to.be.true;
   });
 
   it('should be disabled when disabled property is set', async () => {
-    const el = await fixture<SlCheckbox>(html`<sl-checkbox></sl-checkbox>`);
+    const el = await fixture<Checkbox>(html`<bui-checkbox></bui-checkbox>`);
     const checkbox = el.shadowRoot!.querySelector('input')!;
 
     el.disabled = true;
@@ -49,17 +49,17 @@ describe('<sl-checkbox>', () => {
   });
 
   it('should be valid by default', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+    const el = await fixture<Checkbox>(html` <bui-checkbox></bui-checkbox> `);
     expect(el.checkValidity()).to.be.true;
   });
 
-  it('should emit sl-change and sl-input when clicked', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+  it('should emit bui-change and bui-input when clicked', async () => {
+    const el = await fixture<Checkbox>(html` <bui-checkbox></bui-checkbox> `);
     const changeHandler = sinon.spy();
     const inputHandler = sinon.spy();
 
-    el.addEventListener('sl-change', changeHandler);
-    el.addEventListener('sl-input', inputHandler);
+    el.addEventListener('bui-change', changeHandler);
+    el.addEventListener('bui-input', inputHandler);
     el.click();
     await el.updateComplete;
 
@@ -68,13 +68,13 @@ describe('<sl-checkbox>', () => {
     expect(el.checked).to.be.true;
   });
 
-  it('should emit sl-change and sl-input when toggled with spacebar', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+  it('should emit bui-change and bui-input when toggled with spacebar', async () => {
+    const el = await fixture<Checkbox>(html` <bui-checkbox></bui-checkbox> `);
     const changeHandler = sinon.spy();
     const inputHandler = sinon.spy();
 
-    el.addEventListener('sl-change', changeHandler);
-    el.addEventListener('sl-input', inputHandler);
+    el.addEventListener('bui-change', changeHandler);
+    el.addEventListener('bui-input', inputHandler);
     el.focus();
     await el.updateComplete;
     await sendKeys({ press: ' ' });
@@ -84,11 +84,11 @@ describe('<sl-checkbox>', () => {
     expect(el.checked).to.be.true;
   });
 
-  it('should not emit sl-change or sl-input when checked programmatically', async () => {
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+  it('should not emit bui-change or bui-input when checked programmatically', async () => {
+    const el = await fixture<Checkbox>(html` <bui-checkbox></bui-checkbox> `);
 
-    el.addEventListener('sl-change', () => expect.fail('sl-change should not be emitted'));
-    el.addEventListener('sl-input', () => expect.fail('sl-input should not be emitted'));
+    el.addEventListener('bui-change', () => expect.fail('bui-change should not be emitted'));
+    el.addEventListener('bui-input', () => expect.fail('bui-input should not be emitted'));
     el.checked = true;
     await el.updateComplete;
     el.checked = false;
@@ -99,7 +99,7 @@ describe('<sl-checkbox>', () => {
     //
     // See: https://github.com/shoelace-style/shoelace/issues/1169
     //
-    const el = await fixture<SlCheckbox>(html` <sl-checkbox></sl-checkbox> `);
+    const el = await fixture<Checkbox>(html` <bui-checkbox></bui-checkbox> `);
     const label = el.shadowRoot!.querySelector('.checkbox')!;
     const input = el.shadowRoot!.querySelector('.checkbox__input')!;
 
@@ -114,11 +114,11 @@ describe('<sl-checkbox>', () => {
     it('should submit the correct value when a value is provided', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-checkbox name="a" value="1" checked></sl-checkbox>
-          <sl-button type="submit">Submit</sl-button>
+          <bui-checkbox name="a" value="1" checked></bui-checkbox>
+          <bui-button type="submit">Submit</bui-button>
         </form>
       `);
-      const button = form.querySelector('sl-button')!;
+      const button = form.querySelector('bui-button')!;
       const submitHandler = sinon.spy((event: SubmitEvent) => {
         formData = new FormData(form);
         event.preventDefault();
@@ -136,11 +136,11 @@ describe('<sl-checkbox>', () => {
     it('should submit "on" when no value is provided', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-checkbox name="a" checked></sl-checkbox>
-          <sl-button type="submit">Submit</sl-button>
+          <bui-checkbox name="a" checked></bui-checkbox>
+          <bui-button type="submit">Submit</bui-button>
         </form>
       `);
-      const button = form.querySelector('sl-button')!;
+      const button = form.querySelector('bui-button')!;
       const submitHandler = sinon.spy((event: SubmitEvent) => {
         formData = new FormData(form);
         event.preventDefault();
@@ -156,7 +156,7 @@ describe('<sl-checkbox>', () => {
     });
 
     it('should be invalid when setCustomValidity() is called with a non-empty value', async () => {
-      const checkbox = await fixture<HTMLFormElement>(html` <sl-checkbox></sl-checkbox> `);
+      const checkbox = await fixture<HTMLFormElement>(html` <bui-checkbox></bui-checkbox> `);
 
       // Submitting the form after setting custom validity should not trigger the handler
       checkbox.setCustomValidity('Invalid selection');
@@ -177,12 +177,12 @@ describe('<sl-checkbox>', () => {
     });
 
     it('should be invalid when required and unchecked', async () => {
-      const checkbox = await fixture<HTMLFormElement>(html` <sl-checkbox required></sl-checkbox> `);
+      const checkbox = await fixture<HTMLFormElement>(html` <bui-checkbox required></bui-checkbox> `);
       expect(checkbox.checkValidity()).to.be.false;
     });
 
     it('should be valid when required and checked', async () => {
-      const checkbox = await fixture<HTMLFormElement>(html` <sl-checkbox required checked></sl-checkbox> `);
+      const checkbox = await fixture<HTMLFormElement>(html` <bui-checkbox required checked></bui-checkbox> `);
       expect(checkbox.checkValidity()).to.be.true;
     });
 
@@ -190,9 +190,9 @@ describe('<sl-checkbox>', () => {
       const el = await fixture<HTMLFormElement>(html`
         <div>
           <form id="f">
-            <sl-button type="submit">Submit</sl-button>
+            <bui-button type="submit">Submit</bui-button>
           </form>
-          <sl-checkbox form="f" name="a" value="1" checked></sl-checkbox>
+          <bui-checkbox form="f" name="a" value="1" checked></bui-checkbox>
         </div>
       `);
       const form = el.querySelector('form')!;
@@ -202,8 +202,8 @@ describe('<sl-checkbox>', () => {
     });
 
     it('should receive validation attributes ("states") even when novalidate is used on the parent form', async () => {
-      const el = await fixture<HTMLFormElement>(html` <form novalidate><sl-checkbox required></sl-checkbox></form> `);
-      const checkbox = el.querySelector<SlCheckbox>('sl-checkbox')!;
+      const el = await fixture<HTMLFormElement>(html` <form novalidate><bui-checkbox required></bui-checkbox></form> `);
+      const checkbox = el.querySelector<Checkbox>('bui-checkbox')!;
 
       expect(checkbox.hasAttribute('data-required')).to.be.true;
       expect(checkbox.hasAttribute('data-optional')).to.be.false;
@@ -218,12 +218,12 @@ describe('<sl-checkbox>', () => {
     it('should reset the element to its initial value', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-checkbox name="a" value="1" checked></sl-checkbox>
-          <sl-button type="reset">Reset</sl-button>
+          <bui-checkbox name="a" value="1" checked></bui-checkbox>
+          <bui-button type="reset">Reset</bui-button>
         </form>
       `);
-      const button = form.querySelector('sl-button')!;
-      const checkbox = form.querySelector('sl-checkbox')!;
+      const button = form.querySelector('bui-button')!;
+      const checkbox = form.querySelector('bui-checkbox')!;
       checkbox.checked = false;
 
       await checkbox.updateComplete;
@@ -246,7 +246,7 @@ describe('<sl-checkbox>', () => {
 
   describe('click', () => {
     it('should click the inner input', async () => {
-      const el = await fixture<SlCheckbox>(html`<sl-checkbox></sl-checkbox>`);
+      const el = await fixture<Checkbox>(html`<bui-checkbox></bui-checkbox>`);
       const checkbox = el.shadowRoot!.querySelector('input')!;
       const clickSpy = sinon.spy();
 
@@ -262,7 +262,7 @@ describe('<sl-checkbox>', () => {
 
   describe('focus', () => {
     it('should focus the inner input', async () => {
-      const el = await fixture<SlCheckbox>(html`<sl-checkbox></sl-checkbox>`);
+      const el = await fixture<Checkbox>(html`<bui-checkbox></bui-checkbox>`);
       const checkbox = el.shadowRoot!.querySelector('input')!;
       const focusSpy = sinon.spy();
 
@@ -278,7 +278,7 @@ describe('<sl-checkbox>', () => {
 
   describe('blur', () => {
     it('should blur the inner input', async () => {
-      const el = await fixture<SlCheckbox>(html`<sl-checkbox></sl-checkbox>`);
+      const el = await fixture<Checkbox>(html`<bui-checkbox></bui-checkbox>`);
       const checkbox = el.shadowRoot!.querySelector('input')!;
       const blurSpy = sinon.spy();
 
@@ -297,7 +297,7 @@ describe('<sl-checkbox>', () => {
 
   describe('indeterminate', () => {
     it('should render indeterminate icon until checked', async () => {
-      const el = await fixture<SlCheckbox>(html`<sl-checkbox indeterminate></sl-checkbox>`);
+      const el = await fixture<Checkbox>(html`<bui-checkbox indeterminate></bui-checkbox>`);
       let indeterminateIcon = el.shadowRoot!.querySelector('[part~="indeterminate-icon"]')!;
 
       expect(indeterminateIcon).not.to.be.null;
@@ -310,6 +310,6 @@ describe('<sl-checkbox>', () => {
       expect(indeterminateIcon).to.be.null;
     });
 
-    runFormControlBaseTests('sl-checkbox');
+    runFormControlBaseTests('bui-checkbox');
   });
 });

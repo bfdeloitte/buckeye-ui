@@ -30,13 +30,13 @@
             } else if (isAttributeDifferent) {
               attributeInfo = `
                 <br>
-                <sl-tooltip content="This attribute is different from its property">
+                <bui-tooltip content="This attribute is different from its property">
                   <small>
                     <code class="nowrap">
                       ${escapeHtml(prop.attribute)}
                     </code>
                   </small>
-                </sl-tooltip>`;
+                </bui-tooltip>`;
             }
 
             return `
@@ -49,7 +49,7 @@
                   ${escapeHtml(prop.description)}
                 </td>
                 <td style="text-align: center;">${
-                  prop.reflects ? '<sl-icon label="yes" name="check-lg"></sl-icon>' : ''
+                  prop.reflects ? '<bui-icon label="yes" name="check-lg"></bui-icon>' : ''
                 }</td>
                 <td>${prop.type?.text ? `<code>${escapeHtml(prop.type?.text || '')}</code>` : '-'}</td>
                 <td>${prop.default ? `<code>${escapeHtml(prop.default)}</code>` : '-'}</td>
@@ -334,18 +334,18 @@
       target.appendChild(version);
 
       // Store version for reuse
-      sessionStorage.setItem('sl-version', metadata.package.version);
+      sessionStorage.setItem('bui-version', metadata.package.version);
 
       // Add repo buttons
       const buttons = document.createElement('div');
       buttons.classList.add('sidebar-buttons');
       buttons.innerHTML = `
-        <sl-button size="small" class="repo-button repo-button--github" href="https://github.com/bfdeloitte/buckeye-ui/stargazers" target="_blank">
-          <sl-icon slot="prefix" name="github"></sl-icon> Star
-        </sl-button>
-        <sl-button size="small" class="repo-button repo-button--twitter" href="https://twitter.com/buckeyeui" target="_blank">
-          <sl-icon slot="prefix" name="twitter"></sl-icon> Follow
-        </sl-button>
+        <bui-button size="small" class="repo-button repo-button--github" href="https://github.com/bfdeloitte/buckeye-ui/stargazers" target="_blank">
+          <bui-icon slot="prefix" name="github"></bui-icon> Star
+        </bui-button>
+        <bui-button size="small" class="repo-button repo-button--twitter" href="https://twitter.com/buckeyeui" target="_blank">
+          <bui-icon slot="prefix" name="twitter"></bui-icon> Follow
+        </bui-button>
       `;
       target.appendChild(buttons);
     });
@@ -387,13 +387,13 @@
             </div>
 
             <div class="component-header__info">
-              <sl-badge variant="neutral" pill>
+              <bui-badge variant="neutral" pill>
                 Since ${component.since || '?'}
-              </sl-badge>
+              </bui-badge>
 
-              <sl-badge variant="${badgeType}" pill style="text-transform: capitalize;">
+              <bui-badge variant="${badgeType}" pill style="text-transform: capitalize;">
                 ${component.status}
-              </sl-badge>
+              </bui-badge>
             </div>
 
             <div class="component-header__summary">
@@ -436,42 +436,42 @@
             If you're using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel free to
             use any of the following snippets to [cherry pick](getting-started/installation#cherry-picking) this component.
 
-            <sl-tab-group>
-            <sl-tab slot="nav" panel="script">Script</sl-tab>
-            <sl-tab slot="nav" panel="import">Import</sl-tab>
-            <sl-tab slot="nav" panel="bundler">Bundler</sl-tab>
-            <sl-tab slot="nav" panel="react">React</sl-tab>
+            <bui-tab-group>
+            <bui-tab slot="nav" panel="script">Script</bui-tab>
+            <bui-tab slot="nav" panel="import">Import</bui-tab>
+            <bui-tab slot="nav" panel="bundler">Bundler</bui-tab>
+            <bui-tab slot="nav" panel="react">React</bui-tab>
 
-            <sl-tab-panel name="script">\n
+            <bui-tab-panel name="script">\n
             To import this component from [the CDN](https://www.jsdelivr.com/package/npm/buckeye-ui) using a script tag:
 
             \`\`\`html
             <script type="module" src="https://cdn.jsdelivr.net/npm/buckeye-ui@${metadata.package.version}/dist/${component.path}"></script>
             \`\`\`
-            </sl-tab-panel>
+            </bui-tab-panel>
 
-            <sl-tab-panel name="import">\n
+            <bui-tab-panel name="import">\n
             To import this component from [the CDN](https://www.jsdelivr.com/package/npm/buckeye-ui) using a JavaScript import:
 
             \`\`\`js
             import 'https://cdn.jsdelivr.net/npm/buckeye-ui@${metadata.package.version}/dist/${component.path}';
             \`\`\`
-            </sl-tab-panel>
+            </bui-tab-panel>
 
-            <sl-tab-panel name="bundler">\n
+            <bui-tab-panel name="bundler">\n
             To import this component using [a bundler](/getting-started/installation#bundling):
             \`\`\`js
             import 'buckeye-ui/dist/${component.path}';
             \`\`\`
-            </sl-tab-panel>
+            </bui-tab-panel>
 
-            <sl-tab-panel name="react">\n
+            <bui-tab-panel name="react">\n
             To import this component as a [React component](/frameworks/react):
             \`\`\`js
             import { ${component.name} } from 'buckeye-ui/dist/react';
             \`\`\`
-            </sl-tab-panel>
-            </sl-tab-group>
+            </bui-tab-panel>
+            </bui-tab-group>
 
             <div class="sponsor-callout">
               <p>
@@ -479,17 +479,17 @@
               </p>
 
               <p>
-                <sl-button class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
-                  <sl-icon slot="prefix" name="heart"></sl-icon> Sponsor <span class="sponsor-callout__secondary-label">Development</span>
-                </sl-button>
+                <bui-button class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
+                  <bui-icon slot="prefix" name="heart"></bui-icon> Sponsor <span class="sponsor-callout__secondary-label">Development</span>
+                </bui-button>
 
-                <sl-button class="repo-button repo-button--github" href="https://github.com/bfdeloitte/buckeye-ui/stargazers" target="_blank">
-                  <sl-icon slot="prefix" name="github"></sl-icon> Star <span class="sponsor-callout__secondary-label">on GitHub</span>
-                </sl-button>
+                <bui-button class="repo-button repo-button--github" href="https://github.com/bfdeloitte/buckeye-ui/stargazers" target="_blank">
+                  <bui-icon slot="prefix" name="github"></bui-icon> Star <span class="sponsor-callout__secondary-label">on GitHub</span>
+                </bui-button>
 
-                <sl-button class="repo-button repo-button--twitter" href="https://twitter.com/buckeyeui" target="_blank">
-                  <sl-icon slot="prefix" name="twitter"></sl-icon> Follow <span class="sponsor-callout__secondary-label">on Twitter</span>
-                </sl-button>
+                <bui-button class="repo-button repo-button--twitter" href="https://twitter.com/buckeyeui" target="_blank">
+                  <bui-icon slot="prefix" name="twitter"></bui-icon> Follow <span class="sponsor-callout__secondary-label">on Twitter</span>
+                </bui-button>
               </p>
             </div>
           `;

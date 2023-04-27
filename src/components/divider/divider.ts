@@ -14,8 +14,8 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --width - The width of the divider.
  * @cssproperty --spacing - The spacing of the divider.
  */
-@customElement('sl-divider')
-export default class SlDivider extends BuckeyeElement {
+@customElement('bui-divider')
+export default class Divider extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   /** Draws the divider in a vertical orientation. */
@@ -34,6 +34,6 @@ export default class SlDivider extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-divider': SlDivider;
+    'bui-divider': Divider;
   }
 }

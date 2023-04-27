@@ -37,7 +37,7 @@ After importing the theme, you'll need to import the JavaScript files for Buckey
 
 ```js
 import '../stylesheets/application.scss'
-import { setBasePath, SlAlert, SlAnimation, SlButton, ... } from 'buckeye-ui'
+import { setBasePath, Alert, Animation, Button, ... } from 'buckeye-ui'
 
 // ...
 

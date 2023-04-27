@@ -1,27 +1,27 @@
 # Tab
 
-[component-header:sl-tab]
+[component-header:bui-tab]
 
 ```html preview
-<sl-tab>Tab</sl-tab>
-<sl-tab active>Active</sl-tab>
-<sl-tab closable>Closable</sl-tab>
-<sl-tab disabled>Disabled</sl-tab>
+<bui-tab>Tab</bui-tab>
+<bui-tab active>Active</bui-tab>
+<bui-tab closable>Closable</bui-tab>
+<bui-tab disabled>Disabled</bui-tab>
 ```
 
 ```jsx react
-import { SlTab } from 'buckeye-ui/dist/react';
+import { Tab } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlTab>Tab</SlTab>
-    <SlTab active>Active</SlTab>
-    <SlTab closable>Closable</SlTab>
-    <SlTab disabled>Disabled</SlTab>
+    <Tab>Tab</Tab>
+    <Tab active>Active</Tab>
+    <Tab closable>Closable</Tab>
+    <Tab disabled>Disabled</Tab>
   </>
 );
 ```
 
 ?> Additional demonstrations can be found in the [tab group examples](/components/tab-group).
 
-[component-metadata:sl-tab]
+[component-metadata:bui-tab]

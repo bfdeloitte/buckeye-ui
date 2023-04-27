@@ -4,29 +4,29 @@ import { runFormControlBaseTests } from '../../internal/test/form-control-base-t
 import { sendKeys } from '@web/test-runner-commands';
 import { serialize } from '../../utilities/form';
 import sinon from 'sinon';
-import type SlOption from '../option/option';
+import type Option from '../option/option';
 import type SlSelect from './select';
 
-describe('<sl-select>', () => {
+describe('<bui-select>', () => {
   describe('accessibility', () => {
     it('should pass accessibility tests when closed', async () => {
       const select = await fixture<SlSelect>(html`
-        <sl-select label="Select one">
-          <sl-option value="option-1">Option 1</sl-option>
-          <sl-option value="option-2">Option 2</sl-option>
-          <sl-option value="option-3">Option 3</sl-option>
-        </sl-select>
+        <bui-select label="Select one">
+          <bui-option value="option-1">Option 1</bui-option>
+          <bui-option value="option-2">Option 2</bui-option>
+          <bui-option value="option-3">Option 3</bui-option>
+        </bui-select>
       `);
       await expect(select).to.be.accessible();
     });
 
     it('should pass accessibility tests when open', async () => {
       const select = await fixture<SlSelect>(html`
-        <sl-select label="Select one">
-          <sl-option value="option-1">Option 1</sl-option>
-          <sl-option value="option-2">Option 2</sl-option>
-          <sl-option value="option-3">Option 3</sl-option>
-        </sl-select>
+        <bui-select label="Select one">
+          <bui-option value="option-1">Option 1</bui-option>
+          <bui-option value="option-2">Option 2</bui-option>
+          <bui-option value="option-3">Option 3</bui-option>
+        </bui-select>
       `);
 
       await select.show();
@@ -37,22 +37,22 @@ describe('<sl-select>', () => {
 
   it('should be disabled with the disabled attribute', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select disabled>
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select disabled>
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     expect(el.displayInput.disabled).to.be.true;
   });
 
   it('should show a placeholder when no options are selected', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select placeholder="Select one">
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select placeholder="Select one">
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const displayInput = el.shadowRoot!.querySelector<HTMLInputElement>('[part~="display-input"]')!;
 
@@ -62,11 +62,11 @@ describe('<sl-select>', () => {
 
   it('should show a placeholder when no options are selected and multiple is set', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select placeholder="Select a few" multiple>
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select placeholder="Select a few" multiple>
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const displayInput = el.shadowRoot!.querySelector<HTMLInputElement>('[part~="display-input"]')!;
 
@@ -76,12 +76,12 @@ describe('<sl-select>', () => {
 
   it('should not allow selection when the option is disabled', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select value="option-1">
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2" disabled>Option 2</sl-option>
-      </sl-select>
+      <bui-select value="option-1">
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2" disabled>Option 2</bui-option>
+      </bui-select>
     `);
-    const disabledOption = el.querySelector('sl-option[disabled]')!;
+    const disabledOption = el.querySelector('bui-option[disabled]')!;
 
     await el.show();
     await clickOnElement(disabledOption);
@@ -92,16 +92,16 @@ describe('<sl-select>', () => {
 
   it('should focus the select when clicking on the label', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select label="Select One">
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select label="Select One">
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const label = el.shadowRoot!.querySelector('[part~="form-control-label"]')!;
     const submitHandler = sinon.spy();
 
-    el.addEventListener('sl-focus', submitHandler);
+    el.addEventListener('bui-focus', submitHandler);
     (label as HTMLLabelElement).click();
     await waitUntil(() => submitHandler.calledOnce);
 
@@ -109,20 +109,20 @@ describe('<sl-select>', () => {
   });
 
   describe('when the value changes', () => {
-    it('should emit sl-change when the value is changed with the mouse', async () => {
+    it('should emit bui-change when the value is changed with the mouse', async () => {
       const el = await fixture<SlSelect>(html`
-        <sl-select value="option-1">
-          <sl-option value="option-1">Option 1</sl-option>
-          <sl-option value="option-2">Option 2</sl-option>
-          <sl-option value="option-3">Option 3</sl-option>
-        </sl-select>
+        <bui-select value="option-1">
+          <bui-option value="option-1">Option 1</bui-option>
+          <bui-option value="option-2">Option 2</bui-option>
+          <bui-option value="option-3">Option 3</bui-option>
+        </bui-select>
       `);
-      const secondOption = el.querySelectorAll<SlOption>('sl-option')[1];
+      const secondOption = el.querySelectorAll<Option>('bui-option')[1];
       const changeHandler = sinon.spy();
       const inputHandler = sinon.spy();
 
-      el.addEventListener('sl-change', changeHandler);
-      el.addEventListener('sl-input', inputHandler);
+      el.addEventListener('bui-change', changeHandler);
+      el.addEventListener('bui-input', inputHandler);
 
       await el.show();
       await clickOnElement(secondOption);
@@ -133,19 +133,19 @@ describe('<sl-select>', () => {
       expect(el.value).to.equal('option-2');
     });
 
-    it('should emit sl-change and sl-input when the value is changed with the keyboard', async () => {
+    it('should emit bui-change and bui-input when the value is changed with the keyboard', async () => {
       const el = await fixture<SlSelect>(html`
-        <sl-select value="option-1">
-          <sl-option value="option-1">Option 1</sl-option>
-          <sl-option value="option-2">Option 2</sl-option>
-          <sl-option value="option-3">Option 3</sl-option>
-        </sl-select>
+        <bui-select value="option-1">
+          <bui-option value="option-1">Option 1</bui-option>
+          <bui-option value="option-2">Option 2</bui-option>
+          <bui-option value="option-3">Option 3</bui-option>
+        </bui-select>
       `);
       const changeHandler = sinon.spy();
       const inputHandler = sinon.spy();
 
-      el.addEventListener('sl-change', changeHandler);
-      el.addEventListener('sl-input', inputHandler);
+      el.addEventListener('bui-change', changeHandler);
+      el.addEventListener('bui-input', inputHandler);
 
       el.focus();
       await el.updateComplete;
@@ -163,39 +163,39 @@ describe('<sl-select>', () => {
       expect(el.value).to.equal('option-3');
     });
 
-    it('should not emit sl-change or sl-input when the value is changed programmatically', async () => {
+    it('should not emit bui-change or bui-input when the value is changed programmatically', async () => {
       const el = await fixture<SlSelect>(html`
-        <sl-select value="option-1">
-          <sl-option value="option-1">Option 1</sl-option>
-          <sl-option value="option-2">Option 2</sl-option>
-          <sl-option value="option-3">Option 3</sl-option>
-        </sl-select>
+        <bui-select value="option-1">
+          <bui-option value="option-1">Option 1</bui-option>
+          <bui-option value="option-2">Option 2</bui-option>
+          <bui-option value="option-3">Option 3</bui-option>
+        </bui-select>
       `);
 
-      el.addEventListener('sl-change', () => expect.fail('sl-change should not be emitted'));
-      el.addEventListener('sl-input', () => expect.fail('sl-input should not be emitted'));
+      el.addEventListener('bui-change', () => expect.fail('bui-change should not be emitted'));
+      el.addEventListener('bui-input', () => expect.fail('bui-input should not be emitted'));
       el.value = 'option-2';
 
       await el.updateComplete;
     });
 
-    it('should emit sl-change and sl-input with the correct validation message when the value changes', async () => {
+    it('should emit bui-change and bui-input with the correct validation message when the value changes', async () => {
       const el = await fixture<SlSelect>(html`
-        <sl-select required>
-          <sl-option value="option-1">Option 1</sl-option>
-          <sl-option value="option-2">Option 2</sl-option>
-          <sl-option value="option-3">Option 3</sl-option>
-        </sl-select>
+        <bui-select required>
+          <bui-option value="option-1">Option 1</bui-option>
+          <bui-option value="option-2">Option 2</bui-option>
+          <bui-option value="option-3">Option 3</bui-option>
+        </bui-select>
       `);
-      const option2 = el.querySelectorAll('sl-option')[1];
+      const option2 = el.querySelectorAll('bui-option')[1];
       const handler = sinon.spy((event: CustomEvent) => {
         if (el.validationMessage) {
           expect.fail(`Validation message should be empty when ${event.type} is emitted and a value is set`);
         }
       });
 
-      el.addEventListener('sl-change', handler);
-      el.addEventListener('sl-input', handler);
+      el.addEventListener('bui-change', handler);
+      el.addEventListener('bui-input', handler);
 
       await clickOnElement(el);
       await aTimeout(500);
@@ -206,13 +206,13 @@ describe('<sl-select>', () => {
     });
   });
 
-  it('should open the listbox when any letter key is pressed with sl-select is on focus', async () => {
+  it('should open the listbox when any letter key is pressed with bui-select is on focus', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select>
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select>
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const displayInput = el.shadowRoot!.querySelector<HTMLSelectElement>('.select__display-input')!;
 
@@ -223,13 +223,13 @@ describe('<sl-select>', () => {
     expect(displayInput.getAttribute('aria-expanded')).to.equal('true');
   });
 
-  it('should not open the listbox when ctrl + R is pressed with sl-select is on focus', async () => {
+  it('should not open the listbox when ctrl + R is pressed with bui-select is on focus', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select>
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select>
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const displayInput = el.shadowRoot!.querySelector<HTMLSelectElement>('.select__display-input')!;
 
@@ -245,55 +245,55 @@ describe('<sl-select>', () => {
     it('should be valid by default', async () => {
       const el = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-select>
-            <sl-option value="option-1">Option 1</sl-option>
-            <sl-option value="option-2">Option 2</sl-option>
-            <sl-option value="option-3">Option 3</sl-option>
-          </sl-select>
+          <bui-select>
+            <bui-option value="option-1">Option 1</bui-option>
+            <bui-option value="option-2">Option 2</bui-option>
+            <bui-option value="option-3">Option 3</bui-option>
+          </bui-select>
         </form>
       `);
-      const select = el.querySelector<SlSelect>('sl-select')!;
+      const select = el.querySelector<SlSelect>('bui-select')!;
       expect(select.checkValidity()).to.be.true;
     });
 
     it('should be invalid when required and empty', async () => {
       const el = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-select required>
-            <sl-option value="option-1">Option 1</sl-option>
-            <sl-option value="option-2">Option 2</sl-option>
-            <sl-option value="option-3">Option 3</sl-option>
-          </sl-select>
+          <bui-select required>
+            <bui-option value="option-1">Option 1</bui-option>
+            <bui-option value="option-2">Option 2</bui-option>
+            <bui-option value="option-3">Option 3</bui-option>
+          </bui-select>
         </form>
       `);
-      const select = el.querySelector<SlSelect>('sl-select')!;
+      const select = el.querySelector<SlSelect>('bui-select')!;
       expect(select.checkValidity()).to.be.false;
     });
 
     it('should focus on the displayInput when constraint validation occurs', async () => {
       const el = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-select required>
-            <sl-option value="option-1">Option 1</sl-option>
-            <sl-option value="option-2">Option 2</sl-option>
-            <sl-option value="option-3">Option 3</sl-option>
-          </sl-select>
+          <bui-select required>
+            <bui-option value="option-1">Option 1</bui-option>
+            <bui-option value="option-2">Option 2</bui-option>
+            <bui-option value="option-3">Option 3</bui-option>
+          </bui-select>
         </form>
       `);
-      const select = el.querySelector<SlSelect>('sl-select')!;
+      const select = el.querySelector<SlSelect>('bui-select')!;
       el.requestSubmit();
       expect(select.shadowRoot!.activeElement).to.equal(select.displayInput);
     });
 
     it('should receive the correct validation attributes ("states") when valid', async () => {
       const el = await fixture<SlSelect>(html`
-        <sl-select label="Select one" required value="option-1">
-          <sl-option value="option-1">Option 1</sl-option>
-          <sl-option value="option-2">Option 2</sl-option>
-          <sl-option value="option-3">Option 3</sl-option>
-        </sl-select>
+        <bui-select label="Select one" required value="option-1">
+          <bui-option value="option-1">Option 1</bui-option>
+          <bui-option value="option-2">Option 2</bui-option>
+          <bui-option value="option-3">Option 3</bui-option>
+        </bui-select>
       `);
-      const secondOption = el.querySelectorAll('sl-option')[1]!;
+      const secondOption = el.querySelectorAll('bui-option')[1]!;
 
       expect(el.checkValidity()).to.be.true;
       expect(el.hasAttribute('data-required')).to.be.true;
@@ -316,13 +316,13 @@ describe('<sl-select>', () => {
 
     it('should receive the correct validation attributes ("states") when invalid', async () => {
       const el = await fixture<SlSelect>(html`
-        <sl-select label="Select one" required>
-          <sl-option value="option-1">Option 1</sl-option>
-          <sl-option value="option-2">Option 2</sl-option>
-          <sl-option value="option-3">Option 3</sl-option>
-        </sl-select>
+        <bui-select label="Select one" required>
+          <bui-option value="option-1">Option 1</bui-option>
+          <bui-option value="option-2">Option 2</bui-option>
+          <bui-option value="option-3">Option 3</bui-option>
+        </bui-select>
       `);
-      const secondOption = el.querySelectorAll('sl-option')[1]!;
+      const secondOption = el.querySelectorAll('bui-option')[1]!;
 
       expect(el.hasAttribute('data-required')).to.be.true;
       expect(el.hasAttribute('data-optional')).to.be.false;
@@ -345,14 +345,14 @@ describe('<sl-select>', () => {
     it('should receive validation attributes ("states") even when novalidate is used on the parent form', async () => {
       const el = await fixture<HTMLFormElement>(html`
         <form novalidate>
-          <sl-select required>
-            <sl-option value="option-1">Option 1</sl-option>
-            <sl-option value="option-2">Option 2</sl-option>
-            <sl-option value="option-3">Option 3</sl-option>
-          </sl-select>
+          <bui-select required>
+            <bui-option value="option-1">Option 1</bui-option>
+            <bui-option value="option-2">Option 2</bui-option>
+            <bui-option value="option-3">Option 3</bui-option>
+          </bui-select>
         </form>
       `);
-      const select = el.querySelector<SlSelect>('sl-select')!;
+      const select = el.querySelector<SlSelect>('bui-select')!;
 
       expect(select.hasAttribute('data-required')).to.be.true;
       expect(select.hasAttribute('data-optional')).to.be.false;
@@ -367,11 +367,11 @@ describe('<sl-select>', () => {
     it('should serialize its name and value with FormData', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-select name="a" value="option-1">
-            <sl-option value="option-1">Option 1</sl-option>
-            <sl-option value="option-2">Option 2</sl-option>
-            <sl-option value="option-3">Option 3</sl-option>
-          </sl-select>
+          <bui-select name="a" value="option-1">
+            <bui-option value="option-1">Option 1</bui-option>
+            <bui-option value="option-2">Option 2</bui-option>
+            <bui-option value="option-3">Option 3</bui-option>
+          </bui-select>
         </form>
       `);
       const formData = new FormData(form);
@@ -381,11 +381,11 @@ describe('<sl-select>', () => {
     it('should serialize its name and value in FormData when multiple options are selected', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-select name="a" value="option-2 option-3" multiple>
-            <sl-option value="option-1">Option 1</sl-option>
-            <sl-option value="option-2">Option 2</sl-option>
-            <sl-option value="option-3">Option 3</sl-option>
-          </sl-select>
+          <bui-select name="a" value="option-2 option-3" multiple>
+            <bui-option value="option-1">Option 1</bui-option>
+            <bui-option value="option-2">Option 2</bui-option>
+            <bui-option value="option-3">Option 3</bui-option>
+          </bui-select>
         </form>
       `);
       const formData = new FormData(form);
@@ -396,11 +396,11 @@ describe('<sl-select>', () => {
     it('should serialize its name and value in JSON', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-select name="a" value="option-1">
-            <sl-option value="option-1">Option 1</sl-option>
-            <sl-option value="option-2">Option 2</sl-option>
-            <sl-option value="option-3">Option 3</sl-option>
-          </sl-select>
+          <bui-select name="a" value="option-1">
+            <bui-option value="option-1">Option 1</bui-option>
+            <bui-option value="option-2">Option 2</bui-option>
+            <bui-option value="option-3">Option 3</bui-option>
+          </bui-select>
         </form>
       `);
       const json = serialize(form);
@@ -410,11 +410,11 @@ describe('<sl-select>', () => {
     it('should serialize its name and value in JSON when multiple options are selected', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-select name="a" value="option-2 option-3" multiple>
-            <sl-option value="option-1">Option 1</sl-option>
-            <sl-option value="option-2">Option 2</sl-option>
-            <sl-option value="option-3">Option 3</sl-option>
-          </sl-select>
+          <bui-select name="a" value="option-2 option-3" multiple>
+            <bui-option value="option-1">Option 1</bui-option>
+            <bui-option value="option-2">Option 2</bui-option>
+            <bui-option value="option-3">Option 3</bui-option>
+          </bui-select>
         </form>
       `);
       const json = serialize(form);
@@ -425,13 +425,13 @@ describe('<sl-select>', () => {
       const el = await fixture<HTMLFormElement>(html`
         <div>
           <form id="f">
-            <sl-button type="submit">Submit</sl-button>
+            <bui-button type="submit">Submit</bui-button>
           </form>
-          <sl-select form="f" name="a" value="option-1">
-            <sl-option value="option-1">Option 1</sl-option>
-            <sl-option value="option-2">Option 2</sl-option>
-            <sl-option value="option-3">Option 3</sl-option>
-          </sl-select>
+          <bui-select form="f" name="a" value="option-1">
+            <bui-option value="option-1">Option 1</bui-option>
+            <bui-option value="option-2">Option 2</bui-option>
+            <bui-option value="option-3">Option 3</bui-option>
+          </bui-select>
         </div>
       `);
       const form = el.querySelector('form')!;
@@ -445,16 +445,16 @@ describe('<sl-select>', () => {
     it('should reset the element to its initial value', async () => {
       const form = await fixture<HTMLFormElement>(html`
         <form>
-          <sl-select value="option-1">
-            <sl-option value="option-1">Option 1</sl-option>
-            <sl-option value="option-2">Option 2</sl-option>
-            <sl-option value="option-3">Option 3</sl-option>
-          </sl-select>
-          <sl-button type="reset">Reset</sl-button>
+          <bui-select value="option-1">
+            <bui-option value="option-1">Option 1</bui-option>
+            <bui-option value="option-2">Option 2</bui-option>
+            <bui-option value="option-3">Option 3</bui-option>
+          </bui-select>
+          <bui-button type="reset">Reset</bui-button>
         </form>
       `);
-      const resetButton = form.querySelector('sl-button')!;
-      const select = form.querySelector('sl-select')!;
+      const resetButton = form.querySelector('bui-button')!;
+      const select = form.querySelector('bui-select')!;
 
       select.value = 'option-3';
       await select.updateComplete;
@@ -469,14 +469,14 @@ describe('<sl-select>', () => {
 
   it('should update the display label when an option changes', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select value="option-1">
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select value="option-1">
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const displayInput = el.shadowRoot!.querySelector<HTMLSelectElement>('.select__display-input')!;
-    const option = el.querySelector('sl-option')!;
+    const option = el.querySelector('bui-option')!;
 
     expect(displayInput.value).to.equal('Option 1');
 
@@ -487,19 +487,19 @@ describe('<sl-select>', () => {
     expect(displayInput.value).to.equal('updated');
   });
 
-  it('should emit sl-focus and sl-blur when receiving and losing focus', async () => {
+  it('should emit bui-focus and bui-blur when receiving and losing focus', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select value="option-1">
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select value="option-1">
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const focusHandler = sinon.spy();
     const blurHandler = sinon.spy();
 
-    el.addEventListener('sl-focus', focusHandler);
-    el.addEventListener('sl-blur', blurHandler);
+    el.addEventListener('bui-focus', focusHandler);
+    el.addEventListener('bui-blur', blurHandler);
 
     el.focus();
     await el.updateComplete;
@@ -510,18 +510,18 @@ describe('<sl-select>', () => {
     expect(blurHandler).to.have.been.calledOnce;
   });
 
-  it('should emit sl-clear when the clear button is clicked', async () => {
+  it('should emit bui-clear when the clear button is clicked', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select value="option-1" clearable>
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select value="option-1" clearable>
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const clearHandler = sinon.spy();
     const clearButton = el.shadowRoot!.querySelector('[part~="clear-button"]')!;
 
-    el.addEventListener('sl-clear', clearHandler);
+    el.addEventListener('bui-clear', clearHandler);
     await el.show();
     await clickOnElement(clearButton);
     await el.updateComplete;
@@ -529,21 +529,21 @@ describe('<sl-select>', () => {
     expect(clearHandler).to.have.been.calledOnce;
   });
 
-  it('should emit sl-change and sl-input when a tag is removed', async () => {
+  it('should emit bui-change and bui-input when a tag is removed', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select value="option-1 option-2 option-3" multiple>
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select value="option-1 option-2 option-3" multiple>
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const changeHandler = sinon.spy();
     const inputHandler = sinon.spy();
     const tag = el.shadowRoot!.querySelector('[part~="tag"]')!;
     const removeButton = tag.shadowRoot!.querySelector('[part~="remove-button"]')!;
 
-    el.addEventListener('sl-change', changeHandler);
-    el.addEventListener('sl-input', inputHandler);
+    el.addEventListener('bui-change', changeHandler);
+    el.addEventListener('bui-input', inputHandler);
 
     await clickOnElement(removeButton);
     await el.updateComplete;
@@ -552,23 +552,23 @@ describe('<sl-select>', () => {
     expect(inputHandler).to.have.been.calledOnce;
   });
 
-  it('should emit sl-show, sl-after-show, sl-hide, and sl-after-hide events when the listbox opens and closes', async () => {
+  it('should emit bui-show, bui-after-show, bui-hide, and bui-after-hide events when the listbox opens and closes', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select value="option-1">
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select value="option-1">
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const showHandler = sinon.spy();
     const afterShowHandler = sinon.spy();
     const hideHandler = sinon.spy();
     const afterHideHandler = sinon.spy();
 
-    el.addEventListener('sl-show', showHandler);
-    el.addEventListener('sl-after-show', afterShowHandler);
-    el.addEventListener('sl-hide', hideHandler);
-    el.addEventListener('sl-after-hide', afterHideHandler);
+    el.addEventListener('bui-show', showHandler);
+    el.addEventListener('bui-after-show', afterShowHandler);
+    el.addEventListener('bui-hide', hideHandler);
+    el.addEventListener('bui-after-hide', afterHideHandler);
 
     await el.show();
     expect(showHandler).to.have.been.calledOnce;
@@ -581,16 +581,16 @@ describe('<sl-select>', () => {
 
   it('should have rounded tags when using the pill attribute', async () => {
     const el = await fixture<SlSelect>(html`
-      <sl-select value="option-1 option-2" multiple pill>
-        <sl-option value="option-1">Option 1</sl-option>
-        <sl-option value="option-2">Option 2</sl-option>
-        <sl-option value="option-3">Option 3</sl-option>
-      </sl-select>
+      <bui-select value="option-1 option-2" multiple pill>
+        <bui-option value="option-1">Option 1</bui-option>
+        <bui-option value="option-2">Option 2</bui-option>
+        <bui-option value="option-3">Option 3</bui-option>
+      </bui-select>
     `);
     const tag = el.shadowRoot!.querySelector('[part~="tag"]')!;
 
     expect(tag.hasAttribute('pill')).to.be.true;
   });
 
-  runFormControlBaseTests('sl-select');
+  runFormControlBaseTests('bui-select');
 });

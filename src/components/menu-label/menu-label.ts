@@ -14,8 +14,8 @@ import type { CSSResultGroup } from 'lit';
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-menu-label')
-export default class SlMenuLabel extends BuckeyeElement {
+@customElement('bui-menu-label')
+export default class MenuLabel extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   render() {
@@ -25,6 +25,6 @@ export default class SlMenuLabel extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-menu-label': SlMenuLabel;
+    'bui-menu-label': MenuLabel;
   }
 }

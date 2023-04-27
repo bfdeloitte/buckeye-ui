@@ -23,8 +23,8 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --indicator-color - The color of the indicator.
  * @cssproperty --indicator-transition-duration - The duration of the indicator's transition when the value changes.
  */
-@customElement('sl-progress-ring')
-export default class SlProgressRing extends BuckeyeElement {
+@customElement('bui-progress-ring')
+export default class ProgressRing extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly localize = new LocalizeController(this);
@@ -82,6 +82,6 @@ export default class SlProgressRing extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-progress-ring': SlProgressRing;
+    'bui-progress-ring': ProgressRing;
   }
 }

@@ -1,6 +1,6 @@
 # Icon
 
-[component-header:sl-icon]
+[component-header:bui-icon]
 
 BuckeyeUI comes bundled with over 1,500 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These icons are part of the `default` icon library. If you prefer, you can register [custom icon libraries](#icon-libraries) as well.
 
@@ -11,19 +11,19 @@ BuckeyeUI comes bundled with over 1,500 icons courtesy of the [Bootstrap Icons](
 All available icons in the `default` icon library are shown below. Click or tap on any icon to copy its name, then you can use it in your HTML like this.
 
 ```html
-<sl-icon name="icon-name-here"></sl-icon>
+<bui-icon name="icon-name-here"></bui-icon>
 ```
 
 <div class="icon-search">
   <div class="icon-search-controls">
-    <sl-input placeholder="Search Icons" clearable>
-      <sl-icon slot="prefix" name="search"></sl-icon>
-    </sl-input>
-    <sl-select value="outline">
-      <sl-option value="outline">Outlined</sl-option>
-      <sl-option value="fill">Filled</sl-option>
-      <sl-option value="all">All icons</sl-option>
-    </sl-select>
+    <bui-input placeholder="Search Icons" clearable>
+      <bui-icon slot="prefix" name="search"></bui-icon>
+    </bui-input>
+    <bui-select value="outline">
+      <bui-option value="outline">Outlined</bui-option>
+      <bui-option value="fill">Filled</bui-option>
+      <bui-option value="all">All icons</bui-option>
+    </bui-select>
   </div>
   <div class="icon-list"></div>
   <input type="text" class="icon-copy-input" aria-hidden="true" tabindex="-1">
@@ -33,63 +33,63 @@ All available icons in the `default` icon library are shown below. Click or tap 
 
 ### Colors
 
-Icons inherit their color from the current text color. Thus, you can set the `color` property on the `<sl-icon>` element or an ancestor to change the color.
+Icons inherit their color from the current text color. Thus, you can set the `color` property on the `<bui-icon>` element or an ancestor to change the color.
 
 ```html preview
 <div style="color: #4a90e2;">
-  <sl-icon name="exclamation-triangle"></sl-icon>
-  <sl-icon name="archive"></sl-icon>
-  <sl-icon name="battery-charging"></sl-icon>
-  <sl-icon name="bell"></sl-icon>
+  <bui-icon name="exclamation-triangle"></bui-icon>
+  <bui-icon name="archive"></bui-icon>
+  <bui-icon name="battery-charging"></bui-icon>
+  <bui-icon name="bell"></bui-icon>
 </div>
 <div style="color: #9013fe;">
-  <sl-icon name="clock"></sl-icon>
-  <sl-icon name="cloud"></sl-icon>
-  <sl-icon name="download"></sl-icon>
-  <sl-icon name="file-earmark"></sl-icon>
+  <bui-icon name="clock"></bui-icon>
+  <bui-icon name="cloud"></bui-icon>
+  <bui-icon name="download"></bui-icon>
+  <bui-icon name="file-earmark"></bui-icon>
 </div>
 <div style="color: #417505;">
-  <sl-icon name="flag"></sl-icon>
-  <sl-icon name="heart"></sl-icon>
-  <sl-icon name="image"></sl-icon>
-  <sl-icon name="lightning"></sl-icon>
+  <bui-icon name="flag"></bui-icon>
+  <bui-icon name="heart"></bui-icon>
+  <bui-icon name="image"></bui-icon>
+  <bui-icon name="lightning"></bui-icon>
 </div>
 <div style="color: #f5a623;">
-  <sl-icon name="mic"></sl-icon>
-  <sl-icon name="search"></sl-icon>
-  <sl-icon name="star"></sl-icon>
-  <sl-icon name="trash"></sl-icon>
+  <bui-icon name="mic"></bui-icon>
+  <bui-icon name="search"></bui-icon>
+  <bui-icon name="star"></bui-icon>
+  <bui-icon name="trash"></bui-icon>
 </div>
 ```
 
 ```jsx react
-import { SlIcon } from 'buckeye-ui/dist/react';
+import { Icon } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
     <div style={{ color: '#4a90e2' }}>
-      <SlIcon name="exclamation-triangle"></SlIcon>
-      <SlIcon name="archive"></SlIcon>
-      <SlIcon name="battery-charging"></SlIcon>
-      <SlIcon name="bell"></SlIcon>
+      <Icon name="exclamation-triangle"></Icon>
+      <Icon name="archive"></Icon>
+      <Icon name="battery-charging"></Icon>
+      <Icon name="bell"></Icon>
     </div>
     <div style={{ color: '#9013fe' }}>
-      <SlIcon name="clock"></SlIcon>
-      <SlIcon name="cloud"></SlIcon>
-      <SlIcon name="download"></SlIcon>
-      <SlIcon name="file-earmark"></SlIcon>
+      <Icon name="clock"></Icon>
+      <Icon name="cloud"></Icon>
+      <Icon name="download"></Icon>
+      <Icon name="file-earmark"></Icon>
     </div>
     <div style={{ color: '#417505' }}>
-      <SlIcon name="flag"></SlIcon>
-      <SlIcon name="heart"></SlIcon>
-      <SlIcon name="image"></SlIcon>
-      <SlIcon name="lightning"></SlIcon>
+      <Icon name="flag"></Icon>
+      <Icon name="heart"></Icon>
+      <Icon name="image"></Icon>
+      <Icon name="lightning"></Icon>
     </div>
     <div style={{ color: '#f5a623' }}>
-      <SlIcon name="mic"></SlIcon>
-      <SlIcon name="search"></SlIcon>
-      <SlIcon name="star"></SlIcon>
-      <SlIcon name="trash"></SlIcon>
+      <Icon name="mic"></Icon>
+      <Icon name="search"></Icon>
+      <Icon name="star"></Icon>
+      <Icon name="trash"></Icon>
     </div>
   </>
 );
@@ -101,46 +101,46 @@ Icons are sized relative to the current font size. To change their size, set the
 
 ```html preview
 <div style="font-size: 32px;">
-  <sl-icon name="exclamation-triangle"></sl-icon>
-  <sl-icon name="archive"></sl-icon>
-  <sl-icon name="battery-charging"></sl-icon>
-  <sl-icon name="bell"></sl-icon>
-  <sl-icon name="clock"></sl-icon>
-  <sl-icon name="cloud"></sl-icon>
-  <sl-icon name="download"></sl-icon>
-  <sl-icon name="file-earmark"></sl-icon>
-  <sl-icon name="flag"></sl-icon>
-  <sl-icon name="heart"></sl-icon>
-  <sl-icon name="image"></sl-icon>
-  <sl-icon name="lightning"></sl-icon>
-  <sl-icon name="mic"></sl-icon>
-  <sl-icon name="search"></sl-icon>
-  <sl-icon name="star"></sl-icon>
-  <sl-icon name="trash"></sl-icon>
+  <bui-icon name="exclamation-triangle"></bui-icon>
+  <bui-icon name="archive"></bui-icon>
+  <bui-icon name="battery-charging"></bui-icon>
+  <bui-icon name="bell"></bui-icon>
+  <bui-icon name="clock"></bui-icon>
+  <bui-icon name="cloud"></bui-icon>
+  <bui-icon name="download"></bui-icon>
+  <bui-icon name="file-earmark"></bui-icon>
+  <bui-icon name="flag"></bui-icon>
+  <bui-icon name="heart"></bui-icon>
+  <bui-icon name="image"></bui-icon>
+  <bui-icon name="lightning"></bui-icon>
+  <bui-icon name="mic"></bui-icon>
+  <bui-icon name="search"></bui-icon>
+  <bui-icon name="star"></bui-icon>
+  <bui-icon name="trash"></bui-icon>
 </div>
 ```
 
 ```jsx react
-import { SlIcon } from 'buckeye-ui/dist/react';
+import { Icon } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <div style={{ fontSize: '32px' }}>
-    <SlIcon name="exclamation-triangle" />
-    <SlIcon name="archive" />
-    <SlIcon name="battery-charging" />
-    <SlIcon name="bell" />
-    <SlIcon name="clock" />
-    <SlIcon name="cloud" />
-    <SlIcon name="download" />
-    <SlIcon name="file-earmark" />
-    <SlIcon name="flag" />
-    <SlIcon name="heart" />
-    <SlIcon name="image" />
-    <SlIcon name="lightning" />
-    <SlIcon name="mic" />
-    <SlIcon name="search" />
-    <SlIcon name="star" />
-    <SlIcon name="trash" />
+    <Icon name="exclamation-triangle" />
+    <Icon name="archive" />
+    <Icon name="battery-charging" />
+    <Icon name="bell" />
+    <Icon name="clock" />
+    <Icon name="cloud" />
+    <Icon name="download" />
+    <Icon name="file-earmark" />
+    <Icon name="flag" />
+    <Icon name="heart" />
+    <Icon name="image" />
+    <Icon name="lightning" />
+    <Icon name="mic" />
+    <Icon name="search" />
+    <Icon name="star" />
+    <Icon name="trash" />
   </div>
 );
 ```
@@ -150,13 +150,13 @@ const App = () => (
 For non-decorative icons, use the `label` attribute to announce it to assistive devices.
 
 ```html preview
-<sl-icon name="star-fill" label="Add to favorites"></sl-icon>
+<bui-icon name="star-fill" label="Add to favorites"></bui-icon>
 ```
 
 ```jsx react
-import { SlIcon } from 'buckeye-ui/dist/react';
+import { Icon } from 'buckeye-ui/dist/react';
 
-const App = () => <SlIcon name="star-fill" label="Add to favorites" />;
+const App = () => <Icon name="star-fill" label="Add to favorites" />;
 ```
 
 ### Custom Icons
@@ -164,18 +164,18 @@ const App = () => <SlIcon name="star-fill" label="Add to favorites" />;
 Custom icons can be loaded individually with the `src` attribute. Only SVGs on a local or CORS-enabled endpoint are supported. If you're using more than one custom icon, it might make sense to register a [custom icon library](#icon-libraries).
 
 ```html preview
-<sl-icon src="https://buckeyeui.com/assets/images/shoe.svg" style="font-size: 8rem;"></sl-icon>
+<bui-icon src="https://buckeyeui.com/assets/images/shoe.svg" style="font-size: 8rem;"></bui-icon>
 ```
 
 ```jsx react
-import { SlIcon } from 'buckeye-ui/dist/react';
+import { Icon } from 'buckeye-ui/dist/react';
 
-const App = () => <SlIcon src="https://buckeyeui.com/assets/images/shoe.svg" style={{ fontSize: '8rem' }}></SlIcon>;
+const App = () => <Icon src="https://buckeyeui.com/assets/images/shoe.svg" style={{ fontSize: '8rem' }}></Icon>;
 ```
 
 ## Icon Libraries
 
-You can register additional icons to use with the `<sl-icon>` component through icon libraries. Icon files can exist locally or on a CORS-enabled endpoint (e.g. a CDN). There is no limit to how many icon libraries you can register and there is no cost associated with registering them, as individual icons are only requested when they're used.
+You can register additional icons to use with the `<bui-icon>` component through icon libraries. Icon files can exist locally or on a CORS-enabled endpoint (e.g. a CDN). There is no limit to how many icon libraries you can register and there is no cost associated with registering them, as individual icons are only requested when they're used.
 
 BuckeyeUI ships with two built-in icon libraries, `default` and `system`. The [default icon library](#customizing-the-default-library) contains all of the icons in the Bootstrap Icons project. The [system icon library](#customizing-the-system-library) contains only a small subset of icons that are used internally by BuckeyeUI components.
 
@@ -196,11 +196,11 @@ Here's an example that registers an icon library located in the `/assets/icons` 
 </script>
 ```
 
-To display an icon, set the `library` and `name` attributes of an `<sl-icon>` element.
+To display an icon, set the `library` and `name` attributes of an `<bui-icon>` element.
 
 ```html
 <!-- This will show the icon located at /assets/icons/smile.svg -->
-<sl-icon library="my-icons" name="smile"></sl-icon>
+<bui-icon library="my-icons" name="smile"></bui-icon>
 ```
 
 If an icon is used before registration occurs, it will be empty initially but shown when registered.
@@ -229,26 +229,26 @@ Icons in this library are licensed under the [Creative Commons 4.0 License](http
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="boxicons" name="bx-bot"></sl-icon>
-  <sl-icon library="boxicons" name="bx-cookie"></sl-icon>
-  <sl-icon library="boxicons" name="bx-joystick"></sl-icon>
-  <sl-icon library="boxicons" name="bx-save"></sl-icon>
-  <sl-icon library="boxicons" name="bx-server"></sl-icon>
-  <sl-icon library="boxicons" name="bx-wine"></sl-icon>
+  <bui-icon library="boxicons" name="bx-bot"></bui-icon>
+  <bui-icon library="boxicons" name="bx-cookie"></bui-icon>
+  <bui-icon library="boxicons" name="bx-joystick"></bui-icon>
+  <bui-icon library="boxicons" name="bx-save"></bui-icon>
+  <bui-icon library="boxicons" name="bx-server"></bui-icon>
+  <bui-icon library="boxicons" name="bx-wine"></bui-icon>
   <br />
-  <sl-icon library="boxicons" name="bxs-bot"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-cookie"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-joystick"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-save"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-server"></sl-icon>
-  <sl-icon library="boxicons" name="bxs-wine"></sl-icon>
+  <bui-icon library="boxicons" name="bxs-bot"></bui-icon>
+  <bui-icon library="boxicons" name="bxs-cookie"></bui-icon>
+  <bui-icon library="boxicons" name="bxs-joystick"></bui-icon>
+  <bui-icon library="boxicons" name="bxs-save"></bui-icon>
+  <bui-icon library="boxicons" name="bxs-server"></bui-icon>
+  <bui-icon library="boxicons" name="bxs-wine"></bui-icon>
   <br />
-  <sl-icon library="boxicons" name="bxl-apple"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-chrome"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-edge"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-firefox"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-opera"></sl-icon>
-  <sl-icon library="boxicons" name="bxl-microsoft"></sl-icon>
+  <bui-icon library="boxicons" name="bxl-apple"></bui-icon>
+  <bui-icon library="boxicons" name="bxl-chrome"></bui-icon>
+  <bui-icon library="boxicons" name="bxl-edge"></bui-icon>
+  <bui-icon library="boxicons" name="bxl-firefox"></bui-icon>
+  <bui-icon library="boxicons" name="bxl-opera"></bui-icon>
+  <bui-icon library="boxicons" name="bxl-microsoft"></bui-icon>
 </div>
 ```
 
@@ -260,12 +260,12 @@ Icons in this library are licensed under the [MIT License](https://github.com/lu
 
 ```html preview
 <div style="font-size: 24px;">
-  <sl-icon library="lucide" name="feather"></sl-icon>
-  <sl-icon library="lucide" name="pie-chart"></sl-icon>
-  <sl-icon library="lucide" name="settings"></sl-icon>
-  <sl-icon library="lucide" name="map-pin"></sl-icon>
-  <sl-icon library="lucide" name="printer"></sl-icon>
-  <sl-icon library="lucide" name="shopping-cart"></sl-icon>
+  <bui-icon library="lucide" name="feather"></bui-icon>
+  <bui-icon library="lucide" name="pie-chart"></bui-icon>
+  <bui-icon library="lucide" name="settings"></bui-icon>
+  <bui-icon library="lucide" name="map-pin"></bui-icon>
+  <bui-icon library="lucide" name="printer"></bui-icon>
+  <bui-icon library="lucide" name="shopping-cart"></bui-icon>
 </div>
 
 <script type="module">
@@ -300,26 +300,26 @@ Icons in this library are licensed under the [Font Awesome Free License](https:/
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="fa" name="far-bell"></sl-icon>
-  <sl-icon library="fa" name="far-comment"></sl-icon>
-  <sl-icon library="fa" name="far-hand-point-right"></sl-icon>
-  <sl-icon library="fa" name="far-hdd"></sl-icon>
-  <sl-icon library="fa" name="far-heart"></sl-icon>
-  <sl-icon library="fa" name="far-star"></sl-icon>
+  <bui-icon library="fa" name="far-bell"></bui-icon>
+  <bui-icon library="fa" name="far-comment"></bui-icon>
+  <bui-icon library="fa" name="far-hand-point-right"></bui-icon>
+  <bui-icon library="fa" name="far-hdd"></bui-icon>
+  <bui-icon library="fa" name="far-heart"></bui-icon>
+  <bui-icon library="fa" name="far-star"></bui-icon>
   <br />
-  <sl-icon library="fa" name="fas-archive"></sl-icon>
-  <sl-icon library="fa" name="fas-book"></sl-icon>
-  <sl-icon library="fa" name="fas-chess-knight"></sl-icon>
-  <sl-icon library="fa" name="fas-dice"></sl-icon>
-  <sl-icon library="fa" name="fas-pizza-slice"></sl-icon>
-  <sl-icon library="fa" name="fas-scroll"></sl-icon>
+  <bui-icon library="fa" name="fas-archive"></bui-icon>
+  <bui-icon library="fa" name="fas-book"></bui-icon>
+  <bui-icon library="fa" name="fas-chess-knight"></bui-icon>
+  <bui-icon library="fa" name="fas-dice"></bui-icon>
+  <bui-icon library="fa" name="fas-pizza-slice"></bui-icon>
+  <bui-icon library="fa" name="fas-scroll"></bui-icon>
   <br />
-  <sl-icon library="fa" name="fab-apple"></sl-icon>
-  <sl-icon library="fa" name="fab-chrome"></sl-icon>
-  <sl-icon library="fa" name="fab-edge"></sl-icon>
-  <sl-icon library="fa" name="fab-firefox"></sl-icon>
-  <sl-icon library="fa" name="fab-opera"></sl-icon>
-  <sl-icon library="fa" name="fab-microsoft"></sl-icon>
+  <bui-icon library="fa" name="fab-apple"></bui-icon>
+  <bui-icon library="fa" name="fab-chrome"></bui-icon>
+  <bui-icon library="fa" name="fab-edge"></bui-icon>
+  <bui-icon library="fa" name="fab-firefox"></bui-icon>
+  <bui-icon library="fa" name="fab-opera"></bui-icon>
+  <bui-icon library="fa" name="fab-microsoft"></bui-icon>
 </div>
 ```
 
@@ -339,12 +339,12 @@ Icons in this library are licensed under the [MIT License](https://github.com/ta
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="heroicons" name="chat-bubble-left"></sl-icon>
-  <sl-icon library="heroicons" name="cloud"></sl-icon>
-  <sl-icon library="heroicons" name="cog"></sl-icon>
-  <sl-icon library="heroicons" name="document-text"></sl-icon>
-  <sl-icon library="heroicons" name="gift"></sl-icon>
-  <sl-icon library="heroicons" name="speaker-wave"></sl-icon>
+  <bui-icon library="heroicons" name="chat-bubble-left"></bui-icon>
+  <bui-icon library="heroicons" name="cloud"></bui-icon>
+  <bui-icon library="heroicons" name="cog"></bui-icon>
+  <bui-icon library="heroicons" name="document-text"></bui-icon>
+  <bui-icon library="heroicons" name="gift"></bui-icon>
+  <bui-icon library="heroicons" name="speaker-wave"></bui-icon>
 </div>
 ```
 
@@ -364,12 +364,12 @@ Icons in this library are licensed under the [MIT License](https://github.com/lu
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="iconoir" name="check-circled-outline"></sl-icon>
-  <sl-icon library="iconoir" name="drawer"></sl-icon>
-  <sl-icon library="iconoir" name="keyframes"></sl-icon>
-  <sl-icon library="iconoir" name="headset-help"></sl-icon>
-  <sl-icon library="iconoir" name="color-picker"></sl-icon>
-  <sl-icon library="iconoir" name="wifi"></sl-icon>
+  <bui-icon library="iconoir" name="check-circled-outline"></bui-icon>
+  <bui-icon library="iconoir" name="drawer"></bui-icon>
+  <bui-icon library="iconoir" name="keyframes"></bui-icon>
+  <bui-icon library="iconoir" name="headset-help"></bui-icon>
+  <bui-icon library="iconoir" name="color-picker"></bui-icon>
+  <bui-icon library="iconoir" name="wifi"></bui-icon>
 </div>
 ```
 
@@ -395,26 +395,26 @@ Icons in this library are licensed under the [MIT License](https://github.com/io
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="ionicons" name="alarm"></sl-icon>
-  <sl-icon library="ionicons" name="american-football"></sl-icon>
-  <sl-icon library="ionicons" name="bug"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble"></sl-icon>
-  <sl-icon library="ionicons" name="settings"></sl-icon>
-  <sl-icon library="ionicons" name="warning"></sl-icon>
+  <bui-icon library="ionicons" name="alarm"></bui-icon>
+  <bui-icon library="ionicons" name="american-football"></bui-icon>
+  <bui-icon library="ionicons" name="bug"></bui-icon>
+  <bui-icon library="ionicons" name="chatbubble"></bui-icon>
+  <bui-icon library="ionicons" name="settings"></bui-icon>
+  <bui-icon library="ionicons" name="warning"></bui-icon>
   <br />
-  <sl-icon library="ionicons" name="alarm-outline"></sl-icon>
-  <sl-icon library="ionicons" name="american-football-outline"></sl-icon>
-  <sl-icon library="ionicons" name="bug-outline"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble-outline"></sl-icon>
-  <sl-icon library="ionicons" name="settings-outline"></sl-icon>
-  <sl-icon library="ionicons" name="warning-outline"></sl-icon>
+  <bui-icon library="ionicons" name="alarm-outline"></bui-icon>
+  <bui-icon library="ionicons" name="american-football-outline"></bui-icon>
+  <bui-icon library="ionicons" name="bug-outline"></bui-icon>
+  <bui-icon library="ionicons" name="chatbubble-outline"></bui-icon>
+  <bui-icon library="ionicons" name="settings-outline"></bui-icon>
+  <bui-icon library="ionicons" name="warning-outline"></bui-icon>
   <br />
-  <sl-icon library="ionicons" name="alarm-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="american-football-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="bug-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="chatbubble-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="settings-sharp"></sl-icon>
-  <sl-icon library="ionicons" name="warning-sharp"></sl-icon>
+  <bui-icon library="ionicons" name="alarm-sharp"></bui-icon>
+  <bui-icon library="ionicons" name="american-football-sharp"></bui-icon>
+  <bui-icon library="ionicons" name="bug-sharp"></bui-icon>
+  <bui-icon library="ionicons" name="chatbubble-sharp"></bui-icon>
+  <bui-icon library="ionicons" name="settings-sharp"></bui-icon>
+  <bui-icon library="ionicons" name="warning-sharp"></bui-icon>
 </div>
 ```
 
@@ -435,19 +435,19 @@ Icons in this library are licensed under the [MIT License](https://github.com/mi
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="jam" name="calendar"></sl-icon>
-  <sl-icon library="jam" name="camera"></sl-icon>
-  <sl-icon library="jam" name="filter"></sl-icon>
-  <sl-icon library="jam" name="leaf"></sl-icon>
-  <sl-icon library="jam" name="picture"></sl-icon>
-  <sl-icon library="jam" name="set-square"></sl-icon>
+  <bui-icon library="jam" name="calendar"></bui-icon>
+  <bui-icon library="jam" name="camera"></bui-icon>
+  <bui-icon library="jam" name="filter"></bui-icon>
+  <bui-icon library="jam" name="leaf"></bui-icon>
+  <bui-icon library="jam" name="picture"></bui-icon>
+  <bui-icon library="jam" name="set-square"></bui-icon>
   <br />
-  <sl-icon library="jam" name="calendar-f"></sl-icon>
-  <sl-icon library="jam" name="camera-f"></sl-icon>
-  <sl-icon library="jam" name="filter-f"></sl-icon>
-  <sl-icon library="jam" name="leaf-f"></sl-icon>
-  <sl-icon library="jam" name="picture-f"></sl-icon>
-  <sl-icon library="jam" name="set-square-f"></sl-icon>
+  <bui-icon library="jam" name="calendar-f"></bui-icon>
+  <bui-icon library="jam" name="camera-f"></bui-icon>
+  <bui-icon library="jam" name="filter-f"></bui-icon>
+  <bui-icon library="jam" name="leaf-f"></bui-icon>
+  <bui-icon library="jam" name="picture-f"></bui-icon>
+  <bui-icon library="jam" name="set-square-f"></bui-icon>
 </div>
 ```
 
@@ -471,26 +471,26 @@ Icons in this library are licensed under the [Apache 2.0 License](https://github
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="material" name="notifications"></sl-icon>
-  <sl-icon library="material" name="email"></sl-icon>
-  <sl-icon library="material" name="delete"></sl-icon>
-  <sl-icon library="material" name="volume_up"></sl-icon>
-  <sl-icon library="material" name="settings"></sl-icon>
-  <sl-icon library="material" name="shopping_basket"></sl-icon>
+  <bui-icon library="material" name="notifications"></bui-icon>
+  <bui-icon library="material" name="email"></bui-icon>
+  <bui-icon library="material" name="delete"></bui-icon>
+  <bui-icon library="material" name="volume_up"></bui-icon>
+  <bui-icon library="material" name="settings"></bui-icon>
+  <bui-icon library="material" name="shopping_basket"></bui-icon>
   <br />
-  <sl-icon library="material" name="notifications_round"></sl-icon>
-  <sl-icon library="material" name="email_round"></sl-icon>
-  <sl-icon library="material" name="delete_round"></sl-icon>
-  <sl-icon library="material" name="volume_up_round"></sl-icon>
-  <sl-icon library="material" name="settings_round"></sl-icon>
-  <sl-icon library="material" name="shopping_basket_round"></sl-icon>
+  <bui-icon library="material" name="notifications_round"></bui-icon>
+  <bui-icon library="material" name="email_round"></bui-icon>
+  <bui-icon library="material" name="delete_round"></bui-icon>
+  <bui-icon library="material" name="volume_up_round"></bui-icon>
+  <bui-icon library="material" name="settings_round"></bui-icon>
+  <bui-icon library="material" name="shopping_basket_round"></bui-icon>
   <br />
-  <sl-icon library="material" name="notifications_sharp"></sl-icon>
-  <sl-icon library="material" name="email_sharp"></sl-icon>
-  <sl-icon library="material" name="delete_sharp"></sl-icon>
-  <sl-icon library="material" name="volume_up_sharp"></sl-icon>
-  <sl-icon library="material" name="settings_sharp"></sl-icon>
-  <sl-icon library="material" name="shopping_basket_sharp"></sl-icon>
+  <bui-icon library="material" name="notifications_sharp"></bui-icon>
+  <bui-icon library="material" name="email_sharp"></bui-icon>
+  <bui-icon library="material" name="delete_sharp"></bui-icon>
+  <bui-icon library="material" name="volume_up_sharp"></bui-icon>
+  <bui-icon library="material" name="settings_sharp"></bui-icon>
+  <bui-icon library="material" name="shopping_basket_sharp"></bui-icon>
 </div>
 ```
 
@@ -515,19 +515,19 @@ Icons in this library are licensed under the [Apache 2.0 License](https://github
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="remixicon" name="business/cloud-line"></sl-icon>
-  <sl-icon library="remixicon" name="design/brush-line"></sl-icon>
-  <sl-icon library="remixicon" name="business/pie-chart-line"></sl-icon>
-  <sl-icon library="remixicon" name="development/bug-line"></sl-icon>
-  <sl-icon library="remixicon" name="media/image-line"></sl-icon>
-  <sl-icon library="remixicon" name="system/alert-line"></sl-icon>
+  <bui-icon library="remixicon" name="business/cloud-line"></bui-icon>
+  <bui-icon library="remixicon" name="design/brush-line"></bui-icon>
+  <bui-icon library="remixicon" name="business/pie-chart-line"></bui-icon>
+  <bui-icon library="remixicon" name="development/bug-line"></bui-icon>
+  <bui-icon library="remixicon" name="media/image-line"></bui-icon>
+  <bui-icon library="remixicon" name="system/alert-line"></bui-icon>
   <br />
-  <sl-icon library="remixicon" name="business/cloud-fill"></sl-icon>
-  <sl-icon library="remixicon" name="design/brush-fill"></sl-icon>
-  <sl-icon library="remixicon" name="business/pie-chart-fill"></sl-icon>
-  <sl-icon library="remixicon" name="development/bug-fill"></sl-icon>
-  <sl-icon library="remixicon" name="media/image-fill"></sl-icon>
-  <sl-icon library="remixicon" name="system/alert-fill"></sl-icon>
+  <bui-icon library="remixicon" name="business/cloud-fill"></bui-icon>
+  <bui-icon library="remixicon" name="design/brush-fill"></bui-icon>
+  <bui-icon library="remixicon" name="business/pie-chart-fill"></bui-icon>
+  <bui-icon library="remixicon" name="development/bug-fill"></bui-icon>
+  <bui-icon library="remixicon" name="media/image-fill"></bui-icon>
+  <bui-icon library="remixicon" name="system/alert-fill"></bui-icon>
 </div>
 ```
 
@@ -547,19 +547,19 @@ Icons in this library are licensed under the [MIT License](https://github.com/ta
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="tabler" name="alert-triangle"></sl-icon>
-  <sl-icon library="tabler" name="arrow-back"></sl-icon>
-  <sl-icon library="tabler" name="at"></sl-icon>
-  <sl-icon library="tabler" name="ball-baseball"></sl-icon>
-  <sl-icon library="tabler" name="cake"></sl-icon>
-  <sl-icon library="tabler" name="files"></sl-icon>
+  <bui-icon library="tabler" name="alert-triangle"></bui-icon>
+  <bui-icon library="tabler" name="arrow-back"></bui-icon>
+  <bui-icon library="tabler" name="at"></bui-icon>
+  <bui-icon library="tabler" name="ball-baseball"></bui-icon>
+  <bui-icon library="tabler" name="cake"></bui-icon>
+  <bui-icon library="tabler" name="files"></bui-icon>
   <br />
-  <sl-icon library="tabler" name="keyboard"></sl-icon>
-  <sl-icon library="tabler" name="moon"></sl-icon>
-  <sl-icon library="tabler" name="pig"></sl-icon>
-  <sl-icon library="tabler" name="printer"></sl-icon>
-  <sl-icon library="tabler" name="ship"></sl-icon>
-  <sl-icon library="tabler" name="toilet-paper"></sl-icon>
+  <bui-icon library="tabler" name="keyboard"></bui-icon>
+  <bui-icon library="tabler" name="moon"></bui-icon>
+  <bui-icon library="tabler" name="pig"></bui-icon>
+  <bui-icon library="tabler" name="printer"></bui-icon>
+  <bui-icon library="tabler" name="ship"></bui-icon>
+  <bui-icon library="tabler" name="toilet-paper"></bui-icon>
 </div>
 ```
 
@@ -585,25 +585,25 @@ Icons in this library are licensed under the [Apache 2.0 License](https://github
 </script>
 
 <div style="font-size: 24px;">
-  <sl-icon library="unicons" name="clock"></sl-icon>
-  <sl-icon library="unicons" name="graph-bar"></sl-icon>
-  <sl-icon library="unicons" name="padlock"></sl-icon>
-  <sl-icon library="unicons" name="polygon"></sl-icon>
-  <sl-icon library="unicons" name="rocket"></sl-icon>
-  <sl-icon library="unicons" name="star"></sl-icon>
+  <bui-icon library="unicons" name="clock"></bui-icon>
+  <bui-icon library="unicons" name="graph-bar"></bui-icon>
+  <bui-icon library="unicons" name="padlock"></bui-icon>
+  <bui-icon library="unicons" name="polygon"></bui-icon>
+  <bui-icon library="unicons" name="rocket"></bui-icon>
+  <bui-icon library="unicons" name="star"></bui-icon>
   <br />
-  <sl-icon library="unicons" name="clock-s"></sl-icon>
-  <sl-icon library="unicons" name="graph-bar-s"></sl-icon>
-  <sl-icon library="unicons" name="padlock-s"></sl-icon>
-  <sl-icon library="unicons" name="polygon-s"></sl-icon>
-  <sl-icon library="unicons" name="rocket-s"></sl-icon>
-  <sl-icon library="unicons" name="star-s"></sl-icon>
+  <bui-icon library="unicons" name="clock-s"></bui-icon>
+  <bui-icon library="unicons" name="graph-bar-s"></bui-icon>
+  <bui-icon library="unicons" name="padlock-s"></bui-icon>
+  <bui-icon library="unicons" name="polygon-s"></bui-icon>
+  <bui-icon library="unicons" name="rocket-s"></bui-icon>
+  <bui-icon library="unicons" name="star-s"></bui-icon>
 </div>
 ```
 
 ### Customizing the Default Library
 
-The default icon library contains over 1,300 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These are the icons that display when you use `<sl-icon>` without the `library` attribute. If you prefer to have these icons resolve elsewhere or to a different icon library, register an icon library using the `default` name and a custom resolver.
+The default icon library contains over 1,300 icons courtesy of the [Bootstrap Icons](https://icons.getbootstrap.com/) project. These are the icons that display when you use `<bui-icon>` without the `library` attribute. If you prefer to have these icons resolve elsewhere or to a different icon library, register an icon library using the `default` name and a custom resolver.
 
 This example will load the same set of icons from the jsDelivr CDN instead of your local assets folder.
 
@@ -636,11 +636,11 @@ If you want to change the icons BuckeyeUI uses internally, you can register an i
 <!-- Supporting scripts and styles for the search utility -->
 <script>
   function wrapWithTooltip(item) {
-    const tooltip = document.createElement('sl-tooltip');
+    const tooltip = document.createElement('bui-tooltip');
     tooltip.content = item.getAttribute('data-name');
 
     // Close open tooltips
-    document.querySelectorAll('.icon-list sl-tooltip[open]').forEach(tooltip => tooltip.hide());
+    document.querySelectorAll('.icon-list bui-tooltip[open]').forEach(tooltip => tooltip.hide());
 
     // Wrap it with a tooltip and trick it into showing up
     item.parentNode.insertBefore(tooltip, item);
@@ -652,8 +652,8 @@ If you want to change the icons BuckeyeUI uses internally, you can register an i
     .then(res => res.json())  
     .then(icons => {
       const container = document.querySelector('.icon-search');
-      const input = container.querySelector('sl-input');
-      const select = container.querySelector('sl-select');
+      const input = container.querySelector('bui-input');
+      const select = container.querySelector('bui-select');
       const copyInput = container.querySelector('.icon-copy-input');
       const loader = container.querySelector('.icon-loader');
       const list = container.querySelector('.icon-list');
@@ -679,7 +679,7 @@ If you want to change the icons BuckeyeUI uses internally, you can register an i
 
         // Copy on click
         item.addEventListener('click', () => {
-          const tooltip = item.closest('sl-tooltip');
+          const tooltip = item.closest('bui-tooltip');
           copyInput.value = i.name;
           copyInput.select();
           document.execCommand('copy');
@@ -692,7 +692,7 @@ If you want to change the icons BuckeyeUI uses internally, you can register an i
       });
 
       // Filter as the user types
-      input.addEventListener('sl-input', () => {
+      input.addEventListener('bui-input', () => {
         clearTimeout(inputTimeout);
         inputTimeout = setTimeout(() => {
           [...list.querySelectorAll('.icon-list-item')].map(item => {
@@ -708,21 +708,21 @@ If you want to change the icons BuckeyeUI uses internally, you can register an i
       });
 
       // Sort by type and remember preference
-      const iconType = localStorage.getItem('sl-icon:type') || 'outline';
+      const iconType = localStorage.getItem('bui-icon:type') || 'outline';
       select.value = iconType;
       list.setAttribute('data-type', select.value);
-      select.addEventListener('sl-change', () => {
+      select.addEventListener('bui-change', () => {
         list.setAttribute('data-type', select.value);
-        localStorage.setItem('sl-icon:type', select.value);
+        localStorage.setItem('bui-icon:type', select.value);
       });
     });
 </script>
 
 <style>
   .icon-search {
-    border: solid 1px var(--sl-panel-border-color);
-    border-radius: var(--sl-border-radius-medium);
-    padding: var(--sl-spacing-medium);
+    border: solid 1px var(--bui-panel-border-color);
+    border-radius: var(--bui-border-radius-medium);
+    padding: var(--bui-spacing-medium);
   }
 
   .icon-search [hidden] {
@@ -733,11 +733,11 @@ If you want to change the icons BuckeyeUI uses internally, you can register an i
     display: flex;
   }
 
-  .icon-search-controls sl-input {
+  .icon-search-controls bui-input {
     flex: 1 1 auto;
   }
 
-  .icon-search-controls sl-select {
+  .icon-search-controls bui-select {
     width: 10rem;
     flex: 0 0 auto;
     margin-left: 1rem;
@@ -766,18 +766,18 @@ If you want to change the icons BuckeyeUI uses internally, you can register an i
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--sl-border-radius-medium);
+    border-radius: var(--bui-border-radius-medium);
     font-size: 24px;
     width: 2em;
     height: 2em;
     margin: 0 auto;
     cursor: copy;
-    transition: var(--sl-transition-medium) all;
+    transition: var(--bui-transition-medium) all;
   }
 
   .icon-list-item:hover {
-    background-color: var(--sl-color-primary-50);
-    color: var(--sl-color-primary-600);
+    background-color: var(--bui-color-primary-50);
+    color: var(--bui-color-primary-600);
   }
 
   .icon-list[data-type="outline"] .icon-list-item[data-name$="-fill"] {
@@ -807,7 +807,7 @@ If you want to change the icons BuckeyeUI uses internally, you can register an i
       display: block;
     }
 
-    .icon-search-controls sl-select {
+    .icon-search-controls bui-select {
       width: auto;
       margin: 1rem 0 0 0;
     }
@@ -820,4 +820,4 @@ If you want to change the icons BuckeyeUI uses internally, you can register an i
   }
 </style>
 
-[component-metadata:sl-icon]
+[component-metadata:bui-icon]

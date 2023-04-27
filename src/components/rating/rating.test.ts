@@ -2,11 +2,11 @@ import { clickOnElement } from '../../internal/test';
 import { expect, fixture, html } from '@open-wc/testing';
 import { sendKeys } from '@web/test-runner-commands';
 import sinon from 'sinon';
-import type SlRating from './rating';
+import type Rating from './rating';
 
-describe('<sl-rating>', () => {
+describe('<bui-rating>', () => {
   it('should pass accessibility tests', async () => {
-    const el = await fixture<SlRating>(html` <sl-rating label="Test"></sl-rating> `);
+    const el = await fixture<Rating>(html` <bui-rating label="Test"></bui-rating> `);
     await expect(el).to.be.accessible();
 
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part~="base"]')!;
@@ -22,7 +22,7 @@ describe('<sl-rating>', () => {
   });
 
   it('should be readonly with the readonly attribute', async () => {
-    const el = await fixture<SlRating>(html` <sl-rating label="Test" readonly></sl-rating> `);
+    const el = await fixture<Rating>(html` <bui-rating label="Test" readonly></bui-rating> `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part~="base"]')!;
 
     expect(base.getAttribute('aria-readonly')).to.equal('true');
@@ -30,7 +30,7 @@ describe('<sl-rating>', () => {
   });
 
   it('should be disabled with the disabled attribute', async () => {
-    const el = await fixture<SlRating>(html` <sl-rating label="Test" disabled></sl-rating> `);
+    const el = await fixture<Rating>(html` <bui-rating label="Test" disabled></bui-rating> `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part~="base"]')!;
 
     expect(base.getAttribute('aria-disabled')).to.equal('true');
@@ -38,25 +38,25 @@ describe('<sl-rating>', () => {
   });
 
   it('should set max value by attribute', async () => {
-    const el = await fixture<SlRating>(html` <sl-rating label="Test" max="12"></sl-rating> `);
+    const el = await fixture<Rating>(html` <bui-rating label="Test" max="12"></bui-rating> `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part~="base"]')!;
 
     expect(base.getAttribute('aria-valuemax')).to.equal('12');
   });
 
   it('should set selected value by attribute', async () => {
-    const el = await fixture<SlRating>(html` <sl-rating label="Test" value="3"></sl-rating> `);
+    const el = await fixture<Rating>(html` <bui-rating label="Test" value="3"></bui-rating> `);
     const base = el.shadowRoot!.querySelector<HTMLElement>('[part~="base"]')!;
 
     expect(base.getAttribute('aria-valuenow')).to.equal('3');
   });
 
-  it('should emit sl-change when clicked', async () => {
-    const el = await fixture<SlRating>(html` <sl-rating></sl-rating> `);
+  it('should emit bui-change when clicked', async () => {
+    const el = await fixture<Rating>(html` <bui-rating></bui-rating> `);
     const lastSymbol = el.shadowRoot!.querySelector<HTMLSpanElement>('.rating__symbol:last-child')!;
     const changeHandler = sinon.spy();
 
-    el.addEventListener('sl-change', changeHandler);
+    el.addEventListener('bui-change', changeHandler);
 
     await clickOnElement(lastSymbol);
     await el.updateComplete;
@@ -65,11 +65,11 @@ describe('<sl-rating>', () => {
     expect(el.value).to.equal(5);
   });
 
-  it('should emit sl-change when the value is changed with the keyboard', async () => {
-    const el = await fixture<SlRating>(html` <sl-rating></sl-rating> `);
+  it('should emit bui-change when the value is changed with the keyboard', async () => {
+    const el = await fixture<Rating>(html` <bui-rating></bui-rating> `);
     const changeHandler = sinon.spy();
 
-    el.addEventListener('sl-change', changeHandler);
+    el.addEventListener('bui-change', changeHandler);
     el.focus();
     await el.updateComplete;
     await sendKeys({ press: 'ArrowRight' });
@@ -79,12 +79,12 @@ describe('<sl-rating>', () => {
     expect(el.value).to.equal(1);
   });
 
-  it('should not emit sl-change when disabled', async () => {
-    const el = await fixture<SlRating>(html` <sl-rating value="5" disabled></sl-rating> `);
+  it('should not emit bui-change when disabled', async () => {
+    const el = await fixture<Rating>(html` <bui-rating value="5" disabled></bui-rating> `);
     const lastSymbol = el.shadowRoot!.querySelector<HTMLSpanElement>('.rating__symbol:last-child')!;
     const changeHandler = sinon.spy();
 
-    el.addEventListener('sl-change', changeHandler);
+    el.addEventListener('bui-change', changeHandler);
 
     await clickOnElement(lastSymbol);
     await el.updateComplete;
@@ -93,16 +93,16 @@ describe('<sl-rating>', () => {
     expect(el.value).to.equal(5);
   });
 
-  it('should not emit sl-change when the value is changed programmatically', async () => {
-    const el = await fixture<SlRating>(html` <sl-rating label="Test" value="1"></sl-rating> `);
-    el.addEventListener('sl-change', () => expect.fail('sl-change incorrectly emitted'));
+  it('should not emit bui-change when the value is changed programmatically', async () => {
+    const el = await fixture<Rating>(html` <bui-rating label="Test" value="1"></bui-rating> `);
+    el.addEventListener('bui-change', () => expect.fail('bui-change incorrectly emitted'));
     el.value = 5;
     await el.updateComplete;
   });
 
   describe('focus', () => {
     it('should focus inner div', async () => {
-      const el = await fixture<SlRating>(html` <sl-rating label="Test"></sl-rating> `);
+      const el = await fixture<Rating>(html` <bui-rating label="Test"></bui-rating> `);
 
       const base = el.shadowRoot!.querySelector<HTMLElement>('[part~="base"]')!;
 
@@ -115,7 +115,7 @@ describe('<sl-rating>', () => {
 
   describe('blur', () => {
     it('should blur inner div', async () => {
-      const el = await fixture<SlRating>(html` <sl-rating label="Test"></sl-rating> `);
+      const el = await fixture<Rating>(html` <bui-rating label="Test"></bui-rating> `);
 
       el.focus();
       await el.updateComplete;

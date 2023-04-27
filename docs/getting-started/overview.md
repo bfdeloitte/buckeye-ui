@@ -2,7 +2,7 @@
 <div class="splash-start">
 <img class="splash-logo" src="/assets/images/buckeyeui.png" alt="IOP-UI">
 
-# <sl-visually-hidden>BuckeyeUI:</sl-visually-hidden> An Ohioan library of web components.
+# <bui-visually-hidden>BuckeyeUI:</bui-visually-hidden> An Ohioan library of web components.
 
 - Works with all frameworks 🧩
 - Works with CDNs 🚛
@@ -36,7 +36,7 @@ Add the following code to your page.
 Now you have access to all of BuckeyeUI's components! Try adding a button:
 
 ```html preview expanded
-<sl-button>Click me</sl-button>
+<bui-button>Click me</bui-button>
 ```
 
 ?> This will activate BuckeyeUI's experimental autoloader, which registers components on the fly as you use them. To learn more about it, or for other ways to install BuckeyeUI, refer to the [installation instructions](getting-started/installation).
@@ -97,17 +97,17 @@ Designing, developing, and supporting this library requires a lot of time, effor
 
 👇 Your support is very much appreciated! 👇
 
-<sl-button class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
-  <sl-icon slot="prefix" name="heart"></sl-icon> Become a sponsor
-</sl-button>
+<bui-button class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
+  <bui-icon slot="prefix" name="heart"></bui-icon> Become a sponsor
+</bui-button>
 
-<sl-button class="repo-button repo-button--github" href="https://github.com/bfdeloitte/buckeye-ui/stargazers" target="_blank">
-  <sl-icon slot="prefix" name="github"></sl-icon> Star
-</sl-button>
+<bui-button class="repo-button repo-button--github" href="https://github.com/bfdeloitte/buckeye-ui/stargazers" target="_blank">
+  <bui-icon slot="prefix" name="github"></bui-icon> Star
+</bui-button>
 
-<sl-button class="repo-button repo-button--twitter" href="https://twitter.com/buckeyeui" target="_blank">
-  <sl-icon slot="prefix" name="twitter"></sl-icon> Follow
-</sl-button>
+<bui-button class="repo-button repo-button--twitter" href="https://twitter.com/buckeyeui" target="_blank">
+  <bui-icon slot="prefix" name="twitter"></bui-icon> Follow
+</bui-button>
 
 ## Attribution
 

@@ -1,15 +1,15 @@
 # Divider
 
-[component-header:sl-divider]
+[component-header:bui-divider]
 
 ```html preview
-<sl-divider></sl-divider>
+<bui-divider></bui-divider>
 ```
 
 ```jsx react
-import { SlDivider } from 'buckeye-ui/dist/react';
+import { Divider } from 'buckeye-ui/dist/react';
 
-const App = () => <SlDivider />;
+const App = () => <Divider />;
 ```
 
 ## Examples
@@ -19,13 +19,13 @@ const App = () => <SlDivider />;
 Use the `--width` custom property to change the width of the divider.
 
 ```html preview
-<sl-divider style="--width: 4px;"></sl-divider>
+<bui-divider style="--width: 4px;"></bui-divider>
 ```
 
 ```jsx react
-import { SlDivider } from 'buckeye-ui/dist/react';
+import { Divider } from 'buckeye-ui/dist/react';
 
-const App = () => <SlDivider style={{ '--width': '4px' }} />;
+const App = () => <Divider style={{ '--width': '4px' }} />;
 ```
 
 ### Color
@@ -33,13 +33,13 @@ const App = () => <SlDivider style={{ '--width': '4px' }} />;
 Use the `--color` custom property to change the color of the divider.
 
 ```html preview
-<sl-divider style="--color: tomato;"></sl-divider>
+<bui-divider style="--color: tomato;"></bui-divider>
 ```
 
 ```jsx react
-import { SlDivider } from 'buckeye-ui/dist/react';
+import { Divider } from 'buckeye-ui/dist/react';
 
-const App = () => <SlDivider style={{ '--color': 'tomato' }} />;
+const App = () => <Divider style={{ '--color': 'tomato' }} />;
 ```
 
 ### Spacing
@@ -49,18 +49,18 @@ Use the `--spacing` custom property to change the amount of space between the di
 ```html preview
 <div style="text-align: center;">
   Above
-  <sl-divider style="--spacing: 2rem;"></sl-divider>
+  <bui-divider style="--spacing: 2rem;"></bui-divider>
   Below
 </div>
 ```
 
 ```jsx react
-import { SlDivider } from 'buckeye-ui/dist/react';
+import { Divider } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
     Above
-    <SlDivider style={{ '--spacing': '2rem' }} />
+    <Divider style={{ '--spacing': '2rem' }} />
     Below
   </>
 );
@@ -73,15 +73,15 @@ Add the `vertical` attribute to draw the divider in a vertical orientation. The 
 ```html preview
 <div style="display: flex; align-items: center; height: 2rem;">
   First
-  <sl-divider vertical></sl-divider>
+  <bui-divider vertical></bui-divider>
   Middle
-  <sl-divider vertical></sl-divider>
+  <bui-divider vertical></bui-divider>
   Last
 </div>
 ```
 
 ```jsx react
-import { SlDivider } from 'buckeye-ui/dist/react';
+import { Divider } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <div
@@ -92,9 +92,9 @@ const App = () => (
     }}
   >
     First
-    <SlDivider vertical />
+    <Divider vertical />
     Middle
-    <SlDivider vertical />
+    <Divider vertical />
     Last
   </div>
 );
@@ -105,31 +105,31 @@ const App = () => (
 Use dividers in [menus](/components/menu) to visually group menu items.
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-item value="1">Option 1</sl-menu-item>
-  <sl-menu-item value="2">Option 2</sl-menu-item>
-  <sl-menu-item value="3">Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item value="4">Option 4</sl-menu-item>
-  <sl-menu-item value="5">Option 5</sl-menu-item>
-  <sl-menu-item value="6">Option 6</sl-menu-item>
-</sl-menu>
+<bui-menu style="max-width: 200px;">
+  <bui-menu-item value="1">Option 1</bui-menu-item>
+  <bui-menu-item value="2">Option 2</bui-menu-item>
+  <bui-menu-item value="3">Option 3</bui-menu-item>
+  <bui-divider></bui-divider>
+  <bui-menu-item value="4">Option 4</bui-menu-item>
+  <bui-menu-item value="5">Option 5</bui-menu-item>
+  <bui-menu-item value="6">Option 6</bui-menu-item>
+</bui-menu>
 ```
 
 ```jsx react
-import { SlDivider, SlMenu, SlMenuItem } from 'buckeye-ui/dist/react';
+import { Divider, Menu, MenuItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlMenu style={{ maxWidth: '200px' }}>
-    <SlMenuItem value="1">Option 1</SlMenuItem>
-    <SlMenuItem value="2">Option 2</SlMenuItem>
-    <SlMenuItem value="3">Option 3</SlMenuItem>
-    <sl-divider />
-    <SlMenuItem value="4">Option 4</SlMenuItem>
-    <SlMenuItem value="5">Option 5</SlMenuItem>
-    <SlMenuItem value="6">Option 6</SlMenuItem>
-  </SlMenu>
+  <Menu style={{ maxWidth: '200px' }}>
+    <MenuItem value="1">Option 1</MenuItem>
+    <MenuItem value="2">Option 2</MenuItem>
+    <MenuItem value="3">Option 3</MenuItem>
+    <bui-divider />
+    <MenuItem value="4">Option 4</MenuItem>
+    <MenuItem value="5">Option 5</MenuItem>
+    <MenuItem value="6">Option 6</MenuItem>
+  </Menu>
 );
 ```
 
-[component-metadata:sl-divider]
+[component-metadata:bui-divider]

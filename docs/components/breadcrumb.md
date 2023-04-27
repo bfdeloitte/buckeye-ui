@@ -1,28 +1,28 @@
 # Breadcrumb
 
-[component-header:sl-breadcrumb]
+[component-header:bui-breadcrumb]
 
 Breadcrumbs are usually placed before a page's main content with the current page shown last to indicate the user's position in the navigation.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>Catalog</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Women's</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Shirts &amp; Tops</sl-breadcrumb-item>
-</sl-breadcrumb>
+<bui-breadcrumb>
+  <bui-breadcrumb-item>Catalog</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Clothing</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Women's</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Shirts &amp; Tops</bui-breadcrumb-item>
+</bui-breadcrumb>
 ```
 
 ```jsx react
-import { SlBreadcrumb, SlBreadcrumbItem } from 'buckeye-ui/dist/react';
+import { Breadcrumb, BreadcrumbItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlBreadcrumb>
-    <SlBreadcrumbItem>Catalog</SlBreadcrumbItem>
-    <SlBreadcrumbItem>Clothing</SlBreadcrumbItem>
-    <SlBreadcrumbItem>Women's</SlBreadcrumbItem>
-    <SlBreadcrumbItem>Shirts &amp; Tops</SlBreadcrumbItem>
-  </SlBreadcrumb>
+  <Breadcrumb>
+    <BreadcrumbItem>Catalog</BreadcrumbItem>
+    <BreadcrumbItem>Clothing</BreadcrumbItem>
+    <BreadcrumbItem>Women's</BreadcrumbItem>
+    <BreadcrumbItem>Shirts &amp; Tops</BreadcrumbItem>
+  </Breadcrumb>
 );
 ```
 
@@ -35,30 +35,30 @@ By default, breadcrumb items are rendered as buttons so you can use them to navi
 For websites, you'll probably want to use links instead. You can make any breadcrumb item a link by applying an `href` attribute to it. Now, when the user activates it, they'll be taken to the corresponding page — no event listeners required.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item href="https://example.com/home">Homepage</sl-breadcrumb-item>
+<bui-breadcrumb>
+  <bui-breadcrumb-item href="https://example.com/home">Homepage</bui-breadcrumb-item>
 
-  <sl-breadcrumb-item href="https://example.com/home/services">Our Services</sl-breadcrumb-item>
+  <bui-breadcrumb-item href="https://example.com/home/services">Our Services</bui-breadcrumb-item>
 
-  <sl-breadcrumb-item href="https://example.com/home/services/digital">Digital Media</sl-breadcrumb-item>
+  <bui-breadcrumb-item href="https://example.com/home/services/digital">Digital Media</bui-breadcrumb-item>
 
-  <sl-breadcrumb-item href="https://example.com/home/services/digital/web-design">Web Design</sl-breadcrumb-item>
-</sl-breadcrumb>
+  <bui-breadcrumb-item href="https://example.com/home/services/digital/web-design">Web Design</bui-breadcrumb-item>
+</bui-breadcrumb>
 ```
 
 ```jsx react
-import { SlBreadcrumb, SlBreadcrumbItem } from 'buckeye-ui/dist/react';
+import { Breadcrumb, BreadcrumbItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlBreadcrumb>
-    <SlBreadcrumbItem href="https://example.com/home">Homepage</SlBreadcrumbItem>
+  <Breadcrumb>
+    <BreadcrumbItem href="https://example.com/home">Homepage</BreadcrumbItem>
 
-    <SlBreadcrumbItem href="https://example.com/home/services">Our Services</SlBreadcrumbItem>
+    <BreadcrumbItem href="https://example.com/home/services">Our Services</BreadcrumbItem>
 
-    <SlBreadcrumbItem href="https://example.com/home/services/digital">Digital Media</SlBreadcrumbItem>
+    <BreadcrumbItem href="https://example.com/home/services/digital">Digital Media</BreadcrumbItem>
 
-    <SlBreadcrumbItem href="https://example.com/home/services/digital/web-design">Web Design</SlBreadcrumbItem>
-  </SlBreadcrumb>
+    <BreadcrumbItem href="https://example.com/home/services/digital/web-design">Web Design</BreadcrumbItem>
+  </Breadcrumb>
 );
 ```
 
@@ -67,62 +67,62 @@ const App = () => (
 Use the `separator` slot to change the separator that goes between breadcrumb items. Icons work well, but you can also use text or an image.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-icon name="dot" slot="separator"></sl-icon>
-  <sl-breadcrumb-item>First</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Third</sl-breadcrumb-item>
-</sl-breadcrumb>
+<bui-breadcrumb>
+  <bui-icon name="dot" slot="separator"></bui-icon>
+  <bui-breadcrumb-item>First</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Second</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Third</bui-breadcrumb-item>
+</bui-breadcrumb>
 
 <br />
 
-<sl-breadcrumb>
-  <sl-icon name="arrow-right" slot="separator"></sl-icon>
-  <sl-breadcrumb-item>First</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Third</sl-breadcrumb-item>
-</sl-breadcrumb>
+<bui-breadcrumb>
+  <bui-icon name="arrow-right" slot="separator"></bui-icon>
+  <bui-breadcrumb-item>First</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Second</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Third</bui-breadcrumb-item>
+</bui-breadcrumb>
 
 <br />
 
-<sl-breadcrumb>
+<bui-breadcrumb>
   <span slot="separator">/</span>
-  <sl-breadcrumb-item>First</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Second</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Third</sl-breadcrumb-item>
-</sl-breadcrumb>
+  <bui-breadcrumb-item>First</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Second</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Third</bui-breadcrumb-item>
+</bui-breadcrumb>
 ```
 
 ```jsx react
 import 'buckeye-ui/dist/components/icon/icon.js';
-import { SlBreadcrumb, SlBreadcrumbItem } from 'buckeye-ui/dist/react';
+import { Breadcrumb, BreadcrumbItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlBreadcrumb>
-      <sl-icon name="dot" slot="separator" />
-      <SlBreadcrumbItem>First</SlBreadcrumbItem>
-      <SlBreadcrumbItem>Second</SlBreadcrumbItem>
-      <SlBreadcrumbItem>Third</SlBreadcrumbItem>
-    </SlBreadcrumb>
+    <Breadcrumb>
+      <bui-icon name="dot" slot="separator" />
+      <BreadcrumbItem>First</BreadcrumbItem>
+      <BreadcrumbItem>Second</BreadcrumbItem>
+      <BreadcrumbItem>Third</BreadcrumbItem>
+    </Breadcrumb>
 
     <br />
 
-    <SlBreadcrumb>
-      <sl-icon name="arrow-right" slot="separator" />
-      <SlBreadcrumbItem>First</SlBreadcrumbItem>
-      <SlBreadcrumbItem>Second</SlBreadcrumbItem>
-      <SlBreadcrumbItem>Third</SlBreadcrumbItem>
-    </SlBreadcrumb>
+    <Breadcrumb>
+      <bui-icon name="arrow-right" slot="separator" />
+      <BreadcrumbItem>First</BreadcrumbItem>
+      <BreadcrumbItem>Second</BreadcrumbItem>
+      <BreadcrumbItem>Third</BreadcrumbItem>
+    </Breadcrumb>
 
     <br />
 
-    <SlBreadcrumb>
+    <Breadcrumb>
       <span slot="separator">/</span>
-      <SlBreadcrumbItem>First</SlBreadcrumbItem>
-      <SlBreadcrumbItem>Second</SlBreadcrumbItem>
-      <SlBreadcrumbItem>Third</SlBreadcrumbItem>
-    </SlBreadcrumb>
+      <BreadcrumbItem>First</BreadcrumbItem>
+      <BreadcrumbItem>Second</BreadcrumbItem>
+      <BreadcrumbItem>Third</BreadcrumbItem>
+    </Breadcrumb>
   </>
 );
 ```
@@ -132,28 +132,28 @@ const App = () => (
 Use the `prefix` slot to add content before any breadcrumb item.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>
-    <sl-icon slot="prefix" name="house"></sl-icon>
+<bui-breadcrumb>
+  <bui-breadcrumb-item>
+    <bui-icon slot="prefix" name="house"></bui-icon>
     Home
-  </sl-breadcrumb-item>
-  <sl-breadcrumb-item>Articles</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Traveling</sl-breadcrumb-item>
-</sl-breadcrumb>
+  </bui-breadcrumb-item>
+  <bui-breadcrumb-item>Articles</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Traveling</bui-breadcrumb-item>
+</bui-breadcrumb>
 ```
 
 ```jsx react
-import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from 'buckeye-ui/dist/react';
+import { Breadcrumb, BreadcrumbItem, Icon } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlBreadcrumb>
-    <SlBreadcrumbItem>
-      <SlIcon slot="prefix" name="house" />
+  <Breadcrumb>
+    <BreadcrumbItem>
+      <Icon slot="prefix" name="house" />
       Home
-    </SlBreadcrumbItem>
-    <SlBreadcrumbItem>Articles</SlBreadcrumbItem>
-    <SlBreadcrumbItem>Traveling</SlBreadcrumbItem>
-  </SlBreadcrumb>
+    </BreadcrumbItem>
+    <BreadcrumbItem>Articles</BreadcrumbItem>
+    <BreadcrumbItem>Traveling</BreadcrumbItem>
+  </Breadcrumb>
 );
 ```
 
@@ -162,28 +162,28 @@ const App = () => (
 Use the `suffix` slot to add content after any breadcrumb item.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>Documents</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Policies</sl-breadcrumb-item>
-  <sl-breadcrumb-item>
+<bui-breadcrumb>
+  <bui-breadcrumb-item>Documents</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Policies</bui-breadcrumb-item>
+  <bui-breadcrumb-item>
     Security
-    <sl-icon slot="suffix" name="shield-lock"></sl-icon>
-  </sl-breadcrumb-item>
-</sl-breadcrumb>
+    <bui-icon slot="suffix" name="shield-lock"></bui-icon>
+  </bui-breadcrumb-item>
+</bui-breadcrumb>
 ```
 
 ```jsx react
-import { SlBreadcrumb, SlBreadcrumbItem, SlIcon } from 'buckeye-ui/dist/react';
+import { Breadcrumb, BreadcrumbItem, Icon } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlBreadcrumb>
-    <SlBreadcrumbItem>Documents</SlBreadcrumbItem>
-    <SlBreadcrumbItem>Policies</SlBreadcrumbItem>
-    <SlBreadcrumbItem>
+  <Breadcrumb>
+    <BreadcrumbItem>Documents</BreadcrumbItem>
+    <BreadcrumbItem>Policies</BreadcrumbItem>
+    <BreadcrumbItem>
       Security
-      <SlIcon slot="suffix" name="shield-lock"></SlIcon>
-    </SlBreadcrumbItem>
-  </SlBreadcrumb>
+      <Icon slot="suffix" name="shield-lock"></Icon>
+    </BreadcrumbItem>
+  </Breadcrumb>
 );
 ```
 
@@ -192,59 +192,51 @@ const App = () => (
 Dropdown menus can be placed in a prefix or suffix slot to provide additional options.
 
 ```html preview
-<sl-breadcrumb>
-  <sl-breadcrumb-item>Homepage</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Our Services</sl-breadcrumb-item>
-  <sl-breadcrumb-item>Digital Media</sl-breadcrumb-item>
-  <sl-breadcrumb-item>
+<bui-breadcrumb>
+  <bui-breadcrumb-item>Homepage</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Our Services</bui-breadcrumb-item>
+  <bui-breadcrumb-item>Digital Media</bui-breadcrumb-item>
+  <bui-breadcrumb-item>
     Web Design
-    <sl-dropdown slot="suffix">
-      <sl-button slot="trigger" size="small" circle>
-        <sl-icon label="More options" name="three-dots"></sl-icon>
-      </sl-button>
-      <sl-menu>
-        <sl-menu-item type="checkbox" checked>Web Design</sl-menu-item>
-        <sl-menu-item type="checkbox">Web Development</sl-menu-item>
-        <sl-menu-item type="checkbox">Marketing</sl-menu-item>
-      </sl-menu>
-    </sl-dropdown>
-  </sl-breadcrumb-item>
-</sl-breadcrumb>
+    <bui-dropdown slot="suffix">
+      <bui-button slot="trigger" size="small" circle>
+        <bui-icon label="More options" name="three-dots"></bui-icon>
+      </bui-button>
+      <bui-menu>
+        <bui-menu-item type="checkbox" checked>Web Design</bui-menu-item>
+        <bui-menu-item type="checkbox">Web Development</bui-menu-item>
+        <bui-menu-item type="checkbox">Marketing</bui-menu-item>
+      </bui-menu>
+    </bui-dropdown>
+  </bui-breadcrumb-item>
+</bui-breadcrumb>
 ```
 
 ```jsx react
-import {
-  SlBreadcrumb,
-  SlBreadcrumbItem,
-  SlButton,
-  SlDropdown,
-  SlIcon,
-  SlMenu,
-  SlMenuItem
-} from 'buckeye-ui/dist/react';
+import { Breadcrumb, BreadcrumbItem, Button, Dropdown, Icon, Menu, MenuItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlBreadcrumb>
-    <SlBreadcrumbItem>Homepage</SlBreadcrumbItem>
-    <SlBreadcrumbItem>Our Services</SlBreadcrumbItem>
-    <SlBreadcrumbItem>Digital Media</SlBreadcrumbItem>
-    <SlBreadcrumbItem>
+  <Breadcrumb>
+    <BreadcrumbItem>Homepage</BreadcrumbItem>
+    <BreadcrumbItem>Our Services</BreadcrumbItem>
+    <BreadcrumbItem>Digital Media</BreadcrumbItem>
+    <BreadcrumbItem>
       Web Design
-      <SlDropdown slot="suffix">
-        <SlButton slot="trigger" size="small" circle>
-          <SlIcon label="More options" name="three-dots"></SlIcon>
-        </SlButton>
-        <SlMenu>
-          <SlMenuItem type="checkbox" checked>
+      <Dropdown slot="suffix">
+        <Button slot="trigger" size="small" circle>
+          <Icon label="More options" name="three-dots"></Icon>
+        </Button>
+        <Menu>
+          <MenuItem type="checkbox" checked>
             Web Design
-          </SlMenuItem>
-          <SlMenuItem type="checkbox">Web Development</SlMenuItem>
-          <SlMenuItem type="checkbox">Marketing</SlMenuItem>
-        </SlMenu>
-      </SlDropdown>
-    </SlBreadcrumbItem>
-  </SlBreadcrumb>
+          </MenuItem>
+          <MenuItem type="checkbox">Web Development</MenuItem>
+          <MenuItem type="checkbox">Marketing</MenuItem>
+        </Menu>
+      </Dropdown>
+    </BreadcrumbItem>
+  </Breadcrumb>
 );
 ```
 
-[component-metadata:sl-breadcrumb]
+[component-metadata:bui-breadcrumb]

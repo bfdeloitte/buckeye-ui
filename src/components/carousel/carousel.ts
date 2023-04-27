@@ -11,7 +11,7 @@ import { range } from 'lit/directives/range.js';
 import { ScrollController } from './scroll-controller';
 import { watch } from '../../internal/watch';
 import BuckeyeElement from '../../internal/buckeye-element';
-import SlCarouselItem from '../carousel-item/carousel-item';
+import CarouselItem from '../carousel-item/carousel-item';
 import styles from './carousel.styles';
 import type { CSSResultGroup } from 'lit';
 
@@ -21,13 +21,13 @@ import type { CSSResultGroup } from 'lit';
  * @since 2.2
  * @status experimental
  *
- * @dependency sl-icon
+ * @dependency bui-icon
  *
- * @event {{ index: number, slide: SlCarouselItem }} sl-slide-change - Emitted when the active slide changes.
+ * @event {{ index: number, slide: CarouselItem }} bui-slide-change - Emitted when the active slide changes.
  *
- * @slot - The carousel's main content, one or more `<sl-carousel-item>` elements.
- * @slot next-icon - Optional next icon to use instead of the default. Works best with `<sl-icon>`.
- * @slot previous-icon - Optional previous icon to use instead of the default. Works best with `<sl-icon>`.
+ * @slot - The carousel's main content, one or more `<bui-carousel-item>` elements.
+ * @slot next-icon - Optional next icon to use instead of the default. Works best with `<bui-icon>`.
+ * @slot previous-icon - Optional previous icon to use instead of the default. Works best with `<bui-icon>`.
  *
  * @csspart base - The carousel's internal wrapper.
  * @csspart scroll-container - The scroll container that wraps the slides.
@@ -44,8 +44,8 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --scroll-hint - The amount of padding to apply to the scroll area, allowing adjacent slides to become
  *  partially visible as a scroll hint.
  */
-@customElement('sl-carousel')
-export default class SlCarousel extends BuckeyeElement {
+@customElement('bui-carousel')
+export default class Carousel extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   /** When set, allows the user to navigate the carousel in the same direction indefinitely. */
@@ -87,7 +87,7 @@ export default class SlCarousel extends BuckeyeElement {
 
   private autoplayController = new AutoplayController(this, () => this.next());
   private scrollController = new ScrollController(this);
-  private readonly slides = this.getElementsByTagName('sl-carousel-item');
+  private readonly slides = this.getElementsByTagName('bui-carousel-item');
   private intersectionObserver: IntersectionObserver; // determines which slide is displayed
   // A map containing the state of all the slides
   private readonly intersectionObserverEntries = new Map<Element, IntersectionObserverEntry>();
@@ -207,14 +207,14 @@ export default class SlCarousel extends BuckeyeElement {
 
     // Activate the first intersecting slide
     if (firstIntersecting) {
-      this.activeSlide = slides.indexOf(firstIntersecting.target as SlCarouselItem);
+      this.activeSlide = slides.indexOf(firstIntersecting.target as CarouselItem);
     }
   }
 
   private handleSlotChange(mutations: MutationRecord[]) {
     const needsInitialization = mutations.some(mutation =>
       [...mutation.addedNodes, ...mutation.removedNodes].some(
-        node => SlCarouselItem.isCarouselItem(node) && !(node as HTMLElement).hasAttribute('data-clone')
+        node => CarouselItem.isCarouselItem(node) && !(node as HTMLElement).hasAttribute('data-clone')
       )
     );
 
@@ -282,7 +282,7 @@ export default class SlCarousel extends BuckeyeElement {
 
     // Do not emit an event on first render
     if (this.hasUpdated) {
-      this.emit('sl-slide-change', {
+      this.emit('bui-slide-change', {
         detail: {
           index: this.activeSlide,
           slide: slides[this.activeSlide]
@@ -412,7 +412,7 @@ export default class SlCarousel extends BuckeyeElement {
                   @click=${prevEnabled ? () => this.previous() : null}
                 >
                   <slot name="previous-icon">
-                    <sl-icon library="system" name="${isLtr ? 'chevron-left' : 'chevron-right'}"></sl-icon>
+                    <bui-icon library="system" name="${isLtr ? 'chevron-left' : 'chevron-right'}"></bui-icon>
                   </slot>
                 </button>
 
@@ -429,7 +429,7 @@ export default class SlCarousel extends BuckeyeElement {
                   @click=${nextEnabled ? () => this.next() : null}
                 >
                   <slot name="next-icon">
-                    <sl-icon library="system" name="${isLtr ? 'chevron-right' : 'chevron-left'}"></sl-icon>
+                    <bui-icon library="system" name="${isLtr ? 'chevron-right' : 'chevron-left'}"></bui-icon>
                   </slot>
                 </button>
               </div>
@@ -466,6 +466,6 @@ export default class SlCarousel extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-carousel': SlCarousel;
+    'bui-carousel': Carousel;
   }
 }

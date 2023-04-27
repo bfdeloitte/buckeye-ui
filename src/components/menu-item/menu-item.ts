@@ -14,7 +14,7 @@ import type { CSSResultGroup } from 'lit';
  * @status stable
  * @since 2.0
  *
- * @dependency sl-icon
+ * @dependency bui-icon
  *
  * @slot - The menu item's label.
  * @slot prefix - Used to prepend an icon or similar element to the menu item.
@@ -26,8 +26,8 @@ import type { CSSResultGroup } from 'lit';
  * @csspart label - The menu item label.
  * @csspart suffix - The suffix container.
  */
-@customElement('sl-menu-item')
-export default class SlMenuItem extends BuckeyeElement {
+@customElement('bui-menu-item')
+export default class MenuItem extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private cachedTextLabel: string;
@@ -132,7 +132,7 @@ export default class SlMenuItem extends BuckeyeElement {
         })}
       >
         <span part="checked-icon" class="menu-item__check">
-          <sl-icon name="check" library="system" aria-hidden="true"></sl-icon>
+          <bui-icon name="check" library="system" aria-hidden="true"></bui-icon>
         </span>
 
         <slot name="prefix" part="prefix" class="menu-item__prefix"></slot>
@@ -142,7 +142,7 @@ export default class SlMenuItem extends BuckeyeElement {
         <slot name="suffix" part="suffix" class="menu-item__suffix"></slot>
 
         <span class="menu-item__chevron">
-          <sl-icon name="chevron-right" library="system" aria-hidden="true"></sl-icon>
+          <bui-icon name="chevron-right" library="system" aria-hidden="true"></bui-icon>
         </span>
       </div>
     `;
@@ -151,6 +151,6 @@ export default class SlMenuItem extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-menu-item': SlMenuItem;
+    'bui-menu-item': MenuItem;
   }
 }

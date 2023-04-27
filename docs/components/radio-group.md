@@ -1,24 +1,24 @@
 # Radio Group
 
-[component-header:sl-radio-group]
+[component-header:bui-radio-group]
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio value="1">Option 1</sl-radio>
-  <sl-radio value="2">Option 2</sl-radio>
-  <sl-radio value="3">Option 3</sl-radio>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio value="1">Option 1</bui-radio>
+  <bui-radio value="2">Option 2</bui-radio>
+  <bui-radio value="3">Option 3</bui-radio>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadio, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { Radio, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadio value="1">Option 1</SlRadio>
-    <SlRadio value="2">Option 2</SlRadio>
-    <SlRadio value="3">Option 3</SlRadio>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <Radio value="1">Option 1</Radio>
+    <Radio value="2">Option 2</Radio>
+    <Radio value="3">Option 3</Radio>
+  </RadioGroup>
 );
 ```
 
@@ -29,22 +29,22 @@ const App = () => (
 Add descriptive help text to a radio group with the `help-text` attribute. For help texts that contain HTML, use the `help-text` slot instead.
 
 ```html preview
-<sl-radio-group label="Select an option" help-text="Choose the most appropriate option." name="a" value="1">
-  <sl-radio value="1">Option 1</sl-radio>
-  <sl-radio value="2">Option 2</sl-radio>
-  <sl-radio value="3">Option 3</sl-radio>
-</sl-radio-group>
+<bui-radio-group label="Select an option" help-text="Choose the most appropriate option." name="a" value="1">
+  <bui-radio value="1">Option 1</bui-radio>
+  <bui-radio value="2">Option 2</bui-radio>
+  <bui-radio value="3">Option 3</bui-radio>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadio, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { Radio, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" help-text="Choose the most appropriate option." name="a" value="1">
-    <SlRadio value="1">Option 1</SlRadio>
-    <SlRadio value="2">Option 2</SlRadio>
-    <SlRadio value="3">Option 3</SlRadio>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" help-text="Choose the most appropriate option." name="a" value="1">
+    <Radio value="1">Option 1</Radio>
+    <Radio value="2">Option 2</Radio>
+    <Radio value="3">Option 3</Radio>
+  </RadioGroup>
 );
 ```
 
@@ -53,22 +53,22 @@ const App = () => (
 [Radio buttons](/components/radio-button) offer an alternate way to display radio controls. In this case, an internal [button group](/components/button-group) is used to group the buttons into a single, cohesive control.
 
 ```html preview
-<sl-radio-group label="Select an option" help-text="Select an option that makes you proud." name="a" value="1">
-  <sl-radio-button value="1">Option 1</sl-radio-button>
-  <sl-radio-button value="2">Option 2</sl-radio-button>
-  <sl-radio-button value="3">Option 3</sl-radio-button>
-</sl-radio-group>
+<bui-radio-group label="Select an option" help-text="Select an option that makes you proud." name="a" value="1">
+  <bui-radio-button value="1">Option 1</bui-radio-button>
+  <bui-radio-button value="2">Option 2</bui-radio-button>
+  <bui-radio-button value="3">Option 3</bui-radio-button>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadioButton, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { RadioButton, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadioButton value="1">Option 1</SlRadioButton>
-    <SlRadioButton value="2">Option 2</SlRadioButton>
-    <SlRadioButton value="3">Option 3</SlRadioButton>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <RadioButton value="1">Option 1</RadioButton>
+    <RadioButton value="2">Option 2</RadioButton>
+    <RadioButton value="3">Option 3</RadioButton>
+  </RadioGroup>
 );
 ```
 
@@ -77,24 +77,24 @@ const App = () => (
 Radios and radio buttons can be disabled by adding the `disabled` attribute to the respective options inside the radio group.
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio value="1">Option 1</sl-radio>
-  <sl-radio value="2" disabled>Option 2</sl-radio>
-  <sl-radio value="3">Option 3</sl-radio>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio value="1">Option 1</bui-radio>
+  <bui-radio value="2" disabled>Option 2</bui-radio>
+  <bui-radio value="3">Option 3</bui-radio>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadio, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { Radio, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadio value="1">Option 1</SlRadio>
-    <SlRadio value="2" disabled>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <Radio value="1">Option 1</Radio>
+    <Radio value="2" disabled>
       Option 2
-    </SlRadio>
-    <SlRadio value="3">Option 3</SlRadio>
-  </SlRadioGroup>
+    </Radio>
+    <Radio value="3">Option 3</Radio>
+  </RadioGroup>
 );
 ```
 
@@ -104,13 +104,13 @@ Setting the `required` attribute to make selecting an option mandatory. If a val
 
 ```html preview
 <form class="validation">
-  <sl-radio-group label="Select an option" name="a" required>
-    <sl-radio value="1">Option 1</sl-radio>
-    <sl-radio value="2">Option 2</sl-radio>
-    <sl-radio value="3">Option 3</sl-radio>
-  </sl-radio-group>
+  <bui-radio-group label="Select an option" name="a" required>
+    <bui-radio value="1">Option 1</bui-radio>
+    <bui-radio value="2">Option 2</bui-radio>
+    <bui-radio value="3">Option 3</bui-radio>
+  </bui-radio-group>
   <br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
+  <bui-button type="submit" variant="primary">Submit</bui-button>
 </form>
 
 <script>
@@ -125,7 +125,7 @@ Setting the `required` attribute to make selecting an option mandatory. If a val
 ```
 
 ```jsx react
-import { SlButton, SlIcon, SlRadio, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { Button, Icon, Radio, RadioGroup } from 'buckeye-ui/dist/react';
 const App = () => {
   function handleSubmit(event) {
     event.preventDefault();
@@ -134,21 +134,21 @@ const App = () => {
 
   return (
     <form class="custom-validity" onSubmit={handleSubmit}>
-      <SlRadioGroup label="Select an option" name="a" required onSlChange={handleChange}>
-        <SlRadio value="1">
+      <RadioGroup label="Select an option" name="a" required onChange={handleChange}>
+        <Radio value="1">
           Option 1
-        </SlRadio>
-        <SlRadiovalue="2">
+        </Radio>
+        <Radiovalue="2">
           Option 2
-        </SlRadio>
-        <SlRadio value="3">
+        </Radio>
+        <Radio value="3">
           Option 3
-        </SlRadio>
-      </SlRadioGroup>
+        </Radio>
+      </RadioGroup>
       <br />
-      <SlButton type="submit" variant="primary">
+      <Button type="submit" variant="primary">
         Submit
-      </SlButton>
+      </Button>
     </form>
   );
 };
@@ -160,27 +160,27 @@ Use the `setCustomValidity()` method to set a custom validation message. This wi
 
 ```html preview
 <form class="custom-validity">
-  <sl-radio-group label="Select an option" name="a" value="1">
-    <sl-radio value="1">Not me</sl-radio>
-    <sl-radio value="2">Me neither</sl-radio>
-    <sl-radio value="3">Choose me</sl-radio>
-  </sl-radio-group>
+  <bui-radio-group label="Select an option" name="a" value="1">
+    <bui-radio value="1">Not me</bui-radio>
+    <bui-radio value="2">Me neither</bui-radio>
+    <bui-radio value="3">Choose me</bui-radio>
+  </bui-radio-group>
   <br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
+  <bui-button type="submit" variant="primary">Submit</bui-button>
 </form>
 
 <script>
   const form = document.querySelector('.custom-validity');
-  const radioGroup = form.querySelector('sl-radio-group');
+  const radioGroup = form.querySelector('bui-radio-group');
   const errorMessage = 'You must choose the last option';
 
   // Set initial validity as soon as the element is defined
-  customElements.whenDefined('sl-radio').then(() => {
+  customElements.whenDefined('bui-radio').then(() => {
     radioGroup.setCustomValidity(errorMessage);
   });
 
   // Update validity when a selection is made
-  form.addEventListener('sl-change', () => {
+  form.addEventListener('bui-change', () => {
     const isValid = radioGroup.value === '3';
     radioGroup.setCustomValidity(isValid ? '' : errorMessage);
   });
@@ -195,7 +195,7 @@ Use the `setCustomValidity()` method to set a custom validation message. This wi
 
 ```jsx react
 import { useEffect, useRef } from 'react';
-import { SlButton, SlIcon, SlRadio, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { Button, Icon, Radio, RadioGroup } from 'buckeye-ui/dist/react';
 const App = () => {
   const radioGroup = useRef(null);
   const errorMessage = 'You must choose this option';
@@ -215,18 +215,18 @@ const App = () => {
 
   return (
     <form class="custom-validity" onSubmit={handleSubmit}>
-      <SlRadioGroup ref={radioGroup} label="Select an option" name="a" value="1" onSlChange={handleChange}>
-        <SlRadio value="1">Not me</SlRadio>
-        <SlRadio value="2">Me neither</SlRadio>
-        <SlRadio value="3">Choose me</SlRadio>
-      </SlRadioGroup>
+      <RadioGroup ref={radioGroup} label="Select an option" name="a" value="1" onChange={handleChange}>
+        <Radio value="1">Not me</Radio>
+        <Radio value="2">Me neither</Radio>
+        <Radio value="3">Choose me</Radio>
+      </RadioGroup>
       <br />
-      <SlButton type="submit" variant="primary">
+      <Button type="submit" variant="primary">
         Submit
-      </SlButton>
+      </Button>
     </form>
   );
 };
 ```
 
-[component-metadata:sl-radio-group]
+[component-metadata:bui-radio-group]

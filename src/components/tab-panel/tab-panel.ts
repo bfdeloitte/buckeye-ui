@@ -20,12 +20,12 @@ let id = 0;
  *
  * @cssproperty --padding - The tab panel's padding.
  */
-@customElement('sl-tab-panel')
-export default class SlTabPanel extends BuckeyeElement {
+@customElement('bui-tab-panel')
+export default class TabPanel extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly attrId = ++id;
-  private readonly componentId = `sl-tab-panel-${this.attrId}`;
+  private readonly componentId = `bui-tab-panel-${this.attrId}`;
 
   /** The tab panel's name. */
   @property({ reflect: true }) name = '';
@@ -59,6 +59,6 @@ export default class SlTabPanel extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tab-panel': SlTabPanel;
+    'bui-tab-panel': TabPanel;
   }
 }

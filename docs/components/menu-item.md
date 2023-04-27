@@ -1,50 +1,50 @@
 # Menu Item
 
-[component-header:sl-menu-item]
+[component-header:bui-menu-item]
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-item>Option 1</sl-menu-item>
-  <sl-menu-item>Option 2</sl-menu-item>
-  <sl-menu-item>Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item type="checkbox" checked>Checkbox</sl-menu-item>
-  <sl-menu-item disabled>Disabled</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item>
+<bui-menu style="max-width: 200px;">
+  <bui-menu-item>Option 1</bui-menu-item>
+  <bui-menu-item>Option 2</bui-menu-item>
+  <bui-menu-item>Option 3</bui-menu-item>
+  <bui-divider></bui-divider>
+  <bui-menu-item type="checkbox" checked>Checkbox</bui-menu-item>
+  <bui-menu-item disabled>Disabled</bui-menu-item>
+  <bui-divider></bui-divider>
+  <bui-menu-item>
     Prefix Icon
-    <sl-icon slot="prefix" name="gift"></sl-icon>
-  </sl-menu-item>
-  <sl-menu-item>
+    <bui-icon slot="prefix" name="gift"></bui-icon>
+  </bui-menu-item>
+  <bui-menu-item>
     Suffix Icon
-    <sl-icon slot="suffix" name="heart"></sl-icon>
-  </sl-menu-item>
-</sl-menu>
+    <bui-icon slot="suffix" name="heart"></bui-icon>
+  </bui-menu-item>
+</bui-menu>
 ```
 
 ```jsx react
-import { SlDivider, SlIcon, SlMenu, SlMenuItem } from 'buckeye-ui/dist/react';
+import { Divider, Icon, Menu, MenuItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlMenu style={{ maxWidth: '200px' }}>
-    <SlMenuItem>Option 1</SlMenuItem>
-    <SlMenuItem>Option 2</SlMenuItem>
-    <SlMenuItem>Option 3</SlMenuItem>
-    <SlDivider />
-    <SlMenuItem type="checkbox" checked>
+  <Menu style={{ maxWidth: '200px' }}>
+    <MenuItem>Option 1</MenuItem>
+    <MenuItem>Option 2</MenuItem>
+    <MenuItem>Option 3</MenuItem>
+    <Divider />
+    <MenuItem type="checkbox" checked>
       Checkbox
-    </SlMenuItem>
-    <SlMenuItem disabled>Disabled</SlMenuItem>
-    <SlDivider />
-    <SlMenuItem>
+    </MenuItem>
+    <MenuItem disabled>Disabled</MenuItem>
+    <Divider />
+    <MenuItem>
       Prefix Icon
-      <SlIcon slot="prefix" name="gift" />
-    </SlMenuItem>
-    <SlMenuItem>
+      <Icon slot="prefix" name="gift" />
+    </MenuItem>
+    <MenuItem>
       Suffix Icon
-      <SlIcon slot="suffix" name="heart" />
-    </SlMenuItem>
-  </SlMenu>
+      <Icon slot="suffix" name="heart" />
+    </MenuItem>
+  </Menu>
 );
 ```
 
@@ -55,22 +55,22 @@ const App = () => (
 Add the `disabled` attribute to disable the menu item so it cannot be selected.
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-item>Option 1</sl-menu-item>
-  <sl-menu-item disabled>Option 2</sl-menu-item>
-  <sl-menu-item>Option 3</sl-menu-item>
-</sl-menu>
+<bui-menu style="max-width: 200px;">
+  <bui-menu-item>Option 1</bui-menu-item>
+  <bui-menu-item disabled>Option 2</bui-menu-item>
+  <bui-menu-item>Option 3</bui-menu-item>
+</bui-menu>
 ```
 
 ```jsx react
-import { SlMenu, SlMenuItem } from 'buckeye-ui/dist/react';
+import { Menu, MenuItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlMenu style={{ maxWidth: '200px' }}>
-    <SlMenuItem>Option 1</SlMenuItem>
-    <SlMenuItem disabled>Option 2</SlMenuItem>
-    <SlMenuItem>Option 3</SlMenuItem>
-  </SlMenu>
+  <Menu style={{ maxWidth: '200px' }}>
+    <MenuItem>Option 1</MenuItem>
+    <MenuItem disabled>Option 2</MenuItem>
+    <MenuItem>Option 3</MenuItem>
+  </Menu>
 );
 ```
 
@@ -79,52 +79,52 @@ const App = () => (
 Add content to the start and end of menu items using the `prefix` and `suffix` slots.
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-item>
-    <sl-icon slot="prefix" name="house"></sl-icon>
+<bui-menu style="max-width: 200px;">
+  <bui-menu-item>
+    <bui-icon slot="prefix" name="house"></bui-icon>
     Home
-  </sl-menu-item>
+  </bui-menu-item>
 
-  <sl-menu-item>
-    <sl-icon slot="prefix" name="envelope"></sl-icon>
+  <bui-menu-item>
+    <bui-icon slot="prefix" name="envelope"></bui-icon>
     Messages
-    <sl-badge slot="suffix" variant="primary" pill>12</sl-badge>
-  </sl-menu-item>
+    <bui-badge slot="suffix" variant="primary" pill>12</bui-badge>
+  </bui-menu-item>
 
-  <sl-divider></sl-divider>
+  <bui-divider></bui-divider>
 
-  <sl-menu-item>
-    <sl-icon slot="prefix" name="gear"></sl-icon>
+  <bui-menu-item>
+    <bui-icon slot="prefix" name="gear"></bui-icon>
     Settings
-  </sl-menu-item>
-</sl-menu>
+  </bui-menu-item>
+</bui-menu>
 ```
 
 ```jsx react
-import { SlBadge, SlDivider, SlIcon, SlMenu, SlMenuItem } from 'buckeye-ui/dist/react';
+import { Badge, Divider, Icon, Menu, MenuItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlMenu style={{ maxWidth: '200px' }}>
-    <SlMenuItem>
-      <SlIcon slot="prefix" name="house" />
+  <Menu style={{ maxWidth: '200px' }}>
+    <MenuItem>
+      <Icon slot="prefix" name="house" />
       Home
-    </SlMenuItem>
+    </MenuItem>
 
-    <SlMenuItem>
-      <SlIcon slot="prefix" name="envelope" />
+    <MenuItem>
+      <Icon slot="prefix" name="envelope" />
       Messages
-      <SlBadge slot="suffix" variant="primary" pill>
+      <Badge slot="suffix" variant="primary" pill>
         12
-      </SlBadge>
-    </SlMenuItem>
+      </Badge>
+    </MenuItem>
 
-    <SlDivider />
+    <Divider />
 
-    <SlMenuItem>
-      <SlIcon slot="prefix" name="gear" />
+    <MenuItem>
+      <Icon slot="prefix" name="gear" />
       Settings
-    </SlMenuItem>
-  </SlMenu>
+    </MenuItem>
+  </Menu>
 );
 ```
 
@@ -135,46 +135,46 @@ Set the `type` attribute to `checkbox` to create a menu item that will toggle on
 Checkbox menu items are visually indistinguishable from regular menu items. Their ability to be toggled is primarily inferred from context, much like you'd find in the menu of a native app.
 
 ```html preview
-<sl-menu style="max-width: 200px;">
-  <sl-menu-item type="checkbox">Autosave</sl-menu-item>
-  <sl-menu-item type="checkbox" checked>Check Spelling</sl-menu-item>
-  <sl-menu-item type="checkbox">Word Wrap</sl-menu-item>
-</sl-menu>
+<bui-menu style="max-width: 200px;">
+  <bui-menu-item type="checkbox">Autosave</bui-menu-item>
+  <bui-menu-item type="checkbox" checked>Check Spelling</bui-menu-item>
+  <bui-menu-item type="checkbox">Word Wrap</bui-menu-item>
+</bui-menu>
 ```
 
 ```jsx react
-import { SlMenu, SlMenuItem } from 'buckeye-ui/dist/react';
+import { Menu, MenuItem } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlMenu style={{ maxWidth: '200px' }}>
-    <SlMenuItem type="checkbox">Autosave</SlMenuItem>
-    <SlMenuItem type="checkbox" checked>
+  <Menu style={{ maxWidth: '200px' }}>
+    <MenuItem type="checkbox">Autosave</MenuItem>
+    <MenuItem type="checkbox" checked>
       Check Spelling
-    </SlMenuItem>
-    <SlMenuItem type="checkbox">Word Wrap</SlMenuItem>
-  </SlMenu>
+    </MenuItem>
+    <MenuItem type="checkbox">Word Wrap</MenuItem>
+  </Menu>
 );
 ```
 
 ### Value & Selection
 
-The `value` attribute can be used to assign a hidden value, such as a unique identifier, to a menu item. When an item is selected, the `sl-select` event will be emitted and a reference to the item will be available at `event.detail.item`. You can use this reference to access the selected item's value, its checked state, and more.
+The `value` attribute can be used to assign a hidden value, such as a unique identifier, to a menu item. When an item is selected, the `bui-select` event will be emitted and a reference to the item will be available at `event.detail.item`. You can use this reference to access the selected item's value, its checked state, and more.
 
 ```html preview
-<sl-menu class="menu-value" style="max-width: 200px;">
-  <sl-menu-item value="opt-1">Option 1</sl-menu-item>
-  <sl-menu-item value="opt-2">Option 2</sl-menu-item>
-  <sl-menu-item value="opt-3">Option 3</sl-menu-item>
-  <sl-divider></sl-divider>
-  <sl-menu-item type="checkbox" value="opt-4">Checkbox 4</sl-menu-item>
-  <sl-menu-item type="checkbox" value="opt-5">Checkbox 5</sl-menu-item>
-  <sl-menu-item type="checkbox" value="opt-6">Checkbox 6</sl-menu-item>
-</sl-menu>
+<bui-menu class="menu-value" style="max-width: 200px;">
+  <bui-menu-item value="opt-1">Option 1</bui-menu-item>
+  <bui-menu-item value="opt-2">Option 2</bui-menu-item>
+  <bui-menu-item value="opt-3">Option 3</bui-menu-item>
+  <bui-divider></bui-divider>
+  <bui-menu-item type="checkbox" value="opt-4">Checkbox 4</bui-menu-item>
+  <bui-menu-item type="checkbox" value="opt-5">Checkbox 5</bui-menu-item>
+  <bui-menu-item type="checkbox" value="opt-6">Checkbox 6</bui-menu-item>
+</bui-menu>
 
 <script>
   const menu = document.querySelector('.menu-value');
 
-  menu.addEventListener('sl-select', event => {
+  menu.addEventListener('bui-select', event => {
     const item = event.detail.item;
 
     // Log value
@@ -188,7 +188,7 @@ The `value` attribute can be used to assign a hidden value, such as a unique ide
 ```
 
 ```jsx react
-import { SlMenu, SlMenuItem } from 'buckeye-ui/dist/react';
+import { Menu, MenuItem } from 'buckeye-ui/dist/react';
 
 const App = () => {
   function handleSelect(event) {
@@ -202,13 +202,13 @@ const App = () => {
   }
 
   return (
-    <SlMenu style={{ maxWidth: '200px' }} onSlSelect={handleSelect}>
-      <SlMenuItem value="opt-1">Option 1</SlMenuItem>
-      <SlMenuItem value="opt-2">Option 2</SlMenuItem>
-      <SlMenuItem value="opt-3">Option 3</SlMenuItem>
-    </SlMenu>
+    <Menu style={{ maxWidth: '200px' }} onSlSelect={handleSelect}>
+      <MenuItem value="opt-1">Option 1</MenuItem>
+      <MenuItem value="opt-2">Option 2</MenuItem>
+      <MenuItem value="opt-3">Option 3</MenuItem>
+    </Menu>
   );
 };
 ```
 
-[component-metadata:sl-menu-item]
+[component-metadata:bui-menu-item]

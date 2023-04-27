@@ -19,11 +19,11 @@ import type { CSSResultGroup } from 'lit';
  *
  * @slot - The switch's label.
  *
- * @event sl-blur - Emitted when the control loses focus.
- * @event sl-change - Emitted when the control's checked state changes.
- * @event sl-input - Emitted when the control receives input.
- * @event sl-focus - Emitted when the control gains focus.
- * @event sl-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.
+ * @event bui-blur - Emitted when the control loses focus.
+ * @event bui-change - Emitted when the control's checked state changes.
+ * @event bui-input - Emitted when the control receives input.
+ * @event bui-focus - Emitted when the control gains focus.
+ * @event bui-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.
  *
  * @csspart base - The component's base wrapper.
  * @csspart control - The control that houses the switch's thumb.
@@ -34,7 +34,7 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --height - The height of the switch.
  * @cssproperty --thumb-size - The size of the thumb.
  */
-@customElement('sl-switch')
+@customElement('bui-switch')
 export default class SlSwitch extends BuckeyeElement implements BuckeyeFormControl {
   static styles: CSSResultGroup = styles;
 
@@ -93,11 +93,11 @@ export default class SlSwitch extends BuckeyeElement implements BuckeyeFormContr
 
   private handleBlur() {
     this.hasFocus = false;
-    this.emit('sl-blur');
+    this.emit('bui-blur');
   }
 
   private handleInput() {
-    this.emit('sl-input');
+    this.emit('bui-input');
   }
 
   private handleInvalid(event: Event) {
@@ -107,27 +107,27 @@ export default class SlSwitch extends BuckeyeElement implements BuckeyeFormContr
 
   private handleClick() {
     this.checked = !this.checked;
-    this.emit('sl-change');
+    this.emit('bui-change');
   }
 
   private handleFocus() {
     this.hasFocus = true;
-    this.emit('sl-focus');
+    this.emit('bui-focus');
   }
 
   private handleKeyDown(event: KeyboardEvent) {
     if (event.key === 'ArrowLeft') {
       event.preventDefault();
       this.checked = false;
-      this.emit('sl-change');
-      this.emit('sl-input');
+      this.emit('bui-change');
+      this.emit('bui-input');
     }
 
     if (event.key === 'ArrowRight') {
       event.preventDefault();
       this.checked = true;
-      this.emit('sl-change');
-      this.emit('sl-input');
+      this.emit('bui-change');
+      this.emit('bui-input');
     }
   }
 
@@ -224,6 +224,6 @@ export default class SlSwitch extends BuckeyeElement implements BuckeyeFormContr
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-switch': SlSwitch;
+    'bui-switch': SlSwitch;
   }
 }

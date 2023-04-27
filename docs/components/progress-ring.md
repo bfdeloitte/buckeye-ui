@@ -1,15 +1,15 @@
 # Progress Ring
 
-[component-header:sl-progress-ring]
+[component-header:bui-progress-ring]
 
 ```html preview
-<sl-progress-ring value="25"></sl-progress-ring>
+<bui-progress-ring value="25"></bui-progress-ring>
 ```
 
 ```jsx react
-import { SlProgressRing } from 'buckeye-ui/dist/react';
+import { ProgressRing } from 'buckeye-ui/dist/react';
 
-const App = () => <SlProgressRing value="25" />;
+const App = () => <ProgressRing value="25" />;
 ```
 
 ## Examples
@@ -19,13 +19,13 @@ const App = () => <SlProgressRing value="25" />;
 Use the `--size` custom property to set the diameter of the progress ring.
 
 ```html preview
-<sl-progress-ring value="50" style="--size: 200px;"></sl-progress-ring>
+<bui-progress-ring value="50" style="--size: 200px;"></bui-progress-ring>
 ```
 
 ```jsx react
-import { SlProgressRing } from 'buckeye-ui/dist/react';
+import { ProgressRing } from 'buckeye-ui/dist/react';
 
-const App = () => <SlProgressRing value="50" style={{ '--size': '200px' }} />;
+const App = () => <ProgressRing value="50" style={{ '--size': '200px' }} />;
 ```
 
 ### Track and Indicator Width
@@ -33,13 +33,13 @@ const App = () => <SlProgressRing value="50" style={{ '--size': '200px' }} />;
 Use the `--track-width` and `--indicator-width` custom properties to set the width of the progress ring's track and indicator.
 
 ```html preview
-<sl-progress-ring value="50" style="--track-width: 6px; --indicator-width: 12px;"></sl-progress-ring>
+<bui-progress-ring value="50" style="--track-width: 6px; --indicator-width: 12px;"></bui-progress-ring>
 ```
 
 ```jsx react
-import { SlProgressRing } from 'buckeye-ui/dist/react';
+import { ProgressRing } from 'buckeye-ui/dist/react';
 
-const App = () => <SlProgressRing value="50" style={{ '--track-width': '6px', '--indicator-width': '12px' }} />;
+const App = () => <ProgressRing value="50" style={{ '--track-width': '6px', '--indicator-width': '12px' }} />;
 ```
 
 ### Colors
@@ -47,20 +47,20 @@ const App = () => <SlProgressRing value="50" style={{ '--track-width': '6px', '-
 To change the color, use the `--track-color` and `--indicator-color` custom properties.
 
 ```html preview
-<sl-progress-ring
+<bui-progress-ring
   value="50"
   style="
-    --track-color: pink; 
+    --track-color: pink;
     --indicator-color: deeppink;
   "
-></sl-progress-ring>
+></bui-progress-ring>
 ```
 
 ```jsx react
-import { SlProgressRing } from 'buckeye-ui/dist/react';
+import { ProgressRing } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlProgressRing
+  <ProgressRing
     value="50"
     style={{
       '--track-color': 'pink',
@@ -75,13 +75,13 @@ const App = () => (
 Use the `label` attribute to label the progress ring and tell assistive devices how to announce it.
 
 ```html preview
-<sl-progress-ring value="50" label="Upload progress"></sl-progress-ring>
+<bui-progress-ring value="50" label="Upload progress"></bui-progress-ring>
 ```
 
 ```jsx react
-import { SlProgressRing } from 'buckeye-ui/dist/react';
+import { ProgressRing } from 'buckeye-ui/dist/react';
 
-const App = () => <SlProgressRing value="50" label="Upload progress" />;
+const App = () => <ProgressRing value="50" label="Upload progress" />;
 ```
 
 ### Showing Values
@@ -89,12 +89,12 @@ const App = () => <SlProgressRing value="50" label="Upload progress" />;
 Use the default slot to show a label inside the progress ring.
 
 ```html preview
-<sl-progress-ring value="50" class="progress-ring-values" style="margin-bottom: .5rem;">50%</sl-progress-ring>
+<bui-progress-ring value="50" class="progress-ring-values" style="margin-bottom: .5rem;">50%</bui-progress-ring>
 
 <br />
 
-<sl-button circle><sl-icon name="dash" label="Decrease"></sl-icon></sl-button>
-<sl-button circle><sl-icon name="plus" label="Increase"></sl-icon></sl-button>
+<bui-button circle><bui-icon name="dash" label="Decrease"></bui-icon></bui-button>
+<bui-button circle><bui-icon name="plus" label="Increase"></bui-icon></bui-button>
 
 <script>
   const progressRing = document.querySelector('.progress-ring-values');
@@ -117,7 +117,7 @@ Use the default slot to show a label inside the progress ring.
 
 ```jsx react
 import { useState } from 'react';
-import { SlButton, SlIcon, SlProgressRing } from 'buckeye-ui/dist/react';
+import { Button, Icon, ProgressRing } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const [value, setValue] = useState(50);
@@ -131,22 +131,22 @@ const App = () => {
 
   return (
     <>
-      <SlProgressRing value={value} style={{ marginBottom: '.5rem' }}>
+      <ProgressRing value={value} style={{ marginBottom: '.5rem' }}>
         {value}%
-      </SlProgressRing>
+      </ProgressRing>
 
       <br />
 
-      <SlButton circle onClick={() => adjustValue(-10)}>
-        <SlIcon name="dash" label="Decrease" />
-      </SlButton>
+      <Button circle onClick={() => adjustValue(-10)}>
+        <Icon name="dash" label="Decrease" />
+      </Button>
 
-      <SlButton circle onClick={() => adjustValue(10)}>
-        <SlIcon name="plus" label="Increase" />
-      </SlButton>
+      <Button circle onClick={() => adjustValue(10)}>
+        <Icon name="plus" label="Increase" />
+      </Button>
     </>
   );
 };
 ```
 
-[component-metadata:sl-progress-ring]
+[component-metadata:bui-progress-ring]

@@ -1,15 +1,15 @@
 # Checkbox
 
-[component-header:sl-checkbox]
+[component-header:bui-checkbox]
 
 ```html preview
-<sl-checkbox>Checkbox</sl-checkbox>
+<bui-checkbox>Checkbox</bui-checkbox>
 ```
 
 ```jsx react
-import { SlCheckbox } from 'buckeye-ui/dist/react';
+import { Checkbox } from 'buckeye-ui/dist/react';
 
-const App = () => <SlCheckbox>Checkbox</SlCheckbox>;
+const App = () => <Checkbox>Checkbox</Checkbox>;
 ```
 
 ?> This component works with standard `<form>` elements. Please refer to the section on [form controls](/getting-started/form-controls) to learn more about form submission and client-side validation.
@@ -21,13 +21,13 @@ const App = () => <SlCheckbox>Checkbox</SlCheckbox>;
 Use the `checked` attribute to activate the checkbox.
 
 ```html preview
-<sl-checkbox checked>Checked</sl-checkbox>
+<bui-checkbox checked>Checked</bui-checkbox>
 ```
 
 ```jsx react
-import { SlCheckbox } from 'buckeye-ui/dist/react';
+import { Checkbox } from 'buckeye-ui/dist/react';
 
-const App = () => <SlCheckbox checked>Checked</SlCheckbox>;
+const App = () => <Checkbox checked>Checked</Checkbox>;
 ```
 
 ### Indeterminate
@@ -35,13 +35,13 @@ const App = () => <SlCheckbox checked>Checked</SlCheckbox>;
 Use the `indeterminate` attribute to make the checkbox indeterminate.
 
 ```html preview
-<sl-checkbox indeterminate>Indeterminate</sl-checkbox>
+<bui-checkbox indeterminate>Indeterminate</bui-checkbox>
 ```
 
 ```jsx react
-import { SlCheckbox } from 'buckeye-ui/dist/react';
+import { Checkbox } from 'buckeye-ui/dist/react';
 
-const App = () => <SlCheckbox indeterminate>Indeterminate</SlCheckbox>;
+const App = () => <Checkbox indeterminate>Indeterminate</Checkbox>;
 ```
 
 ### Disabled
@@ -49,13 +49,13 @@ const App = () => <SlCheckbox indeterminate>Indeterminate</SlCheckbox>;
 Use the `disabled` attribute to disable the checkbox.
 
 ```html preview
-<sl-checkbox disabled>Disabled</sl-checkbox>
+<bui-checkbox disabled>Disabled</bui-checkbox>
 ```
 
 ```jsx react
-import { SlCheckbox } from 'buckeye-ui/dist/react';
+import { Checkbox } from 'buckeye-ui/dist/react';
 
-const App = () => <SlCheckbox disabled>Disabled</SlCheckbox>;
+const App = () => <Checkbox disabled>Disabled</Checkbox>;
 ```
 
 ## Sizes
@@ -63,23 +63,23 @@ const App = () => <SlCheckbox disabled>Disabled</SlCheckbox>;
 Use the `size` attribute to change a checkbox's size.
 
 ```html preview
-<sl-checkbox size="small">Small</sl-checkbox>
+<bui-checkbox size="small">Small</bui-checkbox>
 <br />
-<sl-checkbox size="medium">Medium</sl-checkbox>
+<bui-checkbox size="medium">Medium</bui-checkbox>
 <br />
-<sl-checkbox size="large">Large</sl-checkbox>
+<bui-checkbox size="large">Large</bui-checkbox>
 ```
 
 ```jsx react
-import { SlCheckbox } from 'buckeye-ui/dist/react';
+import { Checkbox } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlCheckbox size="small">Small</SlCheckbox>
+    <Checkbox size="small">Small</Checkbox>
     <br />
-    <SlCheckbox size="medium">Medium</SlCheckbox>
+    <Checkbox size="medium">Medium</Checkbox>
     <br />
-    <SlCheckbox size="large">Large</SlCheckbox>
+    <Checkbox size="large">Large</Checkbox>
   </>
 );
 ```
@@ -90,23 +90,23 @@ Use the `setCustomValidity()` method to set a custom validation message. This wi
 
 ```html preview
 <form class="custom-validity">
-  <sl-checkbox>Check me</sl-checkbox>
+  <bui-checkbox>Check me</bui-checkbox>
   <br />
-  <sl-button type="submit" variant="primary" style="margin-top: 1rem;">Submit</sl-button>
+  <bui-button type="submit" variant="primary" style="margin-top: 1rem;">Submit</bui-button>
 </form>
 <script>
   const form = document.querySelector('.custom-validity');
-  const checkbox = form.querySelector('sl-checkbox');
+  const checkbox = form.querySelector('bui-checkbox');
   const errorMessage = `Don't forget to check me!`;
 
   // Set initial validity as soon as the element is defined
-  customElements.whenDefined('sl-checkbox').then(async () => {
+  customElements.whenDefined('bui-checkbox').then(async () => {
     await checkbox.updateComplete;
     checkbox.setCustomValidity(errorMessage);
   });
 
   // Update validity on change
-  checkbox.addEventListener('sl-change', () => {
+  checkbox.addEventListener('bui-change', () => {
     checkbox.setCustomValidity(checkbox.checked ? '' : errorMessage);
   });
 
@@ -120,7 +120,7 @@ Use the `setCustomValidity()` method to set a custom validation message. This wi
 
 ```jsx react
 import { useEffect, useRef } from 'react';
-import { SlButton, SlCheckbox } from 'buckeye-ui/dist/react';
+import { Button, Checkbox } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const checkbox = useRef(null);
@@ -141,16 +141,16 @@ const App = () => {
 
   return (
     <form class="custom-validity" onSubmit={handleSubmit}>
-      <SlCheckbox ref={checkbox} onSlChange={handleChange}>
+      <Checkbox ref={checkbox} onChange={handleChange}>
         Check me
-      </SlCheckbox>
+      </Checkbox>
       <br />
-      <SlButton type="submit" variant="primary" style={{ marginTop: '1rem' }}>
+      <Button type="submit" variant="primary" style={{ marginTop: '1rem' }}>
         Submit
-      </SlButton>
+      </Button>
     </form>
   );
 };
 ```
 
-[component-metadata:sl-checkbox]
+[component-metadata:bui-checkbox]

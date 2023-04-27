@@ -8,8 +8,8 @@ import BuckeyeElement from '../../internal/buckeye-element';
  * @status stable
  * @since 2.0
  */
-@customElement('sl-format-bytes')
-export default class SlFormatBytes extends BuckeyeElement {
+@customElement('bui-format-bytes')
+export default class FormatBytes extends BuckeyeElement {
   private readonly localize = new LocalizeController(this);
 
   /** The number to format in bytes. */
@@ -43,6 +43,6 @@ export default class SlFormatBytes extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-format-bytes': SlFormatBytes;
+    'bui-format-bytes': FormatBytes;
   }
 }

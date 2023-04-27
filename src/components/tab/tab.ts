@@ -16,23 +16,23 @@ let id = 0;
  * @status stable
  * @since 2.0
  *
- * @dependency sl-icon-button
+ * @dependency bui-icon-button
  *
  * @slot - The tab's label.
  *
- * @event sl-close - Emitted when the tab is closable and the close button is activated.
+ * @event bui-close - Emitted when the tab is closable and the close button is activated.
  *
  * @csspart base - The component's base wrapper.
- * @csspart close-button - The close button, an `<sl-icon-button>`.
+ * @csspart close-button - The close button, an `<bui-icon-button>`.
  * @csspart close-button__base - The close button's exported `base` part.
  */
-@customElement('sl-tab')
-export default class SlTab extends BuckeyeElement {
+@customElement('bui-tab')
+export default class Tab extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
   private readonly localize = new LocalizeController(this);
 
   private readonly attrId = ++id;
-  private readonly componentId = `sl-tab-${this.attrId}`;
+  private readonly componentId = `bui-tab-${this.attrId}`;
 
   @query('.tab') tab: HTMLElement;
 
@@ -55,7 +55,7 @@ export default class SlTab extends BuckeyeElement {
 
   private handleCloseClick(event: Event) {
     event.stopPropagation();
-    this.emit('sl-close');
+    this.emit('bui-close');
   }
 
   @watch('active')
@@ -96,7 +96,7 @@ export default class SlTab extends BuckeyeElement {
         <slot></slot>
         ${this.closable
           ? html`
-              <sl-icon-button
+              <bui-icon-button
                 part="close-button"
                 exportparts="base:close-button__base"
                 name="x-lg"
@@ -105,7 +105,7 @@ export default class SlTab extends BuckeyeElement {
                 class="tab__close-button"
                 @click=${this.handleCloseClick}
                 tabindex="-1"
-              ></sl-icon-button>
+              ></bui-icon-button>
             `
           : ''}
       </div>
@@ -115,6 +115,6 @@ export default class SlTab extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-tab': SlTab;
+    'bui-tab': Tab;
   }
 }

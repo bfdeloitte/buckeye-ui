@@ -11,12 +11,12 @@
       const searchBox = document.createElement('div');
       searchBox.classList.add('search-box');
       searchBox.innerHTML = `
-        <sl-input type="search" placeholder="Search" pill>
-          <sl-icon slot="prefix" name="search"></sl-icon>
+        <bui-input type="search" placeholder="Search" pill>
+          <bui-icon slot="prefix" name="search"></bui-icon>
           <kbd slot="suffix" title="Press / to search">/</kbd>
-        </sl-input>
+        </bui-input>
       `;
-      const searchBoxInput = searchBox.querySelector('sl-input');
+      const searchBoxInput = searchBox.querySelector('bui-input');
 
       appName.insertAdjacentElement('afterend', searchBox);
 
@@ -56,7 +56,7 @@
         aria-activedescendant=""
       >
         <header class="site-search__header">
-          <sl-input
+          <bui-input
             class="site-search__input"
             type="search"
             placeholder="Search this site"
@@ -65,8 +65,8 @@
             size="large"
             clearable
           >
-            <sl-icon slot="prefix" name="search"></sl-icon>
-          </sl-input>
+            <bui-icon slot="prefix" name="search"></bui-icon>
+          </bui-input>
         </header>
         <div class="site-search__body">
           <ul
@@ -275,7 +275,7 @@
           a.href = window.$docsify.routerMode === 'hash' ? `/#/${page.url}` : `/${page.url}`;
           a.innerHTML = `
             <div class="site-search__result-icon">
-              <sl-icon name="${icon}" aria-hidden="true"></sl-icon>
+              <bui-icon name="${icon}" aria-hidden="true"></bui-icon>
             </div>
             <div class="site-search__result__details">
               <h3>${page.title}</h3>
@@ -308,7 +308,7 @@
       }
     });
 
-    input.addEventListener('sl-input', handleInput);
+    input.addEventListener('bui-input', handleInput);
 
     // Close when a result is selected
     results.addEventListener('click', event => {

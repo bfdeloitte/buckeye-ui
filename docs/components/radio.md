@@ -1,26 +1,26 @@
 # Radio
 
-[component-header:sl-radio]
+[component-header:bui-radio]
 
 Radios are designed to be used with [radio groups](/components/radio-group).
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio value="1">Option 1</sl-radio>
-  <sl-radio value="2">Option 2</sl-radio>
-  <sl-radio value="3">Option 3</sl-radio>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio value="1">Option 1</bui-radio>
+  <bui-radio value="2">Option 2</bui-radio>
+  <bui-radio value="3">Option 3</bui-radio>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadio, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { Radio, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadio value="1">Option 1</SlRadio>
-    <SlRadio value="2">Option 2</SlRadio>
-    <SlRadio value="3">Option 3</SlRadio>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <Radio value="1">Option 1</Radio>
+    <Radio value="2">Option 2</Radio>
+    <Radio value="3">Option 3</Radio>
+  </RadioGroup>
 );
 ```
 
@@ -33,22 +33,22 @@ const App = () => (
 To set the initial value and checked state, use the `value` attribute on the containing radio group.
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="3">
-  <sl-radio value="1">Option 1</sl-radio>
-  <sl-radio value="2">Option 2</sl-radio>
-  <sl-radio value="3">Option 3</sl-radio>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="3">
+  <bui-radio value="1">Option 1</bui-radio>
+  <bui-radio value="2">Option 2</bui-radio>
+  <bui-radio value="3">Option 3</bui-radio>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadio, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { Radio, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="3">
-    <SlRadio value="1">Option 1</SlRadio>
-    <SlRadio value="2">Option 2</SlRadio>
-    <SlRadio value="3">Option 3</SlRadio>
-  </SlRadioGroup>
+  <RadioGroup label="Select an option" name="a" value="3">
+    <Radio value="1">Option 1</Radio>
+    <Radio value="2">Option 2</Radio>
+    <Radio value="3">Option 3</Radio>
+  </RadioGroup>
 );
 ```
 
@@ -57,24 +57,24 @@ const App = () => (
 Use the `disabled` attribute to disable a radio.
 
 ```html preview
-<sl-radio-group label="Select an option" name="a" value="1">
-  <sl-radio value="1">Option 1</sl-radio>
-  <sl-radio value="2" disabled>Option 2</sl-radio>
-  <sl-radio value="3">Option 3</sl-radio>
-</sl-radio-group>
+<bui-radio-group label="Select an option" name="a" value="1">
+  <bui-radio value="1">Option 1</bui-radio>
+  <bui-radio value="2" disabled>Option 2</bui-radio>
+  <bui-radio value="3">Option 3</bui-radio>
+</bui-radio-group>
 ```
 
 ```jsx react
-import { SlRadio, SlRadioGroup } from 'buckeye-ui/dist/react';
+import { Radio, RadioGroup } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlRadioGroup label="Select an option" name="a" value="1">
-    <SlRadio value="1">Option 1</SlRadio>
-    <SlRadio value="2" disabled>
+  <RadioGroup label="Select an option" name="a" value="1">
+    <Radio value="1">Option 1</Radio>
+    <Radio value="2" disabled>
       Option 2
-    </SlRadio>
-    <SlRadio value="3">Option 3</SlRadio>
-  </SlRadioGroup>
+    </Radio>
+    <Radio value="3">Option 3</Radio>
+  </RadioGroup>
 );
 ```
 
@@ -83,23 +83,23 @@ const App = () => (
 Use the `size` attribute to change a radio's size.
 
 ```html preview
-<sl-radio size="small">Small</sl-radio>
-<sl-radio size="medium">Medium</sl-radio>
-<sl-radio size="large">Large</sl-radio>
+<bui-radio size="small">Small</bui-radio>
+<bui-radio size="medium">Medium</bui-radio>
+<bui-radio size="large">Large</bui-radio>
 ```
 
 ```jsx react
-import { SlRadio } from 'buckeye-ui/dist/react';
+import { Radio } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlRadio size="small">Small</SlRadio>
+    <Radio size="small">Small</Radio>
     <br />
-    <SlRadio size="medium">Medium</SlRadio>
+    <Radio size="medium">Medium</Radio>
     <br />
-    <SlRadio size="large">Large</SlRadio>
+    <Radio size="large">Large</Radio>
   </>
 );
 ```
 
-[component-metadata:sl-radio]
+[component-metadata:bui-radio]

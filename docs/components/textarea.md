@@ -1,15 +1,15 @@
 # Textarea
 
-[component-header:sl-textarea]
+[component-header:bui-textarea]
 
 ```html preview
-<sl-textarea></sl-textarea>
+<bui-textarea></bui-textarea>
 ```
 
 ```jsx react
-import { SlTextarea } from 'buckeye-ui/dist/react';
+import { Textarea } from 'buckeye-ui/dist/react';
 
-const App = () => <SlTextarea />;
+const App = () => <Textarea />;
 ```
 
 ?> This component works with standard `<form>` elements. Please refer to the section on [form controls](/getting-started/form-controls) to learn more about form submission and client-side validation.
@@ -21,13 +21,13 @@ const App = () => <SlTextarea />;
 Use the `label` attribute to give the textarea an accessible label. For labels that contain HTML, use the `label` slot instead.
 
 ```html preview
-<sl-textarea label="Comments"></sl-textarea>
+<bui-textarea label="Comments"></bui-textarea>
 ```
 
 ```jsx react
-import { SlTextarea } from 'buckeye-ui/dist/react';
+import { Textarea } from 'buckeye-ui/dist/react';
 
-const App = () => <SlTextarea label="Comments" />;
+const App = () => <Textarea label="Comments" />;
 ```
 
 ### Help Text
@@ -35,13 +35,13 @@ const App = () => <SlTextarea label="Comments" />;
 Add descriptive help text to a textarea with the `help-text` attribute. For help texts that contain HTML, use the `help-text` slot instead.
 
 ```html preview
-<sl-textarea label="Feedback" help-text="Please tell us what you think."> </sl-textarea>
+<bui-textarea label="Feedback" help-text="Please tell us what you think."> </bui-textarea>
 ```
 
 ```jsx react
-import { SlTextarea } from 'buckeye-ui/dist/react';
+import { Textarea } from 'buckeye-ui/dist/react';
 
-const App = () => <SlTextarea label="Feedback" help-text="Please tell us what you think." />;
+const App = () => <Textarea label="Feedback" help-text="Please tell us what you think." />;
 ```
 
 ### Rows
@@ -49,13 +49,13 @@ const App = () => <SlTextarea label="Feedback" help-text="Please tell us what yo
 Use the `rows` attribute to change the number of text rows that get shown.
 
 ```html preview
-<sl-textarea rows="2"></sl-textarea>
+<bui-textarea rows="2"></bui-textarea>
 ```
 
 ```jsx react
-import { SlTextarea } from 'buckeye-ui/dist/react';
+import { Textarea } from 'buckeye-ui/dist/react';
 
-const App = () => <SlTextarea rows={2} />;
+const App = () => <Textarea rows={2} />;
 ```
 
 ### Placeholders
@@ -63,13 +63,13 @@ const App = () => <SlTextarea rows={2} />;
 Use the `placeholder` attribute to add a placeholder.
 
 ```html preview
-<sl-textarea placeholder="Type something"></sl-textarea>
+<bui-textarea placeholder="Type something"></bui-textarea>
 ```
 
 ```jsx react
-import { SlTextarea } from 'buckeye-ui/dist/react';
+import { Textarea } from 'buckeye-ui/dist/react';
 
-const App = () => <SlTextarea placeholder="Type something" />;
+const App = () => <Textarea placeholder="Type something" />;
 ```
 
 ### Filled Textareas
@@ -77,13 +77,13 @@ const App = () => <SlTextarea placeholder="Type something" />;
 Add the `filled` attribute to draw a filled textarea.
 
 ```html preview
-<sl-textarea placeholder="Type something" filled></sl-textarea>
+<bui-textarea placeholder="Type something" filled></bui-textarea>
 ```
 
 ```jsx react
-import { SlTextarea } from 'buckeye-ui/dist/react';
+import { Textarea } from 'buckeye-ui/dist/react';
 
-const App = () => <SlTextarea placeholder="Type something" filled />;
+const App = () => <Textarea placeholder="Type something" filled />;
 ```
 
 ### Disabled
@@ -91,13 +91,13 @@ const App = () => <SlTextarea placeholder="Type something" filled />;
 Use the `disabled` attribute to disable a textarea.
 
 ```html preview
-<sl-textarea placeholder="Textarea" disabled></sl-textarea>
+<bui-textarea placeholder="Textarea" disabled></bui-textarea>
 ```
 
 ```jsx react
-import { SlTextarea } from 'buckeye-ui/dist/react';
+import { Textarea } from 'buckeye-ui/dist/react';
 
-const App = () => <SlTextarea placeholder="Textarea" disabled />;
+const App = () => <Textarea placeholder="Textarea" disabled />;
 ```
 
 ### Sizes
@@ -105,23 +105,23 @@ const App = () => <SlTextarea placeholder="Textarea" disabled />;
 Use the `size` attribute to change a textarea's size.
 
 ```html preview
-<sl-textarea placeholder="Small" size="small"></sl-textarea>
+<bui-textarea placeholder="Small" size="small"></bui-textarea>
 <br />
-<sl-textarea placeholder="Medium" size="medium"></sl-textarea>
+<bui-textarea placeholder="Medium" size="medium"></bui-textarea>
 <br />
-<sl-textarea placeholder="Large" size="large"></sl-textarea>
+<bui-textarea placeholder="Large" size="large"></bui-textarea>
 ```
 
 ```jsx react
-import { SlTextarea } from 'buckeye-ui/dist/react';
+import { Textarea } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <>
-    <SlTextarea placeholder="Small" size="small"></SlTextarea>
+    <Textarea placeholder="Small" size="small"></Textarea>
     <br />
-    <SlTextarea placeholder="Medium" size="medium"></SlTextarea>
+    <Textarea placeholder="Medium" size="medium"></Textarea>
     <br />
-    <SlTextarea placeholder="Large" size="large"></SlTextarea>
+    <Textarea placeholder="Large" size="large"></Textarea>
   </>
 );
 ```
@@ -131,13 +131,13 @@ const App = () => (
 By default, textareas can be resized vertically by the user. To prevent resizing, set the `resize` attribute to `none`.
 
 ```html preview
-<sl-textarea resize="none"></sl-textarea>
+<bui-textarea resize="none"></bui-textarea>
 ```
 
 ```jsx react
-import { SlTextarea } from 'buckeye-ui/dist/react';
+import { Textarea } from 'buckeye-ui/dist/react';
 
-const App = () => <SlTextarea resize="none" />;
+const App = () => <Textarea resize="none" />;
 ```
 
 ### Expand with Content
@@ -145,13 +145,13 @@ const App = () => <SlTextarea resize="none" />;
 Textareas will automatically resize to expand to fit their content when `resize` is set to `auto`.
 
 ```html preview
-<sl-textarea resize="auto"></sl-textarea>
+<bui-textarea resize="auto"></bui-textarea>
 ```
 
 ```jsx react
-import { SlTextarea } from 'buckeye-ui/dist/react';
+import { Textarea } from 'buckeye-ui/dist/react';
 
-const App = () => <SlTextarea resize="auto" />;
+const App = () => <Textarea resize="auto" />;
 ```
 
-[component-metadata:sl-textarea]
+[component-metadata:bui-textarea]

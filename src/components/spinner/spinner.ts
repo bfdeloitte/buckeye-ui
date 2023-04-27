@@ -18,7 +18,7 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --indicator-color - The color of the spinner's indicator.
  * @cssproperty --speed - The time it takes for the spinner to complete one animation cycle.
  */
-@customElement('sl-spinner')
+@customElement('bui-spinner')
 export default class SlSpinner extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
@@ -36,6 +36,6 @@ export default class SlSpinner extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-spinner': SlSpinner;
+    'bui-spinner': SlSpinner;
   }
 }

@@ -1,5 +1,5 @@
 export default function (plop) {
-  plop.setHelper('tagWithoutPrefix', tag => tag.replace(/^sl-/, ''));
+  plop.setHelper('tagWithoutPrefix', tag => tag.replace(/^bui-/, ''));
 
   plop.setHelper('tagToTitle', tag => {
     const withoutPrefix = plop.getHelper('tagWithoutPrefix');
@@ -13,10 +13,10 @@ export default function (plop) {
       {
         type: 'input',
         name: 'tag',
-        message: 'Tag name? (e.g. sl-button)',
+        message: 'Tag name? (e.g. bui-button)',
         validate: value => {
-          // Start with sl- and include only a-z + dashes
-          if (!/^sl-[a-z-+]+/.test(value)) {
+          // Start with bui- and include only a-z + dashes
+          if (!/^bui-[a-z-+]+/.test(value)) {
             return false;
           }
 

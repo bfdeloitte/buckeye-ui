@@ -44,26 +44,26 @@ If you don't want to use client-side validation, you can suppress this behavior 
 
 ### Required Fields
 
-To make a field required, use the `required` attribute. Required fields will automatically receive a `*` after their labels. This is configurable through the `--sl-input-required-content` custom property.
+To make a field required, use the `required` attribute. Required fields will automatically receive a `*` after their labels. This is configurable through the `--bui-input-required-content` custom property.
 
 The form will not be submitted if a required field is incomplete.
 
 ```html preview
 <form class="input-validation-required">
-  <sl-input name="name" label="Name" required></sl-input>
+  <bui-input name="name" label="Name" required></bui-input>
   <br />
-  <sl-select label="Favorite Animal" clearable required>
-    <sl-option value="birds">Birds</sl-option>
-    <sl-option value="cats">Cats</sl-option>
-    <sl-option value="dogs">Dogs</sl-option>
-    <sl-option value="other">Other</sl-option>
-  </sl-select>
+  <bui-select label="Favorite Animal" clearable required>
+    <bui-option value="birds">Birds</bui-option>
+    <bui-option value="cats">Cats</bui-option>
+    <bui-option value="dogs">Dogs</bui-option>
+    <bui-option value="other">Other</bui-option>
+  </bui-select>
   <br />
-  <sl-textarea name="comment" label="Comment" required></sl-textarea>
+  <bui-textarea name="comment" label="Comment" required></bui-textarea>
   <br />
-  <sl-checkbox required>Check me before submitting</sl-checkbox>
+  <bui-checkbox required>Check me before submitting</bui-checkbox>
   <br /><br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
+  <bui-button type="submit" variant="primary">Submit</bui-button>
 </form>
 
 <script type="module">
@@ -76,7 +76,7 @@ The form will not be submitted if a required field is incomplete.
 ```
 
 ```jsx react
-import { SlButton, SlCheckbox, SlInput, SlMenuItem, SlSelect, SlTextarea } from 'buckeye-ui/dist/react';
+import { Button, Checkbox, Input, MenuItem, SlSelect, Textarea } from 'buckeye-ui/dist/react';
 
 const App = () => {
   function handleSubmit(event) {
@@ -86,23 +86,23 @@ const App = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <SlInput name="name" label="Name" required />
+      <Input name="name" label="Name" required />
       <br />
       <SlSelect label="Favorite Animal" clearable required>
-        <SlMenuItem value="birds">Birds</SlMenuItem>
-        <SlMenuItem value="cats">Cats</SlMenuItem>
-        <SlMenuItem value="dogs">Dogs</SlMenuItem>
-        <SlMenuItem value="other">Other</SlMenuItem>
+        <MenuItem value="birds">Birds</MenuItem>
+        <MenuItem value="cats">Cats</MenuItem>
+        <MenuItem value="dogs">Dogs</MenuItem>
+        <MenuItem value="other">Other</MenuItem>
       </SlSelect>
       <br />
-      <SlTextarea name="comment" label="Comment" required></SlTextarea>
+      <Textarea name="comment" label="Comment" required></Textarea>
       <br />
-      <SlCheckbox required>Check me before submitting</SlCheckbox>
+      <Checkbox required>Check me before submitting</Checkbox>
       <br />
       <br />
-      <SlButton type="submit" variant="primary">
+      <Button type="submit" variant="primary">
         Submit
-      </SlButton>
+      </Button>
     </form>
   );
 };
@@ -110,14 +110,14 @@ const App = () => {
 
 ### Input Patterns
 
-To restrict a value to a specific [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern), use the `pattern` attribute. This example only allows the letters A-Z, so the form will not submit if a number or symbol is entered. This only works with `<sl-input>` elements.
+To restrict a value to a specific [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern), use the `pattern` attribute. This example only allows the letters A-Z, so the form will not submit if a number or symbol is entered. This only works with `<bui-input>` elements.
 
 ```html preview
 <form class="input-validation-pattern">
-  <sl-input name="letters" required label="Letters" pattern="[A-Za-z]+"></sl-input>
+  <bui-input name="letters" required label="Letters" pattern="[A-Za-z]+"></bui-input>
   <br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
-  <sl-button type="reset" variant="default">Reset</sl-button>
+  <bui-button type="submit" variant="primary">Submit</bui-button>
+  <bui-button type="reset" variant="default">Reset</bui-button>
 </form>
 
 <script type="module">
@@ -130,7 +130,7 @@ To restrict a value to a specific [pattern](https://developer.mozilla.org/en-US/
 ```
 
 ```jsx react
-import { SlButton, SlInput } from 'buckeye-ui/dist/react';
+import { Button, Input } from 'buckeye-ui/dist/react';
 
 const App = () => {
   function handleSubmit(event) {
@@ -140,11 +140,11 @@ const App = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <SlInput name="letters" required label="Letters" pattern="[A-Za-z]+" />
+      <Input name="letters" required label="Letters" pattern="[A-Za-z]+" />
       <br />
-      <SlButton type="submit" variant="primary">
+      <Button type="submit" variant="primary">
         Submit
-      </SlButton>
+      </Button>
     </form>
   );
 };
@@ -156,12 +156,12 @@ Some input types will automatically trigger constraints, such as `email` and `ur
 
 ```html preview
 <form class="input-validation-type">
-  <sl-input type="email" label="Email" placeholder="you@example.com" required></sl-input>
+  <bui-input type="email" label="Email" placeholder="you@example.com" required></bui-input>
   <br />
-  <sl-input type="url" label="URL" placeholder="https://example.com/" required></sl-input>
+  <bui-input type="url" label="URL" placeholder="https://example.com/" required></bui-input>
   <br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
-  <sl-button type="reset" variant="default">Reset</sl-button>
+  <bui-button type="submit" variant="primary">Submit</bui-button>
+  <bui-button type="reset" variant="default">Reset</bui-button>
 </form>
 
 <script type="module">
@@ -174,7 +174,7 @@ Some input types will automatically trigger constraints, such as `email` and `ur
 ```
 
 ```jsx react
-import { SlButton, SlInput } from 'buckeye-ui/dist/react';
+import { Button, Input } from 'buckeye-ui/dist/react';
 
 const App = () => {
   function handleSubmit(event) {
@@ -184,13 +184,13 @@ const App = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <SlInput type="email" label="Email" placeholder="you@example.com" required />
+      <Input type="email" label="Email" placeholder="you@example.com" required />
       <br />
-      <SlInput type="url" label="URL" placeholder="https://example.com/" required />
+      <Input type="url" label="URL" placeholder="https://example.com/" required />
       <br />
-      <SlButton type="submit" variant="primary">
+      <Button type="submit" variant="primary">
         Submit
-      </SlButton>
+      </Button>
     </form>
   );
 };
@@ -202,22 +202,22 @@ To create a custom validation error, pass a non-empty string to the `setCustomVa
 
 ```html preview
 <form class="input-validation-custom">
-  <sl-input label="Type “buckeye”" required></sl-input>
+  <bui-input label="Type “buckeye”" required></bui-input>
   <br />
-  <sl-button type="submit" variant="primary">Submit</sl-button>
-  <sl-button type="reset" variant="default">Reset</sl-button>
+  <bui-button type="submit" variant="primary">Submit</bui-button>
+  <bui-button type="reset" variant="default">Reset</bui-button>
 </form>
 
 <script type="module">
   const form = document.querySelector('.input-validation-custom');
-  const input = form.querySelector('sl-input');
+  const input = form.querySelector('bui-input');
 
   form.addEventListener('submit', event => {
     event.preventDefault();
     alert('All fields are valid!');
   });
 
-  input.addEventListener('sl-input', () => {
+  input.addEventListener('bui-input', () => {
     if (input.value === 'buckeye') {
       input.setCustomValidity('');
     } else {
@@ -229,7 +229,7 @@ To create a custom validation error, pass a non-empty string to the `setCustomVa
 
 ```jsx react
 import { useRef, useState } from 'react';
-import { SlButton, SlInput } from 'buckeye-ui/dist/react';
+import { Button, Input } from 'buckeye-ui/dist/react';
 
 const App = () => {
   const input = useRef(null);
@@ -252,11 +252,11 @@ const App = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <SlInput ref={input} label="Type 'buckeye'" required value={value} onSlInput={handleInput} />
+      <Input ref={input} label="Type 'buckeye'" required value={value} onInput={handleInput} />
       <br />
-      <SlButton type="submit" variant="primary">
+      <Button type="submit" variant="primary">
         Submit
-      </SlButton>
+      </Button>
     </form>
   );
 };
@@ -287,25 +287,25 @@ This example demonstrates custom validation styles using `data-user-invalid` and
 
 ```html preview
 <form class="validity-styles">
-  <sl-input
+  <bui-input
     name="name"
     label="Name"
     help-text="What would you like people to call you?"
     autocomplete="off"
     required
-  ></sl-input>
+  ></bui-input>
 
-  <sl-select name="animal" label="Favorite Animal" help-text="Select the best option." clearable required>
-    <sl-option value="birds">Birds</sl-option>
-    <sl-option value="cats">Cats</sl-option>
-    <sl-option value="dogs">Dogs</sl-option>
-    <sl-option value="other">Other</sl-option>
-  </sl-select>
+  <bui-select name="animal" label="Favorite Animal" help-text="Select the best option." clearable required>
+    <bui-option value="birds">Birds</bui-option>
+    <bui-option value="cats">Cats</bui-option>
+    <bui-option value="dogs">Dogs</bui-option>
+    <bui-option value="other">Other</bui-option>
+  </bui-select>
 
-  <sl-checkbox value="accept" required>Accept terms and conditions</sl-checkbox>
+  <bui-checkbox value="accept" required>Accept terms and conditions</bui-checkbox>
 
-  <sl-button type="submit" variant="primary">Submit</sl-button>
-  <sl-button type="reset" variant="default">Reset</sl-button>
+  <bui-button type="submit" variant="primary">Submit</bui-button>
+  <bui-button type="reset" variant="default">Reset</bui-button>
 </form>
 
 <script type="module">
@@ -317,60 +317,60 @@ This example demonstrates custom validation styles using `data-user-invalid` and
 </script>
 
 <style>
-  .validity-styles sl-input,
-  .validity-styles sl-select,
-  .validity-styles sl-checkbox {
+  .validity-styles bui-input,
+  .validity-styles bui-select,
+  .validity-styles bui-checkbox {
     display: block;
-    margin-bottom: var(--sl-spacing-medium);
+    margin-bottom: var(--bui-spacing-medium);
   }
 
   /* user invalid styles */
-  .validity-styles sl-input[data-user-invalid]::part(base),
-  .validity-styles sl-select[data-user-invalid]::part(combobox),
-  .validity-styles sl-checkbox[data-user-invalid]::part(control) {
-    border-color: var(--sl-color-danger-600);
+  .validity-styles bui-input[data-user-invalid]::part(base),
+  .validity-styles bui-select[data-user-invalid]::part(combobox),
+  .validity-styles bui-checkbox[data-user-invalid]::part(control) {
+    border-color: var(--bui-color-danger-600);
   }
 
   .validity-styles [data-user-invalid]::part(form-control-label),
   .validity-styles [data-user-invalid]::part(form-control-help-text),
-  .validity-styles sl-checkbox[data-user-invalid]::part(label) {
-    color: var(--sl-color-danger-700);
+  .validity-styles bui-checkbox[data-user-invalid]::part(label) {
+    color: var(--bui-color-danger-700);
   }
 
-  .validity-styles sl-checkbox[data-user-invalid]::part(control) {
+  .validity-styles bui-checkbox[data-user-invalid]::part(control) {
     outline: none;
   }
 
-  .validity-styles sl-input:focus-within[data-user-invalid]::part(base),
-  .validity-styles sl-select:focus-within[data-user-invalid]::part(combobox),
-  .validity-styles sl-checkbox:focus-within[data-user-invalid]::part(control) {
-    border-color: var(--sl-color-danger-600);
-    box-shadow: 0 0 0 var(--sl-focus-ring-width) var(--sl-color-danger-300);
+  .validity-styles bui-input:focus-within[data-user-invalid]::part(base),
+  .validity-styles bui-select:focus-within[data-user-invalid]::part(combobox),
+  .validity-styles bui-checkbox:focus-within[data-user-invalid]::part(control) {
+    border-color: var(--bui-color-danger-600);
+    box-shadow: 0 0 0 var(--bui-focus-ring-width) var(--bui-color-danger-300);
   }
 
   /* User valid styles */
-  .validity-styles sl-input[data-user-valid]::part(base),
-  .validity-styles sl-select[data-user-valid]::part(combobox),
-  .validity-styles sl-checkbox[data-user-valid]::part(control) {
-    border-color: var(--sl-color-success-600);
+  .validity-styles bui-input[data-user-valid]::part(base),
+  .validity-styles bui-select[data-user-valid]::part(combobox),
+  .validity-styles bui-checkbox[data-user-valid]::part(control) {
+    border-color: var(--bui-color-success-600);
   }
 
   .validity-styles [data-user-valid]::part(form-control-label),
   .validity-styles [data-user-valid]::part(form-control-help-text),
-  .validity-styles sl-checkbox[data-user-valid]::part(label) {
-    color: var(--sl-color-success-700);
+  .validity-styles bui-checkbox[data-user-valid]::part(label) {
+    color: var(--bui-color-success-700);
   }
 
-  .validity-styles sl-checkbox[data-user-valid]::part(control) {
-    background-color: var(--sl-color-success-600);
+  .validity-styles bui-checkbox[data-user-valid]::part(control) {
+    background-color: var(--bui-color-success-600);
     outline: none;
   }
 
-  .validity-styles sl-input:focus-within[data-user-valid]::part(base),
-  .validity-styles sl-select:focus-within[data-user-valid]::part(combobox),
-  .validity-styles sl-checkbox:focus-within[data-user-valid]::part(control) {
-    border-color: var(--sl-color-success-600);
-    box-shadow: 0 0 0 var(--sl-focus-ring-width) var(--sl-color-success-300);
+  .validity-styles bui-input:focus-within[data-user-valid]::part(base),
+  .validity-styles bui-select:focus-within[data-user-valid]::part(combobox),
+  .validity-styles bui-checkbox:focus-within[data-user-valid]::part(control) {
+    border-color: var(--bui-color-success-600);
+    box-shadow: 0 0 0 var(--bui-focus-ring-width) var(--bui-color-success-300);
   }
 </style>
 ```
@@ -379,22 +379,22 @@ This example demonstrates custom validation styles using `data-user-invalid` and
 
 By default, BuckeyeUI form controls use the browser's tooltip-style error messages. No mechanism is provided to show errors inline, as there are too many opinions on how that would work when combined with native form controls and other custom elements. You can, however, implement your own solution using the following technique.
 
-To disable the browser's error messages, you need to cancel the `sl-invalid` event. Then you can apply your own inline validation errors. This example demonstrates a primitive way to do this.
+To disable the browser's error messages, you need to cancel the `bui-invalid` event. Then you can apply your own inline validation errors. This example demonstrates a primitive way to do this.
 
 ```html preview
 <form class="inline-validation">
-  <sl-input
+  <bui-input
     name="name"
     label="Name"
     help-text="What would you like people to call you?"
     autocomplete="off"
     required
-  ></sl-input>
+  ></bui-input>
 
   <div id="name-error" aria-live="polite" hidden></div>
 
-  <sl-button type="submit" variant="primary">Submit</sl-button>
-  <sl-button type="reset" variant="default">Reset</sl-button>
+  <bui-button type="submit" variant="primary">Submit</bui-button>
+  <bui-button type="reset" variant="default">Reset</bui-button>
 </form>
 
 <script>
@@ -403,7 +403,7 @@ To disable the browser's error messages, you need to cancel the `sl-invalid` eve
 
   // A form control is invalid
   form.addEventListener(
-    'sl-invalid',
+    'bui-invalid',
     event => {
       // Suppress the browser's constraint validation message
       event.preventDefault();
@@ -413,7 +413,7 @@ To disable the browser's error messages, you need to cancel the `sl-invalid` eve
 
       event.target.focus();
     },
-    { capture: true } // you must use capture since sl-invalid doesn't bubble!
+    { capture: true } // you must use capture since bui-invalid doesn't bubble!
   );
 
   // Handle form submit
@@ -433,51 +433,51 @@ To disable the browser's error messages, you need to cancel the `sl-invalid` eve
 
 <style>
   #name-error {
-    font-size: var(--sl-input-help-text-font-size-medium);
-    color: var(--sl-color-danger-700);
+    font-size: var(--bui-input-help-text-font-size-medium);
+    color: var(--bui-color-danger-700);
   }
 
-  #name-error ~ sl-button {
-    margin-top: var(--sl-spacing-medium);
+  #name-error ~ bui-button {
+    margin-top: var(--bui-spacing-medium);
   }
 
-  .inline-validation sl-input {
+  .inline-validation bui-input {
     display: block;
   }
 
   /* user invalid styles */
-  .inline-validation sl-input[data-user-invalid]::part(base) {
-    border-color: var(--sl-color-danger-600);
+  .inline-validation bui-input[data-user-invalid]::part(base) {
+    border-color: var(--bui-color-danger-600);
   }
 
   .inline-validation [data-user-invalid]::part(form-control-label),
   .inline-validation [data-user-invalid]::part(form-control-help-text) {
-    color: var(--sl-color-danger-700);
+    color: var(--bui-color-danger-700);
   }
 
-  .inline-validation sl-input:focus-within[data-user-invalid]::part(base) {
-    border-color: var(--sl-color-danger-600);
-    box-shadow: 0 0 0 var(--sl-focus-ring-width) var(--sl-color-danger-300);
+  .inline-validation bui-input:focus-within[data-user-invalid]::part(base) {
+    border-color: var(--bui-color-danger-600);
+    box-shadow: 0 0 0 var(--bui-focus-ring-width) var(--bui-color-danger-300);
   }
 
   /* User valid styles */
-  .inline-validation sl-input[data-user-valid]::part(base) {
-    border-color: var(--sl-color-success-600);
+  .inline-validation bui-input[data-user-valid]::part(base) {
+    border-color: var(--bui-color-success-600);
   }
 
   .inline-validation [data-user-valid]::part(form-control-label),
   .inline-validation [data-user-valid]::part(form-control-help-text) {
-    color: var(--sl-color-success-700);
+    color: var(--bui-color-success-700);
   }
 
-  .inline-validation sl-checkbox[data-user-valid]::part(control) {
-    background-color: var(--sl-color-success-600);
+  .inline-validation bui-checkbox[data-user-valid]::part(control) {
+    background-color: var(--bui-color-success-600);
     outline: none;
   }
 
-  .inline-validation sl-input:focus-within[data-user-valid]::part(base) {
-    border-color: var(--sl-color-success-600);
-    box-shadow: 0 0 0 var(--sl-focus-ring-width) var(--sl-color-success-300);
+  .inline-validation bui-input:focus-within[data-user-valid]::part(base) {
+    border-color: var(--bui-color-success-600);
+    box-shadow: 0 0 0 var(--bui-focus-ring-width) var(--bui-color-success-300);
   }
 </style>
 ```
@@ -494,7 +494,7 @@ import { getFormControls } from 'buckeye-ui/dist/utilities/form.js';
 const form = document.querySelector('#my-form');
 const formControls = getFormControls(form);
 
-console.log(formControls); // e.g. [input, sl-input, ...]
+console.log(formControls); // e.g. [input, bui-input, ...]
 ```
 
 ?> You probably don't need this function! If you're gathering form data for submission, you probably want to use [Data Serialization](#data-serializing) instead.

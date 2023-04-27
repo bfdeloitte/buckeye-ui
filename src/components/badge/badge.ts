@@ -15,8 +15,8 @@ import type { CSSResultGroup } from 'lit';
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-badge')
-export default class SlBadge extends BuckeyeElement {
+@customElement('bui-badge')
+export default class Badge extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   /** The badge's theme variant. */
@@ -50,6 +50,6 @@ export default class SlBadge extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-badge': SlBadge;
+    'bui-badge': Badge;
   }
 }

@@ -5,7 +5,7 @@ import { LocalizeController } from '../../utilities/localize';
 import BuckeyeElement from '../../internal/buckeye-element';
 import styles from './breadcrumb.styles';
 import type { CSSResultGroup } from 'lit';
-import type SlBreadcrumbItem from '../breadcrumb-item/breadcrumb-item';
+import type BreadcrumbItem from '../breadcrumb-item/breadcrumb-item';
 
 /**
  * @summary Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
@@ -14,14 +14,14 @@ import type SlBreadcrumbItem from '../breadcrumb-item/breadcrumb-item';
  * @since 2.0
  *
  * @slot - One or more breadcrumb items to display.
- * @slot separator - The separator to use between breadcrumb items. Works best with `<sl-icon>`.
+ * @slot separator - The separator to use between breadcrumb items. Works best with `<bui-icon>`.
  *
- * @dependency sl-icon
+ * @dependency bui-icon
  *
  * @csspart base - The component's base wrapper.
  */
-@customElement('sl-breadcrumb')
-export default class SlBreadcrumb extends BuckeyeElement {
+@customElement('bui-breadcrumb')
+export default class Breadcrumb extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly localize = new LocalizeController(this);
@@ -51,8 +51,8 @@ export default class SlBreadcrumb extends BuckeyeElement {
 
   private handleSlotChange() {
     const items = [...this.defaultSlot.assignedElements({ flatten: true })].filter(
-      item => item.tagName.toLowerCase() === 'sl-breadcrumb-item'
-    ) as SlBreadcrumbItem[];
+      item => item.tagName.toLowerCase() === 'bui-breadcrumb-item'
+    ) as BreadcrumbItem[];
 
     items.forEach((item, index) => {
       // Append separators to each item if they don't already have one
@@ -91,7 +91,7 @@ export default class SlBreadcrumb extends BuckeyeElement {
       </nav>
 
       <slot name="separator" hidden aria-hidden="true">
-        <sl-icon name=${this.localize.dir() === 'rtl' ? 'chevron-left' : 'chevron-right'} library="system"></sl-icon>
+        <bui-icon name=${this.localize.dir() === 'rtl' ? 'chevron-left' : 'chevron-right'} library="system"></bui-icon>
       </slot>
     `;
   }
@@ -99,6 +99,6 @@ export default class SlBreadcrumb extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-breadcrumb': SlBreadcrumb;
+    'bui-breadcrumb': Breadcrumb;
   }
 }

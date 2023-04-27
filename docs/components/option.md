@@ -1,23 +1,23 @@
 # Option
 
-[component-header:sl-option]
+[component-header:bui-option]
 
 ```html preview
-<sl-select label="Select one">
-  <sl-option value="option-1">Option 1</sl-option>
-  <sl-option value="option-2">Option 2</sl-option>
-  <sl-option value="option-3">Option 3</sl-option>
-</sl-select>
+<bui-select label="Select one">
+  <bui-option value="option-1">Option 1</bui-option>
+  <bui-option value="option-2">Option 2</bui-option>
+  <bui-option value="option-3">Option 3</bui-option>
+</bui-select>
 ```
 
 ```jsx react
-import { SlOption, SlSelect } from 'buckeye-ui/dist/react';
+import { Option, SlSelect } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <SlSelect>
-    <SlOption value="option-1">Option 1</SlOption>
-    <SlOption value="option-2">Option 2</SlOption>
-    <SlOption value="option-3">Option 3</SlOption>
+    <Option value="option-1">Option 1</Option>
+    <Option value="option-2">Option 2</Option>
+    <Option value="option-3">Option 3</Option>
   </SlSelect>
 );
 ```
@@ -29,23 +29,23 @@ const App = () => (
 Use the `disabled` attribute to disable an option and prevent it from being selected.
 
 ```html preview
-<sl-select label="Select one">
-  <sl-option value="option-1">Option 1</sl-option>
-  <sl-option value="option-2" disabled>Option 2</sl-option>
-  <sl-option value="option-3">Option 3</sl-option>
-</sl-select>
+<bui-select label="Select one">
+  <bui-option value="option-1">Option 1</bui-option>
+  <bui-option value="option-2" disabled>Option 2</bui-option>
+  <bui-option value="option-3">Option 3</bui-option>
+</bui-select>
 ```
 
 ```jsx react
-import { SlOption, SlSelect } from 'buckeye-ui/dist/react';
+import { Option, SlSelect } from 'buckeye-ui/dist/react';
 
 const App = () => (
   <SlSelect>
-    <SlOption value="option-1">Option 1</SlOption>
-    <SlOption value="option-2" disabled>
+    <Option value="option-1">Option 1</Option>
+    <Option value="option-2" disabled>
       Option 2
-    </SlOption>
-    <SlOption value="option-3">Option 3</SlOption>
+    </Option>
+    <Option value="option-3">Option 3</Option>
   </SlSelect>
 );
 ```
@@ -55,25 +55,25 @@ const App = () => (
 Add icons to the start and end of menu items using the `prefix` and `suffix` slots.
 
 ```html preview
-<sl-select label="Select one">
-  <sl-option value="option-1">
-    <sl-icon slot="prefix" name="envelope"></sl-icon>
+<bui-select label="Select one">
+  <bui-option value="option-1">
+    <bui-icon slot="prefix" name="envelope"></bui-icon>
     Email
-    <sl-icon slot="suffix" name="patch-check"></sl-icon>
-  </sl-option>
+    <bui-icon slot="suffix" name="patch-check"></bui-icon>
+  </bui-option>
 
-  <sl-option value="option-2">
-    <sl-icon slot="prefix" name="telephone"></sl-icon>
+  <bui-option value="option-2">
+    <bui-icon slot="prefix" name="telephone"></bui-icon>
     Phone
-    <sl-icon slot="suffix" name="patch-check"></sl-icon>
-  </sl-option>
+    <bui-icon slot="suffix" name="patch-check"></bui-icon>
+  </bui-option>
 
-  <sl-option value="option-3">
-    <sl-icon slot="prefix" name="chat-dots"></sl-icon>
+  <bui-option value="option-3">
+    <bui-icon slot="prefix" name="chat-dots"></bui-icon>
     Chat
-    <sl-icon slot="suffix" name="patch-check"></sl-icon>
-  </sl-option>
-</sl-select>
+    <bui-icon slot="suffix" name="patch-check"></bui-icon>
+  </bui-option>
+</bui-select>
 ```
 
-[component-metadata:sl-option]
+[component-metadata:bui-option]

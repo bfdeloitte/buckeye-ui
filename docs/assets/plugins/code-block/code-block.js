@@ -13,7 +13,7 @@
   }
 
   function convertModuleLinks(html) {
-    const version = sessionStorage.getItem('sl-version');
+    const version = sessionStorage.getItem('bui-version');
 
     html = html
       .replace(/buckeye-ui/g, `https://cdn.skypack.dev/buckeye-ui@${version}`)
@@ -125,7 +125,7 @@
               <div class="code-block__preview">
                 ${code.textContent}
                 <div class="code-block__resizer">
-                  <sl-icon name="grip-vertical"></sl-icon>
+                  <bui-icon name="grip-vertical"></bui-icon>
                 </div>
               </div>
 
@@ -287,7 +287,7 @@
   // Open in CodePen
   document.addEventListener('click', event => {
     const button = event.target.closest('button');
-    const version = sessionStorage.getItem('sl-version');
+    const version = sessionStorage.getItem('bui-version');
 
     if (button?.classList.contains('code-block__button--codepen')) {
       const codeBlock = button.closest('.code-block');
@@ -336,8 +336,8 @@
         '\n' +
         'body {\n' +
         '  font: 16px sans-serif;\n' +
-        '  background-color: var(--sl-color-neutral-0);\n' +
-        '  color: var(--sl-color-neutral-900);\n' +
+        '  background-color: var(--bui-color-neutral-0);\n' +
+        '  color: var(--bui-color-neutral-900);\n' +
         '  padding: 1rem;\n' +
         '}';
 
@@ -348,7 +348,7 @@
         tags: ['buckeye', 'web components'],
         editors,
         head: `<meta name="viewport" content="width=device-width">`,
-        html_classes: `sl-theme-${isDark ? 'dark' : 'light'}`,
+        html_classes: `bui-theme-${isDark ? 'dark' : 'light'}`,
         css_external: ``,
         js_external: ``,
         js_module: true,

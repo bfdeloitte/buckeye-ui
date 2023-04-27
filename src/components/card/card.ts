@@ -28,8 +28,8 @@ import type { CSSResultGroup } from 'lit';
  * @cssproperty --border-width - The width of the card's borders.
  * @cssproperty --padding - The padding to use for the card's sections.
  */
-@customElement('sl-card')
-export default class SlCard extends BuckeyeElement {
+@customElement('bui-card')
+export default class Card extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private readonly hasSlotController = new HasSlotController(this, 'footer', 'header', 'image');
@@ -56,6 +56,6 @@ export default class SlCard extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-card': SlCard;
+    'bui-card': Card;
   }
 }

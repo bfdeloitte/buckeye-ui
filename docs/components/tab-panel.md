@@ -1,47 +1,47 @@
 # Tab Panel
 
-[component-header:sl-tab-panel]
+[component-header:bui-tab-panel]
 
 ```html preview
-<sl-tab-group>
-  <sl-tab slot="nav" panel="general">General</sl-tab>
-  <sl-tab slot="nav" panel="custom">Custom</sl-tab>
-  <sl-tab slot="nav" panel="advanced">Advanced</sl-tab>
-  <sl-tab slot="nav" panel="disabled" disabled>Disabled</sl-tab>
+<bui-tab-group>
+  <bui-tab slot="nav" panel="general">General</bui-tab>
+  <bui-tab slot="nav" panel="custom">Custom</bui-tab>
+  <bui-tab slot="nav" panel="advanced">Advanced</bui-tab>
+  <bui-tab slot="nav" panel="disabled" disabled>Disabled</bui-tab>
 
-  <sl-tab-panel name="general">This is the general tab panel.</sl-tab-panel>
-  <sl-tab-panel name="custom">This is the custom tab panel.</sl-tab-panel>
-  <sl-tab-panel name="advanced">This is the advanced tab panel.</sl-tab-panel>
-  <sl-tab-panel name="disabled">This is a disabled tab panel.</sl-tab-panel>
-</sl-tab-group>
+  <bui-tab-panel name="general">This is the general tab panel.</bui-tab-panel>
+  <bui-tab-panel name="custom">This is the custom tab panel.</bui-tab-panel>
+  <bui-tab-panel name="advanced">This is the advanced tab panel.</bui-tab-panel>
+  <bui-tab-panel name="disabled">This is a disabled tab panel.</bui-tab-panel>
+</bui-tab-group>
 ```
 
 ```jsx react
-import { SlTab, SlTabGroup, SlTabPanel } from 'buckeye-ui/dist/react';
+import { Tab, TabGroup, TabPanel } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <SlTabGroup>
-    <SlTab slot="nav" panel="general">
+  <TabGroup>
+    <Tab slot="nav" panel="general">
       General
-    </SlTab>
-    <SlTab slot="nav" panel="custom">
+    </Tab>
+    <Tab slot="nav" panel="custom">
       Custom
-    </SlTab>
-    <SlTab slot="nav" panel="advanced">
+    </Tab>
+    <Tab slot="nav" panel="advanced">
       Advanced
-    </SlTab>
-    <SlTab slot="nav" panel="disabled" disabled>
+    </Tab>
+    <Tab slot="nav" panel="disabled" disabled>
       Disabled
-    </SlTab>
+    </Tab>
 
-    <SlTabPanel name="general">This is the general tab panel.</SlTabPanel>
-    <SlTabPanel name="custom">This is the custom tab panel.</SlTabPanel>
-    <SlTabPanel name="advanced">This is the advanced tab panel.</SlTabPanel>
-    <SlTabPanel name="disabled">This is a disabled tab panel.</SlTabPanel>
-  </SlTabGroup>
+    <TabPanel name="general">This is the general tab panel.</TabPanel>
+    <TabPanel name="custom">This is the custom tab panel.</TabPanel>
+    <TabPanel name="advanced">This is the advanced tab panel.</TabPanel>
+    <TabPanel name="disabled">This is a disabled tab panel.</TabPanel>
+  </TabGroup>
 );
 ```
 
 ?> Additional demonstrations can be found in the [tab group examples](/components/tab-group).
 
-[component-metadata:sl-tab-panel]
+[component-metadata:bui-tab-panel]

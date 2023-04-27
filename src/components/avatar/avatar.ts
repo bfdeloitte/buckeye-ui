@@ -13,9 +13,9 @@ import type { CSSResultGroup } from 'lit';
  * @status stable
  * @since 2.0
  *
- * @dependency sl-icon
+ * @dependency bui-icon
  *
- * @slot icon - The default icon to use when no image or initials are present. Works best with `<sl-icon>`.
+ * @slot icon - The default icon to use when no image or initials are present. Works best with `<bui-icon>`.
  *
  * @csspart base - The component's base wrapper.
  * @csspart icon - The container that wraps the avatar's icon.
@@ -24,8 +24,8 @@ import type { CSSResultGroup } from 'lit';
  *
  * @cssproperty --size - The size of the avatar.
  */
-@customElement('sl-avatar')
-export default class SlAvatar extends BuckeyeElement {
+@customElement('bui-avatar')
+export default class Avatar extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   @state() private hasError = false;
@@ -70,7 +70,7 @@ export default class SlAvatar extends BuckeyeElement {
     } else {
       avatarWithoutImage = html`
         <slot name="icon" part="icon" class="avatar__icon" aria-hidden="true">
-          <sl-icon name="person-fill" library="system"></sl-icon>
+          <bui-icon name="person-fill" library="system"></bui-icon>
         </slot>
       `;
     }
@@ -95,6 +95,6 @@ export default class SlAvatar extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-avatar': SlAvatar;
+    'bui-avatar': Avatar;
   }
 }

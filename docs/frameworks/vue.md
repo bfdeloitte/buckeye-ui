@@ -25,7 +25,7 @@ setBasePath('https://cdn.jsdelivr.net/npm/buckeye-ui@%VERSION%/dist/');
 
 ## Configuration
 
-You'll need to tell Vue to ignore BuckeyeUI components. This is pretty easy because they all start with `sl-`.
+You'll need to tell Vue to ignore BuckeyeUI components. This is pretty easy because they all start with `bui-`.
 
 ```js
 import { fileURLToPath, URL } from 'url';
@@ -39,7 +39,7 @@ export default defineConfig({
     vue({
       template: {
         compilerOptions: {
-          isCustomElement: tag => tag.startsWith('sl-')
+          isCustomElement: tag => tag.startsWith('bui-')
         }
       }
     })
@@ -63,9 +63,9 @@ Now you can start using BuckeyeUI components in your app!
   <div class="container">
     <h1>QR code generator</h1>
 
-    <sl-input maxlength="255" clearable label="Value" v-model="qrCode"></sl-input>
+    <bui-input maxlength="255" clearable label="Value" v-model="qrCode"></bui-input>
 
-    <sl-qr-code :value="qrCode"></sl-qr-code>
+    <bui-qr-code :value="qrCode"></bui-qr-code>
   </div>
 </template>
 
@@ -83,8 +83,8 @@ Now you can start using BuckeyeUI components in your app!
     margin: 0 auto;
   }
 
-  sl-input {
-    margin: var(--sl-spacing-large) 0;
+  bui-input {
+    margin: var(--bui-spacing-large) 0;
   }
 </style>
 ```
@@ -94,7 +94,7 @@ Now you can start using BuckeyeUI components in your app!
 When binding complex data such as objects and arrays, use the `.prop` modifier to make Vue bind them as a property instead of an attribute.
 
 ```html
-<sl-color-picker :swatches.prop="mySwatches" />
+<bui-color-picker :swatches.prop="mySwatches" />
 ```
 
 ?> Are you using BuckeyeUI with Vue? [Help us improve this page!](https://github.com/bfdeloitte/buckeye-ui/blob/next/docs/frameworks/vue.md)
@@ -106,10 +106,10 @@ To use BuckeyeUI components with slots, follow the Vue documentation on using [s
 Here is an example:
 
 ```html
-<sl-drawer label="Drawer" placement="start" class="drawer-placement-start" :open="drawerIsOpen">
+<bui-drawer label="Drawer" placement="start" class="drawer-placement-start" :open="drawerIsOpen">
   This drawer slides in from the start.
   <div slot="footer">
-    <sl-button variant="primary" @click=" drawerIsOpen = false">Close</sl-button>
+    <bui-button variant="primary" @click=" drawerIsOpen = false">Close</bui-button>
   </div>
-</sl-drawer>
+</bui-drawer>
 ```

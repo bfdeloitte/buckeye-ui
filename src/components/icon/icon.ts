@@ -18,13 +18,13 @@ const iconCache = new Map<string, Promise<SVGResult>>();
  * @status stable
  * @since 2.0
  *
- * @event sl-load - Emitted when the icon has loaded.
- * @event sl-error - Emitted when the icon fails to load due to an error.
+ * @event bui-load - Emitted when the icon has loaded.
+ * @event bui-error - Emitted when the icon fails to load due to an error.
  *
  * @csspart svg - The internal SVG element.
  */
-@customElement('sl-icon')
-export default class SlIcon extends BuckeyeElement {
+@customElement('bui-icon')
+export default class Icon extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   /** Given a URL, this function returns the resulting SVG element or an appropriate error symbol. */
@@ -126,7 +126,7 @@ export default class SlIcon extends BuckeyeElement {
 
     let iconResolver = iconCache.get(url);
     if (!iconResolver) {
-      iconResolver = SlIcon.resolveIcon(url);
+      iconResolver = Icon.resolveIcon(url);
       iconCache.set(url, iconResolver);
     }
 
@@ -144,12 +144,12 @@ export default class SlIcon extends BuckeyeElement {
       case RETRYABLE_ERROR:
       case CACHEABLE_ERROR:
         this.svg = null;
-        this.emit('sl-error');
+        this.emit('bui-error');
         break;
       default:
         this.svg = svg.cloneNode(true) as SVGElement;
         library?.mutator?.(this.svg);
-        this.emit('sl-load');
+        this.emit('bui-load');
     }
   }
 
@@ -160,6 +160,6 @@ export default class SlIcon extends BuckeyeElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'sl-icon': SlIcon;
+    'bui-icon': Icon;
   }
 }
