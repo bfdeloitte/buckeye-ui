@@ -16,7 +16,7 @@ import type { CSSResultGroup } from 'lit';
  * @event {{ entries: ResizeObserverEntry[] }} bui-resize - Emitted when the element is resized.
  */
 @customElement('bui-resize-observer')
-export default class ResizeObserver extends BuckeyeElement {
+export default class SlResizeObserver extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private resizeObserver: ResizeObserver;

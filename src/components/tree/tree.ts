@@ -4,8 +4,8 @@ import { html } from 'lit';
 import { LocalizeController } from '../../utilities/localize';
 import { watch } from '../../internal/watch';
 import BuckeyeElement from '../../internal/buckeye-element';
-import TreeItem from '../tree-item/tree-item';
 import styles from './tree.styles';
+import TreeItem from '../tree-item/tree-item';
 import type { CSSResultGroup } from 'lit';
 
 function syncCheckboxes(changedTreeItem: TreeItem, initialSync = false) {

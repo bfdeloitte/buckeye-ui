@@ -20,7 +20,7 @@ import type { CSSResultGroup } from 'lit';
  *  animate multiple elements, either wrap them in a single container or use multiple `<bui-animation>` elements.
  */
 @customElement('bui-animation')
-export default class Animation extends BuckeyeElement {
+export default class SlAnimation extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private animation?: Animation;

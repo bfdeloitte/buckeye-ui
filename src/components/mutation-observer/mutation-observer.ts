@@ -16,7 +16,7 @@ import type { CSSResultGroup } from 'lit';
  * @slot - The content to watch for mutations.
  */
 @customElement('bui-mutation-observer')
-export default class MutationObserver extends BuckeyeElement {
+export default class SlMutationObserver extends BuckeyeElement {
   static styles: CSSResultGroup = styles;
 
   private mutationObserver: MutationObserver;
