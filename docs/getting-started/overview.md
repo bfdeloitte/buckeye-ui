@@ -2,7 +2,7 @@
 <div class="splash-start">
 <img class="splash-logo" src="/assets/images/buckeyeui.png" alt="IOP-UI">
 
-# <bui-visually-hidden>BuckeyeUI:</bui-visually-hidden> A library of web components inspired by the Heart State, Ohio.
+# <bui-visually-hidden>BuckeyeUI:</bui-visually-hidden> A library of web components inspired by Ohio.
 
 - Works with all frameworks 🧩
 - Works with CDNs 🚛
