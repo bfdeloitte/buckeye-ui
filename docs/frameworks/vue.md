@@ -97,7 +97,7 @@ When binding complex data such as objects and arrays, use the `.prop` modifier t
 <bui-color-picker :swatches.prop="mySwatches" />
 ```
 
-?> Are you using BuckeyeUI with Vue? [Help us improve this page!](https://github.com/bfdeloitte/buckeye-ui/blob/next/docs/frameworks/vue.md)
+?> Are you using BuckeyeUI with Vue? [Help us improve this page!](https://github.com/bfdeloitte/buckeye-ui/blob/main/docs/frameworks/vue.md)
 
 ### Slots
 

@@ -75,4 +75,4 @@ export class DrawerExampleComponent implements OnInit {
 
 Now you can start using BuckeyeUI components in your app!
 
-?> Are you using BuckeyeUI with Angular? [Help us improve this page!](https://github.com/bfdeloitte/buckeye-ui/blob/next/docs/frameworks/angular.md)
+?> Are you using BuckeyeUI with Angular? [Help us improve this page!](https://github.com/bfdeloitte/buckeye-ui/blob/main/docs/frameworks/angular.md)

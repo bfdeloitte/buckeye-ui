@@ -92,4 +92,4 @@ Now you can use the `v-bui-model` directive to keep your data in sync!
 <bui-input v-bui-model="name"></bui-input>
 ```
 
-?> Are you using BuckeyeUI with Vue? [Help us improve this page!](https://github.com/bfdeloitte/buckeye-ui/blob/next/docs/frameworks/vue-2.md)
+?> Are you using BuckeyeUI with Vue? [Help us improve this page!](https://github.com/bfdeloitte/buckeye-ui/blob/main/docs/frameworks/vue-2.md)

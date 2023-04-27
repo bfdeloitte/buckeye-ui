@@ -2,7 +2,7 @@
 
 This page explains how to integrate BuckeyeUI with a NextJS app.
 
-?> This is a community-maintained document. Please [ask the community](/resources/community) if you have questions about this integration. You can also [suggest improvements](https://github.com/bfdeloitte/buckeye-ui/blob/next/docs/tutorials/integrating-with-nextjs.md) to make it better.
+?> This is a community-maintained document. Please [ask the community](/resources/community) if you have questions about this integration. You can also [suggest improvements](https://github.com/bfdeloitte/buckeye-ui/blob/main/docs/tutorials/integrating-with-nextjs.md) to make it better.
 
 ## Requirements
 

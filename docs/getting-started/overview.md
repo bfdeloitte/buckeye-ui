@@ -2,7 +2,7 @@
 <div class="splash-start">
 <img class="splash-logo" src="/assets/images/buckeyeui.png" alt="IOP-UI">
 
-# <bui-visually-hidden>BuckeyeUI:</bui-visually-hidden> An Ohioan library of web components.
+# <bui-visually-hidden>BuckeyeUI:</bui-visually-hidden> A library of web components inspired by the Heart State, Ohio.
 
 - Works with all frameworks 🧩
 - Works with CDNs 🚛
@@ -11,6 +11,7 @@
 - Built with accessibility in mind ♿️
 - First-class [React support](/frameworks/react) ⚛️
 - Built-in localization 💬
+- Open source 😸
 
 </div>
 <div class="splash-end">
@@ -19,7 +20,8 @@
 </div>
 
 [![jsDelivr](https://data.jsdelivr.com/v1/package/npm/buckeye-ui/badge)](https://www.jsdelivr.com/package/npm/buckeye-ui)
-[![npm](https://img.shields.io/npm/dw/buckeye-ui?label=npm&style=flat-square)](https://www.npmjs.com/package/buckeye-ui)<br>
+[![npm](https://img.shields.io/npm/dw/buckeye-ui?label=npm&style=flat-square)](https://www.npmjs.com/package/buckeye-ui)
+[![License](https://img.shields.io/badge/license-MIT-232323.svg?style=flat-square)](https://github.com/bfdeloitte/buckeye-ui/blob/main/LICENSE.md)<br>
 [![Twitter](https://img.shields.io/badge/Twitter-Follow-00acee.svg?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/buckeyeui)
 [![Sponsor](https://img.shields.io/badge/GitHub-Code-232323.svg?style=flat-square&logo=github&logoColor=white)](https://github.com/bfdeloitte/buckeye-ui)
 
@@ -97,7 +99,7 @@ Designing, developing, and supporting this library requires a lot of time, effor
 
 👇 Your support is very much appreciated! 👇
 
-<bui-button class="repo-button repo-button--sponsor" href="https://github.com/sponsors/claviska" target="_blank">
+<bui-button class="repo-button repo-button--sponsor" href="https://github.com/sponsors/bfdeloitte" target="_blank">
   <bui-icon slot="prefix" name="heart"></bui-icon> Become a sponsor
 </bui-button>
 

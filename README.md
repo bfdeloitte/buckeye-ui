@@ -1,6 +1,6 @@
 # BuckeyeUI
 
-An Ohioan library of web components.
+A library of web components inspired by the Heart State, Ohio.
 
 - Works with all frameworks 🧩
 - Works with CDNs 🚛

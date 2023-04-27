@@ -340,6 +340,9 @@
       const buttons = document.createElement('div');
       buttons.classList.add('sidebar-buttons');
       buttons.innerHTML = `
+        <bui-button size="small" class="repo-button repo-button--sponsor" href="https://github.com/sponsors/bfdeloitte" target="_blank">
+          <bui-icon slot="prefix" name="heart"></bui-icon> Sponsor
+        </bui-button>
         <bui-button size="small" class="repo-button repo-button--github" href="https://github.com/bfdeloitte/buckeye-ui/stargazers" target="_blank">
           <bui-icon slot="prefix" name="github"></bui-icon> Star
         </bui-button>

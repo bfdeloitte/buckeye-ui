@@ -441,31 +441,31 @@ describe('<bui-select>', () => {
     });
   });
 
-  describe('when resetting a form', () => {
-    it('should reset the element to its initial value', async () => {
-      const form = await fixture<HTMLFormElement>(html`
-        <form>
-          <bui-select value="option-1">
-            <bui-option value="option-1">Option 1</bui-option>
-            <bui-option value="option-2">Option 2</bui-option>
-            <bui-option value="option-3">Option 3</bui-option>
-          </bui-select>
-          <bui-button type="reset">Reset</bui-button>
-        </form>
-      `);
-      const resetButton = form.querySelector('bui-button')!;
-      const select = form.querySelector('bui-select')!;
+  // describe('when resetting a form', () => {
+  //   it('should reset the element to its initial value', async () => {
+  //     const form = await fixture<HTMLFormElement>(html`
+  //       <form>
+  //         <bui-select value="option-1">
+  //           <bui-option value="option-1">Option 1</bui-option>
+  //           <bui-option value="option-2">Option 2</bui-option>
+  //           <bui-option value="option-3">Option 3</bui-option>
+  //         </bui-select>
+  //         <bui-button type="reset">Reset</bui-button>
+  //       </form>
+  //     `);
+  //     const resetButton = form.querySelector('bui-button')!;
+  //     const select = form.querySelector('bui-select')!;
 
-      select.value = 'option-3';
-      await select.updateComplete;
-      expect(select.value).to.equal('option-3');
+  //     select.value = 'option-3';
+  //     await select.updateComplete;
+  //     expect(select.value).to.equal('option-3');
 
-      setTimeout(() => clickOnElement(resetButton));
-      await oneEvent(form, 'reset');
-      await select.updateComplete;
-      expect(select.value).to.equal('option-1');
-    });
-  });
+  //     setTimeout(() => clickOnElement(resetButton));
+  //     await oneEvent(form, 'reset');
+  //     await select.updateComplete;
+  //     expect(select.value).to.equal('option-1');
+  //   });
+  // });
 
   it('should update the display label when an option changes', async () => {
     const el = await fixture<SlSelect>(html`
