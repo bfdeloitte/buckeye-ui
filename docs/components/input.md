@@ -32,33 +32,21 @@ const App = () => <Input label="What is your name?" />;
 
 ### Datalists
 
-Use the `list` attribute to associate the input with datalist options.
+Use the `list` and `listOptions` attributes to associate the input with datalist options.
 
 ```html preview
-<bui-input list="ice-cream-flavors" label="What is your favorite ice cream?"></bui-input>
-<datalist id="ice-cream-flavors">
-  <bui-option value="Chocolate"></bui-option>
-  <bui-option value="Coconut"></bui-option>
-  <bui-option value="Mint"></bui-option>
-  <bui-option value="Strawberry"></bui-option>
-  <bui-option value="Vanilla"></bui-option>
-</datalist>
+<bui-input
+  list="ice-cream-flavors"
+  listOptions="Chocolate, Coconut"
+  label="What is your favorite ice cream?"
+></bui-input>
 ```
 
 ```jsx react
 import { Icon, Input } from 'buckeye-ui/dist/react';
 
 const App = () => (
-  <>
-    <Input list="ice-cream-flavors" label="What is your favorite ice cream?" />
-    <datalist id="ice-cream-flavors">
-      <Option value="Chocolate" />
-      <Option value="Coconut" />
-      <Option value="Mint" />
-      <Option value="Strawberry" />
-      <Option value="Vanilla" />
-    </datalist>
-  </>
+  <Input label="What is your favorite ice cream?" list="ice-cream-flavors" listOptions="Chocolate, Coconut" />
 );
 ```
 
