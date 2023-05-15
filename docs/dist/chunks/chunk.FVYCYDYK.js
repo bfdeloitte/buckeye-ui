@@ -1,6 +1,6 @@
 import {
   Avatar
-} from "./chunk.66NTWFIL.js";
+} from "./chunk.XV7DGNOU.js";
 
 // src/react/avatar/index.ts
 import * as React from "react";

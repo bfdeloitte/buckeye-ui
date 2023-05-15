@@ -1,6 +1,6 @@
 import {
   Drawer
-} from "./chunk.IZXUVTG7.js";
+} from "./chunk.TM53CMTS.js";
 
 // src/react/drawer/index.ts
 import * as React from "react";

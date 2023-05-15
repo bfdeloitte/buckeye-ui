@@ -1,6 +1,6 @@
 import {
   Alert
-} from "./chunk.VPYY273V.js";
+} from "./chunk.E3ZIP6M7.js";
 
 // src/react/alert/index.ts
 import * as React from "react";

@@ -2,9 +2,6 @@ import {
   o
 } from "./chunk.26WLO5GK.js";
 import {
-  avatar_styles_default
-} from "./chunk.Q7FRDC6S.js";
-import {
   watch
 } from "./chunk.VQ3XOPCT.js";
 import {
@@ -13,6 +10,9 @@ import {
   e2,
   t
 } from "./chunk.5DKFNGO3.js";
+import {
+  avatar_styles_default
+} from "./chunk.Q7FRDC6S.js";
 import {
   x
 } from "./chunk.D4QE2MLU.js";

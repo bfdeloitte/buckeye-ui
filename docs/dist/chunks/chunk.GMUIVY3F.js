@@ -1,6 +1,6 @@
 import {
   Range
-} from "./chunk.CHOBWQL7.js";
+} from "./chunk.5JT2BS7W.js";
 
 // src/react/range/index.ts
 import * as React from "react";

@@ -1,17 +1,18 @@
 import {
-  ColorPicker
-} from "./chunk.3B5UPIOG.js";
+  Input
+} from "./chunk.ADX4AUW4.js";
 
-// src/react/color-picker/index.ts
+// src/react/input/index.ts
 import * as React from "react";
 import { createComponent } from "@lit-labs/react";
-var color_picker_default = createComponent({
-  tagName: "bui-color-picker",
-  elementClass: ColorPicker,
+var input_default = createComponent({
+  tagName: "bui-input",
+  elementClass: Input,
   react: React,
   events: {
     onBuiBlur: "bui-blur",
     onBuiChange: "bui-change",
+    onBuiClear: "bui-clear",
     onBuiFocus: "bui-focus",
     onBuiInput: "bui-input",
     onBuiInvalid: "bui-invalid"
@@ -19,5 +20,5 @@ var color_picker_default = createComponent({
 });
 
 export {
-  color_picker_default
+  input_default
 };

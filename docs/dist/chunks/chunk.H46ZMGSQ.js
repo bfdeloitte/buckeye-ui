@@ -22,11 +22,11 @@ import {
   stopAnimations
 } from "./chunk.65AZ2BGN.js";
 import {
-  LocalizeController
-} from "./chunk.MQ6XKY3Z.js";
-import {
   HasSlotController
 } from "./chunk.WVHZIUTV.js";
+import {
+  LocalizeController
+} from "./chunk.MQ6XKY3Z.js";
 import {
   o
 } from "./chunk.26WLO5GK.js";

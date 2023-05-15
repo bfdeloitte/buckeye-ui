@@ -2,61 +2,6 @@
   "version": 1.1,
   "tags": [
     {
-      "name": "bui-alert",
-      "description": "Alerts are used to display important messages inline or as toast notifications.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-show** - Emitted when the alert opens.\n- **bui-after-show** - Emitted after the alert opens and all animations are complete.\n- **bui-hide** - Emitted when the alert closes.\n- **bui-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<bui-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<bui-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
-      "attributes": [
-        {
-          "name": "open",
-          "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-          "values": []
-        },
-        {
-          "name": "closable",
-          "description": "Enables a close button that allows the user to dismiss the alert.",
-          "values": []
-        },
-        {
-          "name": "variant",
-          "description": "The alert's theme variant.",
-          "values": [
-            { "name": "primary" },
-            { "name": "success" },
-            { "name": "neutral" },
-            { "name": "warning" },
-            { "name": "danger" }
-          ]
-        },
-        {
-          "name": "duration",
-          "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "bui-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-load** - Emitted when the image loads successfully.\n- **bui-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<bui-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<bui-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **** - control-box - The container that surrounds the pause/play icons and provides their background.",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "bui-animation",
       "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-cancel** - Emitted when the animation is canceled.\n- **bui-finish** - Emitted when the animation finishes.\n- **bui-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<bui-animation>` elements.",
       "attributes": [
@@ -119,6 +64,67 @@
       "references": []
     },
     {
+      "name": "bui-alert",
+      "description": "Alerts are used to display important messages inline or as toast notifications.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-show** - Emitted when the alert opens.\n- **bui-after-show** - Emitted after the alert opens and all animations are complete.\n- **bui-hide** - Emitted when the alert closes.\n- **bui-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<bui-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<bui-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+          "values": []
+        },
+        {
+          "name": "closable",
+          "description": "Enables a close button that allows the user to dismiss the alert.",
+          "values": []
+        },
+        {
+          "name": "variant",
+          "description": "The alert's theme variant.",
+          "values": [
+            { "name": "primary" },
+            { "name": "success" },
+            { "name": "neutral" },
+            { "name": "warning" },
+            { "name": "danger" }
+          ]
+        },
+        {
+          "name": "duration",
+          "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bui-badge",
+      "description": "Badges are used to draw attention and display statuses or counts.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The badge's theme variant.",
+          "values": [
+            { "name": "primary" },
+            { "name": "success" },
+            { "name": "neutral" },
+            { "name": "warning" },
+            { "name": "danger" }
+          ]
+        },
+        {
+          "name": "pill",
+          "description": "Draws a pill-style badge with rounded edges.",
+          "values": []
+        },
+        {
+          "name": "pulse",
+          "description": "Makes the badge pulsate to draw attention.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "bui-avatar",
       "description": "Avatars are used to represent a person or object.\n\n\n---\n\n\n\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<bui-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
       "attributes": [
@@ -155,34 +161,6 @@
       "references": []
     },
     {
-      "name": "bui-badge",
-      "description": "Badges are used to draw attention and display statuses or counts.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "variant",
-          "description": "The badge's theme variant.",
-          "values": [
-            { "name": "primary" },
-            { "name": "success" },
-            { "name": "neutral" },
-            { "name": "warning" },
-            { "name": "danger" }
-          ]
-        },
-        {
-          "name": "pill",
-          "description": "Draws a pill-style badge with rounded edges.",
-          "values": []
-        },
-        {
-          "name": "pulse",
-          "description": "Makes the badge pulsate to draw attention.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
       "name": "bui-breadcrumb-item",
       "description": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The breadcrumb item's label.\n- **prefix** - An optional prefix, usually an icon or icon button.\n- **suffix** - An optional suffix, usually an icon or icon button.\n- **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<bui-breadcrumb>` instead.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The breadcrumb item's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.\n- **separator** - The container that wraps the separator.",
       "attributes": [
@@ -204,6 +182,28 @@
         {
           "name": "rel",
           "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bui-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-load** - Emitted when the image loads successfully.\n- **bui-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<bui-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<bui-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **** - control-box - The container that surrounds the pause/play icons and provides their background.",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
           "values": []
         }
       ],
@@ -383,6 +383,12 @@
       "references": []
     },
     {
+      "name": "bui-carousel-item",
+      "description": "A carousel item represent a slide within a [carousel](/components/carousel).\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The carousel item's content..\n\n### **CSS Properties:**\n - **--aspect-ratio** - The slide's aspect ratio. Inherited from the carousel by default. _(default: undefined)_",
+      "attributes": [],
+      "references": []
+    },
+    {
       "name": "bui-carousel",
       "description": "Carousels display an arbitrary number of content slides along a horizontal or vertical axis.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-slide-change** - Emitted when the active slide changes.\n\n### **Methods:**\n - **previous(behavior: _ScrollBehavior_)** - Move the carousel backward by `slides-per-move` slides.\n- **next(behavior: _ScrollBehavior_)** - Move the carousel forward by `slides-per-move` slides.\n- **goToSlide(index: _number_, behavior: _ScrollBehavior_)** - Scrolls the carousel to the slide specified by `index`.\n\n### **Slots:**\n - _default_ - The carousel's main content, one or more `<bui-carousel-item>` elements.\n- **next-icon** - Optional next icon to use instead of the default. Works best with `<bui-icon>`.\n- **previous-icon** - Optional previous icon to use instead of the default. Works best with `<bui-icon>`.\n\n### **CSS Properties:**\n - **--slide-gap** - The space between each slide. _(default: undefined)_\n- **--aspect-ratio** - The aspect ratio of each slide. _(default: undefined)_\n- **--scroll-hint** - The amount of padding to apply to the scroll area, allowing adjacent slides to become partially visible as a scroll hint. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The carousel's internal wrapper.\n- **scroll-container** - The scroll container that wraps the slides.\n- **pagination** - The pagination indicators wrapper.\n- **pagination-item** - The pagination indicator.\n- **pagination-item--active** - Applied when the item is active.\n- **navigation** - The navigation wrapper.\n- **navigation-button** - The navigation button.\n- **navigation-button--previous** - Applied to the previous button.\n- **navigation-button--next** - Applied to the next button.",
       "attributes": [
@@ -432,12 +438,6 @@
           "values": []
         }
       ],
-      "references": []
-    },
-    {
-      "name": "bui-carousel-item",
-      "description": "A carousel item represent a slide within a [carousel](/components/carousel).\n\n\n---\n\n\n\n\n### **Slots:**\n - _default_ - The carousel item's content..\n\n### **CSS Properties:**\n - **--aspect-ratio** - The slide's aspect ratio. Inherited from the carousel by default. _(default: undefined)_",
-      "attributes": [],
       "references": []
     },
     {
@@ -835,6 +835,85 @@
       "references": []
     },
     {
+      "name": "bui-icon-button",
+      "description": "Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-blur** - Emitted when the icon button loses focus.\n- **bui-focus** - Emitted when the icon button gains focus.\n\n### **Methods:**\n - **click()** - Simulates a click on the icon button.\n- **focus(options: _FocusOptions_)** - Sets focus on the icon button.\n- **blur()** - Removes focus from the icon button.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+          "values": []
+        },
+        {
+          "name": "library",
+          "description": "The name of a registered custom icon library.",
+          "values": []
+        },
+        {
+          "name": "src",
+          "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+          "values": []
+        },
+        {
+          "name": "href",
+          "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
+          "values": []
+        },
+        {
+          "name": "target",
+          "description": "Tells the browser where to open the link. Only used when `href` is set.",
+          "values": [
+            { "name": "_blank" },
+            { "name": "_parent" },
+            { "name": "_self" },
+            { "name": "_top" }
+          ]
+        },
+        {
+          "name": "download",
+          "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "A description that gets read by assistive devices. For optimal accessibility, you should always include a label\nthat describes what the icon button does.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the button.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
+      "name": "bui-icon",
+      "description": "Icons are symbols that can be used to represent various options within an application.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-load** - Emitted when the icon has loaded.\n- **bui-error** - Emitted when the icon fails to load due to an error.\n\n### **CSS Parts:**\n - **svg** - The internal SVG element.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+          "values": []
+        },
+        {
+          "name": "src",
+          "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "library",
+          "description": "The name of a registered custom icon library.",
+          "values": []
+        }
+      ],
+      "references": []
+    },
+    {
       "name": "bui-format-number",
       "description": "Formats a number using the specified locale and options.\n\n\n---\n\n\n",
       "attributes": [
@@ -901,82 +980,9 @@
       "references": []
     },
     {
-      "name": "bui-icon",
-      "description": "Icons are symbols that can be used to represent various options within an application.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-load** - Emitted when the icon has loaded.\n- **bui-error** - Emitted when the icon fails to load due to an error.\n\n### **CSS Parts:**\n - **svg** - The internal SVG element.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-          "values": []
-        },
-        {
-          "name": "src",
-          "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-          "values": []
-        },
-        {
-          "name": "label",
-          "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "library",
-          "description": "The name of a registered custom icon library.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "bui-icon-button",
-      "description": "Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-blur** - Emitted when the icon button loses focus.\n- **bui-focus** - Emitted when the icon button gains focus.\n\n### **Methods:**\n - **click()** - Simulates a click on the icon button.\n- **focus(options: _FocusOptions_)** - Sets focus on the icon button.\n- **blur()** - Removes focus from the icon button.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-          "values": []
-        },
-        {
-          "name": "library",
-          "description": "The name of a registered custom icon library.",
-          "values": []
-        },
-        {
-          "name": "src",
-          "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-          "values": []
-        },
-        {
-          "name": "href",
-          "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
-          "values": []
-        },
-        {
-          "name": "target",
-          "description": "Tells the browser where to open the link. Only used when `href` is set.",
-          "values": [
-            { "name": "_blank" },
-            { "name": "_parent" },
-            { "name": "_self" },
-            { "name": "_top" }
-          ]
-        },
-        {
-          "name": "download",
-          "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
-          "values": []
-        },
-        {
-          "name": "label",
-          "description": "A description that gets read by assistive devices. For optimal accessibility, you should always include a label\nthat describes what the icon button does.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the button.",
-          "values": []
-        }
-      ],
+      "name": "bui-menu",
+      "description": "Menus provide a list of options for the user to choose from.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
+      "attributes": [],
       "references": []
     },
     {
@@ -986,32 +992,6 @@
         {
           "name": "position",
           "description": "The position of the divider as a percentage.",
-          "values": []
-        }
-      ],
-      "references": []
-    },
-    {
-      "name": "bui-include",
-      "description": "Includes give you the power to embed external HTML files into the page.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-load** - Emitted when the included file is loaded.\n- **bui-error** - Emitted when the included file fails to load due to an error.",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The location of the HTML file to include. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
-          "values": []
-        },
-        {
-          "name": "mode",
-          "description": "The fetch mode to use.",
-          "values": [
-            { "name": "cors" },
-            { "name": "no-cors" },
-            { "name": "same-origin" }
-          ]
-        },
-        {
-          "name": "allow-scripts",
-          "description": "Allows included scripts to be executed. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
           "values": []
         }
       ],
@@ -1226,9 +1206,29 @@
       "references": []
     },
     {
-      "name": "bui-menu",
-      "description": "Menus provide a list of options for the user to choose from.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
-      "attributes": [],
+      "name": "bui-include",
+      "description": "Includes give you the power to embed external HTML files into the page.\n\n\n---\n\n\n\n\n### **Events:**\n - **bui-load** - Emitted when the included file is loaded.\n- **bui-error** - Emitted when the included file fails to load due to an error.",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The location of the HTML file to include. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
+          "values": []
+        },
+        {
+          "name": "mode",
+          "description": "The fetch mode to use.",
+          "values": [
+            { "name": "cors" },
+            { "name": "no-cors" },
+            { "name": "same-origin" }
+          ]
+        },
+        {
+          "name": "allow-scripts",
+          "description": "Allows included scripts to be executed. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
+          "values": []
+        }
+      ],
       "references": []
     },
     {

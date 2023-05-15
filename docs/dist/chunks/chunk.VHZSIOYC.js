@@ -1,6 +1,6 @@
 import {
   Dialog
-} from "./chunk.3NYZ77HC.js";
+} from "./chunk.I37B6IH5.js";
 
 // src/react/dialog/index.ts
 import * as React from "react";

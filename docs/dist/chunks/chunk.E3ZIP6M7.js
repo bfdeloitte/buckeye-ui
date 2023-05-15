@@ -10,11 +10,11 @@ import {
   stopAnimations
 } from "./chunk.65AZ2BGN.js";
 import {
-  LocalizeController
-} from "./chunk.MQ6XKY3Z.js";
-import {
   HasSlotController
 } from "./chunk.WVHZIUTV.js";
+import {
+  LocalizeController
+} from "./chunk.MQ6XKY3Z.js";
 import {
   alert_styles_default
 } from "./chunk.NQIFKAPO.js";

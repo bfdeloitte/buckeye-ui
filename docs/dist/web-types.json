@@ -14,243 +14,6 @@
     "html": {
       "elements": [
         {
-          "name": "bui-alert",
-          "description": "",
-          "doc-url": "https://buckeyeui.com/components/alert",
-          "js": {
-            "properties": [
-              {
-                "name": "autoHideTimeout",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "hasSlotController",
-                "value": {}
-              },
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "base",
-                "value": {
-                  "type": "HTMLElement"
-                }
-              },
-              {
-                "name": "open",
-                "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "closable",
-                "description": "Enables a close button that allows the user to dismiss the alert.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "variant",
-                "description": "The alert's theme variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "duration",
-                "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-                "value": {}
-              },
-              {
-                "name": "restartAutoHide",
-                "value": {}
-              },
-              {
-                "name": "handleCloseClick",
-                "value": {}
-              },
-              {
-                "name": "handleMouseMove",
-                "value": {}
-              },
-              {
-                "name": "handleOpenChange",
-                "value": {}
-              },
-              {
-                "name": "handleDurationChange",
-                "value": {}
-              },
-              {
-                "name": "show",
-                "description": "Shows the alert.",
-                "value": {}
-              },
-              {
-                "name": "hide",
-                "description": "Hides the alert",
-                "value": {}
-              },
-              {
-                "name": "toast",
-                "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "bui-show",
-                "description": "Emitted when the alert opens."
-              },
-              {
-                "name": "bui-after-show",
-                "description": "Emitted after the alert opens and all animations are complete."
-              },
-              {
-                "name": "bui-hide",
-                "description": "Emitted when the alert closes."
-              },
-              {
-                "name": "bui-after-hide",
-                "description": "Emitted after the alert closes and all animations are complete."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "open",
-              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "closable",
-              "description": "Enables a close button that allows the user to dismiss the alert.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "variant",
-              "description": "The alert's theme variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "duration",
-              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-              "value": {}
-            }
-          ]
-        },
-        {
-          "name": "bui-animated-image",
-          "description": "",
-          "doc-url": "https://buckeyeui.com/components/animated-image",
-          "js": {
-            "properties": [
-              {
-                "name": "animatedImage",
-                "value": {
-                  "type": "HTMLImageElement"
-                }
-              },
-              {
-                "name": "frozenFrame",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "isLoaded",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "handleClick",
-                "value": {}
-              },
-              {
-                "name": "handleLoad",
-                "value": {}
-              },
-              {
-                "name": "handleError",
-                "value": {}
-              },
-              {
-                "name": "handlePlayChange",
-                "value": {}
-              },
-              {
-                "name": "handleSrcChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "bui-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "bui-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "bui-animation",
           "description": "",
           "doc-url": "https://buckeyeui.com/components/animation",
@@ -518,6 +281,196 @@
           "attributes": []
         },
         {
+          "name": "bui-alert",
+          "description": "",
+          "doc-url": "https://buckeyeui.com/components/alert",
+          "js": {
+            "properties": [
+              {
+                "name": "autoHideTimeout",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "hasSlotController",
+                "value": {}
+              },
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "base",
+                "value": {
+                  "type": "HTMLElement"
+                }
+              },
+              {
+                "name": "open",
+                "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "closable",
+                "description": "Enables a close button that allows the user to dismiss the alert.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "variant",
+                "description": "The alert's theme variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                }
+              },
+              {
+                "name": "duration",
+                "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+                "value": {}
+              },
+              {
+                "name": "restartAutoHide",
+                "value": {}
+              },
+              {
+                "name": "handleCloseClick",
+                "value": {}
+              },
+              {
+                "name": "handleMouseMove",
+                "value": {}
+              },
+              {
+                "name": "handleOpenChange",
+                "value": {}
+              },
+              {
+                "name": "handleDurationChange",
+                "value": {}
+              },
+              {
+                "name": "show",
+                "description": "Shows the alert.",
+                "value": {}
+              },
+              {
+                "name": "hide",
+                "description": "Hides the alert",
+                "value": {}
+              },
+              {
+                "name": "toast",
+                "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "bui-show",
+                "description": "Emitted when the alert opens."
+              },
+              {
+                "name": "bui-after-show",
+                "description": "Emitted after the alert opens and all animations are complete."
+              },
+              {
+                "name": "bui-hide",
+                "description": "Emitted when the alert closes."
+              },
+              {
+                "name": "bui-after-hide",
+                "description": "Emitted after the alert closes and all animations are complete."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "open",
+              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "closable",
+              "description": "Enables a close button that allows the user to dismiss the alert.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "variant",
+              "description": "The alert's theme variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              }
+            },
+            {
+              "name": "duration",
+              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+              "value": {}
+            }
+          ]
+        },
+        {
+          "name": "bui-badge",
+          "description": "",
+          "doc-url": "https://buckeyeui.com/components/badge",
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "The badge's theme variant.",
+                "value": {
+                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                }
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
+                "value": {
+                  "type": "boolean"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The badge's theme variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
           "name": "bui-avatar",
           "description": "",
           "doc-url": "https://buckeyeui.com/components/avatar",
@@ -610,60 +563,6 @@
           ]
         },
         {
-          "name": "bui-badge",
-          "description": "",
-          "doc-url": "https://buckeyeui.com/components/badge",
-          "js": {
-            "properties": [
-              {
-                "name": "variant",
-                "description": "The badge's theme variant.",
-                "value": {
-                  "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-                }
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
-                "value": {
-                  "type": "boolean"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The badge's theme variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
           "name": "bui-breadcrumb-item",
           "description": "",
           "doc-url": "https://buckeyeui.com/components/breadcrumb-item",
@@ -717,6 +616,107 @@
               "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
               "value": {
                 "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "bui-animated-image",
+          "description": "",
+          "doc-url": "https://buckeyeui.com/components/animated-image",
+          "js": {
+            "properties": [
+              {
+                "name": "animatedImage",
+                "value": {
+                  "type": "HTMLImageElement"
+                }
+              },
+              {
+                "name": "frozenFrame",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "isLoaded",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleLoad",
+                "value": {}
+              },
+              {
+                "name": "handleError",
+                "value": {}
+              },
+              {
+                "name": "handlePlayChange",
+                "value": {}
+              },
+              {
+                "name": "handleSrcChange",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "bui-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "bui-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": {
+                "type": "boolean"
               }
             }
           ]
@@ -1287,6 +1287,21 @@
           "attributes": []
         },
         {
+          "name": "bui-carousel-item",
+          "description": "",
+          "doc-url": "https://buckeyeui.com/components/carousel-item",
+          "js": {
+            "properties": [
+              {
+                "name": "isCarouselItem",
+                "value": {}
+              }
+            ],
+            "events": []
+          },
+          "attributes": []
+        },
+        {
           "description": "A controller that repeatedly calls the specified callback with the provided interval time.\nThe timer is automatically paused while the user is interacting with the component.",
           "doc-url": "https://buckeyeui.com/components/",
           "js": {
@@ -1693,21 +1708,6 @@
               },
               {
                 "name": "handleDragEnd",
-                "value": {}
-              }
-            ],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
-          "name": "bui-carousel-item",
-          "description": "",
-          "doc-url": "https://buckeyeui.com/components/carousel-item",
-          "js": {
-            "properties": [
-              {
-                "name": "isCarouselItem",
                 "value": {}
               }
             ],
@@ -3397,323 +3397,6 @@
           ]
         },
         {
-          "name": "bui-format-number",
-          "description": "",
-          "doc-url": "https://buckeyeui.com/components/format-number",
-          "js": {
-            "properties": [
-              {
-                "name": "localize",
-                "value": {}
-              },
-              {
-                "name": "value",
-                "description": "The number to format.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "type",
-                "description": "The formatting style to use.",
-                "value": {
-                  "type": "'currency' | 'decimal' | 'percent'"
-                }
-              },
-              {
-                "name": "noGrouping",
-                "description": "Turns off grouping separators.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "currency",
-                "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "currencyDisplay",
-                "description": "How to display the currency.",
-                "value": {
-                  "type": "'symbol' | 'narrowSymbol' | 'code' | 'name'"
-                }
-              },
-              {
-                "name": "minimumIntegerDigits",
-                "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "minimumFractionDigits",
-                "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "maximumFractionDigits",
-                "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "minimumSignificantDigits",
-                "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-                "value": {
-                  "type": "number"
-                }
-              },
-              {
-                "name": "maximumSignificantDigits",
-                "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-                "value": {
-                  "type": "number"
-                }
-              }
-            ],
-            "events": []
-          },
-          "attributes": [
-            {
-              "name": "value",
-              "description": "The number to format.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "type",
-              "description": "The formatting style to use.",
-              "value": {
-                "type": "'currency' | 'decimal' | 'percent'"
-              }
-            },
-            {
-              "name": "no-grouping",
-              "description": "Turns off grouping separators.",
-              "value": {
-                "type": "boolean"
-              }
-            },
-            {
-              "name": "currency",
-              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "currency-display",
-              "description": "How to display the currency.",
-              "value": {
-                "type": "'symbol' | 'narrowSymbol' | 'code' | 'name'"
-              }
-            },
-            {
-              "name": "minimum-integer-digits",
-              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "minimum-fraction-digits",
-              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "maximum-fraction-digits",
-              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "minimum-significant-digits",
-              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-              "value": {
-                "type": "number"
-              }
-            },
-            {
-              "name": "maximum-significant-digits",
-              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-              "value": {
-                "type": "number"
-              }
-            }
-          ]
-        },
-        {
-          "name": "bui-icon",
-          "description": "",
-          "doc-url": "https://buckeyeui.com/components/icon",
-          "js": {
-            "properties": [
-              {
-                "name": "resolveIcon",
-                "description": "Given a URL, this function returns the resulting SVG element or an appropriate error symbol.",
-                "value": {}
-              },
-              {
-                "name": "svg",
-                "value": {
-                  "type": "SVGElement | null"
-                }
-              },
-              {
-                "name": "name",
-                "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-                "value": {
-                  "type": "string | undefined"
-                }
-              },
-              {
-                "name": "src",
-                "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-                "value": {
-                  "type": "string | undefined"
-                }
-              },
-              {
-                "name": "label",
-                "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "library",
-                "description": "The name of a registered custom icon library.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "getUrl",
-                "value": {}
-              },
-              {
-                "name": "handleLabelChange",
-                "value": {}
-              },
-              {
-                "name": "setIcon",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "bui-load",
-                "description": "Emitted when the icon has loaded."
-              },
-              {
-                "name": "bui-error",
-                "description": "Emitted when the icon fails to load due to an error."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "name",
-              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-              "value": {
-                "type": "string | undefined"
-              }
-            },
-            {
-              "name": "src",
-              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-              "value": {
-                "type": "string | undefined"
-              }
-            },
-            {
-              "name": "label",
-              "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "library",
-              "description": "The name of a registered custom icon library.",
-              "value": {
-                "type": "string"
-              }
-            }
-          ]
-        },
-        {
-          "doc-url": "https://buckeyeui.com/components/",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
-          "doc-url": "https://buckeyeui.com/components/",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
-          "description": "Adds an icon to the list of watched icons.",
-          "doc-url": "https://buckeyeui.com/components/",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
-          "description": "Removes an icon from the list of watched icons.",
-          "doc-url": "https://buckeyeui.com/components/",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
-          "description": "Returns a library from the registry.",
-          "doc-url": "https://buckeyeui.com/components/",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
-          "description": "Adds an icon library to the registry, or overrides an existing one.",
-          "doc-url": "https://buckeyeui.com/components/",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
-          "description": "Removes an icon library from the registry.",
-          "doc-url": "https://buckeyeui.com/components/",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
-        },
-        {
           "name": "bui-icon-button",
           "description": "",
           "doc-url": "https://buckeyeui.com/components/icon-button",
@@ -3886,6 +3569,365 @@
           ]
         },
         {
+          "name": "bui-icon",
+          "description": "",
+          "doc-url": "https://buckeyeui.com/components/icon",
+          "js": {
+            "properties": [
+              {
+                "name": "resolveIcon",
+                "description": "Given a URL, this function returns the resulting SVG element or an appropriate error symbol.",
+                "value": {}
+              },
+              {
+                "name": "svg",
+                "value": {
+                  "type": "SVGElement | null"
+                }
+              },
+              {
+                "name": "name",
+                "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+                "value": {
+                  "type": "string | undefined"
+                }
+              },
+              {
+                "name": "src",
+                "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+                "value": {
+                  "type": "string | undefined"
+                }
+              },
+              {
+                "name": "label",
+                "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "library",
+                "description": "The name of a registered custom icon library.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "getUrl",
+                "value": {}
+              },
+              {
+                "name": "handleLabelChange",
+                "value": {}
+              },
+              {
+                "name": "setIcon",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "bui-load",
+                "description": "Emitted when the icon has loaded."
+              },
+              {
+                "name": "bui-error",
+                "description": "Emitted when the icon fails to load due to an error."
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "name",
+              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+              "value": {
+                "type": "string | undefined"
+              }
+            },
+            {
+              "name": "src",
+              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+              "value": {
+                "type": "string | undefined"
+              }
+            },
+            {
+              "name": "label",
+              "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "library",
+              "description": "The name of a registered custom icon library.",
+              "value": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "doc-url": "https://buckeyeui.com/components/",
+          "js": {
+            "properties": [],
+            "events": []
+          },
+          "attributes": []
+        },
+        {
+          "doc-url": "https://buckeyeui.com/components/",
+          "js": {
+            "properties": [],
+            "events": []
+          },
+          "attributes": []
+        },
+        {
+          "description": "Adds an icon to the list of watched icons.",
+          "doc-url": "https://buckeyeui.com/components/",
+          "js": {
+            "properties": [],
+            "events": []
+          },
+          "attributes": []
+        },
+        {
+          "description": "Removes an icon from the list of watched icons.",
+          "doc-url": "https://buckeyeui.com/components/",
+          "js": {
+            "properties": [],
+            "events": []
+          },
+          "attributes": []
+        },
+        {
+          "description": "Returns a library from the registry.",
+          "doc-url": "https://buckeyeui.com/components/",
+          "js": {
+            "properties": [],
+            "events": []
+          },
+          "attributes": []
+        },
+        {
+          "description": "Adds an icon library to the registry, or overrides an existing one.",
+          "doc-url": "https://buckeyeui.com/components/",
+          "js": {
+            "properties": [],
+            "events": []
+          },
+          "attributes": []
+        },
+        {
+          "description": "Removes an icon library from the registry.",
+          "doc-url": "https://buckeyeui.com/components/",
+          "js": {
+            "properties": [],
+            "events": []
+          },
+          "attributes": []
+        },
+        {
+          "name": "bui-format-number",
+          "description": "",
+          "doc-url": "https://buckeyeui.com/components/format-number",
+          "js": {
+            "properties": [
+              {
+                "name": "localize",
+                "value": {}
+              },
+              {
+                "name": "value",
+                "description": "The number to format.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "type",
+                "description": "The formatting style to use.",
+                "value": {
+                  "type": "'currency' | 'decimal' | 'percent'"
+                }
+              },
+              {
+                "name": "noGrouping",
+                "description": "Turns off grouping separators.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "currency",
+                "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+                "value": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "currencyDisplay",
+                "description": "How to display the currency.",
+                "value": {
+                  "type": "'symbol' | 'narrowSymbol' | 'code' | 'name'"
+                }
+              },
+              {
+                "name": "minimumIntegerDigits",
+                "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "minimumFractionDigits",
+                "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "maximumFractionDigits",
+                "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "minimumSignificantDigits",
+                "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+                "value": {
+                  "type": "number"
+                }
+              },
+              {
+                "name": "maximumSignificantDigits",
+                "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+                "value": {
+                  "type": "number"
+                }
+              }
+            ],
+            "events": []
+          },
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The number to format.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "type",
+              "description": "The formatting style to use.",
+              "value": {
+                "type": "'currency' | 'decimal' | 'percent'"
+              }
+            },
+            {
+              "name": "no-grouping",
+              "description": "Turns off grouping separators.",
+              "value": {
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "currency",
+              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "currency-display",
+              "description": "How to display the currency.",
+              "value": {
+                "type": "'symbol' | 'narrowSymbol' | 'code' | 'name'"
+              }
+            },
+            {
+              "name": "minimum-integer-digits",
+              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "minimum-fraction-digits",
+              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "maximum-fraction-digits",
+              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "minimum-significant-digits",
+              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "maximum-significant-digits",
+              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+              "value": {
+                "type": "number"
+              }
+            }
+          ]
+        },
+        {
+          "name": "bui-menu",
+          "description": "",
+          "doc-url": "https://buckeyeui.com/components/menu",
+          "js": {
+            "properties": [
+              {
+                "name": "defaultSlot",
+                "value": {
+                  "type": "HTMLSlotElement"
+                }
+              },
+              {
+                "name": "handleClick",
+                "value": {}
+              },
+              {
+                "name": "handleKeyDown",
+                "value": {}
+              },
+              {
+                "name": "handleMouseDown",
+                "value": {}
+              },
+              {
+                "name": "handleSlotChange",
+                "value": {}
+              },
+              {
+                "name": "isMenuItem",
+                "value": {}
+              }
+            ],
+            "events": [
+              {
+                "name": "bui-select",
+                "description": "Emitted when a menu item is selected."
+              }
+            ]
+          },
+          "attributes": []
+        },
+        {
           "name": "bui-image-comparer",
           "description": "",
           "doc-url": "https://buckeyeui.com/components/image-comparer",
@@ -3943,86 +3985,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "bui-include",
-          "description": "",
-          "doc-url": "https://buckeyeui.com/components/include",
-          "js": {
-            "properties": [
-              {
-                "name": "src",
-                "description": "The location of the HTML file to include. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
-                "value": {
-                  "type": "string"
-                }
-              },
-              {
-                "name": "mode",
-                "description": "The fetch mode to use.",
-                "value": {
-                  "type": "'cors' | 'no-cors' | 'same-origin'"
-                }
-              },
-              {
-                "name": "allowScripts",
-                "description": "Allows included scripts to be executed. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
-                "value": {
-                  "type": "boolean"
-                }
-              },
-              {
-                "name": "executeScript",
-                "value": {}
-              },
-              {
-                "name": "handleSrcChange",
-                "value": {}
-              }
-            ],
-            "events": [
-              {
-                "name": "bui-load",
-                "description": "Emitted when the included file is loaded."
-              },
-              {
-                "name": "bui-error",
-                "description": "Emitted when the included file fails to load due to an error."
-              }
-            ]
-          },
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The location of the HTML file to include. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
-              "value": {
-                "type": "string"
-              }
-            },
-            {
-              "name": "mode",
-              "description": "The fetch mode to use.",
-              "value": {
-                "type": "'cors' | 'no-cors' | 'same-origin'"
-              }
-            },
-            {
-              "name": "allow-scripts",
-              "description": "Allows included scripts to be executed. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
-              "value": {
-                "type": "boolean"
-              }
-            }
-          ]
-        },
-        {
-          "description": "Fetches an include file from a remote source. Caching is enabled so the origin is only pinged once.",
-          "doc-url": "https://buckeyeui.com/components/",
-          "js": {
-            "properties": [],
-            "events": []
-          },
-          "attributes": []
         },
         {
           "name": "bui-input",
@@ -4677,44 +4639,82 @@
           ]
         },
         {
-          "name": "bui-menu",
+          "name": "bui-include",
           "description": "",
-          "doc-url": "https://buckeyeui.com/components/menu",
+          "doc-url": "https://buckeyeui.com/components/include",
           "js": {
             "properties": [
               {
-                "name": "defaultSlot",
+                "name": "src",
+                "description": "The location of the HTML file to include. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
                 "value": {
-                  "type": "HTMLSlotElement"
+                  "type": "string"
                 }
               },
               {
-                "name": "handleClick",
+                "name": "mode",
+                "description": "The fetch mode to use.",
+                "value": {
+                  "type": "'cors' | 'no-cors' | 'same-origin'"
+                }
+              },
+              {
+                "name": "allowScripts",
+                "description": "Allows included scripts to be executed. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              {
+                "name": "executeScript",
                 "value": {}
               },
               {
-                "name": "handleKeyDown",
-                "value": {}
-              },
-              {
-                "name": "handleMouseDown",
-                "value": {}
-              },
-              {
-                "name": "handleSlotChange",
-                "value": {}
-              },
-              {
-                "name": "isMenuItem",
+                "name": "handleSrcChange",
                 "value": {}
               }
             ],
             "events": [
               {
-                "name": "bui-select",
-                "description": "Emitted when a menu item is selected."
+                "name": "bui-load",
+                "description": "Emitted when the included file is loaded."
+              },
+              {
+                "name": "bui-error",
+                "description": "Emitted when the included file fails to load due to an error."
               }
             ]
+          },
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The location of the HTML file to include. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "mode",
+              "description": "The fetch mode to use.",
+              "value": {
+                "type": "'cors' | 'no-cors' | 'same-origin'"
+              }
+            },
+            {
+              "name": "allow-scripts",
+              "description": "Allows included scripts to be executed. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
+              "value": {
+                "type": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "description": "Fetches an include file from a remote source. Caching is enabled so the origin is only pinged once.",
+          "doc-url": "https://buckeyeui.com/components/",
+          "js": {
+            "properties": [],
+            "events": []
           },
           "attributes": []
         },

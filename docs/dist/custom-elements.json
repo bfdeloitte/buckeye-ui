@@ -4,438 +4,6 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "components/alert/alert.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "Alert",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the optional icon.",
-              "name": "icon"
-            },
-            {
-              "description": "The container that wraps the alert's main content.",
-              "name": "message"
-            },
-            {
-              "description": "The close button, an `<bui-icon-button>`.",
-              "name": "close-button"
-            },
-            {
-              "description": "The close button's exported `base` part.",
-              "name": "close-button__base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The alert's main content.",
-              "name": ""
-            },
-            {
-              "description": "An icon to show in the alert. Works best with `<bui-icon>`.",
-              "name": "icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "autoHideTimeout",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "default": "new HasSlotController(this, 'icon', 'suffix')"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "base",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-              "attribute": "open",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "closable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Enables a close button that allows the user to dismiss the alert.",
-              "attribute": "closable",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The alert's theme variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "duration",
-              "default": "Infinity",
-              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-              "attribute": "duration"
-            },
-            {
-              "kind": "method",
-              "name": "restartAutoHide",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleCloseClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseMove",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleOpenChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDurationChange"
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "description": "Shows the alert."
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "description": "Hides the alert"
-            },
-            {
-              "kind": "method",
-              "name": "toast",
-              "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden."
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the alert opens.",
-              "name": "bui-show",
-              "reactName": "onBuiShow"
-            },
-            {
-              "description": "Emitted after the alert opens and all animations are complete.",
-              "name": "bui-after-show",
-              "reactName": "onBuiAfterShow"
-            },
-            {
-              "description": "Emitted when the alert closes.",
-              "name": "bui-hide",
-              "reactName": "onBuiHide"
-            },
-            {
-              "description": "Emitted after the alert closes and all animations are complete.",
-              "name": "bui-after-hide",
-              "reactName": "onBuiAfterHide"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-              "fieldName": "open"
-            },
-            {
-              "name": "closable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Enables a close button that allows the user to dismiss the alert.",
-              "fieldName": "closable"
-            },
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The alert's theme variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "duration",
-              "default": "Infinity",
-              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-              "resolveInitializer": {
-                "module": "src/components/alert/alert.ts"
-              },
-              "fieldName": "duration"
-            }
-          ],
-          "superclass": {
-            "name": "BuckeyeElement",
-            "module": "/src/internal/buckeye-element"
-          },
-          "summary": "Alerts are used to display important messages inline or as toast notifications.",
-          "documentation": "https://buckeyeui.com/components/alert",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "bui-icon-button"
-          ],
-          "animations": [
-            {
-              "name": "alert.show",
-              "description": "The animation to use when showing the alert."
-            },
-            {
-              "name": "alert.hide",
-              "description": "The animation to use when hiding the alert."
-            }
-          ],
-          "tagName": "bui-alert",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "Alert",
-            "module": "components/alert/alert.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "bui-alert",
-          "declaration": {
-            "name": "Alert",
-            "module": "components/alert/alert.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/animated-image/animated-image.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "AnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "control-box - The container that surrounds the pause/play icons and provides their background.",
-              "name": ""
-            }
-          ],
-          "slots": [
-            {
-              "description": "Optional play icon to use instead of the default. Works best with `<bui-icon>`.",
-              "name": "play-icon"
-            },
-            {
-              "description": "Optional pause icon to use instead of the default. Works best with `<bui-icon>`.",
-              "name": "pause-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleError",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "bui-load",
-              "reactName": "onBuiLoad"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "bui-error",
-              "reactName": "onBuiError"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "BuckeyeElement",
-            "module": "/src/internal/buckeye-element"
-          },
-          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
-          "documentation": "https://buckeyeui.com/components/animated-image",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "bui-icon"
-          ],
-          "tagName": "bui-animated-image",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "AnimatedImage",
-            "module": "components/animated-image/animated-image.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "bui-animated-image",
-          "declaration": {
-            "name": "AnimatedImage",
-            "module": "components/animated-image/animated-image.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/animation/animation.js",
       "declarations": [
         {
@@ -838,6 +406,372 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/alert/alert.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Alert",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the optional icon.",
+              "name": "icon"
+            },
+            {
+              "description": "The container that wraps the alert's main content.",
+              "name": "message"
+            },
+            {
+              "description": "The close button, an `<bui-icon-button>`.",
+              "name": "close-button"
+            },
+            {
+              "description": "The close button's exported `base` part.",
+              "name": "close-button__base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The alert's main content.",
+              "name": ""
+            },
+            {
+              "description": "An icon to show in the alert. Works best with `<bui-icon>`.",
+              "name": "icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "autoHideTimeout",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "default": "new HasSlotController(this, 'icon', 'suffix')"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "base",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+              "attribute": "open",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Enables a close button that allows the user to dismiss the alert.",
+              "attribute": "closable",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The alert's theme variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "duration",
+              "default": "Infinity",
+              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+              "attribute": "duration"
+            },
+            {
+              "kind": "method",
+              "name": "restartAutoHide",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleCloseClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseMove",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleOpenChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDurationChange"
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "description": "Shows the alert."
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "description": "Hides the alert"
+            },
+            {
+              "kind": "method",
+              "name": "toast",
+              "description": "Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the alert opens.",
+              "name": "bui-show",
+              "reactName": "onBuiShow"
+            },
+            {
+              "description": "Emitted after the alert opens and all animations are complete.",
+              "name": "bui-after-show",
+              "reactName": "onBuiAfterShow"
+            },
+            {
+              "description": "Emitted when the alert closes.",
+              "name": "bui-hide",
+              "reactName": "onBuiHide"
+            },
+            {
+              "description": "Emitted after the alert closes and all animations are complete.",
+              "name": "bui-after-hide",
+              "reactName": "onBuiAfterHide"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+              "fieldName": "open"
+            },
+            {
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Enables a close button that allows the user to dismiss the alert.",
+              "fieldName": "closable"
+            },
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The alert's theme variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "duration",
+              "default": "Infinity",
+              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+              "resolveInitializer": {
+                "module": "src/components/alert/alert.ts"
+              },
+              "fieldName": "duration"
+            }
+          ],
+          "superclass": {
+            "name": "BuckeyeElement",
+            "module": "/src/internal/buckeye-element"
+          },
+          "summary": "Alerts are used to display important messages inline or as toast notifications.",
+          "documentation": "https://buckeyeui.com/components/alert",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "bui-icon-button"
+          ],
+          "animations": [
+            {
+              "name": "alert.show",
+              "description": "The animation to use when showing the alert."
+            },
+            {
+              "name": "alert.hide",
+              "description": "The animation to use when hiding the alert."
+            }
+          ],
+          "tagName": "bui-alert",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "Alert",
+            "module": "components/alert/alert.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "bui-alert",
+          "declaration": {
+            "name": "Alert",
+            "module": "components/alert/alert.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/badge/badge.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Badge",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's theme variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              "default": "'primary'",
+              "description": "The badge's theme variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "BuckeyeElement",
+            "module": "/src/internal/buckeye-element"
+          },
+          "summary": "Badges are used to draw attention and display statuses or counts.",
+          "documentation": "https://buckeyeui.com/components/badge",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "bui-badge",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "Badge",
+            "module": "components/badge/badge.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "bui-badge",
+          "declaration": {
+            "name": "Badge",
+            "module": "components/badge/badge.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/avatar/avatar.js",
       "declarations": [
         {
@@ -1023,121 +957,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/badge/badge.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "Badge",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's theme variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              "default": "'primary'",
-              "description": "The badge's theme variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "BuckeyeElement",
-            "module": "/src/internal/buckeye-element"
-          },
-          "summary": "Badges are used to draw attention and display statuses or counts.",
-          "documentation": "https://buckeyeui.com/components/badge",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "bui-badge",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "Badge",
-            "module": "components/badge/badge.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "bui-badge",
-          "declaration": {
-            "name": "Badge",
-            "module": "components/badge/badge.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/breadcrumb-item/breadcrumb-item.js",
       "declarations": [
         {
@@ -1274,6 +1093,187 @@
           "declaration": {
             "name": "BreadcrumbItem",
             "module": "components/breadcrumb-item/breadcrumb-item.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/animated-image/animated-image.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "AnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "control-box - The container that surrounds the pause/play icons and provides their background.",
+              "name": ""
+            }
+          ],
+          "slots": [
+            {
+              "description": "Optional play icon to use instead of the default. Works best with `<bui-icon>`.",
+              "name": "play-icon"
+            },
+            {
+              "description": "Optional pause icon to use instead of the default. Works best with `<bui-icon>`.",
+              "name": "pause-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "animatedImage",
+              "type": {
+                "text": "HTMLImageElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "frozenFrame",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleLoad",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleError",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "bui-load",
+              "reactName": "onBuiLoad"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "bui-error",
+              "reactName": "onBuiError"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "fieldName": "play"
+            }
+          ],
+          "superclass": {
+            "name": "BuckeyeElement",
+            "module": "/src/internal/buckeye-element"
+          },
+          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
+          "documentation": "https://buckeyeui.com/components/animated-image",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "bui-icon"
+          ],
+          "tagName": "bui-animated-image",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "AnimatedImage",
+            "module": "components/animated-image/animated-image.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "bui-animated-image",
+          "declaration": {
+            "name": "AnimatedImage",
+            "module": "components/animated-image/animated-image.js"
           }
         }
       ]
@@ -2319,6 +2319,71 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/carousel-item/carousel-item.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CarouselItem",
+          "cssProperties": [
+            {
+              "description": "The slide's aspect ratio. Inherited from the carousel by default.",
+              "name": "--aspect-ratio"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The carousel item's content..",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "isCarouselItem",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "node",
+                  "type": {
+                    "text": "Node"
+                  }
+                }
+              ]
+            }
+          ],
+          "superclass": {
+            "name": "BuckeyeElement",
+            "module": "/src/internal/buckeye-element"
+          },
+          "summary": "A carousel item represent a slide within a [carousel](/components/carousel).",
+          "since": "2.0",
+          "status": "experimental",
+          "tagName": "bui-carousel-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "CarouselItem",
+            "module": "components/carousel-item/carousel-item.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "bui-carousel-item",
+          "declaration": {
+            "name": "CarouselItem",
+            "module": "components/carousel-item/carousel-item.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/carousel/autoplay-controller.js",
       "declarations": [
         {
@@ -3091,71 +3156,6 @@
           "declaration": {
             "name": "ScrollController",
             "module": "components/carousel/scroll-controller.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/carousel-item/carousel-item.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "CarouselItem",
-          "cssProperties": [
-            {
-              "description": "The slide's aspect ratio. Inherited from the carousel by default.",
-              "name": "--aspect-ratio"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The carousel item's content..",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "method",
-              "name": "isCarouselItem",
-              "static": true,
-              "parameters": [
-                {
-                  "name": "node",
-                  "type": {
-                    "text": "Node"
-                  }
-                }
-              ]
-            }
-          ],
-          "superclass": {
-            "name": "BuckeyeElement",
-            "module": "/src/internal/buckeye-element"
-          },
-          "summary": "A carousel item represent a slide within a [carousel](/components/carousel).",
-          "since": "2.0",
-          "status": "experimental",
-          "tagName": "bui-carousel-item",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "CarouselItem",
-            "module": "components/carousel-item/carousel-item.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "bui-carousel-item",
-          "declaration": {
-            "name": "CarouselItem",
-            "module": "components/carousel-item/carousel-item.js"
           }
         }
       ]
@@ -6406,211 +6406,250 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/format-number/format-number.js",
+      "path": "components/icon-button/icon-button.js",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "FormatNumber",
+          "name": "IconButton",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
           "members": [
             {
               "kind": "field",
-              "name": "localize",
+              "name": "button",
+              "type": {
+                "text": "HTMLButtonElement | HTMLLinkElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
               "privacy": "private",
-              "default": "new LocalizeController(this)"
+              "default": "false"
             },
             {
               "kind": "field",
-              "name": "value",
+              "name": "name",
               "type": {
-                "text": "number"
+                "text": "string | undefined"
               },
-              "default": "0",
-              "description": "The number to format.",
-              "attribute": "value"
+              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+              "attribute": "name"
             },
             {
               "kind": "field",
-              "name": "type",
+              "name": "library",
               "type": {
-                "text": "'currency' | 'decimal' | 'percent'"
+                "text": "string | undefined"
               },
-              "default": "'decimal'",
-              "description": "The formatting style to use.",
-              "attribute": "type"
+              "description": "The name of a registered custom icon library.",
+              "attribute": "library"
             },
             {
               "kind": "field",
-              "name": "noGrouping",
+              "name": "src",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
+              "attribute": "href"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "attribute": "target"
+            },
+            {
+              "kind": "field",
+              "name": "download",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
+              "attribute": "download"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A description that gets read by assistive devices. For optimal accessibility, you should always include a label\nthat describes what the icon button does.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Turns off grouping separators.",
-              "attribute": "no-grouping"
+              "description": "Disables the button.",
+              "attribute": "disabled",
+              "reflects": true
             },
             {
-              "kind": "field",
-              "name": "currency",
-              "type": {
-                "text": "string"
-              },
-              "default": "'USD'",
-              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-              "attribute": "currency"
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
             },
             {
-              "kind": "field",
-              "name": "currencyDisplay",
-              "type": {
-                "text": "'symbol' | 'narrowSymbol' | 'code' | 'name'"
-              },
-              "default": "'symbol'",
-              "description": "How to display the currency.",
-              "attribute": "currency-display"
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
             },
             {
-              "kind": "field",
-              "name": "minimumIntegerDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-              "attribute": "minimum-integer-digits"
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
             },
             {
-              "kind": "field",
-              "name": "minimumFractionDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-              "attribute": "minimum-fraction-digits"
+              "kind": "method",
+              "name": "click",
+              "description": "Simulates a click on the icon button."
             },
             {
-              "kind": "field",
-              "name": "maximumFractionDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-              "attribute": "maximum-fraction-digits"
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the icon button."
             },
             {
-              "kind": "field",
-              "name": "minimumSignificantDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-              "attribute": "minimum-significant-digits"
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the icon button."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the icon button loses focus.",
+              "name": "bui-blur",
+              "reactName": "onBuiBlur"
             },
             {
-              "kind": "field",
-              "name": "maximumSignificantDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-              "attribute": "maximum-significant-digits"
+              "description": "Emitted when the icon button gains focus.",
+              "name": "bui-focus",
+              "reactName": "onBuiFocus"
             }
           ],
           "attributes": [
             {
-              "name": "value",
+              "name": "name",
               "type": {
-                "text": "number"
+                "text": "string | undefined"
               },
-              "default": "0",
-              "description": "The number to format.",
-              "fieldName": "value"
+              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+              "fieldName": "name"
             },
             {
-              "name": "type",
+              "name": "library",
               "type": {
-                "text": "'currency' | 'decimal' | 'percent'"
+                "text": "string | undefined"
               },
-              "default": "'decimal'",
-              "description": "The formatting style to use.",
-              "fieldName": "type"
+              "description": "The name of a registered custom icon library.",
+              "fieldName": "library"
             },
             {
-              "name": "no-grouping",
+              "name": "src",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+              "fieldName": "src"
+            },
+            {
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
+              "fieldName": "href"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "fieldName": "target"
+            },
+            {
+              "name": "download",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
+              "fieldName": "download"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "A description that gets read by assistive devices. For optimal accessibility, you should always include a label\nthat describes what the icon button does.",
+              "fieldName": "label"
+            },
+            {
+              "name": "disabled",
               "type": {
                 "text": "boolean"
               },
               "default": "false",
-              "description": "Turns off grouping separators.",
-              "fieldName": "noGrouping"
-            },
-            {
-              "name": "currency",
-              "type": {
-                "text": "string"
-              },
-              "default": "'USD'",
-              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-              "fieldName": "currency"
-            },
-            {
-              "name": "currency-display",
-              "type": {
-                "text": "'symbol' | 'narrowSymbol' | 'code' | 'name'"
-              },
-              "default": "'symbol'",
-              "description": "How to display the currency.",
-              "fieldName": "currencyDisplay"
-            },
-            {
-              "name": "minimum-integer-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-              "fieldName": "minimumIntegerDigits"
-            },
-            {
-              "name": "minimum-fraction-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-              "fieldName": "minimumFractionDigits"
-            },
-            {
-              "name": "maximum-fraction-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-              "fieldName": "maximumFractionDigits"
-            },
-            {
-              "name": "minimum-significant-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-              "fieldName": "minimumSignificantDigits"
-            },
-            {
-              "name": "maximum-significant-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-              "fieldName": "maximumSignificantDigits"
+              "description": "Disables the button.",
+              "fieldName": "disabled"
             }
           ],
           "superclass": {
             "name": "BuckeyeElement",
             "module": "/src/internal/buckeye-element"
           },
-          "summary": "Formats a number using the specified locale and options.",
-          "documentation": "https://buckeyeui.com/components/format-number",
+          "summary": "Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.",
+          "documentation": "https://buckeyeui.com/components/icon-button",
           "status": "stable",
           "since": "2.0",
-          "tagName": "bui-format-number",
+          "dependencies": [
+            "bui-icon"
+          ],
+          "tagName": "bui-icon-button",
           "customElement": true
         }
       ],
@@ -6619,16 +6658,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "FormatNumber",
-            "module": "components/format-number/format-number.js"
+            "name": "IconButton",
+            "module": "components/icon-button/icon-button.js"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "bui-format-number",
+          "name": "bui-icon-button",
           "declaration": {
-            "name": "FormatNumber",
-            "module": "components/format-number/format-number.js"
+            "name": "IconButton",
+            "module": "components/icon-button/icon-button.js"
           }
         }
       ]
@@ -6980,119 +7019,254 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/icon-button/icon-button.js",
+      "path": "components/format-number/format-number.js",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "IconButton",
-          "cssParts": [
+          "name": "FormatNumber",
+          "members": [
             {
-              "description": "The component's base wrapper.",
-              "name": "base"
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "'currency' | 'decimal' | 'percent'"
+              },
+              "default": "'decimal'",
+              "description": "The formatting style to use.",
+              "attribute": "type"
+            },
+            {
+              "kind": "field",
+              "name": "noGrouping",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Turns off grouping separators.",
+              "attribute": "no-grouping"
+            },
+            {
+              "kind": "field",
+              "name": "currency",
+              "type": {
+                "text": "string"
+              },
+              "default": "'USD'",
+              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+              "attribute": "currency"
+            },
+            {
+              "kind": "field",
+              "name": "currencyDisplay",
+              "type": {
+                "text": "'symbol' | 'narrowSymbol' | 'code' | 'name'"
+              },
+              "default": "'symbol'",
+              "description": "How to display the currency.",
+              "attribute": "currency-display"
+            },
+            {
+              "kind": "field",
+              "name": "minimumIntegerDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+              "attribute": "minimum-integer-digits"
+            },
+            {
+              "kind": "field",
+              "name": "minimumFractionDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+              "attribute": "minimum-fraction-digits"
+            },
+            {
+              "kind": "field",
+              "name": "maximumFractionDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+              "attribute": "maximum-fraction-digits"
+            },
+            {
+              "kind": "field",
+              "name": "minimumSignificantDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+              "attribute": "minimum-significant-digits"
+            },
+            {
+              "kind": "field",
+              "name": "maximumSignificantDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+              "attribute": "maximum-significant-digits"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format.",
+              "fieldName": "value"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "'currency' | 'decimal' | 'percent'"
+              },
+              "default": "'decimal'",
+              "description": "The formatting style to use.",
+              "fieldName": "type"
+            },
+            {
+              "name": "no-grouping",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Turns off grouping separators.",
+              "fieldName": "noGrouping"
+            },
+            {
+              "name": "currency",
+              "type": {
+                "text": "string"
+              },
+              "default": "'USD'",
+              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+              "fieldName": "currency"
+            },
+            {
+              "name": "currency-display",
+              "type": {
+                "text": "'symbol' | 'narrowSymbol' | 'code' | 'name'"
+              },
+              "default": "'symbol'",
+              "description": "How to display the currency.",
+              "fieldName": "currencyDisplay"
+            },
+            {
+              "name": "minimum-integer-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+              "fieldName": "minimumIntegerDigits"
+            },
+            {
+              "name": "minimum-fraction-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+              "fieldName": "minimumFractionDigits"
+            },
+            {
+              "name": "maximum-fraction-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+              "fieldName": "maximumFractionDigits"
+            },
+            {
+              "name": "minimum-significant-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+              "fieldName": "minimumSignificantDigits"
+            },
+            {
+              "name": "maximum-significant-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+              "fieldName": "maximumSignificantDigits"
+            }
+          ],
+          "superclass": {
+            "name": "BuckeyeElement",
+            "module": "/src/internal/buckeye-element"
+          },
+          "summary": "Formats a number using the specified locale and options.",
+          "documentation": "https://buckeyeui.com/components/format-number",
+          "status": "stable",
+          "since": "2.0",
+          "tagName": "bui-format-number",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "FormatNumber",
+            "module": "components/format-number/format-number.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "bui-format-number",
+          "declaration": {
+            "name": "FormatNumber",
+            "module": "components/format-number/format-number.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/menu/menu.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Menu",
+          "slots": [
+            {
+              "description": "The menu's content, including menu items, menu labels, and dividers.",
+              "name": ""
             }
           ],
           "members": [
             {
               "kind": "field",
-              "name": "button",
+              "name": "defaultSlot",
               "type": {
-                "text": "HTMLButtonElement | HTMLLinkElement"
+                "text": "HTMLSlotElement"
               }
-            },
-            {
-              "kind": "field",
-              "name": "hasFocus",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "library",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of a registered custom icon library.",
-              "attribute": "library"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
-              "attribute": "href"
-            },
-            {
-              "kind": "field",
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "attribute": "target"
-            },
-            {
-              "kind": "field",
-              "name": "download",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
-              "attribute": "download"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A description that gets read by assistive devices. For optimal accessibility, you should always include a label\nthat describes what the icon button does.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the button.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus",
-              "privacy": "private"
             },
             {
               "kind": "method",
@@ -7109,121 +7283,68 @@
             },
             {
               "kind": "method",
-              "name": "click",
-              "description": "Simulates a click on the icon button."
-            },
-            {
-              "kind": "method",
-              "name": "focus",
+              "name": "handleKeyDown",
+              "privacy": "private",
               "parameters": [
                 {
-                  "name": "options",
-                  "optional": true,
+                  "name": "event",
                   "type": {
-                    "text": "FocusOptions"
+                    "text": "KeyboardEvent"
                   }
                 }
-              ],
-              "description": "Sets focus on the icon button."
+              ]
             },
             {
               "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the icon button."
+              "name": "handleMouseDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "isMenuItem",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                }
+              ]
             }
           ],
           "events": [
             {
-              "description": "Emitted when the icon button loses focus.",
-              "name": "bui-blur",
-              "reactName": "onBuiBlur"
-            },
-            {
-              "description": "Emitted when the icon button gains focus.",
-              "name": "bui-focus",
-              "reactName": "onBuiFocus"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
               "type": {
-                "text": "string | undefined"
+                "text": "{ item: MenuItem }"
               },
-              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-              "fieldName": "name"
-            },
-            {
-              "name": "library",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of a registered custom icon library.",
-              "fieldName": "library"
-            },
-            {
-              "name": "src",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-              "fieldName": "src"
-            },
-            {
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
-              "fieldName": "href"
-            },
-            {
-              "name": "target",
-              "type": {
-                "text": "'_blank' | '_parent' | '_self' | '_top' | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "fieldName": "target"
-            },
-            {
-              "name": "download",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Tells the browser to download the linked file as this filename. Only used when `href` is set.",
-              "fieldName": "download"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "A description that gets read by assistive devices. For optimal accessibility, you should always include a label\nthat describes what the icon button does.",
-              "fieldName": "label"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the button.",
-              "fieldName": "disabled"
+              "description": "Emitted when a menu item is selected.",
+              "name": "bui-select",
+              "reactName": "onBuiSelect"
             }
           ],
           "superclass": {
             "name": "BuckeyeElement",
             "module": "/src/internal/buckeye-element"
           },
-          "summary": "Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.",
-          "documentation": "https://buckeyeui.com/components/icon-button",
+          "summary": "Menus provide a list of options for the user to choose from.",
+          "documentation": "https://buckeyeui.com/components/menu",
           "status": "stable",
           "since": "2.0",
-          "dependencies": [
-            "bui-icon"
-          ],
-          "tagName": "bui-icon-button",
+          "tagName": "bui-menu",
           "customElement": true
         }
       ],
@@ -7232,16 +7353,16 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "IconButton",
-            "module": "components/icon-button/icon-button.js"
+            "name": "Menu",
+            "module": "components/menu/menu.js"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "bui-icon-button",
+          "name": "bui-menu",
           "declaration": {
-            "name": "IconButton",
-            "module": "components/icon-button/icon-button.js"
+            "name": "Menu",
+            "module": "components/menu/menu.js"
           }
         }
       ]
@@ -7411,177 +7532,6 @@
           "declaration": {
             "name": "ImageComparer",
             "module": "components/image-comparer/image-comparer.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/include/include.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "Include",
-          "members": [
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The location of the HTML file to include. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "mode",
-              "type": {
-                "text": "'cors' | 'no-cors' | 'same-origin'"
-              },
-              "default": "'cors'",
-              "description": "The fetch mode to use.",
-              "attribute": "mode"
-            },
-            {
-              "kind": "field",
-              "name": "allowScripts",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Allows included scripts to be executed. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
-              "attribute": "allow-scripts"
-            },
-            {
-              "kind": "method",
-              "name": "executeScript",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "script",
-                  "type": {
-                    "text": "HTMLScriptElement"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the included file is loaded.",
-              "name": "bui-load",
-              "reactName": "onBuiLoad"
-            },
-            {
-              "type": {
-                "text": "{ status: number }"
-              },
-              "description": "Emitted when the included file fails to load due to an error.",
-              "name": "bui-error",
-              "reactName": "onBuiError"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The location of the HTML file to include. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
-              "fieldName": "src"
-            },
-            {
-              "name": "mode",
-              "type": {
-                "text": "'cors' | 'no-cors' | 'same-origin'"
-              },
-              "default": "'cors'",
-              "description": "The fetch mode to use.",
-              "fieldName": "mode"
-            },
-            {
-              "name": "allow-scripts",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Allows included scripts to be executed. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
-              "fieldName": "allowScripts"
-            }
-          ],
-          "superclass": {
-            "name": "BuckeyeElement",
-            "module": "/src/internal/buckeye-element"
-          },
-          "summary": "Includes give you the power to embed external HTML files into the page.",
-          "documentation": "https://buckeyeui.com/components/include",
-          "status": "stable",
-          "since": "2.0",
-          "tagName": "bui-include",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "Include",
-            "module": "components/include/include.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "bui-include",
-          "declaration": {
-            "name": "Include",
-            "module": "components/include/include.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/include/request.js",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "requestInclude",
-          "return": {
-            "type": {
-              "text": "Promise<IncludeFile>"
-            }
-          },
-          "parameters": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "name": "mode",
-              "default": "'cors'",
-              "type": {
-                "text": "'cors' | 'no-cors' | 'same-origin'"
-              }
-            }
-          ],
-          "description": "Fetches an include file from a remote source. Caching is enabled so the origin is only pinged once."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "requestInclude",
-          "declaration": {
-            "name": "requestInclude",
-            "module": "components/include/request.js"
           }
         }
       ]
@@ -8618,103 +8568,112 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/menu/menu.js",
+      "path": "components/include/include.js",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "Menu",
-          "slots": [
-            {
-              "description": "The menu's content, including menu items, menu labels, and dividers.",
-              "name": ""
-            }
-          ],
+          "name": "Include",
           "members": [
             {
               "kind": "field",
-              "name": "defaultSlot",
+              "name": "src",
               "type": {
-                "text": "HTMLSlotElement"
-              }
+                "text": "string"
+              },
+              "description": "The location of the HTML file to include. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "mode",
+              "type": {
+                "text": "'cors' | 'no-cors' | 'same-origin'"
+              },
+              "default": "'cors'",
+              "description": "The fetch mode to use.",
+              "attribute": "mode"
+            },
+            {
+              "kind": "field",
+              "name": "allowScripts",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Allows included scripts to be executed. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
+              "attribute": "allow-scripts"
             },
             {
               "kind": "method",
-              "name": "handleClick",
+              "name": "executeScript",
               "privacy": "private",
               "parameters": [
                 {
-                  "name": "event",
+                  "name": "script",
                   "type": {
-                    "text": "MouseEvent"
+                    "text": "HTMLScriptElement"
                   }
                 }
               ]
             },
             {
               "kind": "method",
-              "name": "handleKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "isMenuItem",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "item",
-                  "type": {
-                    "text": "HTMLElement"
-                  }
-                }
-              ]
+              "name": "handleSrcChange"
             }
           ],
           "events": [
             {
+              "description": "Emitted when the included file is loaded.",
+              "name": "bui-load",
+              "reactName": "onBuiLoad"
+            },
+            {
               "type": {
-                "text": "{ item: MenuItem }"
+                "text": "{ status: number }"
               },
-              "description": "Emitted when a menu item is selected.",
-              "name": "bui-select",
-              "reactName": "onBuiSelect"
+              "description": "Emitted when the included file fails to load due to an error.",
+              "name": "bui-error",
+              "reactName": "onBuiError"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The location of the HTML file to include. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
+              "fieldName": "src"
+            },
+            {
+              "name": "mode",
+              "type": {
+                "text": "'cors' | 'no-cors' | 'same-origin'"
+              },
+              "default": "'cors'",
+              "description": "The fetch mode to use.",
+              "fieldName": "mode"
+            },
+            {
+              "name": "allow-scripts",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Allows included scripts to be executed. Be sure you trust the content you are including as it will be executed as\ncode and can result in XSS attacks.",
+              "fieldName": "allowScripts"
             }
           ],
           "superclass": {
             "name": "BuckeyeElement",
             "module": "/src/internal/buckeye-element"
           },
-          "summary": "Menus provide a list of options for the user to choose from.",
-          "documentation": "https://buckeyeui.com/components/menu",
+          "summary": "Includes give you the power to embed external HTML files into the page.",
+          "documentation": "https://buckeyeui.com/components/include",
           "status": "stable",
           "since": "2.0",
-          "tagName": "bui-menu",
+          "tagName": "bui-include",
           "customElement": true
         }
       ],
@@ -8723,16 +8682,57 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "Menu",
-            "module": "components/menu/menu.js"
+            "name": "Include",
+            "module": "components/include/include.js"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "bui-menu",
+          "name": "bui-include",
           "declaration": {
-            "name": "Menu",
-            "module": "components/menu/menu.js"
+            "name": "Include",
+            "module": "components/include/include.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/include/request.js",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "requestInclude",
+          "return": {
+            "type": {
+              "text": "Promise<IncludeFile>"
+            }
+          },
+          "parameters": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "mode",
+              "default": "'cors'",
+              "type": {
+                "text": "'cors' | 'no-cors' | 'same-origin'"
+              }
+            }
+          ],
+          "description": "Fetches an include file from a remote source. Caching is enabled so the origin is only pinged once."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "requestInclude",
+          "declaration": {
+            "name": "requestInclude",
+            "module": "components/include/request.js"
           }
         }
       ]

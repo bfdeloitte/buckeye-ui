@@ -1,6 +1,6 @@
 import {
   SlSelect
-} from "./chunk.3EQFBK7B.js";
+} from "./chunk.H46ZMGSQ.js";
 
 // src/react/select/index.ts
 import * as React from "react";
