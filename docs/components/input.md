@@ -30,6 +30,38 @@ import { Icon, Input } from 'buckeye-ui/dist/react';
 const App = () => <Input label="What is your name?" />;
 ```
 
+### Datalists
+
+Use the `list` attribute to associate the input with datalist options.
+
+```html preview
+<bui-input list="ice-cream-flavors" label="What is your favorite ice cream?"></bui-input>
+<datalist id="ice-cream-flavors">
+  <bui-option value="Chocolate"></bui-option>
+  <bui-option value="Coconut"></bui-option>
+  <bui-option value="Mint"></bui-option>
+  <bui-option value="Strawberry"></bui-option>
+  <bui-option value="Vanilla"></bui-option>
+</datalist>
+```
+
+```jsx react
+import { Icon, Input } from 'buckeye-ui/dist/react';
+
+const App = () => (
+  <>
+    <Input list="ice-cream-flavors" label="What is your favorite ice cream?" />
+    <datalist id="ice-cream-flavors">
+      <Option value="Chocolate" />
+      <Option value="Coconut" />
+      <Option value="Mint" />
+      <Option value="Strawberry" />
+      <Option value="Vanilla" />
+    </datalist>
+  </>
+);
+```
+
 ### Help Text
 
 Add descriptive help text to an input with the `help-text` attribute. For help texts that contain HTML, use the `help-text` slot instead.

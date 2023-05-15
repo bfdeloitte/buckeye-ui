@@ -1,18 +1,18 @@
-import '../icon/icon';
-import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, query, state } from 'lit/decorators.js';
-import { defaultValue } from '../../internal/default-value';
-import { FormControlController } from '../../internal/form';
-import { HasSlotController } from '../../internal/slot';
-import { html } from 'lit';
-import { ifDefined } from 'lit/directives/if-defined.js';
-import { live } from 'lit/directives/live.js';
-import { LocalizeController } from '../../utilities/localize';
-import { watch } from '../../internal/watch';
-import BuckeyeElement from '../../internal/buckeye-element';
-import styles from './input.styles';
-import type { BuckeyeFormControl } from '../../internal/buckeye-element';
-import type { CSSResultGroup } from 'lit';
+import "../icon/icon";
+import { classMap } from "lit/directives/class-map.js";
+import { customElement, property, query, state } from "lit/decorators.js";
+import { defaultValue } from "../../internal/default-value";
+import { FormControlController } from "../../internal/form";
+import { HasSlotController } from "../../internal/slot";
+import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { live } from "lit/directives/live.js";
+import { LocalizeController } from "../../utilities/localize";
+import { watch } from "../../internal/watch";
+import BuckeyeElement from "../../internal/buckeye-element";
+import styles from "./input.styles";
+import type { BuckeyeFormControl } from "../../internal/buckeye-element";
+import type { CSSResultGroup } from "lit";
 
 /**
  * @summary Inputs collect data from the user.
@@ -48,48 +48,55 @@ import type { CSSResultGroup } from 'lit';
  * @csspart password-toggle-button - The password toggle button.
  * @csspart suffix - The container that wraps the suffix.
  */
-@customElement('bui-input')
-export default class Input extends BuckeyeElement implements BuckeyeFormControl {
+@customElement("bui-input")
+export default class Input
+  extends BuckeyeElement
+  implements BuckeyeFormControl
+{
   static styles: CSSResultGroup = styles;
 
   private readonly formControlController = new FormControlController(this, {
-    assumeInteractionOn: ['bui-blur', 'bui-input']
+    assumeInteractionOn: ["bui-blur", "bui-input"],
   });
-  private readonly hasSlotController = new HasSlotController(this, 'help-text', 'label');
+  private readonly hasSlotController = new HasSlotController(
+    this,
+    "help-text",
+    "label"
+  );
   private readonly localize = new LocalizeController(this);
 
-  @query('.input__control') input: HTMLInputElement;
+  @query(".input__control") input: HTMLInputElement;
 
   @state() private hasFocus = false;
-  @property() title = ''; // make reactive to pass through
+  @property() title = ""; // make reactive to pass through
 
   /**
    * The type of input. Works the same as a native `<input>` element, but only a subset of types are supported. Defaults
    * to `text`.
    */
   @property({ reflect: true }) type:
-    | 'date'
-    | 'datetime-local'
-    | 'email'
-    | 'number'
-    | 'password'
-    | 'search'
-    | 'tel'
-    | 'text'
-    | 'time'
-    | 'url' = 'text';
+    | "date"
+    | "datetime-local"
+    | "email"
+    | "number"
+    | "password"
+    | "search"
+    | "tel"
+    | "text"
+    | "time"
+    | "url" = "text";
 
   /** The name of the input, submitted as a name/value pair with form data. */
-  @property() name = '';
+  @property() name = "";
 
   /** The current value of the input, submitted as a name/value pair with form data. */
-  @property() value = '';
+  @property() value = "";
 
   /** The default value of the form control. Primarily used for resetting the form control. */
-  @defaultValue() defaultValue = '';
+  @defaultValue() defaultValue = "";
 
   /** The input's size. */
-  @property({ reflect: true }) size: 'small' | 'medium' | 'large' = 'medium';
+  @property({ reflect: true }) size: "small" | "medium" | "large" = "medium";
 
   /** Draws a filled input. */
   @property({ type: Boolean, reflect: true }) filled = false;
@@ -98,10 +105,13 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
   @property({ type: Boolean, reflect: true }) pill = false;
 
   /** The input's label. If you need to display HTML, use the `label` slot instead. */
-  @property() label = '';
+  @property() label = "";
+
+  /** The input's datalist. */
+  @property() list = "";
 
   /** The input's help text. If you need to display HTML, use the `help-text` slot instead. */
-  @property({ attribute: 'help-text' }) helpText = '';
+  @property({ attribute: "help-text" }) helpText = "";
 
   /** Adds a clear button when the input is not empty. */
   @property({ type: Boolean }) clearable = false;
@@ -110,26 +120,29 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
   @property({ type: Boolean, reflect: true }) disabled = false;
 
   /** Placeholder text to show as a hint when the input is empty. */
-  @property() placeholder = '';
+  @property() placeholder = "";
 
   /** Makes the input readonly. */
   @property({ type: Boolean, reflect: true }) readonly = false;
 
   /** Adds a button to toggle the password's visibility. Only applies to password types. */
-  @property({ attribute: 'password-toggle', type: Boolean }) passwordToggle = false;
+  @property({ attribute: "password-toggle", type: Boolean }) passwordToggle =
+    false;
 
   /** Determines whether or not the password is currently visible. Only applies to password input types. */
-  @property({ attribute: 'password-visible', type: Boolean }) passwordVisible = false;
+  @property({ attribute: "password-visible", type: Boolean }) passwordVisible =
+    false;
 
   /** Hides the browser's built-in increment/decrement spin buttons for number inputs. */
-  @property({ attribute: 'no-spin-buttons', type: Boolean }) noSpinButtons = false;
+  @property({ attribute: "no-spin-buttons", type: Boolean }) noSpinButtons =
+    false;
 
   /**
    * By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you
    * to place the form control outside of a form and associate it with the form that has this `id`. The form must be in
    * the same document or shadow root for this to work.
    */
-  @property({ reflect: true }) form = '';
+  @property({ reflect: true }) form = "";
 
   /** Makes the input a required field. */
   @property({ type: Boolean, reflect: true }) required = false;
@@ -153,13 +166,19 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
    * Specifies the granularity that the value must adhere to, or the special value `any` which means no stepping is
    * implied, allowing any numeric value. Only applies to date and number input types.
    */
-  @property() step: number | 'any';
+  @property() step: number | "any";
 
   /** Controls whether and how text input is automatically capitalized as it is entered by the user. */
-  @property() autocapitalize: 'off' | 'none' | 'on' | 'sentences' | 'words' | 'characters';
+  @property() autocapitalize:
+    | "off"
+    | "none"
+    | "on"
+    | "sentences"
+    | "words"
+    | "characters";
 
   /** Indicates whether the browser's autocorrect feature is on or off. */
-  @property() autocorrect: 'off' | 'on';
+  @property() autocorrect: "off" | "on";
 
   /**
    * Specifies what permission the browser has to provide assistance in filling out form field values. Refer to
@@ -171,16 +190,23 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
   @property({ type: Boolean }) autofocus: boolean;
 
   /** Used to customize the label or icon of the Enter key on virtual keyboards. */
-  @property() enterkeyhint: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
+  @property() enterkeyhint:
+    | "enter"
+    | "done"
+    | "go"
+    | "next"
+    | "previous"
+    | "search"
+    | "send";
 
   /** Enables spell checking on the input. */
   @property({
     type: Boolean,
     converter: {
       // Allow "true|false" attribute values but keep the property boolean
-      fromAttribute: value => (!value || value === 'false' ? false : true),
-      toAttribute: value => (value ? 'true' : 'false')
-    }
+      fromAttribute: (value) => (!value || value === "false" ? false : true),
+      toAttribute: (value) => (value ? "true" : "false"),
+    },
   })
   spellcheck = true;
 
@@ -188,7 +214,15 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
    * Tells the browser what type of data will be entered by the user, allowing it to display the appropriate virtual
    * keyboard on supportive devices.
    */
-  @property() inputmode: 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url';
+  @property() inputmode:
+    | "none"
+    | "text"
+    | "decimal"
+    | "numeric"
+    | "tel"
+    | "search"
+    | "email"
+    | "url";
 
   //
   // NOTE: We use an in-memory input for these getters/setters instead of the one in the template because the properties
@@ -197,30 +231,30 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
 
   /** Gets or sets the current value as a `Date` object. Returns `null` if the value can't be converted. */
   get valueAsDate() {
-    const input = document.createElement('input');
-    input.type = 'date';
+    const input = document.createElement("input");
+    input.type = "date";
     input.value = this.value;
     return input.valueAsDate;
   }
 
   set valueAsDate(newValue: Date | null) {
-    const input = document.createElement('input');
-    input.type = 'date';
+    const input = document.createElement("input");
+    input.type = "date";
     input.valueAsDate = newValue;
     this.value = input.value;
   }
 
   /** Gets or sets the current value as a number. Returns `NaN` if the value can't be converted. */
   get valueAsNumber() {
-    const input = document.createElement('input');
-    input.type = 'number';
+    const input = document.createElement("input");
+    input.type = "number";
     input.value = this.value;
     return input.valueAsNumber;
   }
 
   set valueAsNumber(newValue: number) {
-    const input = document.createElement('input');
-    input.type = 'number';
+    const input = document.createElement("input");
+    input.type = "number";
     input.valueAsNumber = newValue;
     this.value = input.value;
   }
@@ -241,19 +275,19 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
 
   private handleBlur() {
     this.hasFocus = false;
-    this.emit('bui-blur');
+    this.emit("bui-blur");
   }
 
   private handleChange() {
     this.value = this.input.value;
-    this.emit('bui-change');
+    this.emit("bui-change");
   }
 
   private handleClearClick(event: MouseEvent) {
-    this.value = '';
-    this.emit('bui-clear');
-    this.emit('bui-input');
-    this.emit('bui-change');
+    this.value = "";
+    this.emit("bui-clear");
+    this.emit("bui-input");
+    this.emit("bui-change");
     this.input.focus();
 
     event.stopPropagation();
@@ -261,13 +295,13 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
 
   private handleFocus() {
     this.hasFocus = true;
-    this.emit('bui-focus');
+    this.emit("bui-focus");
   }
 
   private handleInput() {
     this.value = this.input.value;
     this.formControlController.updateValidity();
-    this.emit('bui-input');
+    this.emit("bui-input");
   }
 
   private handleInvalid(event: Event) {
@@ -276,11 +310,12 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
   }
 
   private handleKeyDown(event: KeyboardEvent) {
-    const hasModifier = event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+    const hasModifier =
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
 
     // Pressing enter when focused on an input should submit the form like a native input, but we wait a tick before
     // submitting to allow users to cancel the keydown event if they need to
-    if (event.key === 'Enter' && !hasModifier) {
+    if (event.key === "Enter" && !hasModifier) {
       setTimeout(() => {
         //
         // When using an Input Method Editor (IME), pressing enter will cause the form to submit unexpectedly. One way
@@ -299,13 +334,13 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
     this.passwordVisible = !this.passwordVisible;
   }
 
-  @watch('disabled', { waitUntilFirstUpdate: true })
+  @watch("disabled", { waitUntilFirstUpdate: true })
   handleDisabledChange() {
     // Disabled form controls are always valid
     this.formControlController.setValidity(this.disabled);
   }
 
-  @watch('step', { waitUntilFirstUpdate: true })
+  @watch("step", { waitUntilFirstUpdate: true })
   handleStepChange() {
     // If step changes, the value may become invalid so we need to recheck after the update. We set the new step
     // imperatively so we don't have to wait for the next render to report the updated validity.
@@ -313,7 +348,7 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
     this.formControlController.updateValidity();
   }
 
-  @watch('value', { waitUntilFirstUpdate: true })
+  @watch("value", { waitUntilFirstUpdate: true })
   async handleValueChange() {
     await this.updateComplete;
     this.formControlController.updateValidity();
@@ -338,9 +373,13 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
   setSelectionRange(
     selectionStart: number,
     selectionEnd: number,
-    selectionDirection: 'forward' | 'backward' | 'none' = 'none'
+    selectionDirection: "forward" | "backward" | "none" = "none"
   ) {
-    this.input.setSelectionRange(selectionStart, selectionEnd, selectionDirection);
+    this.input.setSelectionRange(
+      selectionStart,
+      selectionEnd,
+      selectionDirection
+    );
   }
 
   /** Replaces a range of text with a new string. */
@@ -348,7 +387,7 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
     replacement: string,
     start?: number,
     end?: number,
-    selectMode?: 'select' | 'start' | 'end' | 'preserve'
+    selectMode?: "select" | "start" | "end" | "preserve"
   ) {
     // @ts-expect-error - start, end, and selectMode are optional
     this.input.setRangeText(replacement, start, end, selectMode);
@@ -360,7 +399,7 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
 
   /** Displays the browser picker for an input element (only works if the browser supports it for the input type). */
   showPicker() {
-    if ('showPicker' in HTMLInputElement.prototype) {
+    if ("showPicker" in HTMLInputElement.prototype) {
       this.input.showPicker();
     }
   }
@@ -403,30 +442,33 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
   }
 
   render() {
-    const hasLabelSlot = this.hasSlotController.test('label');
-    const hasHelpTextSlot = this.hasSlotController.test('help-text');
+    const hasLabelSlot = this.hasSlotController.test("label");
+    const hasHelpTextSlot = this.hasSlotController.test("help-text");
     const hasLabel = this.label ? true : !!hasLabelSlot;
     const hasHelpText = this.helpText ? true : !!hasHelpTextSlot;
     const hasClearIcon =
-      this.clearable && !this.disabled && !this.readonly && (typeof this.value === 'number' || this.value.length > 0);
+      this.clearable &&
+      !this.disabled &&
+      !this.readonly &&
+      (typeof this.value === "number" || this.value.length > 0);
 
     return html`
       <div
         part="form-control"
         class=${classMap({
-          'form-control': true,
-          'form-control--small': this.size === 'small',
-          'form-control--medium': this.size === 'medium',
-          'form-control--large': this.size === 'large',
-          'form-control--has-label': hasLabel,
-          'form-control--has-help-text': hasHelpText
+          "form-control": true,
+          "form-control--small": this.size === "small",
+          "form-control--medium": this.size === "medium",
+          "form-control--large": this.size === "large",
+          "form-control--has-label": hasLabel,
+          "form-control--has-help-text": hasHelpText,
         })}
       >
         <label
           part="form-control-label"
           class="form-control__label"
           for="input"
-          aria-hidden=${hasLabel ? 'false' : 'true'}
+          aria-hidden=${hasLabel ? "false" : "true"}
         >
           <slot name="label">${this.label}</slot>
         </label>
@@ -438,18 +480,18 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
               input: true,
 
               // Sizes
-              'input--small': this.size === 'small',
-              'input--medium': this.size === 'medium',
-              'input--large': this.size === 'large',
+              "input--small": this.size === "small",
+              "input--medium": this.size === "medium",
+              "input--large": this.size === "large",
 
               // States
-              'input--pill': this.pill,
-              'input--standard': !this.filled,
-              'input--filled': this.filled,
-              'input--disabled': this.disabled,
-              'input--focused': this.hasFocus,
-              'input--empty': !this.value,
-              'input--no-spin-buttons': this.noSpinButtons
+              "input--pill": this.pill,
+              "input--standard": !this.filled,
+              "input--filled": this.filled,
+              "input--disabled": this.disabled,
+              "input--focused": this.hasFocus,
+              "input--empty": !this.value,
+              "input--no-spin-buttons": this.noSpinButtons,
             })}
           >
             <slot name="prefix" part="prefix" class="input__prefix"></slot>
@@ -457,9 +499,17 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
               part="input"
               id="input"
               class="input__control"
-              type=${this.type === 'password' && this.passwordVisible ? 'text' : this.type}
-              title=${this.title /* An empty title prevents browser validation tooltips from appearing on hover */}
+              type=${
+                this.type === "password" && this.passwordVisible
+                  ? "text"
+                  : this.type
+              }
+              title=${
+                this
+                  .title /* An empty title prevents browser validation tooltips from appearing on hover */
+              }
               name=${ifDefined(this.name)}
+              list=${ifDefined(this.list)}
               ?disabled=${this.disabled}
               ?readonly=${this.readonly}
               ?required=${this.required}
@@ -494,16 +544,19 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
                       part="clear-button"
                       class="input__clear"
                       type="button"
-                      aria-label=${this.localize.term('clearEntry')}
+                      aria-label=${this.localize.term("clearEntry")}
                       @click=${this.handleClearClick}
                       tabindex="-1"
                     >
                       <slot name="clear-icon">
-                        <bui-icon name="x-circle-fill" library="system"></bui-icon>
+                        <bui-icon
+                          name="x-circle-fill"
+                          library="system"
+                        ></bui-icon>
                       </slot>
                     </button>
                   `
-                : ''
+                : ""
             }
             ${
               this.passwordToggle && !this.disabled
@@ -512,14 +565,19 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
                       part="password-toggle-button"
                       class="input__password-toggle"
                       type="button"
-                      aria-label=${this.localize.term(this.passwordVisible ? 'hidePassword' : 'showPassword')}
+                      aria-label=${this.localize.term(
+                        this.passwordVisible ? "hidePassword" : "showPassword"
+                      )}
                       @click=${this.handlePasswordToggle}
                       tabindex="-1"
                     >
                       ${this.passwordVisible
                         ? html`
                             <slot name="show-password-icon">
-                              <bui-icon name="eye-slash" library="system"></bui-icon>
+                              <bui-icon
+                                name="eye-slash"
+                                library="system"
+                              ></bui-icon>
                             </slot>
                           `
                         : html`
@@ -529,7 +587,7 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
                           `}
                     </button>
                   `
-                : ''
+                : ""
             }
 
             <slot name="suffix" part="suffix" class="input__suffix"></slot>
@@ -541,7 +599,7 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
           part="form-control-help-text"
           id="help-text"
           class="form-control__help-text"
-          aria-hidden=${hasHelpText ? 'false' : 'true'}
+          aria-hidden=${hasHelpText ? "false" : "true"}
         >
           ${this.helpText}
         </slot>
@@ -553,6 +611,6 @@ export default class Input extends BuckeyeElement implements BuckeyeFormControl 
 
 declare global {
   interface HTMLElementTagNameMap {
-    'bui-input': Input;
+    "bui-input": Input;
   }
 }
