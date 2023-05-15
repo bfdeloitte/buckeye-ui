@@ -1,7 +1,7 @@
 {
   "name": "buckeye-ui",
   "description": "A library of web components inspired by Ohio.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/bfdeloitte/buckeye-ui",
   "author": "Brandon Fearing",
   "license": "MIT",
